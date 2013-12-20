@@ -530,7 +530,6 @@ object fmCatalogs: TfmCatalogs
       ParentShowHint = False
       ShowHint = True
       Images = CatalogsImageList
-      ExplicitWidth = 246
     end
     object cxDBNavigator1: TcxDBNavigator
       Left = 3
@@ -541,7 +540,6 @@ object fmCatalogs: TfmCatalogs
       DataSource = CatalogsDataSource
       Align = alBottom
       TabOrder = 1
-      ExplicitWidth = 302
     end
   end
   object cxSplitter1: TcxSplitter
@@ -550,7 +548,6 @@ object fmCatalogs: TfmCatalogs
     Width = 8
     Height = 510
     Control = cxGroupBox1
-    ExplicitLeft = 313
   end
   object cxGroupBox2: TcxGroupBox
     Left = 209
@@ -559,8 +556,6 @@ object fmCatalogs: TfmCatalogs
     Caption = 'Catalogs'
     ParentFont = False
     TabOrder = 2
-    ExplicitLeft = 321
-    ExplicitWidth = 699
     Height = 510
     Width = 811
     object CatalogsRegistryGrid: TcxGrid
@@ -570,7 +565,6 @@ object fmCatalogs: TfmCatalogs
       Height = 250
       Align = alTop
       TabOrder = 0
-      ExplicitWidth = 693
       object CatalogsRegistryGridDBTableView1: TcxGridDBTableView
         Navigator.Buttons.CustomButtons = <>
         Navigator.Visible = True
@@ -584,6 +578,9 @@ object fmCatalogs: TfmCatalogs
         object CatalogsRegistryGridDBTableView1CAPTION: TcxGridDBColumn
           DataBinding.FieldName = 'CAPTION'
         end
+        object CatalogsRegistryGridDBTableView1TABLE_NAME: TcxGridDBColumn
+          DataBinding.FieldName = 'TABLE_NAME'
+        end
       end
       object CatalogsRegistryGridLevel1: TcxGridLevel
         GridView = CatalogsRegistryGridDBTableView1
@@ -595,29 +592,28 @@ object fmCatalogs: TfmCatalogs
       Width = 805
       Height = 8
       AlignSplitter = salTop
-      ExplicitLeft = -21
-      ExplicitTop = 359
-      ExplicitWidth = 693
+      Control = CatalogsRegistryGrid
     end
-    object cxGrid1: TcxGrid
+    object CatalogGrid: TcxGrid
       Left = 3
       Top = 273
       Width = 805
       Height = 227
       Align = alClient
       TabOrder = 2
-      ExplicitLeft = 256
-      ExplicitTop = 400
-      ExplicitWidth = 250
-      ExplicitHeight = 200
-      object cxGrid1DBTableView1: TcxGridDBTableView
+      object CatalogGridDBTableView1: TcxGridDBTableView
         Navigator.Buttons.CustomButtons = <>
+        Navigator.Visible = True
+        DataController.DataSource = CatalogDataSource
         DataController.Summary.DefaultGroupSummaryItems = <>
         DataController.Summary.FooterSummaryItems = <>
         DataController.Summary.SummaryGroups = <>
+        NewItemRow.Visible = True
+        OptionsView.CellAutoHeight = True
+        OptionsView.ColumnAutoWidth = True
       end
-      object cxGrid1Level1: TcxGridLevel
-        GridView = cxGrid1DBTableView1
+      object CatalogGridLevel1: TcxGridLevel
+        GridView = CatalogGridDBTableView1
       end
     end
   end
@@ -670,12 +666,8 @@ object fmCatalogs: TfmCatalogs
       '    CAPTION'
       'FROM'
       '    CATALOGS ')
-    AutoUpdateOptions.UpdateTableName = 'CATALOGS'
-    AutoUpdateOptions.KeyFields = 'ID'
-    AutoUpdateOptions.CanChangeSQLs = True
-    AutoUpdateOptions.GeneratorName = 'GEN_CATALOGS_ID'
+    AutoUpdateOptions.GeneratorName = 'GEN__ID'
     AutoUpdateOptions.WhenGetGenID = wgOnNewRecord
-    AutoUpdateOptions.AutoParamsToFields = True
     Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
@@ -691,7 +683,6 @@ object fmCatalogs: TfmCatalogs
       AutoGenerateValue = arAutoInc
       FieldName = 'ID'
       ReadOnly = True
-      Required = True
     end
     object CatalogsDataSetSUB_ID: TFIBLargeIntField
       FieldName = 'SUB_ID'
@@ -707,7 +698,8 @@ object fmCatalogs: TfmCatalogs
       'UPDATE CATALOGS_REGISTRY'
       'SET '
       '    TYPE_ID = :MAS_ID,'
-      '    CAPTION = :CAPTION'
+      '    CAPTION = :CAPTION,'
+      '    TABLE_NAME = :TABLE_NAME'
       'WHERE'
       '    ID = :OLD_ID'
       '    ')
@@ -720,17 +712,20 @@ object fmCatalogs: TfmCatalogs
     InsertSQL.Strings = (
       'INSERT INTO CATALOGS_REGISTRY('
       '    TYPE_ID,'
-      '    CAPTION'
+      '    CAPTION,'
+      '    TABLE_NAME'
       ')'
       'VALUES('
       '    :MAS_ID,'
-      '    :CAPTION'
+      '    :CAPTION,'
+      '    :TABLE_NAME'
       ')')
     RefreshSQL.Strings = (
       'SELECT'
       '    ID,'
       '    TYPE_ID,'
-      '    CAPTION'
+      '    CAPTION,'
+      '    TABLE_NAME'
       'FROM'
       '    CATALOGS_REGISTRY '
       ''
@@ -741,17 +736,16 @@ object fmCatalogs: TfmCatalogs
       'SELECT'
       '    ID,'
       '    TYPE_ID,'
-      '    CAPTION'
+      '    CAPTION,'
+      '    TABLE_NAME'
       'FROM'
       '    CATALOGS_REGISTRY '
       'WHERE TYPE_ID = :MAS_ID')
-    AutoUpdateOptions.UpdateTableName = 'CATALOGS_REGISTRY'
-    AutoUpdateOptions.KeyFields = 'ID'
     AutoUpdateOptions.CanChangeSQLs = True
-    AutoUpdateOptions.GeneratorName = 'GEN_CATALOGS_REGISTRY_ID'
     AutoUpdateOptions.WhenGetGenID = wgOnNewRecord
     AutoUpdateOptions.AutoParamsToFields = True
     Active = True
+    AfterScroll = CatalogsRegistryDataSetAfterScroll
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -767,14 +761,17 @@ object fmCatalogs: TfmCatalogs
     object CatalogsRegistryDataSetID: TFIBLargeIntField
       AutoGenerateValue = arAutoInc
       FieldName = 'ID'
-      KeyFields = 'ID'
-      ReadOnly = True
     end
     object CatalogsRegistryDataSetTYPE_ID: TFIBLargeIntField
       FieldName = 'TYPE_ID'
     end
     object CatalogsRegistryDataSetCAPTION: TFIBWideStringField
       FieldName = 'CAPTION'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object CatalogsRegistryDataSetTABLE_NAME: TFIBWideStringField
+      FieldName = 'TABLE_NAME'
       Size = 255
       EmptyStrToNull = True
     end
@@ -786,7 +783,7 @@ object fmCatalogs: TfmCatalogs
   end
   object CatalogsImageList: TcxImageList
     FormatVersion = 1
-    DesignInfo = 21496232
+    DesignInfo = 18874456
     ImageInfo = <
       item
         Image.Data = {
@@ -831,5 +828,17 @@ object fmCatalogs: TfmCatalogs
           000000000000000000000000000080000000C0000000E0000000F8000000F800
           0000}
       end>
+  end
+  object CatalogDataSource: TDataSource
+    DataSet = CatalogDataSet
+    Left = 544
+    Top = 368
+  end
+  object CatalogDataSet: TpFIBDataSet
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    Left = 464
+    Top = 368
   end
 end
