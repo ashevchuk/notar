@@ -42,16 +42,21 @@ type
     CatalogsRegistryGridDBTableView1: TcxGridDBTableView;
     CatalogsRegistryGridLevel1: TcxGridLevel;
     CatalogsRegistryGrid: TcxGrid;
+    cxSplitter2: TcxSplitter;
+    CatalogGridDBTableView1: TcxGridDBTableView;
+    CatalogGridLevel1: TcxGridLevel;
+    CatalogGrid: TcxGrid;
+    CatalogsImageList: TcxImageList;
     CatalogsRegistryDataSetID: TFIBLargeIntField;
     CatalogsRegistryDataSetTYPE_ID: TFIBLargeIntField;
     CatalogsRegistryDataSetCAPTION: TFIBWideStringField;
+    CatalogsRegistryDataSetTABLE_NAME: TFIBWideStringField;
     CatalogsRegistryGridDBTableView1CAPTION: TcxGridDBColumn;
-    cxSplitter2: TcxSplitter;
-    cxGrid1DBTableView1: TcxGridDBTableView;
-    cxGrid1Level1: TcxGridLevel;
-    cxGrid1: TcxGrid;
-    CatalogsImageList: TcxImageList;
+    CatalogsRegistryGridDBTableView1TABLE_NAME: TcxGridDBColumn;
+    CatalogDataSource: TDataSource;
+    CatalogDataSet: TpFIBDataSet;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure CatalogsRegistryDataSetAfterScroll(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -64,6 +69,41 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfmCatalogs.CatalogsRegistryDataSetAfterScroll(DataSet: TDataSet);
+var
+  iField: word;
+  FieldDescription: string;
+begin
+  CatalogDataSet.Close;
+  if Length(CatalogsRegistryDataSetTABLE_NAME.AsString) = 0 then Exit;
+
+  CatalogDataSet.SQLs.SelectSQL.Text := 'select * from ' + CatalogsRegistryDataSetTABLE_NAME.AsString;
+  try
+  CatalogDataSet.Open;
+  except
+    ShowMessage(CatalogDataSet.SQLs.SelectSQL.Text);
+  end;
+
+  while CatalogGridDBTableView1.ColumnCount >0 do
+  begin
+    CatalogGridDBTableView1.Columns[0].Free;
+  end;
+
+  if CatalogDataSet.FieldCount >0 then
+  for iField := 0 to CatalogDataSet.FieldCount -1 do
+  begin
+    FieldDescription := RemoteDataModule.getFieldInfo(CatalogsRegistryDataSetTABLE_NAME.AsString, CatalogDataSet.Fields[iField].FieldName, 'FIELD_DESCRIPTION');
+    with CatalogGridDBTableView1.CreateColumn do
+    begin
+      Visible := boolean(Length(FieldDescription) >0);
+      DataBinding.FieldName := CatalogDataSet.Fields[iField].FieldName;
+      Caption := FieldDescription;
+      Index := StrToInt(RemoteDataModule.getFieldInfo(CatalogsRegistryDataSetTABLE_NAME.AsString, CatalogDataSet.Fields[iField].FieldName, 'FIELD_POSITION'));
+    end;
+  end;
+
+end;
 
 procedure TfmCatalogs.FormClose(Sender: TObject; var Action: TCloseAction);
 begin

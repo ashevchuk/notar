@@ -25,7 +25,6 @@ object RemoteDataModule: TRemoteDataModule
   object FIBTransaction: TpFIBTransaction
     Active = True
     DefaultDatabase = FIBDatabase
-    TimeoutAction = TACommit
     TRParams.Strings = (
       'write'
       'isc_tpb_nowait'
@@ -37,8 +36,8 @@ object RemoteDataModule: TRemoteDataModule
     Top = 40
   end
   object FIBUpdateTransaction: TpFIBTransaction
+    Active = True
     DefaultDatabase = FIBDatabase
-    TimeoutAction = TACommit
     TRParams.Strings = (
       'write'
       'isc_tpb_nowait'
@@ -68,5 +67,68 @@ object RemoteDataModule: TRemoteDataModule
     ForceSaveLog = False
     Left = 232
     Top = 168
+  end
+  object FieldsDataSet: TpFIBDataSet
+    UpdateSQL.Strings = (
+      'UPDATE VIEW_TABLE_FIELDS'
+      'SET '
+      '    TABLE_NAME = :TABLE_NAME,'
+      '    FIELD_NAME = :FIELD_NAME,'
+      '    FIELD_POSITION = :FIELD_POSITION,'
+      '    FIELD_ID = :FIELD_ID,'
+      '    FIELD_DESCRIPTION = :FIELD_DESCRIPTION,'
+      '    FIELD_NULL_FLAG = :FIELD_NULL_FLAG'
+      'WHERE'
+      '    ')
+    DeleteSQL.Strings = (
+      'DELETE FROM'
+      '    VIEW_TABLE_FIELDS'
+      'WHERE'
+      '        ')
+    InsertSQL.Strings = (
+      'INSERT INTO VIEW_TABLE_FIELDS('
+      '    TABLE_NAME,'
+      '    FIELD_NAME,'
+      '    FIELD_POSITION,'
+      '    FIELD_ID,'
+      '    FIELD_DESCRIPTION,'
+      '    FIELD_NULL_FLAG'
+      ')'
+      'VALUES('
+      '    :TABLE_NAME,'
+      '    :FIELD_NAME,'
+      '    :FIELD_POSITION,'
+      '    :FIELD_ID,'
+      '    :FIELD_DESCRIPTION,'
+      '    :FIELD_NULL_FLAG'
+      ')')
+    RefreshSQL.Strings = (
+      'SELECT'
+      '    TABLE_NAME,'
+      '    FIELD_NAME,'
+      '    FIELD_POSITION,'
+      '    FIELD_ID,'
+      '    FIELD_DESCRIPTION,'
+      '    FIELD_NULL_FLAG'
+      'FROM'
+      '    VIEW_TABLE_FIELDS ')
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TABLE_NAME,'
+      '    FIELD_NAME,'
+      '    FIELD_POSITION,'
+      '    FIELD_ID,'
+      '    FIELD_DESCRIPTION,'
+      '    FIELD_NULL_FLAG'
+      'FROM'
+      '    VIEW_TABLE_FIELDS '
+      'where'
+      '    TABLE_NAME = :TABLE_NAME'
+      'and FIELD_NAME = :FIELD_NAME')
+    Transaction = FIBTransaction
+    Database = FIBDatabase
+    UpdateTransaction = FIBUpdateTransaction
+    Left = 36
+    Top = 232
   end
 end

@@ -4,7 +4,8 @@ interface
 
 uses
   System.SysUtils, System.Classes, FIBDatabase, pFIBDatabase, pFIBSQLLog,
-  SIBEABase, SIBFIBEA, FIBSQLMonitor, pFIBErrorHandler;
+  SIBEABase, SIBFIBEA, FIBSQLMonitor, pFIBErrorHandler, Data.DB, FIBDataSet,
+  pFIBDataSet;
 
 type
   TRemoteDataModule = class(TDataModule)
@@ -15,10 +16,12 @@ type
     FIBSQLMonitor: TFIBSQLMonitor;
     SIBfibEventAlerter: TSIBfibEventAlerter;
     FIBSQLLogger: TFIBSQLLogger;
+    FieldsDataSet: TpFIBDataSet;
   private
     { Private declarations }
   public
     function ConnectDataBase: boolean;
+    function getFieldInfo(const ATable: string; AField: string; AType: string = 'FIELD_DESCRIPTION') : string;
   end;
 
 var
@@ -40,6 +43,16 @@ begin
   finally
     Result := FIBDatabase.Connected;
   end;
+end;
+
+function TRemoteDataModule.getFieldInfo(const ATable: string; AField, AType: string): string;
+begin
+  FieldsDataSet.Close;
+  FieldsDataSet.ParamByName('TABLE_NAME').AsString := ATable;
+  FieldsDataSet.ParamByName('FIELD_NAME').AsString := AField;
+  FieldsDataSet.Open;
+  Result := FieldsDataSet.FieldByName(AType).AsString;
+  FieldsDataSet.Close;
 end;
 
 end.
