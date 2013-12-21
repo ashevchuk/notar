@@ -38,11 +38,11 @@ begin
   RemoteDataModule.ConnectDataBase;
 
   fmSplash.ShowMessage('Starting Application...');
+  Application.ShowMainForm := True;
+
   fmSplash.Hide;
   fmSplash.Close;
   fmSplash.Free;
-
-  Application.ShowMainForm := True;
 
   Application.Run;
 
