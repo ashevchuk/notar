@@ -838,6 +838,7 @@ object fmCatalogs: TfmCatalogs
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
     Left = 464
     Top = 368
   end

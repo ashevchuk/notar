@@ -74,13 +74,42 @@ procedure TfmCatalogs.CatalogsRegistryDataSetAfterScroll(DataSet: TDataSet);
 var
   iField: word;
   FieldDescription: string;
+  Fields: string;
+  FieldsWithoutKey: string;
+
+  FieldsList: TStringList;
+  FieldsParamsListWithoutKey: TStringList;
+  FieldsParamsPairListWithoutKey: TStringList;
+
+  iFields: word;
 begin
   CatalogDataSet.Close;
   if Length(CatalogsRegistryDataSetTABLE_NAME.AsString) = 0 then Exit;
 
-  CatalogDataSet.SQLs.SelectSQL.Text := 'select * from ' + CatalogsRegistryDataSetTABLE_NAME.AsString;
+  Fields := RemoteDataModule.getFields(CatalogsRegistryDataSetTABLE_NAME.AsString);
+  //FieldsList := TStringList.Create;
+  FieldsParamsListWithoutKey := TStringList.Create;
+  FieldsParamsPairListWithoutKey := TStringList.Create;
+
+  FieldsList := RemoteDataModule.getFieldsList(CatalogsRegistryDataSetTABLE_NAME.AsString);
+
+  FieldsList.Delete(FieldsList.IndexOf('ID'));
+  FieldsWithoutKey := FieldsList.CommaText;
+
+  for iFields := 0 to FieldsList.Count-1 do
+  begin
+    FieldsParamsListWithoutKey.Append(Format(':%s', [FieldsList[iFields]]));
+    FieldsParamsPairListWithoutKey.Append(Format('%s = :%s', [FieldsList[iFields], FieldsList[iFields]]));
+  end;
+
+  CatalogDataSet.SQLs.SelectSQL.Text := Format('SELECT %s FROM %s', [Fields, CatalogsRegistryDataSetTABLE_NAME.AsString]);
+  CatalogDataSet.SQLs.UpdateSQL.Text := Format('UPDATE %s SET %s WHERE ID = :OLD_ID', [CatalogsRegistryDataSetTABLE_NAME.AsString, FieldsParamsPairListWithoutKey.CommaText]);
+  CatalogDataSet.SQLs.DeleteSQL.Text := Format('DELETE FROM %s WHERE ID = :OLD_ID', [CatalogsRegistryDataSetTABLE_NAME.AsString]);
+  CatalogDataSet.SQLs.InsertSQL.Text := Format('INSERT INTO %s( %s ) VALUES( %s )', [CatalogsRegistryDataSetTABLE_NAME.AsString, FieldsWithoutKey, FieldsParamsListWithoutKey.CommaText]);
+  CatalogDataSet.SQLs.RefreshSQL.Text := Format('SELECT %s FROM %s WHERE %s.ID = :OLD_ID', [Fields, CatalogsRegistryDataSetTABLE_NAME.AsString, CatalogsRegistryDataSetTABLE_NAME.AsString]);
+
   try
-  CatalogDataSet.Open;
+    CatalogDataSet.Open;
   except
     ShowMessage(CatalogDataSet.SQLs.SelectSQL.Text);
   end;
@@ -102,7 +131,9 @@ begin
       Index := StrToInt(RemoteDataModule.getFieldInfo(CatalogsRegistryDataSetTABLE_NAME.AsString, CatalogDataSet.Fields[iField].FieldName, 'FIELD_POSITION'));
     end;
   end;
-
+  FieldsList.Free;
+  FieldsParamsListWithoutKey.Free;
+  FieldsParamsPairListWithoutKey.Free;
 end;
 
 procedure TfmCatalogs.FormClose(Sender: TObject; var Action: TCloseAction);
