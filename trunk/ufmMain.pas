@@ -3,20 +3,10 @@ unit ufmMain;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, ClipBrd,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, OnGuard, Vcl.StdCtrls, cxGraphics,
-  cxControls, cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, dxSkinBlack,
-  dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom,
-  dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
-  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
-  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMoneyTwins,
-  dxSkinOffice2007Black, dxSkinOffice2007Blue, dxSkinOffice2007Green,
-  dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinOffice2010Black,
-  dxSkinOffice2010Blue, dxSkinOffice2010Silver, dxSkinOffice2013White,
-  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
-  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
-  dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine, dxSkinVS2010,
-  dxSkinWhiteprint, dxSkinXmas2008Blue, dxSkinsdxStatusBarPainter, dxStatusBar,
+  cxControls, cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore,
+  dxSkinOffice2010Blue, dxSkinsDefaultPainters, dxSkinsdxStatusBarPainter, dxStatusBar,
   Vcl.Buttons, dxSkinsdxBarPainter, dxBar, cxClasses, dxBarApplicationMenu,
   dxRibbon, cxPC, dxSkinscxPCPainter, dxTabbedMDI, dxScreenTip, dxSkinsForm,
   cxLocalization, cxStyles, dxCustomHint, cxHint, cxEdit, cxContainer,
@@ -30,7 +20,7 @@ uses
 
   cxGridTableView, Vcl.ComCtrls, ScriptCtrls, ShellApi, atPascal, FormScript,
   atScriptDebug, atMemoInterface, cxPCdxBarPopupMenu, cxTL, cxScrollBox,
-  cxSplitter, cxGroupBox, cxListBox;
+  cxSplitter, cxGroupBox, cxListBox, dxSkinOffice2007Blue, Vcl.Menus;
 
 const
   IDX_STATUS_TEXT : byte = 0;
@@ -97,6 +87,11 @@ type
     LogGroupBox: TcxGroupBox;
     LogSplitter: TcxSplitter;
     LogListBox: TcxListBox;
+    LogPopupMenu: TPopupMenu;
+    Clear1: TMenuItem;
+    Save1: TMenuItem;
+    Copy1: TMenuItem;
+    LogSaveDialog: TSaveDialog;
     procedure FormCreate(Sender: TObject);
     procedure dxBarButtonExitClick(Sender: TObject);
     procedure dxBarButtonEditorClick(Sender: TObject);
@@ -105,6 +100,9 @@ type
     procedure dxBarButton2Click(Sender: TObject);
     procedure dxBarButton3Click(Sender: TObject);
     procedure StatusBarDblClick(Sender: TObject);
+    procedure Copy1Click(Sender: TObject);
+    procedure Clear1Click(Sender: TObject);
+    procedure Save1Click(Sender: TObject);
   private
     procedure OnException(Sender: TObject; E: Exception);
 
@@ -116,19 +114,37 @@ type
     procedure SwitchLogWindow;
   end;
 
+procedure Log(AText: string);
+
 var
   fmMain: TfmMain;
 
 implementation
 uses uRemoteDM, uLicenseDM,
   ufmIDE,
-  ufmRichEditor,
+ // ufmRichEditor,
   ufmCatalogs,
 
   RVARibbonFrm,
   uDbFreeReporter,
   uFreeReporter;
 {$R *.dfm}
+
+procedure Log(AText: string);
+begin
+  TfmMain(Application.MainForm).SetStatusText(AText);
+end;
+
+procedure TfmMain.Clear1Click(Sender: TObject);
+begin
+  LogListBox.Items.Clear;
+  LogListBox.ItemIndex := -1;
+end;
+
+procedure TfmMain.Copy1Click(Sender: TObject);
+begin
+  Clipboard.AsText := LogListBox.Items[LogListBox.ItemIndex];
+end;
 
 procedure TfmMain.dxBarButton1Click(Sender: TObject);
 begin
@@ -204,6 +220,11 @@ begin
  SetStatusText('Started...');
  SetStatusText(RegisterFlipFlop[LicenseDataModule.IsRegistered], IDX_STATUS_REGISTERED);
  SetStatusText('Expires: ' + DateToStr(LicenseDataModule.ExpireDate), IDX_STATUS_EXPIRATION);
+end;
+
+procedure TfmMain.Save1Click(Sender: TObject);
+begin
+  if LogSaveDialog.Execute then LogListBox.Items.SaveToFile(LogSaveDialog.FileName);
 end;
 
 procedure TfmMain.SetStatusText(const AStatus: string; StatusType: byte);

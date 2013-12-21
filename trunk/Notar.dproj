@@ -77,7 +77,7 @@
         <VerInfo_Locale>1058</VerInfo_Locale>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
-        <VerInfo_Keys>CompanyName=Cloud computing research initiative;FileDescription=;FileVersion=1.0.0.6;InternalName=Notar AWP;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=Notar;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=Cloud computing research initiative;FileDescription=Notarial automated workplace;FileVersion=1.0.0.6;InternalName=Notar AWP;LegalCopyright=Cloud computing research initiative;LegalTrademarks=;OriginalFilename=Notar.exe;ProductName=Notar;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Build>6</VerInfo_Build>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
     </PropertyGroup>

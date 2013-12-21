@@ -1,11 +1,10 @@
-object fmCatalogs: TfmCatalogs
+object fmCreateTable: TfmCreateTable
   Left = 0
   Top = 0
-  Caption = 'Catalogs'
-  ClientHeight = 510
-  ClientWidth = 1020
+  Caption = #1057#1090#1074#1086#1088#1077#1085#1085#1103' '#1090#1072#1073#1083#1080#1094#1110
+  ClientHeight = 501
+  ClientWidth = 647
   Color = clBtnFace
-  DefaultMonitor = dmMainForm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -488,494 +487,213 @@ object fmCatalogs: TfmCatalogs
   OldCreateOrder = False
   Visible = True
   OnClose = FormClose
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object dxBevel1: TdxBevel
-    Left = 488
-    Top = 240
-    Width = 50
-    Height = 50
-  end
-  object dxBevel2: TdxBevel
-    Left = 0
-    Top = 0
-    Width = 1020
-    Height = 29
-    Align = alTop
-    LookAndFeel.NativeStyle = False
-    LookAndFeel.SkinName = 'Office2007Blue'
-    Shape = dxbsNone
-  end
   object cxGroupBox1: TcxGroupBox
     Left = 0
-    Top = 29
-    Align = alLeft
-    Caption = #1043#1088#1091#1087#1080' '#1076#1086#1074#1110#1076#1085#1080#1082#1110#1074
+    Top = 0
+    Align = alTop
+    Caption = #1053#1086#1074#1072' '#1090#1072#1073#1083#1080#1094#1103
+    ParentBackground = False
+    ParentColor = False
     ParentFont = False
+    Style.StyleController = fmMain.cxEditStyleController
     TabOrder = 0
-    ExplicitLeft = 2
-    ExplicitTop = 0
-    ExplicitHeight = 510
-    Height = 481
-    Width = 265
-    object dxDBTreeView1: TdxDBTreeView
-      Left = 3
-      Top = 15
-      Width = 259
-      Height = 431
-      ShowNodeHint = False
-      AutoExpand = True
-      DataSource = CatalogsDataSource
-      DisplayField = 'CAPTION'
-      KeyField = 'ID'
-      ListField = 'CAPTION'
-      ParentField = 'SUB_ID'
-      RootValue = Null
-      SeparatedSt = ' - '
-      RaiseOnError = True
-      DragMode = dmAutomatic
-      Indent = 19
-      Align = alClient
+    Height = 51
+    Width = 647
+    object cxLabel1: TcxLabel
+      Left = 16
+      Top = 18
+      Caption = #1053#1072#1079#1074#1072
       ParentColor = False
-      Options = [trDBCanDelete, trDBConfirmDelete, trCanDBNavigate, trSmartRecordCopy, trCheckHasChildren]
-      SelectedIndex = -1
-      TabOrder = 0
-      ParentShowHint = False
-      ShowHint = True
-      Images = CatalogsImageList
-      ExplicitTop = 9
-      ExplicitWidth = 195
-      ExplicitHeight = 460
+      ParentFont = False
+      Style.StyleController = fmMain.cxEditStyleController
+      Transparent = True
     end
-    object cxDBNavigator1: TcxDBNavigator
-      Left = 3
-      Top = 446
-      Width = 257
-      Height = 25
-      Buttons.CustomButtons = <>
-      DataSource = CatalogsDataSource
-      Align = alBottom
+    object TableNameTextEdit: TcxTextEdit
+      Left = 56
+      Top = 17
+      ParentFont = False
+      Style.StyleController = fmMain.cxEditStyleController
       TabOrder = 1
-      ExplicitTop = 475
+      Text = 'CATALOG_'
+      Width = 121
     end
-  end
-  object cxSplitter1: TcxSplitter
-    Left = 265
-    Top = 29
-    Width = 8
-    Height = 481
-    Control = cxGroupBox1
-    ExplicitLeft = 201
-    ExplicitTop = 0
-    ExplicitHeight = 510
+    object CreateTableButton: TcxButton
+      Left = 183
+      Top = 16
+      Width = 75
+      Height = 25
+      Caption = #1057#1090#1074#1086#1088#1080#1090#1080
+      TabOrder = 2
+      OnClick = CreateTableButtonClick
+    end
   end
   object cxGroupBox2: TcxGroupBox
-    Left = 273
-    Top = 29
+    Left = 0
+    Top = 51
     Align = alClient
-    Caption = #1044#1086#1074#1110#1076#1085#1080#1082#1080
+    Caption = #1055#1086#1083#1103
+    ParentBackground = False
+    ParentColor = False
     ParentFont = False
-    TabOrder = 2
-    ExplicitLeft = 295
-    ExplicitTop = 128
-    ExplicitHeight = 510
-    Height = 481
-    Width = 747
-    object CatalogsRegistryGrid: TcxGrid
+    TabOrder = 1
+    ExplicitTop = 49
+    ExplicitHeight = 323
+    Height = 321
+    Width = 647
+    object FieldsListBox: TcxMCListBox
       Left = 3
       Top = 15
-      Width = 741
-      Height = 250
-      Align = alTop
-      TabOrder = 0
-      ExplicitTop = 17
-      object CatalogsRegistryGridDBTableView1: TcxGridDBTableView
-        Navigator.Buttons.CustomButtons = <>
-        Navigator.Visible = True
-        DataController.DataSource = CatalogsRegistryDataSource
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
-        OptionsView.ShowEditButtons = gsebForFocusedRecord
-        OptionsView.ColumnAutoWidth = True
-        OptionsView.GroupByBox = False
-        object CatalogsRegistryGridDBTableView1CAPTION: TcxGridDBColumn
-          Caption = #1044#1086#1074#1110#1076#1085#1080#1082
-          DataBinding.FieldName = 'CAPTION'
-        end
-        object CatalogsRegistryGridDBTableView1TABLE_NAME: TcxGridDBColumn
-          Caption = #1058#1072#1073#1083#1080#1094#1103
-          DataBinding.FieldName = 'TABLE_NAME'
-          PropertiesClassName = 'TcxLookupComboBoxProperties'
-          Properties.DropDownAutoSize = True
-          Properties.DropDownListStyle = lsFixedList
-          Properties.DropDownSizeable = True
-          Properties.GridMode = True
-          Properties.KeyFieldNames = 'TABLE_NAME'
-          Properties.ListColumns = <
-            item
-              Caption = #1058#1072#1073#1083#1080#1094#1103
-              FieldName = 'TABLE_NAME'
-            end>
-          Properties.ListSource = CatalogTablesDataSource
-        end
-      end
-      object CatalogsRegistryGridLevel1: TcxGridLevel
-        GridView = CatalogsRegistryGridDBTableView1
-      end
-    end
-    object cxSplitter2: TcxSplitter
-      Left = 3
-      Top = 265
-      Width = 741
-      Height = 8
-      AlignSplitter = salTop
-      Control = CatalogsRegistryGrid
-      ExplicitWidth = 805
-    end
-    object CatalogGrid: TcxGrid
-      Left = 3
-      Top = 273
-      Width = 741
-      Height = 198
+      Width = 641
+      Height = 296
       Align = alClient
+      HeaderSections = <
+        item
+          Text = #8470
+        end
+        item
+          Text = #1053#1072#1079#1074#1072
+          Width = 250
+        end
+        item
+          Text = #1058#1080#1087
+          Width = 100
+        end
+        item
+          Text = #1056#1086#1079#1084#1110#1088
+        end
+        item
+          AutoSize = True
+          Text = #1054#1087#1080#1089
+          Width = 187
+        end>
+      ParentFont = False
+      Style.Shadow = False
+      TabOrder = 0
+      OnDblClick = FieldsListBoxDblClick
+      ExplicitHeight = 298
+    end
+  end
+  object cxGroupBox3: TcxGroupBox
+    Left = 0
+    Top = 372
+    Align = alBottom
+    Caption = #1055#1086#1083#1103
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    Style.StyleController = fmMain.cxEditStyleController
+    TabOrder = 2
+    ExplicitTop = 375
+    Height = 129
+    Width = 647
+    object AddFieldButton: TcxButton
+      Left = 207
+      Top = 94
+      Width = 75
+      Height = 25
+      Caption = #1044#1086#1076#1072#1090#1080
+      TabOrder = 0
+      OnClick = AddFieldButtonClick
+    end
+    object FieldNameTextEdit: TcxTextEdit
+      Left = 56
+      Top = 16
+      ParentFont = False
+      Properties.OnChange = FieldNameTextEditPropertiesChange
+      TabOrder = 1
+      Width = 145
+    end
+    object FieldSizeSpinEdit: TcxSpinEdit
+      Left = 56
+      Top = 70
+      ParentFont = False
+      Properties.MaxValue = 255.000000000000000000
+      Properties.MinValue = 1.000000000000000000
       TabOrder = 2
-      ExplicitLeft = 6
-      ExplicitTop = 313
-      ExplicitWidth = 805
-      ExplicitHeight = 227
-      object CatalogGridDBTableView1: TcxGridDBTableView
-        Navigator.Buttons.CustomButtons = <>
-        Navigator.Visible = True
-        DataController.DataSource = CatalogDataSource
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
-        NewItemRow.Visible = True
-        OptionsView.CellAutoHeight = True
-        OptionsView.ColumnAutoWidth = True
-        OptionsView.GroupByBox = False
-      end
-      object CatalogGridLevel1: TcxGridLevel
-        GridView = CatalogGridDBTableView1
-      end
+      Value = 1
+      Width = 145
     end
-  end
-  object CreateTableButton: TcxButton
-    Left = 2
-    Top = 2
-    Width = 111
-    Height = 25
-    Caption = #1057#1090#1074#1086#1088#1080#1090#1080' '#1090#1072#1073#1083#1080#1094#1102
-    TabOrder = 7
-    OnClick = CreateTableButtonClick
-  end
-  object CatalogsDataSource: TDataSource
-    DataSet = CatalogsDataSet
-    Left = 88
-    Top = 144
-  end
-  object CatalogsDataSet: TpFIBDataSet
-    UpdateSQL.Strings = (
-      'UPDATE CATALOGS'
-      'SET '
-      '    SUB_ID = :SUB_ID,'
-      '    CAPTION = :CAPTION'
-      'WHERE'
-      '    ID = :OLD_ID'
-      '    ')
-    DeleteSQL.Strings = (
-      'DELETE FROM'
-      '    CATALOGS'
-      'WHERE'
-      '        ID = :OLD_ID'
-      '    ')
-    InsertSQL.Strings = (
-      'INSERT INTO CATALOGS('
-      '    ID,'
-      '    SUB_ID,'
-      '    CAPTION'
-      ')'
-      'VALUES('
-      '    :ID,'
-      '    :SUB_ID,'
-      '    :CAPTION'
-      ')')
-    RefreshSQL.Strings = (
-      'SELECT'
-      '    ID,'
-      '    SUB_ID,'
-      '    CAPTION'
-      'FROM'
-      '    CATALOGS '
-      ''
-      ' WHERE '
-      '        CATALOGS.ID = :OLD_ID'
-      '    ')
-    SelectSQL.Strings = (
-      'SELECT'
-      '    ID,'
-      '    SUB_ID,'
-      '    CAPTION'
-      'FROM'
-      '    CATALOGS ')
-    AutoUpdateOptions.GeneratorName = 'GEN__ID'
-    AutoUpdateOptions.WhenGetGenID = wgOnNewRecord
-    Active = True
-    Transaction = RemoteDataModule.FIBTransaction
-    Database = RemoteDataModule.FIBDatabase
-    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
-    AutoCommit = True
-    Left = 88
-    Top = 216
-    poUseLargeIntField = True
-    poSupportUnicodeBlobs = True
-    poSetRequiredFields = True
-    poSetReadOnlyFields = True
-    object CatalogsDataSetID: TFIBLargeIntField
-      AutoGenerateValue = arAutoInc
-      FieldName = 'ID'
-      ReadOnly = True
+    object FieldDescriptionTextEdit: TcxTextEdit
+      Left = 56
+      Top = 97
+      ParentFont = False
+      TabOrder = 3
+      Width = 145
     end
-    object CatalogsDataSetSUB_ID: TFIBLargeIntField
-      FieldName = 'SUB_ID'
+    object cxLabel2: TcxLabel
+      Left = 16
+      Top = 17
+      Caption = #1053#1072#1079#1074#1072
+      ParentColor = False
+      ParentFont = False
+      Transparent = True
     end
-    object CatalogsDataSetCAPTION: TFIBWideStringField
-      FieldName = 'CAPTION'
-      Size = 255
-      EmptyStrToNull = True
+    object cxLabel3: TcxLabel
+      Left = 16
+      Top = 44
+      Caption = #1058#1080#1087
+      ParentColor = False
+      ParentFont = False
+      Transparent = True
     end
-  end
-  object CatalogsRegistryDataSet: TpFIBDataSet
-    UpdateSQL.Strings = (
-      'UPDATE CATALOGS_REGISTRY'
-      'SET '
-      '    TYPE_ID = :MAS_ID,'
-      '    CAPTION = :CAPTION,'
-      '    TABLE_NAME = :TABLE_NAME'
-      'WHERE'
-      '    ID = :OLD_ID'
-      '    ')
-    DeleteSQL.Strings = (
-      'DELETE FROM'
-      '    CATALOGS_REGISTRY'
-      'WHERE'
-      '        ID = :OLD_ID'
-      '    ')
-    InsertSQL.Strings = (
-      'INSERT INTO CATALOGS_REGISTRY('
-      '    TYPE_ID,'
-      '    CAPTION,'
-      '    TABLE_NAME'
-      ')'
-      'VALUES('
-      '    :MAS_ID,'
-      '    :CAPTION,'
-      '    :TABLE_NAME'
-      ')')
-    RefreshSQL.Strings = (
-      'SELECT'
-      '    ID,'
-      '    TYPE_ID,'
-      '    CAPTION,'
-      '    TABLE_NAME'
-      'FROM'
-      '    CATALOGS_REGISTRY '
-      ''
-      ' WHERE '
-      '        CATALOGS_REGISTRY.ID = :OLD_ID'
-      '    ')
-    SelectSQL.Strings = (
-      'SELECT'
-      '    ID,'
-      '    TYPE_ID,'
-      '    CAPTION,'
-      '    TABLE_NAME'
-      'FROM'
-      '    CATALOGS_REGISTRY '
-      'WHERE TYPE_ID = :MAS_ID')
-    AutoUpdateOptions.CanChangeSQLs = True
-    AutoUpdateOptions.WhenGetGenID = wgOnNewRecord
-    AutoUpdateOptions.AutoParamsToFields = True
-    Active = True
-    AfterScroll = CatalogsRegistryDataSetAfterScroll
-    Transaction = RemoteDataModule.FIBTransaction
-    Database = RemoteDataModule.FIBDatabase
-    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
-    AutoCommit = True
-    DataSource = CatalogsDataSource
-    Left = 392
-    Top = 80
-    poUseLargeIntField = True
-    poSupportUnicodeBlobs = True
-    poSetRequiredFields = True
-    poSetReadOnlyFields = True
-    dcForceOpen = True
-    object CatalogsRegistryDataSetID: TFIBLargeIntField
-      AutoGenerateValue = arAutoInc
-      FieldName = 'ID'
+    object cxLabel4: TcxLabel
+      Left = 16
+      Top = 71
+      Caption = #1056#1086#1079#1084#1110#1088
+      ParentColor = False
+      ParentFont = False
+      Transparent = True
     end
-    object CatalogsRegistryDataSetTYPE_ID: TFIBLargeIntField
-      FieldName = 'TYPE_ID'
+    object cxLabel5: TcxLabel
+      Left = 16
+      Top = 97
+      Caption = #1054#1087#1080#1089
+      ParentColor = False
+      ParentFont = False
+      Transparent = True
     end
-    object CatalogsRegistryDataSetCAPTION: TFIBWideStringField
-      FieldName = 'CAPTION'
-      Size = 255
-      EmptyStrToNull = True
+    object FieldTypeComboBox: TcxComboBox
+      Left = 56
+      Top = 43
+      ParentFont = False
+      Properties.DropDownListStyle = lsFixedList
+      Properties.Items.Strings = (
+        #1058#1077#1082#1089#1090
+        #1063#1080#1089#1083#1086
+        #1050#1086#1085#1090#1077#1081#1085#1077#1088)
+      TabOrder = 8
+      Text = #1058#1077#1082#1089#1090
+      Width = 145
     end
-    object CatalogsRegistryDataSetTABLE_NAME: TFIBWideStringField
-      FieldName = 'TABLE_NAME'
-      Size = 255
-      EmptyStrToNull = True
+    object FieldUpButton: TcxButton
+      Left = 207
+      Top = 20
+      Width = 35
+      Height = 25
+      Caption = 'Up'
+      TabOrder = 9
+      OnClick = FieldUpButtonClick
     end
-  end
-  object CatalogsRegistryDataSource: TDataSource
-    DataSet = CatalogsRegistryDataSet
-    Left = 392
-    Top = 136
-  end
-  object CatalogsImageList: TcxImageList
-    FormatVersion = 1
-    DesignInfo = 18874456
-    ImageInfo = <
-      item
-        Image.Data = {
-          36040000424D3604000000000000360000002800000010000000100000000100
-          20000000000000040000000000000000000000000000000000000B0B0B0A2D2D
-          2D384141417E4040409540404095404040954040409540404095404040954040
-          4095404040954040409540404095404040954141417E2D2D2D381E1E1E211D82
-          B5FF1B81B3FF187EB0FF167CAEFF1379ABFF1076A8FF0D73A5FF0B71A3FF086E
-          A0FF066C9EFF046A9CFF02689AFF016799FF2C2C2CCA4141417E2287BAFF67CC
-          FFFF2085B8FF99FFFFFF6FD4FFFF6FD4FFFF6FD4FFFF6FD4FFFF6FD4FFFF6FD4
-          FFFF6FD4FFFF6FD4FFFF5ABFEDFF99FFFFFF016799FF40404094258ABDFF67CC
-          FFFF278CBFFF97FCFCFF69BFD9FF69BED8FF79DDFBFF77D8F6FF5EAAC2FF6BC2
-          DDFF70CCE8FF76D7F5FF65CAF1FF98FDFDFF02689AFF40404095288DC0FF67CC
-          FFFF2D92C5FF7ACACCFF518DA9FF528FA9FF61AAB8FF64ADBDFF5B97A5FF5795
-          A5FF5B9EADFF68B7C7FF65BDD6FF8EEDEDFF046899FF404040952A8FC2FF67CC
-          FFFF3398CBFF5EA0CFFF65C7FFFF5EA4F4FF5894B9FF6EB0C1FFA9E8EEFF74B9
-          DBFF5FA1B9FF5B9AA5FF62A9B3FF7FD2D2FF066593FF3F3F3F9A2D92C5FF6FD4
-          FFFF3499CCFF60A3DFFF6ECEFBFF68ADFEFF5D99E7FF6DB0C1FF87C7D1FF71B6
-          D1FF6CB1C9FF68ACC0FF66A7B7FF65A7ADFF064D71FF3A3A3AAA2F94C7FF7BE0
-          FFFF2D92C5FF9C9CDEFFACA6FDFFB1B0FFFF9C9CE9FFA3AABCFFA5ADC0FFB4BD
-          D4FFADB5C7FFA5ACBDFFA8AEC2FFA6AEC4FF09496BFF414141843196C9FF85EB
-          FFFF81E6FFFF1C5BB9FF2B67D1FF2B69DCFF1C59C6FF266A9AFF296D9EFF3279
-          AEFF2C71A2FF236796FF226494FF1F6397FF135377FF202020243398CBFF91F7
-          FFFF8EF4FFFF0B1BB2FF1F97EBFF204AFBFF0B06CAFF1D2E5BFF233563FF5567
-          95FF465584FF374374FF344270FF334170FF0F121AFB060606053499CCFFFFFF
-          FFFF99FFFFFF0E28B2FF3697EEFF1514F0FF1613CFFF1A2B58FF1B2C57FF7582
-          A0FF5A6996FF3E4F7CFF43517CFF414D7FFF11151EFA05050504000000003499
-          CCFFFFFFFFFF090B84FF253DCAFF5267FCFF130B94FF283A61FF566D83FF495B
-          90FF52659BFF4A5C8AFF4C5C85FF3B4B7CFF12151EFA05050504000000000000
-          00003499CCFF1D5690FF0235B6FF65DAFFFF5A88A6FF2F3855FFD8DAE1FFFCFD
-          FEFF96A3C6FF6070A0FF3F5186FF314477FF0F141DFA05050504000000000000
-          0000000000000202020140404F71053EB9FB73E9FFFF618391FF264263FF8384
-          99FFDDDDE0FFFBFEFFFF9AA8CCFF5C709AFF070E18FF05050504000000000000
-          0000000000000000000000000000404052740B3ABDFF8EFAFFFF94CFD5FF1E5F
-          8AFF30486CFF8990A6FFA5A5A0EA52545A74414348A306060605000000000000
-          0000000000000000000000000000020202013F3F4C6B134CA2FB62C7E2E24557
-          59582E31333A44485490394254CA070707060808080702020201}
-        Mask.Data = {
-          7E000000424D7E000000000000003E0000002800000010000000100000000100
-          010000000000400000000000000000000000020000000000000000000000FFFF
-          FF00000000000000000000000000000000000000000000000000000000000000
-          000000000000000000000000000080000000C0000000E0000000F8000000F800
-          0000}
-      end>
-  end
-  object CatalogDataSource: TDataSource
-    DataSet = CatalogDataSet
-    Left = 544
-    Top = 368
-  end
-  object CatalogDataSet: TpFIBDataSet
-    Transaction = RemoteDataModule.FIBTransaction
-    Database = RemoteDataModule.FIBDatabase
-    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
-    AutoCommit = True
-    Left = 464
-    Top = 368
-  end
-  object CatalogTablesDataSet: TpFIBDataSet
-    UpdateSQL.Strings = (
-      'UPDATE VIEW_TABLE_NAMES'
-      'SET '
-      '    TABLE_NAME = :TABLE_NAME'
-      'WHERE'
-      '    TABLE_NAME = :OLD_TABLE_NAME'
-      '    ')
-    DeleteSQL.Strings = (
-      'DELETE FROM'
-      '    VIEW_TABLE_NAMES'
-      'WHERE'
-      '        TABLE_NAME = :OLD_TABLE_NAME'
-      '    ')
-    InsertSQL.Strings = (
-      'INSERT INTO VIEW_TABLE_NAMES('
-      '    TABLE_NAME'
-      ')'
-      'VALUES('
-      '    :TABLE_NAME'
-      ')')
-    RefreshSQL.Strings = (
-      'SELECT'
-      '    TABLE_NAME'
-      'FROM'
-      '    VIEW_TABLE_NAMES '
-      ''
-      ' WHERE '
-      '        VIEW_TABLE_NAMES.TABLE_NAME = :OLD_TABLE_NAME'
-      '    ')
-    SelectSQL.Strings = (
-      'SELECT'
-      '    TABLE_NAME'
-      'FROM'
-      
-        '    VIEW_TABLE_NAMES WHERE TABLE_NAME LIKE '#39'CATALOG\_%'#39' ESCAPE '#39 +
-        '\'#39)
-    Active = True
-    Transaction = RemoteDataModule.FIBTransaction
-    Database = RemoteDataModule.FIBDatabase
-    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
-    AutoCommit = True
-    Left = 512
-    Top = 192
-    object CatalogTablesDataSetTABLE_NAME: TFIBWideStringField
-      FieldName = 'TABLE_NAME'
-      Size = 31
-      EmptyStrToNull = True
+    object FieldDownButton: TcxButton
+      Left = 248
+      Top = 20
+      Width = 34
+      Height = 25
+      Caption = 'Down'
+      TabOrder = 10
+      OnClick = FieldDownButtonClick
     end
-  end
-  object CatalogTablesDataSource: TDataSource
-    DataSet = CatalogTablesDataSet
-    Left = 592
-    Top = 192
-  end
-  object BarManager: TdxBarManager
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Microsoft Sans Serif'
-    Font.Style = []
-    Categories.Strings = (
-      'Default')
-    Categories.ItemsVisibles = (
-      2)
-    Categories.Visibles = (
-      True)
-    PopupMenuLinks = <>
-    UseSystemFont = True
-    Left = 721
-    Top = 168
-    DockControlHeights = (
-      0
-      0
-      0
-      0)
-    object dxBarButton1: TdxBarButton
-      Caption = 'New Button'
-      Category = 0
-      Hint = 'New Button'
-      Visible = ivAlways
+    object FieldRemoveButton: TcxButton
+      Left = 288
+      Top = 20
+      Width = 75
+      Height = 25
+      Caption = 'Remove'
+      TabOrder = 11
+      OnClick = FieldRemoveButtonClick
     end
   end
 end
