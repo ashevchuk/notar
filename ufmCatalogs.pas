@@ -7,22 +7,13 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
   ufmMain, uRemoteDM, Data.DB, FIBDataSet, pFIBDataSet, Vcl.ComCtrls, dxtree,
   dxdbtree, cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters,
-  dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel,
-  dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide, dxSkinDevExpressDarkStyle,
-  dxSkinDevExpressStyle, dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast,
-  dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky,
-  dxSkinMcSkin, dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue,
-  dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
-  dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver,
-  dxSkinOffice2013White, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic,
-  dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringTime, dxSkinStardust,
-  dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinsDefaultPainters,
-  dxSkinValentine, dxSkinVS2010, dxSkinWhiteprint, dxSkinXmas2008Blue,
+  dxSkinsCore, dxSkinOffice2007Blue,
   cxNavigator, cxDBNavigator, cxContainer, cxEdit, cxStyles, dxSkinscxPCPainter,
   cxCustomData, cxFilter, cxData, cxDataStorage, cxDBData,
   cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxGridLevel,
   cxClasses, cxGridCustomView, cxGrid, dxBevel, cxSplitter, cxGroupBox,
-  Vcl.ImgList;
+  Vcl.ImgList, cxButtonEdit, cxDBExtLookupComboBox, cxDBLookupComboBox,
+  dxSkinsdxBarPainter, dxBar, Vcl.Menus, Vcl.StdCtrls, cxButtons;
 
 type
   TfmCatalogs = class(TForm)
@@ -55,8 +46,16 @@ type
     CatalogsRegistryGridDBTableView1TABLE_NAME: TcxGridDBColumn;
     CatalogDataSource: TDataSource;
     CatalogDataSet: TpFIBDataSet;
+    CatalogTablesDataSet: TpFIBDataSet;
+    CatalogTablesDataSource: TDataSource;
+    CatalogTablesDataSetTABLE_NAME: TFIBWideStringField;
+    BarManager: TdxBarManager;
+    dxBarButton1: TdxBarButton;
+    dxBevel2: TdxBevel;
+    CreateTableButton: TcxButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure CatalogsRegistryDataSetAfterScroll(DataSet: TDataSet);
+    procedure CreateTableButtonClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -67,7 +66,7 @@ var
   fmCatalogs: TfmCatalogs;
 
 implementation
-
+uses ufmCreateTable;
 {$R *.dfm}
 
 procedure TfmCatalogs.CatalogsRegistryDataSetAfterScroll(DataSet: TDataSet);
@@ -134,6 +133,16 @@ begin
   FieldsList.Free;
   FieldsParamsListWithoutKey.Free;
   FieldsParamsPairListWithoutKey.Free;
+end;
+
+procedure TfmCatalogs.CreateTableButtonClick(Sender: TObject);
+begin
+
+  with TfmCreateTable.Create(Application.MainForm) do
+  begin
+    Show;
+  end;
+
 end;
 
 procedure TfmCatalogs.FormClose(Sender: TObject; var Action: TCloseAction);

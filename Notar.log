@@ -1,0 +1,342 @@
+=====[EXCEPTION]=====
+[21.12.2013 18:38:20]
+=====================
+ClassType.ClassName: "TcxGridSite", UnitScope: "cxGridCustomView", UnitName: "cxGridCustomView", ClassName: "TcxGridSite", Message: "fmMain.fmCatalogs.CatalogsRegistryDataSet.UpdateQuery:
+The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
+", Exception: "fmMain.fmCatalogs.CatalogsRegistryDataSet.UpdateQuery:
+The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
+", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 18:38:21]
+=====================
+ClassType.ClassName: "TcxGridSite", UnitScope: "cxGridCustomView", UnitName: "cxGridCustomView", ClassName: "TcxGridSite", Message: "fmMain.fmCatalogs.CatalogsRegistryDataSet.UpdateQuery:
+The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
+", Exception: "fmMain.fmCatalogs.CatalogsRegistryDataSet.UpdateQuery:
+The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
+", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 18:38:21]
+=====================
+ClassType.ClassName: "TcxGridSite", UnitScope: "cxGridCustomView", UnitName: "cxGridCustomView", ClassName: "TcxGridSite", Message: "fmMain.fmCatalogs.CatalogsRegistryDataSet.UpdateQuery:
+The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
+", Exception: "fmMain.fmCatalogs.CatalogsRegistryDataSet.UpdateQuery:
+The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
+", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 21:36:20]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Format '%s;%s;%s;%s;%s' invalid or incompatible with argument", Exception: "Format '%s;%s;%s;%s;%s' invalid or incompatible with argument", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 21:53:03]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 21:53:05]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 21:54:02]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 21:54:03]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 21:54:04]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 21:54:05]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 21:54:25]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:13:11]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:13:17]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:13:18]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:13:19]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:13:19]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:13:20]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:13:21]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:13:22]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:13:22]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:13:23]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:15:30]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:15:46]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:15:49]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:15:52]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:16:08]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:16:11]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:16:18]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:16:21]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:16:23]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:18:36]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:18:37]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:18:41]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:18:46]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:18:46]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:20:03]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:20:08]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:20:16]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:20:18]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:20:23]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:20:24]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:20:24]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:22:44]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:23:54]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:23:58]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:23:59]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:23:59]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:24:00]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:24:01]
+=====================
+ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:51:50]
+=====================
+ClassType.ClassName: "TcxTextEdit", UnitScope: "cxTextEdit", UnitName: "cxTextEdit", ClassName: "TcxTextEdit", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 22:54:20]
+=====================
+ClassType.ClassName: "TcxTextEdit", UnitScope: "cxTextEdit", UnitName: "cxTextEdit", ClassName: "TcxTextEdit", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 23:04:45]
+=====================
+ClassType.ClassName: "TcxTextEdit", UnitScope: "cxTextEdit", UnitName: "cxTextEdit", ClassName: "TcxTextEdit", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 23:04:47]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 23:04:55]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[21.12.2013 23:04:55]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
+=====================
+

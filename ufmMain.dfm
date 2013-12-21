@@ -344,7 +344,9 @@ object fmMain: TfmMain
         Text = 'Expiration: 30.12.2010'
         Width = 116
       end>
-    LookAndFeel.SkinName = 'LiquidSky'
+    PaintStyle = stpsUseLookAndFeel
+    LookAndFeel.NativeStyle = False
+    LookAndFeel.SkinName = 'Office2007Blue'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -354,29 +356,32 @@ object fmMain: TfmMain
   end
   object LogGroupBox: TcxGroupBox
     Left = 0
-    Top = 467
+    Top = 448
     Align = alBottom
     Caption = 'Log'
     ParentFont = False
     TabOrder = 5
     OnDblClick = StatusBarDblClick
-    Height = 105
+    Height = 124
     Width = 915
     object LogListBox: TcxListBox
       Left = 3
       Top = 15
       Width = 909
-      Height = 80
+      Height = 99
       Align = alClient
       ItemHeight = 13
       ParentFont = False
+      PopupMenu = LogPopupMenu
+      Style.StyleController = cxEditStyleController
+      Style.TransparentBorder = True
       TabOrder = 0
       OnDblClick = StatusBarDblClick
     end
   end
   object LogSplitter: TcxSplitter
     Left = 0
-    Top = 463
+    Top = 444
     Width = 915
     Height = 4
     AlignSplitter = salBottom
@@ -521,17 +526,28 @@ object fmMain: TfmMain
     Top = 448
   end
   object cxEditStyleController: TcxEditStyleController
+    Style.Color = clWhite
+    Style.Font.Charset = DEFAULT_CHARSET
+    Style.Font.Color = clWindowText
+    Style.Font.Height = -11
+    Style.Font.Name = 'Tahoma'
+    Style.Font.Style = []
+    Style.Shadow = False
+    Style.IsFontAssigned = True
     Left = 72
     Top = 448
     PixelsPerInch = 96
   end
   object cxDefaultEditStyleController: TcxDefaultEditStyleController
     Scalable = False
+    Style.Color = clWhite
     Style.Font.Charset = DEFAULT_CHARSET
     Style.Font.Color = clWindowText
     Style.Font.Height = -11
     Style.Font.Name = 'Tahoma'
     Style.Font.Style = []
+    Style.Shadow = False
+    Style.Gradient = False
     Style.IsFontAssigned = True
     Left = 176
     Top = 448
@@ -861,5 +877,29 @@ object fmMain: TfmMain
     AutoStyler = True
     Left = 520
     Top = 184
+  end
+  object LogPopupMenu: TPopupMenu
+    Left = 456
+    Top = 512
+    object Clear1: TMenuItem
+      Caption = 'Clear'
+      OnClick = Clear1Click
+    end
+    object Save1: TMenuItem
+      Caption = 'Save'
+      OnClick = Save1Click
+    end
+    object Copy1: TMenuItem
+      Caption = 'Copy'
+      OnClick = Copy1Click
+    end
+  end
+  object LogSaveDialog: TSaveDialog
+    DefaultExt = 'log'
+    FileName = 'Notar.log'
+    Filter = '*.log|*.log|*.*|*.*'
+    Title = 'Save Log file'
+    Left = 544
+    Top = 512
   end
 end
