@@ -350,6 +350,37 @@ object fmMain: TfmMain
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
+    OnDblClick = StatusBarDblClick
+  end
+  object LogGroupBox: TcxGroupBox
+    Left = 0
+    Top = 467
+    Align = alBottom
+    Caption = 'Log'
+    ParentFont = False
+    TabOrder = 5
+    OnDblClick = StatusBarDblClick
+    Height = 105
+    Width = 915
+    object LogListBox: TcxListBox
+      Left = 3
+      Top = 15
+      Width = 909
+      Height = 80
+      Align = alClient
+      ItemHeight = 13
+      ParentFont = False
+      TabOrder = 0
+      OnDblClick = StatusBarDblClick
+    end
+  end
+  object LogSplitter: TcxSplitter
+    Left = 0
+    Top = 463
+    Width = 915
+    Height = 4
+    AlignSplitter = salBottom
+    Control = LogGroupBox
   end
   object dxBarManager: TdxBarManager
     Font.Charset = DEFAULT_CHARSET
