@@ -29,7 +29,8 @@ uses
   ap_ImgList,
 
   cxGridTableView, Vcl.ComCtrls, ScriptCtrls, ShellApi, atPascal, FormScript,
-  atScriptDebug, atMemoInterface, cxPCdxBarPopupMenu, cxTL;
+  atScriptDebug, atMemoInterface, cxPCdxBarPopupMenu, cxTL, cxScrollBox,
+  cxSplitter, cxGroupBox, cxListBox;
 
 const
   IDX_STATUS_TEXT : byte = 0;
@@ -93,6 +94,9 @@ type
     cxStyle20: TcxStyle;
     cxStyle21: TcxStyle;
     cxStyle22: TcxStyle;
+    LogGroupBox: TcxGroupBox;
+    LogSplitter: TcxSplitter;
+    LogListBox: TcxListBox;
     procedure FormCreate(Sender: TObject);
     procedure dxBarButtonExitClick(Sender: TObject);
     procedure dxBarButtonEditorClick(Sender: TObject);
@@ -100,12 +104,16 @@ type
     procedure dxBarButton1Click(Sender: TObject);
     procedure dxBarButton2Click(Sender: TObject);
     procedure dxBarButton3Click(Sender: TObject);
+    procedure StatusBarDblClick(Sender: TObject);
   private
+    procedure OnException(Sender: TObject; E: Exception);
 
   public
     CurrentDir : string;
     procedure SetStatusText(const AStatus: string; StatusType: byte = 0);
     function GetCustomTagValue(const Tag: AnsiString;  var Value: string): boolean;
+    procedure ToggleLogWindow(AVisible: boolean);
+    procedure SwitchLogWindow;
   end;
 
 var
@@ -183,6 +191,9 @@ procedure TfmMain.FormCreate(Sender: TObject);
 var
   PathLength       : integer;
 begin
+  ToggleLogWindow(false);
+  Application.OnException := OnException;
+
   ForceCurrentDirectory := true;
  CurrentDir := ExtractFilePath(ParamStr(0));
  PathLength := Length(CurrentDir);
@@ -198,12 +209,53 @@ end;
 procedure TfmMain.SetStatusText(const AStatus: string; StatusType: byte);
 begin
   StatusBar.Panels[StatusType].Text := AStatus;
+  if StatusType = IDX_STATUS_TEXT then
+  begin
+    LogListBox.Items.Append(AStatus);
+    LogListBox.ItemIndex := LogListBox.Count -1;
+  end;
+end;
+
+procedure TfmMain.StatusBarDblClick(Sender: TObject);
+begin
+  SwitchLogWindow;
+end;
+
+procedure TfmMain.SwitchLogWindow;
+begin
+  LogGroupBox.Visible := not LogGroupBox.Visible;
+  LogSplitter.Visible := not LogSplitter.Visible;
+end;
+
+procedure TfmMain.ToggleLogWindow(AVisible: boolean);
+begin
+  LogGroupBox.Visible := AVisible;
+  LogSplitter.Visible := AVisible;
 end;
 
 function TfmMain.GetCustomTagValue(const Tag: AnsiString;  var Value: string): boolean;
 begin
   Result := True;
   Value := 'Test value for ' + Tag;
+end;
+
+procedure TfmMain.OnException(Sender: TObject; E: Exception);
+var
+  ExceptionLog: TextFile;
+  ExceptionInfo: string;
+begin
+  ExceptionInfo := Format('ClassType.ClassName: "%s", UnitScope: "%s", UnitName: "%s", ClassName: "%s", Message: "%s", Exception: "%s", Stack: "%s"', [Sender.ClassType.ClassName, Sender.UnitScope, Sender.UnitName, Sender.ClassName, E.Message, E.ToString, E.StackTrace]);
+  AssignFile(ExceptionLog, CurrentDir + 'Notar.log');
+  Append(ExceptionLog);
+  Writeln(ExceptionLog, '=====[EXCEPTION]=====');
+  Writeln(ExceptionLog, Format('[%s]', [DateTimeToStr(Now)]));
+  Writeln(ExceptionLog, '=====================');
+  Writeln(ExceptionLog, ExceptionInfo);
+  Writeln(ExceptionLog, '=====================');
+  Writeln(ExceptionLog);
+  CloseFile(ExceptionLog);
+
+  SetStatusText(ExceptionInfo);
 end;
 
 end.
