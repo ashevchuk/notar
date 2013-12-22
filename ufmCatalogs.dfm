@@ -488,6 +488,7 @@ object fmCatalogs: TfmCatalogs
   OldCreateOrder = False
   Visible = True
   OnClose = FormClose
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object dxBevel1: TdxBevel
@@ -511,11 +512,10 @@ object fmCatalogs: TfmCatalogs
     Top = 29
     Align = alLeft
     Caption = #1043#1088#1091#1087#1080' '#1076#1086#1074#1110#1076#1085#1080#1082#1110#1074
+    ParentBackground = False
+    ParentColor = False
     ParentFont = False
     TabOrder = 0
-    ExplicitLeft = 2
-    ExplicitTop = 0
-    ExplicitHeight = 510
     Height = 481
     Width = 265
     object dxDBTreeView1: TdxDBTreeView
@@ -543,9 +543,6 @@ object fmCatalogs: TfmCatalogs
       ParentShowHint = False
       ShowHint = True
       Images = CatalogsImageList
-      ExplicitTop = 9
-      ExplicitWidth = 195
-      ExplicitHeight = 460
     end
     object cxDBNavigator1: TcxDBNavigator
       Left = 3
@@ -556,7 +553,6 @@ object fmCatalogs: TfmCatalogs
       DataSource = CatalogsDataSource
       Align = alBottom
       TabOrder = 1
-      ExplicitTop = 475
     end
   end
   object cxSplitter1: TcxSplitter
@@ -565,20 +561,16 @@ object fmCatalogs: TfmCatalogs
     Width = 8
     Height = 481
     Control = cxGroupBox1
-    ExplicitLeft = 201
-    ExplicitTop = 0
-    ExplicitHeight = 510
   end
   object cxGroupBox2: TcxGroupBox
     Left = 273
     Top = 29
     Align = alClient
     Caption = #1044#1086#1074#1110#1076#1085#1080#1082#1080
+    ParentBackground = False
+    ParentColor = False
     ParentFont = False
     TabOrder = 2
-    ExplicitLeft = 295
-    ExplicitTop = 128
-    ExplicitHeight = 510
     Height = 481
     Width = 747
     object CatalogsRegistryGrid: TcxGrid
@@ -588,7 +580,6 @@ object fmCatalogs: TfmCatalogs
       Height = 250
       Align = alTop
       TabOrder = 0
-      ExplicitTop = 17
       object CatalogsRegistryGridDBTableView1: TcxGridDBTableView
         Navigator.Buttons.CustomButtons = <>
         Navigator.Visible = True
@@ -631,7 +622,6 @@ object fmCatalogs: TfmCatalogs
       Height = 8
       AlignSplitter = salTop
       Control = CatalogsRegistryGrid
-      ExplicitWidth = 805
     end
     object CatalogGrid: TcxGrid
       Left = 3
@@ -640,10 +630,6 @@ object fmCatalogs: TfmCatalogs
       Height = 198
       Align = alClient
       TabOrder = 2
-      ExplicitLeft = 6
-      ExplicitTop = 313
-      ExplicitWidth = 805
-      ExplicitHeight = 227
       object CatalogGridDBTableView1: TcxGridDBTableView
         Navigator.Buttons.CustomButtons = <>
         Navigator.Visible = True
@@ -937,6 +923,7 @@ object fmCatalogs: TfmCatalogs
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
     AutoCommit = True
+    Description = 'VIEW_TABLE_NAMES'
     Left = 512
     Top = 192
     object CatalogTablesDataSetTABLE_NAME: TFIBWideStringField

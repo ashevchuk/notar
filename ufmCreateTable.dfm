@@ -539,8 +539,6 @@ object fmCreateTable: TfmCreateTable
     ParentColor = False
     ParentFont = False
     TabOrder = 1
-    ExplicitTop = 49
-    ExplicitHeight = 323
     Height = 321
     Width = 647
     object FieldsListBox: TcxMCListBox
@@ -575,7 +573,6 @@ object fmCreateTable: TfmCreateTable
       Style.Shadow = False
       TabOrder = 0
       OnDblClick = FieldsListBoxDblClick
-      ExplicitHeight = 298
     end
   end
   object cxGroupBox3: TcxGroupBox
@@ -588,7 +585,6 @@ object fmCreateTable: TfmCreateTable
     ParentFont = False
     Style.StyleController = fmMain.cxEditStyleController
     TabOrder = 2
-    ExplicitTop = 375
     Height = 129
     Width = 647
     object AddFieldButton: TcxButton

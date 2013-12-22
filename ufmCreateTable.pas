@@ -8,7 +8,8 @@ uses
   ufmMain, uRemoteDM, cxGraphics, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore, dxSkinOffice2007Blue,
   cxLabel, cxGroupBox, cxTextEdit, cxMCListBox, Vcl.Menus, cxDropDownEdit,
-  cxMaskEdit, cxSpinEdit, Vcl.StdCtrls, cxButtons;
+  cxMaskEdit, cxSpinEdit, Vcl.StdCtrls, cxButtons, Data.DB, FIBDataSet,
+  pFIBDataSet, FIBQuery, pFIBQuery, FIBDatabase, pFIBDatabase;
 
 resourcestring
   FT_CAPTION_TEXT = 'Текст';
@@ -228,6 +229,8 @@ var
   CreateTableSequenceSQL: string;
   CreateTablePrimaryKeySQL: string;
   CreateTablePrimaryKeyTriggerSQL: string;
+  CreateTableDataSet: TpFIBQuery;
+  CreateTableTransaction: TpFIBTransaction;
 begin
   if FieldsListBox.Count = 0 then Exit;
 
@@ -253,14 +256,42 @@ begin
   CreateTablePrimaryKeySQL := Format('ALTER TABLE %s ADD CONSTRAINT PK_%s_ID PRIMARY KEY (ID);', [TableNameTextEdit.Text, TableNameTextEdit.Text]);
   CreateTablePrimaryKeyTriggerSQL := Format('CREATE OR ALTER TRIGGER TRG_%s_BI_ID FOR %s ACTIVE BEFORE INSERT POSITION 0 AS begin if (NEW.ID IS NULL) then NEW.ID = GEN_ID(GEN_%s_ID, 1); end', [TableNameTextEdit.Text, TableNameTextEdit.Text, TableNameTextEdit.Text]);
 
-  Log(CreateTableSQL);
-  Log(CreateTableSequenceSQL);
-  Log(CreateTablePrimaryKeySQL);
-  Log(CreateTablePrimaryKeyTriggerSQL);
-  Log(FieldDescriptionsList.Text);
+  CreateTableDataSet := RemoteDataModule.createQuery;
+  CreateTableTransaction := RemoteDataModule.createTransaction;
+  CreateTableDataSet.Transaction := CreateTableTransaction;
+
+  CreateTableDataSet.Transaction.Active := True;
+  CreateTableDataSet.Transaction.StartTransaction;
+  try
+    CreateTableDataSet.SQL.Text := CreateTableSQL;
+    CreateTableDataSet.ExecQuery;
+
+    CreateTableDataSet.SQL.Text := CreateTableSequenceSQL;
+    CreateTableDataSet.ExecQuery;
+
+    CreateTableDataSet.SQL.Text := CreateTablePrimaryKeySQL;
+    CreateTableDataSet.ExecQuery;
+
+    CreateTableDataSet.SQL.Text := CreateTablePrimaryKeyTriggerSQL;
+    CreateTableDataSet.ExecQuery;
+
+    for iField := 0 to FieldDescriptionsList.Count -1 do
+    begin
+      CreateTableDataSet.SQL.Text := FieldDescriptionsList[iField];
+      CreateTableDataSet.ExecQuery;
+    end;
+  except
+    CreateTableDataSet.Transaction.Rollback;
+  end;
+
+  CreateTableDataSet.Transaction.Commit;
+  CreateTableDataSet.Free;
+
+  CreateTableTransaction.Free;
 
   FieldDescriptionsList.Free;
   FieldList.Free;
+  RemoteDataModule.notifyDataSets('VIEW_TABLE_NAMES');
 end;
 
 procedure TfmCreateTable.reindexFields;
