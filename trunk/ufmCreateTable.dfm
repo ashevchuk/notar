@@ -549,6 +549,7 @@ object fmCreateTable: TfmCreateTable
       Width = 641
       Height = 296
       Align = alClient
+      Delimiter = '|'
       HeaderSections = <
         item
           Text = #8470
@@ -569,6 +570,7 @@ object fmCreateTable: TfmCreateTable
           Text = #1054#1087#1080#1089
           Width = 187
         end>
+      OverflowEmptyColumn = False
       ParentFont = False
       Style.Shadow = False
       TabOrder = 0
@@ -598,21 +600,13 @@ object fmCreateTable: TfmCreateTable
       TabOrder = 0
       OnClick = AddFieldButtonClick
     end
-    object FieldNameTextEdit: TcxTextEdit
-      Left = 56
-      Top = 16
-      ParentFont = False
-      Properties.OnChange = FieldNameTextEditPropertiesChange
-      TabOrder = 1
-      Width = 145
-    end
     object FieldSizeSpinEdit: TcxSpinEdit
       Left = 56
       Top = 70
       ParentFont = False
       Properties.MaxValue = 255.000000000000000000
       Properties.MinValue = 1.000000000000000000
-      TabOrder = 2
+      TabOrder = 1
       Value = 1
       Width = 145
     end
@@ -620,7 +614,7 @@ object fmCreateTable: TfmCreateTable
       Left = 56
       Top = 97
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 2
       Width = 145
     end
     object cxLabel2: TcxLabel
@@ -664,7 +658,7 @@ object fmCreateTable: TfmCreateTable
         #1058#1077#1082#1089#1090
         #1063#1080#1089#1083#1086
         #1050#1086#1085#1090#1077#1081#1085#1077#1088)
-      TabOrder = 8
+      TabOrder = 7
       Text = #1058#1077#1082#1089#1090
       Width = 145
     end
@@ -674,7 +668,7 @@ object fmCreateTable: TfmCreateTable
       Width = 35
       Height = 25
       Caption = 'Up'
-      TabOrder = 9
+      TabOrder = 8
       OnClick = FieldUpButtonClick
     end
     object FieldDownButton: TcxButton
@@ -683,7 +677,7 @@ object fmCreateTable: TfmCreateTable
       Width = 34
       Height = 25
       Caption = 'Down'
-      TabOrder = 10
+      TabOrder = 9
       OnClick = FieldDownButtonClick
     end
     object FieldRemoveButton: TcxButton
@@ -692,8 +686,18 @@ object fmCreateTable: TfmCreateTable
       Width = 75
       Height = 25
       Caption = 'Remove'
-      TabOrder = 11
+      TabOrder = 10
       OnClick = FieldRemoveButtonClick
+    end
+    object FieldNameTextEdit: TcxMaskEdit
+      Left = 56
+      Top = 16
+      ParentFont = False
+      Properties.CharCase = ecUpperCase
+      Properties.MaskKind = emkRegExpr
+      Properties.EditMask = '[a-zA-Z0-9_]+'
+      TabOrder = 11
+      Width = 145
     end
   end
 end

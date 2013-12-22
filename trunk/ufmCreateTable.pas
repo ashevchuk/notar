@@ -47,7 +47,6 @@ type
     FieldsListBox: TcxMCListBox;
     cxGroupBox3: TcxGroupBox;
     AddFieldButton: TcxButton;
-    FieldNameTextEdit: TcxTextEdit;
     FieldSizeSpinEdit: TcxSpinEdit;
     FieldDescriptionTextEdit: TcxTextEdit;
     cxLabel2: TcxLabel;
@@ -59,6 +58,7 @@ type
     FieldDownButton: TcxButton;
     FieldRemoveButton: TcxButton;
     CreateTableButton: TcxButton;
+    FieldNameTextEdit: TcxMaskEdit;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure AddFieldButtonClick(Sender: TObject);
     procedure FieldsListBoxDblClick(Sender: TObject);
@@ -90,7 +90,9 @@ var
   Items: TStringList;
   iField: word;
 begin
-  FieldItem := Format('%s;%s;%s;%s;%s;', [IntToStr(FieldsListBox.Items.Count+1), AName, FieldType[AType], IntToStr(ASize), ADescription]);
+//  FieldItem := Format('%s|%s|%s|%s|"%s"|', [IntToStr(FieldsListBox.Items.Count+1), AName, FieldType[AType], IntToStr(ASize), StringReplace(ADescription, ' ', '_', [rfReplaceAll])]);
+  FieldItem := Format('%s|%s|%s|%s|"%s"|', [IntToStr(FieldsListBox.Items.Count+1), AName, FieldType[AType], IntToStr(ASize), ADescription]);
+
   if findFieldByName(FieldNameTextEdit.Text) then
   begin
     Items := TStringList.Create;
@@ -244,7 +246,9 @@ begin
     end;
   Items.Free;
 
-  CreateTableSQL := Format('CREATE TABLE %s (%s);', [TableNameTextEdit.Text, FieldList.CommaText]);
+  FieldList.Delimiter := ',';
+  FieldList.QuoteChar := ' ';
+  CreateTableSQL := Format('CREATE TABLE %s (%s);', [TableNameTextEdit.Text, FieldList.DelimitedText]);
   CreateTableSequenceSQL := Format('CREATE SEQUENCE GEN_%s_ID;', [TableNameTextEdit.Text]);
   CreateTablePrimaryKeySQL := Format('ALTER TABLE %s ADD CONSTRAINT PK_%s_ID PRIMARY KEY (ID);', [TableNameTextEdit.Text, TableNameTextEdit.Text]);
   CreateTablePrimaryKeyTriggerSQL := Format('CREATE OR ALTER TRIGGER TRG_%s_BI_ID FOR %s ACTIVE BEFORE INSERT POSITION 0 AS begin if (NEW.ID IS NULL) then NEW.ID = GEN_ID(GEN_%s_ID, 1); end', [TableNameTextEdit.Text, TableNameTextEdit.Text, TableNameTextEdit.Text]);
