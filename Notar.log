@@ -340,3 +340,51 @@ ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupB
 ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
 =====================
 
+=====[EXCEPTION]=====
+[22.12.2013 1:06:52]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00407B88 in module 'Notar.exe'. Read of address 04177000", Exception: "Access violation at address 00407B88 in module 'Notar.exe'. Read of address 04177000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 1:06:55]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00407B88 in module 'Notar.exe'. Read of address 04177000", Exception: "Access violation at address 00407B88 in module 'Notar.exe'. Read of address 04177000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 1:30:14]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 1:30:23]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 1:30:23]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 1:30:23]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 1:30:24]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 1:30:24]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
+=====================
+
