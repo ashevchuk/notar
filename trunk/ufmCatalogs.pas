@@ -56,6 +56,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure CatalogsRegistryDataSetAfterScroll(DataSet: TDataSet);
     procedure CreateTableButtonClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -148,6 +149,14 @@ end;
 procedure TfmCatalogs.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Action := caFree;
+end;
+
+procedure TfmCatalogs.FormCreate(Sender: TObject);
+begin
+  RemoteDataModule.registerDataSet(CatalogsDataSet);
+  RemoteDataModule.registerDataSet(CatalogsRegistryDataSet);
+  RemoteDataModule.registerDataSet(CatalogTablesDataSet);
+  RemoteDataModule.registerDataSet(CatalogDataSet);
 end;
 
 end.

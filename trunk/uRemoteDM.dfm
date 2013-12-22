@@ -1,5 +1,7 @@
 object RemoteDataModule: TRemoteDataModule
   OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
   Height = 610
   Width = 332
   object FIBDatabase: TpFIBDatabase
@@ -49,11 +51,14 @@ object RemoteDataModule: TRemoteDataModule
     Top = 40
   end
   object FibErrorHandler: TpFibErrorHandler
+    OnFIBErrorEvent = FibErrorHandlerFIBErrorEvent
+    Options = [oeException, oeForeignKey, oeLostConnect, oeCheck, oeUniqueViolation]
     Left = 40
     Top = 96
   end
   object FIBSQLMonitor: TFIBSQLMonitor
-    TraceFlags = [tfQPrepare, tfQExecute, tfQFetch, tfConnect, tfTransact]
+    OnSQL = FIBSQLMonitorSQL
+    TraceFlags = [tfQExecute]
     Left = 136
     Top = 168
   end
@@ -64,7 +69,12 @@ object RemoteDataModule: TRemoteDataModule
     Top = 168
   end
   object FIBSQLLogger: TFIBSQLLogger
-    ForceSaveLog = False
+    ActiveStatistics = True
+    LogFileName = 'Notar.sql.log'
+    ApplicationID = 'Notar'
+    LogFlags = [lfQPrepare, lfQExecute, lfQFetch, lfConnect, lfTransact, lfService, lfMisc]
+    ForceSaveLog = True
+    ActiveLogging = True
     Left = 232
     Top = 168
   end

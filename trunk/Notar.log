@@ -388,3 +388,141 @@ ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupB
 ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
 =====================
 
+=====[EXCEPTION]=====
+[22.12.2013 17:31:37]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (40)", Exception: "List index out of bounds (40)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 18:36:28]
+=====================
+ClassType.ClassName: "TdxBarButton", UnitScope: "dxBar", UnitName: "dxBar", ClassName: "TdxBarButton", Message: "Access violation at address 00F9E800 in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00F9E800 in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 18:36:36]
+=====================
+ClassType.ClassName: "TdxBarButton", UnitScope: "dxBar", UnitName: "dxBar", ClassName: "TdxBarButton", Message: "Access violation at address 00F9E800 in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00F9E800 in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 18:37:41]
+=====================
+ClassType.ClassName: "TdxBarButton", UnitScope: "dxBar", UnitName: "dxBar", ClassName: "TdxBarButton", Message: "Access violation at address 00F9E804 in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00F9E804 in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 19:27:54]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 19:28:07]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 19:28:07]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 19:28:07]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 19:28:07]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 19:28:07]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 19:28:07]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 19:28:07]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 19:28:07]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 19:28:07]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 21:21:14]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Access violation at address 00FC2DBB in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FC2DBB in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 21:22:01]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Access violation at address 00FC2DBB in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FC2DBB in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 21:40:41]
+=====================
+ClassType.ClassName: "TcxGridSite", UnitScope: "cxGridCustomView", UnitName: "cxGridCustomView", ClassName: "TcxGridSite", Message: "fmMain.fmCatalogs.CatalogDataSet.UpdateQuery:
+Invalid token.
+Dynamic SQL Error.
+SQL error code = -104.
+A string constant is delimited by double quotes.
+", Exception: "fmMain.fmCatalogs.CatalogDataSet.UpdateQuery:
+Invalid token.
+Dynamic SQL Error.
+SQL error code = -104.
+A string constant is delimited by double quotes.
+", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 21:41:09]
+=====================
+ClassType.ClassName: "TcxGridSite", UnitScope: "cxGridCustomView", UnitName: "cxGridCustomView", ClassName: "TcxGridSite", Message: "fmMain.fmCatalogs.CatalogDataSet.UpdateQuery:
+Invalid token.
+Dynamic SQL Error.
+SQL error code = -104.
+A string constant is delimited by double quotes.
+", Exception: "fmMain.fmCatalogs.CatalogDataSet.UpdateQuery:
+Invalid token.
+Dynamic SQL Error.
+SQL error code = -104.
+A string constant is delimited by double quotes.
+", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[22.12.2013 21:43:47]
+=====================
+ClassType.ClassName: "TcxGridSite", UnitScope: "cxGridCustomView", UnitName: "cxGridCustomView", ClassName: "TcxGridSite", Message: "fmMain.fmCatalogs.CatalogsRegistryDataSet.InsertQuery:
+The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
+", Exception: "fmMain.fmCatalogs.CatalogsRegistryDataSet.InsertQuery:
+The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
+", Stack: ""
+=====================
+
