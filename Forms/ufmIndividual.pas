@@ -81,7 +81,6 @@ type
     cxDBLookupComboBox7: TcxDBLookupComboBox;
     cxDBCheckBox1: TcxDBCheckBox;
     cxDBCheckBox2: TcxDBCheckBox;
-    cxDBLookupComboBox8: TcxDBLookupComboBox;
     cxDBLookupComboBox9: TcxDBLookupComboBox;
     cxDBLookupComboBox10: TcxDBLookupComboBox;
     cxDBLookupComboBox11: TcxDBLookupComboBox;
@@ -115,11 +114,12 @@ type
     cxDBLookupComboBox35: TcxDBLookupComboBox;
     cxDBCheckBox3: TcxDBCheckBox;
     cxDBLookupComboBox36: TcxDBLookupComboBox;
-    cxDBLookupComboBox37: TcxDBLookupComboBox;
     cxDBCheckBox4: TcxDBCheckBox;
     cxDBCheckBox5: TcxDBCheckBox;
     cxDBCheckBox6: TcxDBCheckBox;
     cxDBCheckBox7: TcxDBCheckBox;
+    cxDBMemo3: TcxDBMemo;
+    cxDBMemo4: TcxDBMemo;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure cxButton1Click(Sender: TObject);
     procedure cxButton2Click(Sender: TObject);

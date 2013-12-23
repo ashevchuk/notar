@@ -532,3 +532,447 @@ The insert failed because a column definition includes validation constraints.Va
 ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Can't  change transaction  because fmMain.fmIndividual.IndividualsDataSet dataset open.", Exception: "Can't  change transaction  because fmMain.fmIndividual.IndividualsDataSet dataset open.", Stack: ""
 =====================
 
+=====[EXCEPTION]=====
+[23.12.2013 21:27:14]
+=====================
+ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:14]
+=====================
+ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:18]
+=====================
+ClassType.ClassName: "TcxDBLookupComboBox", UnitScope: "cxDBLookupComboBox", UnitName: "cxDBLookupComboBox", ClassName: "TcxDBLookupComboBox", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:23]
+=====================
+ClassType.ClassName: "TcxDBLookupComboBox", UnitScope: "cxDBLookupComboBox", UnitName: "cxDBLookupComboBox", ClassName: "TcxDBLookupComboBox", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:41]
+=====================
+ClassType.ClassName: "TcxDBLookupComboBox", UnitScope: "cxDBLookupComboBox", UnitName: "cxDBLookupComboBox", ClassName: "TcxDBLookupComboBox", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:41]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:44]
+=====================
+ClassType.ClassName: "TcxDBLookupComboBox", UnitScope: "cxDBLookupComboBox", UnitName: "cxDBLookupComboBox", ClassName: "TcxDBLookupComboBox", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:44]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:49]
+=====================
+ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:57]
+=====================
+ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:57]
+=====================
+ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:58]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:58]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:58]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:58]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:58]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:58]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:58]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:58]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:58]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:58]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:27:58]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:08]
+=====================
+ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:09]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:58]
+=====================
+ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:59]
+=====================
+ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:59]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:59]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:59]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:59]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:59]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:59]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:59]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:59]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:59]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:59]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:28:59]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:29:02]
+=====================
+ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[23.12.2013 21:30:30]
+=====================
+ClassType.ClassName: "TcxDBLookupComboBox", UnitScope: "cxDBLookupComboBox", UnitName: "cxDBLookupComboBox", ClassName: "TcxDBLookupComboBox", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
+=====================
+
