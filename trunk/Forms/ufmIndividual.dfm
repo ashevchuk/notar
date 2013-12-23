@@ -689,14 +689,15 @@ object fmIndividual: TfmIndividual
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'SURNAME'
+        Properties.KeyFieldNames = 'PASSPORT_ISSUER_DEPT'
         Properties.ListColumns = <
           item
-            FieldName = 'SURNAME'
+            FieldName = 'PASSPORT_ISSUER_DEPT'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.PassportIssuerStateDataSource
         TabOrder = 11
         Width = 150
       end
@@ -1040,10 +1041,10 @@ object fmIndividual: TfmIndividual
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'MIDDLE'
+        Properties.KeyFieldNames = 'PASSPORT_FOREIGN_ISSUER'
         Properties.ListColumns = <
           item
-            FieldName = 'MIDDLE'
+            FieldName = 'PASSPORT_FOREIGN_ISSUER'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
@@ -1240,7 +1241,7 @@ object fmIndividual: TfmIndividual
         Width = 150
       end
       object cxDBLookupComboBox12: TcxDBLookupComboBox
-        Left = 107
+        Left = 104
         Top = 42
         DataBinding.DataField = 'ADDRESS_REGION'
         DataBinding.DataSource = dmIndividual.IndividualsDataSource
@@ -1307,10 +1308,10 @@ object fmIndividual: TfmIndividual
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'SURNAME'
+        Properties.KeyFieldNames = 'ADDRESS_STREET_TYPE'
         Properties.ListColumns = <
           item
-            FieldName = 'SURNAME'
+            FieldName = 'ADDRESS_STREET_TYPE'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
@@ -1347,10 +1348,10 @@ object fmIndividual: TfmIndividual
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'SURNAME'
+        Properties.KeyFieldNames = 'ADDRESS_BUILDING'
         Properties.ListColumns = <
           item
-            FieldName = 'SURNAME'
+            FieldName = 'ADDRESS_BUILDING'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
@@ -1407,10 +1408,10 @@ object fmIndividual: TfmIndividual
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'SURNAME'
+        Properties.KeyFieldNames = 'ADDRESS_SECTION'
         Properties.ListColumns = <
           item
-            FieldName = 'SURNAME'
+            FieldName = 'ADDRESS_SECTION'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
@@ -1602,9 +1603,11 @@ object fmIndividual: TfmIndividual
         Caption = #1055#1088#1080#1095#1080#1085#1072
         ParentColor = False
         ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
         Transparent = True
         Height = 17
         Width = 100
+        AnchorX = 103
       end
       object cxLabel1: TcxLabel
         Left = 3
@@ -1613,13 +1616,15 @@ object fmIndividual: TfmIndividual
         Caption = #1053#1086#1084#1077#1088
         ParentColor = False
         ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
         Transparent = True
         Height = 17
         Width = 100
+        AnchorX = 103
       end
       object cxDBCheckBox3: TcxDBCheckBox
-        Left = 3
-        Top = 41
+        Left = 53
+        Top = 42
         Caption = #1042#1110#1076#1089#1091#1090#1085#1110#1081
         DataBinding.DataField = 'ID_NUMBER_ABSENT'
         DataBinding.DataSource = dmIndividual.IndividualsDataSource
@@ -1631,7 +1636,7 @@ object fmIndividual: TfmIndividual
         Properties.ValueUnchecked = 0
         TabOrder = 2
         Transparent = True
-        Width = 118
+        Width = 68
       end
       object cxDBLookupComboBox36: TcxDBLookupComboBox
         Left = 104
@@ -1653,24 +1658,15 @@ object fmIndividual: TfmIndividual
         TabOrder = 3
         Width = 150
       end
-      object cxDBLookupComboBox37: TcxDBLookupComboBox
+      object cxDBMemo4: TcxDBMemo
         Left = 104
         Top = 69
         DataBinding.DataField = 'ID_NUMBER_ABSENT_REASON'
         DataBinding.DataSource = dmIndividual.IndividualsDataSource
         ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ID_NUMBER_ABSENT_REASON'
-        Properties.ListColumns = <
-          item
-            FieldName = 'ID_NUMBER_ABSENT_REASON'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.IdNumberAbsentReasonDataSource
+        Properties.ScrollBars = ssVertical
         TabOrder = 4
+        Height = 21
         Width = 150
       end
     end
@@ -1817,6 +1813,7 @@ object fmIndividual: TfmIndividual
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.SurnamesDataSource
         TabOrder = 9
         Width = 150
       end
@@ -1836,6 +1833,7 @@ object fmIndividual: TfmIndividual
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.NameDataSource
         TabOrder = 10
         Width = 150
       end
@@ -1855,6 +1853,7 @@ object fmIndividual: TfmIndividual
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.MiddleDataSource
         TabOrder = 11
         Width = 150
       end
@@ -1864,7 +1863,6 @@ object fmIndividual: TfmIndividual
         DataBinding.DataField = 'GENDER'
         DataBinding.DataSource = dmIndividual.IndividualsDataSource
         ParentFont = False
-        Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
         Properties.KeyFieldNames = 'ID'
         Properties.ListColumns = <
@@ -1884,7 +1882,6 @@ object fmIndividual: TfmIndividual
         DataBinding.DataField = 'STATE'
         DataBinding.DataSource = dmIndividual.IndividualsDataSource
         ParentFont = False
-        Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
         Properties.KeyFieldNames = 'ID'
         Properties.ListColumns = <
@@ -1904,7 +1901,6 @@ object fmIndividual: TfmIndividual
         DataBinding.DataField = 'PERSONAL_DOCUMENT'
         DataBinding.DataSource = dmIndividual.IndividualsDataSource
         ParentFont = False
-        Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
         Properties.KeyFieldNames = 'ID'
         Properties.ListColumns = <
@@ -1948,7 +1944,7 @@ object fmIndividual: TfmIndividual
         Width = 150
       end
       object cxDBCheckBox1: TcxDBCheckBox
-        Left = 3
+        Left = 38
         Top = 231
         Caption = #1030#1085#1074#1072#1083#1110#1076#1085#1110#1089#1090#1100
         DataBinding.DataField = 'DISABLEMENT'
@@ -1961,10 +1957,10 @@ object fmIndividual: TfmIndividual
         Properties.ValueUnchecked = 0
         TabOrder = 17
         Transparent = True
-        Width = 118
+        Width = 83
       end
       object cxDBCheckBox2: TcxDBCheckBox
-        Left = 3
+        Left = 15
         Top = 256
         Caption = #1030#1085#1086#1079#1077#1084#1085#1072' '#1072#1076#1088#1077#1089#1072
         DataBinding.DataField = 'FOREIGN_ADDRESS_TYPE'
@@ -1975,26 +1971,17 @@ object fmIndividual: TfmIndividual
         Properties.Alignment = taRightJustify
         TabOrder = 18
         Transparent = True
-        Width = 118
+        Width = 106
       end
-      object cxDBLookupComboBox8: TcxDBLookupComboBox
+      object cxDBMemo3: TcxDBMemo
         Left = 104
         Top = 281
         DataBinding.DataField = 'DESCRIPTION'
         DataBinding.DataSource = dmIndividual.IndividualsDataSource
         ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'DESCRIPTION'
-        Properties.ListColumns = <
-          item
-            FieldName = 'DESCRIPTION'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.DescriptionDataSource
+        Properties.ScrollBars = ssVertical
         TabOrder = 19
+        Height = 21
         Width = 150
       end
     end
