@@ -372,13 +372,13 @@ object dmIndividual: TdmIndividual
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
     AutoCommit = True
-    Left = 584
-    Top = 752
+    Left = 64
+    Top = 32
   end
   object IndividualsDataSource: TDataSource
     DataSet = IndividualsDataSet
-    Left = 708
-    Top = 752
+    Left = 196
+    Top = 32
   end
   object GenderDataSet: TpFIBDataSet
     SelectSQL.Strings = (
@@ -1028,5 +1028,43 @@ object dmIndividual: TdmIndividual
     AutoCommit = True
     Left = 578
     Top = 638
+  end
+  object MarriageMemberDataSource: TDataSource
+    DataSet = MarriageMemberDataSet
+    Left = 706
+    Top = 694
+  end
+  object MarriageMemberDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    MARRIAGE_MEMBER'
+      'FROM'
+      '    CAT_INDS_MARRIAGE_MEMBER ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 578
+    Top = 694
+  end
+  object MarriageRegistratorDataSource: TDataSource
+    DataSet = MarriageRegistratorDataSet
+    Left = 706
+    Top = 750
+  end
+  object MarriageRegistratorDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    MARRIAGE_REGISTRATOR'
+      'FROM'
+      '    CAT_INDS_MARRIAGE_REGISTRATOR ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 578
+    Top = 750
   end
 end

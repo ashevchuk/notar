@@ -83,6 +83,10 @@ type
     BirthCertificateIssuerDeptDataSet: TpFIBDataSet;
     BirthCertificateIssuerStateDataSource: TDataSource;
     BirthCertificateIssuerStateDataSet: TpFIBDataSet;
+    MarriageMemberDataSource: TDataSource;
+    MarriageMemberDataSet: TpFIBDataSet;
+    MarriageRegistratorDataSource: TDataSource;
+    MarriageRegistratorDataSet: TpFIBDataSet;
   private
     { Private declarations }
   public

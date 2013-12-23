@@ -69,8 +69,6 @@ type
     cxGroupBox11: TcxGroupBox;
     cxDBMemo1: TcxDBMemo;
     cxDBMemo2: TcxDBMemo;
-    cxButton1: TcxButton;
-    cxButton2: TcxButton;
     cxDBLookupComboBox1: TcxDBLookupComboBox;
     cxDBLookupComboBox2: TcxDBLookupComboBox;
     cxDBLookupComboBox3: TcxDBLookupComboBox;
@@ -120,15 +118,25 @@ type
     cxDBCheckBox7: TcxDBCheckBox;
     cxDBMemo3: TcxDBMemo;
     cxDBMemo4: TcxDBMemo;
+    cxGroupBox12: TcxGroupBox;
+    cxLabel2: TcxLabel;
+    cxLabel10: TcxLabel;
+    cxLabel44: TcxLabel;
+    cxDBDateEdit6: TcxDBDateEdit;
+    cxDBLookupComboBox8: TcxDBLookupComboBox;
+    cxDBLookupComboBox37: TcxDBLookupComboBox;
+    PostButton: TcxButton;
+    CancelButton: TcxButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure cxButton1Click(Sender: TObject);
-    procedure cxButton2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure PostButtonClick(Sender: TObject);
+    procedure CancelButtonClick(Sender: TObject);
   private
     { Private declarations }
   public
-    { Public declarations }
+    function appendIndividual: boolean;
+    function saveIndividual: boolean;
   end;
 
 var
@@ -138,7 +146,7 @@ implementation
 
 {$R *.dfm}
 
-procedure TfmIndividual.cxButton1Click(Sender: TObject);
+function TfmIndividual.appendIndividual: boolean;
 begin
   dmIndividual.IndividualsDataSet.Close;
   dmIndividual.IndividualsDataSet.Transaction := RemoteDataModule.createTransaction;
@@ -147,16 +155,10 @@ begin
   dmIndividual.IndividualsDataSet.Append;
 end;
 
-procedure TfmIndividual.cxButton2Click(Sender: TObject);
+procedure TfmIndividual.CancelButtonClick(Sender: TObject);
 begin
-  try
-    dmIndividual.IndividualsDataSet.Post;
-  finally
-    dmIndividual.IndividualsDataSet.Transaction.Commit;
-    dmIndividual.IndividualsDataSet.Close;
-    dmIndividual.IndividualsDataSet.Transaction.Free;
-    dmIndividual.IndividualsDataSet.Transaction := RemoteDataModule.FIBTransaction;
-  end;
+  dmIndividual.IndividualsDataSet.Close;
+  Close;
 end;
 
 procedure TfmIndividual.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -172,6 +174,25 @@ end;
 procedure TfmIndividual.FormDestroy(Sender: TObject);
 begin
   dmIndividual.Destroy;
+end;
+
+procedure TfmIndividual.PostButtonClick(Sender: TObject);
+begin
+  saveIndividual;
+  dmIndividual.IndividualsDataSet.Close;
+  Close;
+end;
+
+function TfmIndividual.saveIndividual: boolean;
+begin
+  try
+    dmIndividual.IndividualsDataSet.Post;
+  finally
+    dmIndividual.IndividualsDataSet.Transaction.Commit;
+    dmIndividual.IndividualsDataSet.Close;
+    dmIndividual.IndividualsDataSet.Transaction.Free;
+    dmIndividual.IndividualsDataSet.Transaction := RemoteDataModule.FIBTransaction;
+  end;
 end;
 
 end.

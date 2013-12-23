@@ -180,6 +180,7 @@ procedure TfmMain.dxBarButton4Click(Sender: TObject);
 begin
   with TfmIndividual.Create(self) do
   begin
+    appendIndividual;
     Show;
   end;
 end;
