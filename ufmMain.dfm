@@ -448,6 +448,10 @@ object fmMain: TfmMain
         item
           Visible = True
           ItemName = 'dxBarButton3'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButton4'
         end>
       MultiLine = True
       OneOnRow = True
@@ -491,6 +495,13 @@ object fmMain: TfmMain
       Hint = 'Catalogs'
       Visible = ivAlways
       OnClick = dxBarButton3Click
+    end
+    object dxBarButton4: TdxBarButton
+      Caption = 'Individual'
+      Category = 0
+      Hint = 'Individual'
+      Visible = ivAlways
+      OnClick = dxBarButton4Click
     end
     object dxBarButtonExit: TdxBarButton
       Caption = 'Exit'
