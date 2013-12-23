@@ -2,8 +2,8 @@ object fmIndividual: TfmIndividual
   Left = 0
   Top = 0
   Caption = #1060#1110#1079#1080#1095#1085#1072' '#1086#1089#1086#1073#1072
-  ClientHeight = 460
-  ClientWidth = 553
+  ClientHeight = 638
+  ClientWidth = 817
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -487,6 +487,1609 @@ object fmIndividual: TfmIndividual
   OldCreateOrder = False
   Visible = True
   OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
+  object cxGroupBox1: TcxGroupBox
+    Left = 0
+    Top = 0
+    Align = alClient
+    Caption = #1044#1086#1076#1072#1090#1080' '#1092#1110#1079#1080#1095#1085#1091' '#1086#1089#1086#1073#1091
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    ExplicitWidth = 969
+    ExplicitHeight = 617
+    Height = 638
+    Width = 817
+    object cxGroupBox2: TcxGroupBox
+      Left = 12
+      Top = 348
+      Caption = #1055#1072#1089#1087#1086#1088#1090
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+      Height = 188
+      Width = 260
+      object cxLabel13: TcxLabel
+        Left = 3
+        Top = 16
+        AutoSize = False
+        Caption = #1057#1077#1088#1110#1103
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel14: TcxLabel
+        Left = 3
+        Top = 43
+        AutoSize = False
+        Caption = #1053#1086#1084#1077#1088
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel15: TcxLabel
+        Left = 3
+        Top = 70
+        AutoSize = False
+        Caption = #1044#1072#1090#1072' '#1074#1080#1076#1072#1095#1110
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel16: TcxLabel
+        Left = 3
+        Top = 97
+        AutoSize = False
+        Caption = #1042#1080#1076#1072#1085#1086
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel17: TcxLabel
+        Left = 3
+        Top = 124
+        AutoSize = False
+        Caption = #1042#1110#1076#1076#1110#1083#1086#1084
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel18: TcxLabel
+        Left = 3
+        Top = 151
+        AutoSize = False
+        Caption = #1054#1073#1083#1072#1089#1090#1110
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxDBLookupComboBox23: TcxDBLookupComboBox
+        Left = 104
+        Top = 15
+        DataBinding.DataField = 'PASSPORT_SERIAL'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'PASSPORT_SERIAL'
+        Properties.ListColumns = <
+          item
+            FieldName = 'PASSPORT_SERIAL'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.PassportSerialDataSource
+        TabOrder = 6
+        Width = 150
+      end
+      object cxDBLookupComboBox24: TcxDBLookupComboBox
+        Left = 104
+        Top = 42
+        DataBinding.DataField = 'PASSPORT_NUMBER'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'PASSPORT_NUMBER'
+        Properties.ListColumns = <
+          item
+            FieldName = 'PASSPORT_NUMBER'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.PassportNumberDataSource
+        TabOrder = 7
+        Width = 150
+      end
+      object cxDBLookupComboBox25: TcxDBLookupComboBox
+        Left = 104
+        Top = 96
+        DataBinding.DataField = 'PASSPORT_ISSUER'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'PASSPORT_ISSUER'
+        Properties.ListColumns = <
+          item
+            FieldName = 'PASSPORT_ISSUER'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.PassportIssuerDataSource
+        TabOrder = 8
+        Width = 150
+      end
+      object cxDBDateEdit2: TcxDBDateEdit
+        Left = 104
+        Top = 69
+        DataBinding.DataField = 'PASSPORT_ISSUE_DATE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        TabOrder = 9
+        Width = 150
+      end
+      object cxDBLookupComboBox26: TcxDBLookupComboBox
+        Left = 104
+        Top = 123
+        DataBinding.DataField = 'PASSPORT_ISSUER_DEPT'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'PASSPORT_ISSUER_DEPT'
+        Properties.ListColumns = <
+          item
+            FieldName = 'PASSPORT_ISSUER_DEPT'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.PassportIssuerDeptDataSource
+        TabOrder = 10
+        Width = 150
+      end
+      object cxDBLookupComboBox27: TcxDBLookupComboBox
+        Left = 104
+        Top = 150
+        DataBinding.DataField = 'PASSPORT_ISSUER_STATE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'SURNAME'
+        Properties.ListColumns = <
+          item
+            FieldName = 'SURNAME'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        TabOrder = 11
+        Width = 150
+      end
+    end
+    object cxGroupBox3: TcxGroupBox
+      Left = 544
+      Top = 298
+      Caption = #1057#1074#1110#1076#1086#1094#1090#1074#1086' '#1087#1088#1086' '#1085#1072#1088#1086#1076#1078#1077#1085#1085#1103
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 1
+      Height = 186
+      Width = 260
+      object cxLabel19: TcxLabel
+        Left = 3
+        Top = 16
+        AutoSize = False
+        Caption = #1057#1077#1088#1110#1103
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel20: TcxLabel
+        Left = 3
+        Top = 43
+        AutoSize = False
+        Caption = #1053#1086#1084#1077#1088
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel21: TcxLabel
+        Left = 3
+        Top = 70
+        AutoSize = False
+        Caption = #1044#1072#1090#1072' '#1074#1080#1076#1072#1095#1110
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel22: TcxLabel
+        Left = 3
+        Top = 97
+        AutoSize = False
+        Caption = #1054#1088#1075#1072#1085#1086#1084
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel23: TcxLabel
+        Left = 3
+        Top = 124
+        AutoSize = False
+        Caption = #1059#1087#1088#1072#1074#1083#1110#1085#1085#1103' '#1102#1089#1090#1080#1094#1110#1111
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel24: TcxLabel
+        Left = 3
+        Top = 151
+        AutoSize = False
+        Caption = #1054#1073#1083#1072#1089#1090#1110
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxDBDateEdit5: TcxDBDateEdit
+        Left = 104
+        Top = 69
+        DataBinding.DataField = 'BIRTH_CERTIFICATE_ISSUE_DATE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        TabOrder = 6
+        Width = 150
+      end
+      object cxDBLookupComboBox31: TcxDBLookupComboBox
+        Left = 104
+        Top = 15
+        DataBinding.DataField = 'BIRTH_CERTIFICATE_SERIAL'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'BIRTH_CERTIFICATE_SERIAL'
+        Properties.ListColumns = <
+          item
+            FieldName = 'BIRTH_CERTIFICATE_SERIAL'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.BirthCertificateSerialDataSource
+        TabOrder = 7
+        Width = 150
+      end
+      object cxDBLookupComboBox32: TcxDBLookupComboBox
+        Left = 104
+        Top = 42
+        DataBinding.DataField = 'BIRTH_CERTIFICATE_NUMBER'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'BIRTH_CERTIFICATE_NUMBER'
+        Properties.ListColumns = <
+          item
+            FieldName = 'BIRTH_CERTIFICATE_NUMBER'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.BirthCertificateNumberDataSource
+        TabOrder = 8
+        Width = 150
+      end
+      object cxDBLookupComboBox33: TcxDBLookupComboBox
+        Left = 104
+        Top = 96
+        DataBinding.DataField = 'BIRTH_CERTIFICATE_ISSUER'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'BIRTH_CERTIFICATE_ISSUER'
+        Properties.ListColumns = <
+          item
+            FieldName = 'BIRTH_CERTIFICATE_ISSUER'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.BirthCertificateIssuerDataSource
+        TabOrder = 9
+        Width = 150
+      end
+      object cxDBLookupComboBox34: TcxDBLookupComboBox
+        Left = 104
+        Top = 123
+        DataBinding.DataField = 'BIRTH_CERTIFICATE_ISSUER_DEPT'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'BIRTH_CERTIFICATE_ISSUER_DEPT'
+        Properties.ListColumns = <
+          item
+            FieldName = 'BIRTH_CERTIFICATE_ISSUER_DEPT'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.BirthCertificateIssuerDeptDataSource
+        TabOrder = 10
+        Width = 150
+      end
+      object cxDBLookupComboBox35: TcxDBLookupComboBox
+        Left = 107
+        Top = 150
+        DataBinding.DataField = 'BIRTH_CERTIFICATE_ISSUER_STATE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'BIRTH_CERTIFICATE_ISSUER_STATE'
+        Properties.ListColumns = <
+          item
+            FieldName = 'BIRTH_CERTIFICATE_ISSUER_STATE'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.BirthCertificateIssuerStateDataSource
+        TabOrder = 11
+        Width = 150
+      end
+    end
+    object cxGroupBox4: TcxGroupBox
+      Left = 278
+      Top = 372
+      Caption = #1047#1072#1082#1086#1088#1076#1086#1085#1085#1080#1081' '#1087#1072#1089#1087#1086#1088#1090
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 2
+      Height = 159
+      Width = 260
+      object cxLabel25: TcxLabel
+        Left = 3
+        Top = 16
+        AutoSize = False
+        Caption = #1057#1077#1088#1110#1103
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel26: TcxLabel
+        Left = 3
+        Top = 43
+        AutoSize = False
+        Caption = #1053#1086#1084#1077#1088
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel27: TcxLabel
+        Left = 3
+        Top = 70
+        AutoSize = False
+        Caption = #1044#1072#1090#1072' '#1074#1080#1076#1072#1095#1110
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel28: TcxLabel
+        Left = 3
+        Top = 124
+        AutoSize = False
+        Caption = #1042#1080#1076#1072#1085#1086
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel29: TcxLabel
+        Left = 3
+        Top = 97
+        AutoSize = False
+        Caption = #1044#1110#1081#1089#1085#1080#1081' '#1076#1086
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxDBDateEdit3: TcxDBDateEdit
+        Left = 104
+        Top = 69
+        DataBinding.DataField = 'PASSPORT_FOREIGN_ISSUE_DATE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        TabOrder = 5
+        Width = 150
+      end
+      object cxDBDateEdit4: TcxDBDateEdit
+        Left = 104
+        Top = 96
+        DataBinding.DataField = 'PASSPORT_FOREIGN_EXPIRATION'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        TabOrder = 6
+        Width = 150
+      end
+      object cxDBLookupComboBox28: TcxDBLookupComboBox
+        Left = 104
+        Top = 15
+        DataBinding.DataField = 'PASSPORT_FOREIGN_SERIAL'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'PASSPORT_FOREIGN_SERIAL'
+        Properties.ListColumns = <
+          item
+            FieldName = 'PASSPORT_FOREIGN_SERIAL'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.PassportForeignSerialDataSource
+        TabOrder = 7
+        Width = 150
+      end
+      object cxDBLookupComboBox29: TcxDBLookupComboBox
+        Left = 104
+        Top = 42
+        DataBinding.DataField = 'PASSPORT_FOREIGN_NUMBER'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'PASSPORT_FOREIGN_NUMBER'
+        Properties.ListColumns = <
+          item
+            FieldName = 'PASSPORT_FOREIGN_NUMBER'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.PassportForeignNumberDataSource
+        TabOrder = 8
+        Width = 150
+      end
+      object cxDBLookupComboBox30: TcxDBLookupComboBox
+        Left = 104
+        Top = 123
+        DataBinding.DataField = 'PASSPORT_FOREIGN_ISSUER'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'MIDDLE'
+        Properties.ListColumns = <
+          item
+            FieldName = 'MIDDLE'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.PassportForeignIssuerDataSource
+        TabOrder = 9
+        Width = 150
+      end
+    end
+    object cxGroupBox6: TcxGroupBox
+      Left = 278
+      Top = 26
+      Caption = #1040#1076#1088#1077#1089#1072
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 3
+      Height = 340
+      Width = 260
+      object cxLabel30: TcxLabel
+        Left = 3
+        Top = 16
+        AutoSize = False
+        Caption = #1054#1073#1083#1072#1089#1090#1100
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel31: TcxLabel
+        Left = 3
+        Top = 43
+        AutoSize = False
+        Caption = #1056#1072#1081#1086#1085
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel32: TcxLabel
+        Left = 3
+        Top = 70
+        AutoSize = False
+        Caption = #1042#1080#1076
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel33: TcxLabel
+        Left = 3
+        Top = 97
+        AutoSize = False
+        Caption = #1053#1072#1089#1077#1083#1077#1085#1080#1081' '#1087#1091#1085#1082#1090
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel34: TcxLabel
+        Left = 3
+        Top = 124
+        AutoSize = False
+        Caption = #1058#1080#1087' '#1074#1091#1083#1080#1094#1110
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel35: TcxLabel
+        Left = 3
+        Top = 151
+        AutoSize = False
+        Caption = #1042#1091#1083#1080#1094#1103
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel36: TcxLabel
+        Left = 3
+        Top = 178
+        AutoSize = False
+        Caption = #1041#1091#1076#1080#1085#1086#1082
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel37: TcxLabel
+        Left = 3
+        Top = 205
+        AutoSize = False
+        Caption = #1050#1074#1072#1088#1090#1080#1088#1072
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel38: TcxLabel
+        Left = 3
+        Top = 233
+        AutoSize = False
+        Caption = #1050#1086#1088#1087#1091#1089
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel39: TcxLabel
+        Left = 3
+        Top = 258
+        AutoSize = False
+        Caption = #1057#1077#1082#1094#1110#1103
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel40: TcxLabel
+        Left = 3
+        Top = 281
+        AutoSize = False
+        Caption = #1030#1085#1076#1077#1082#1089
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel41: TcxLabel
+        Left = 3
+        Top = 304
+        AutoSize = False
+        Caption = #1030#1085#1096#1077
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxDBLookupComboBox11: TcxDBLookupComboBox
+        Left = 104
+        Top = 15
+        DataBinding.DataField = 'ADDRESS_STATE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ADDRESS_STATE'
+        Properties.ListColumns = <
+          item
+            FieldName = 'ADDRESS_STATE'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.AddressStateDataSource
+        TabOrder = 12
+        Width = 150
+      end
+      object cxDBLookupComboBox12: TcxDBLookupComboBox
+        Left = 107
+        Top = 42
+        DataBinding.DataField = 'ADDRESS_REGION'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ADDRESS_REGION'
+        Properties.ListColumns = <
+          item
+            FieldName = 'ADDRESS_REGION'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.AddressRegionDataSource
+        TabOrder = 13
+        Width = 150
+      end
+      object cxDBLookupComboBox13: TcxDBLookupComboBox
+        Left = 104
+        Top = 69
+        DataBinding.DataField = 'ADDRESS_LOCALITY_TYPE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ADDRESS_LOCALITY_TYPE'
+        Properties.ListColumns = <
+          item
+            FieldName = 'ADDRESS_LOCALITY_TYPE'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.AddressLocalityTypeDataSource
+        TabOrder = 14
+        Width = 150
+      end
+      object cxDBLookupComboBox14: TcxDBLookupComboBox
+        Left = 104
+        Top = 96
+        DataBinding.DataField = 'ADDRESS_LOCALITY'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ADDRESS_LOCALITY'
+        Properties.ListColumns = <
+          item
+            FieldName = 'ADDRESS_LOCALITY'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.AddressLocalityDataSource
+        TabOrder = 15
+        Width = 150
+      end
+      object cxDBLookupComboBox15: TcxDBLookupComboBox
+        Left = 104
+        Top = 123
+        DataBinding.DataField = 'ADDRESS_STREET_TYPE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'SURNAME'
+        Properties.ListColumns = <
+          item
+            FieldName = 'SURNAME'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.AddressStreetTypeDataSource
+        TabOrder = 16
+        Width = 150
+      end
+      object cxDBLookupComboBox16: TcxDBLookupComboBox
+        Left = 104
+        Top = 150
+        DataBinding.DataField = 'ADDRESS_STREET'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ADDRESS_STREET'
+        Properties.ListColumns = <
+          item
+            FieldName = 'ADDRESS_STREET'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.AddressStreetDataSource
+        TabOrder = 17
+        Width = 150
+      end
+      object cxDBLookupComboBox17: TcxDBLookupComboBox
+        Left = 104
+        Top = 177
+        DataBinding.DataField = 'ADDRESS_BUILDING'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'SURNAME'
+        Properties.ListColumns = <
+          item
+            FieldName = 'SURNAME'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.AddressBuildingDataSource
+        TabOrder = 18
+        Width = 150
+      end
+      object cxDBLookupComboBox18: TcxDBLookupComboBox
+        Left = 104
+        Top = 204
+        DataBinding.DataField = 'ADDRESS_FLAT'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ADDRESS_FLAT'
+        Properties.ListColumns = <
+          item
+            FieldName = 'ADDRESS_FLAT'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.AddressFlatDataSource
+        TabOrder = 19
+        Width = 150
+      end
+      object cxDBLookupComboBox19: TcxDBLookupComboBox
+        Left = 104
+        Top = 232
+        DataBinding.DataField = 'ADDRESS_CORPS'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ADDRESS_CORPS'
+        Properties.ListColumns = <
+          item
+            FieldName = 'ADDRESS_CORPS'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.AddressCorpsDataSource
+        TabOrder = 20
+        Width = 150
+      end
+      object cxDBLookupComboBox20: TcxDBLookupComboBox
+        Left = 104
+        Top = 257
+        DataBinding.DataField = 'ADDRESS_SECTION'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'SURNAME'
+        Properties.ListColumns = <
+          item
+            FieldName = 'SURNAME'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.AddressSectionDataSource
+        TabOrder = 21
+        Width = 150
+      end
+      object cxDBLookupComboBox21: TcxDBLookupComboBox
+        Left = 104
+        Top = 281
+        DataBinding.DataField = 'ADDRESS_INDEX'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ADDRESS_INDEX'
+        Properties.ListColumns = <
+          item
+            FieldName = 'ADDRESS_INDEX'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.AddressIndexDataSource
+        TabOrder = 22
+        Width = 150
+      end
+      object cxDBLookupComboBox22: TcxDBLookupComboBox
+        Left = 104
+        Top = 303
+        DataBinding.DataField = 'ADDRESS_OTHER'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ADDRESS_OTHER'
+        Properties.ListColumns = <
+          item
+            FieldName = 'ADDRESS_OTHER'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.AddressOtherDataSource
+        TabOrder = 23
+        Width = 150
+      end
+    end
+    object cxGroupBox7: TcxGroupBox
+      Left = 544
+      Top = 216
+      Caption = #1040#1076#1088#1077#1089#1072' '#1074' '#1110#1085#1096#1110#1081' '#1082#1088#1072#1111#1085#1110
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 4
+      Height = 76
+      Width = 260
+      object cxDBMemo2: TcxDBMemo
+        Left = 3
+        Top = 15
+        Align = alClient
+        DataBinding.DataField = 'FOREIGN_ADDRESS'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        TabOrder = 0
+        ExplicitWidth = 110
+        ExplicitHeight = 65
+        Height = 51
+        Width = 254
+      end
+    end
+    object cxGroupBox8: TcxGroupBox
+      Left = 544
+      Top = 134
+      Caption = #1030#1085#1074#1072#1083#1110#1076#1085#1110#1089#1090#1100
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 5
+      Height = 76
+      Width = 260
+      object cxLabel42: TcxLabel
+        Left = 3
+        Top = 16
+        AutoSize = False
+        Caption = #1043#1088#1091#1087#1072
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel43: TcxLabel
+        Left = 3
+        Top = 43
+        AutoSize = False
+        Caption = #1044#1086#1082#1091#1084#1077#1085#1090
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxDBLookupComboBox9: TcxDBLookupComboBox
+        Left = 104
+        Top = 15
+        DataBinding.DataField = 'DISABLEMENT_GROUP'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'DISABLEMENT_GROUP'
+        Properties.ListColumns = <
+          item
+            FieldName = 'DISABLEMENT_GROUP'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.DisablementGroupDataSource
+        TabOrder = 2
+        Width = 150
+      end
+      object cxDBLookupComboBox10: TcxDBLookupComboBox
+        Left = 104
+        Top = 42
+        DataBinding.DataField = 'DISABLEMENT_DOCUMENT'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'DISABLEMENT_DOCUMENT'
+        Properties.ListColumns = <
+          item
+            FieldName = 'DISABLEMENT_DOCUMENT'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.DisablementDocumentDataSource
+        TabOrder = 3
+        Width = 150
+      end
+    end
+    object cxGroupBox5: TcxGroupBox
+      Left = 12
+      Top = 542
+      Caption = #1055#1086#1089#1074#1110#1076#1095#1091#1074#1072#1083#1100#1085#1080#1081' '#1076#1086#1082#1091#1084#1077#1085#1090
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 6
+      Height = 76
+      Width = 260
+      object cxDBMemo1: TcxDBMemo
+        Left = 3
+        Top = 15
+        Align = alClient
+        DataBinding.DataField = 'PERSONAL_CERTIFICATE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        TabOrder = 0
+        ExplicitWidth = 246
+        ExplicitHeight = 65
+        Height = 51
+        Width = 254
+      end
+    end
+    object cxGroupBox9: TcxGroupBox
+      Left = 544
+      Top = 26
+      Caption = #1030#1076#1077#1085#1090#1080#1092#1110#1082#1072#1094#1110#1081#1085#1080#1081' '#1085#1086#1084#1077#1088
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 7
+      Height = 102
+      Width = 260
+      object cxLabel3: TcxLabel
+        Left = 3
+        Top = 70
+        AutoSize = False
+        Caption = #1055#1088#1080#1095#1080#1085#1072
+        ParentColor = False
+        ParentFont = False
+        Transparent = True
+        Height = 17
+        Width = 100
+      end
+      object cxLabel1: TcxLabel
+        Left = 3
+        Top = 16
+        AutoSize = False
+        Caption = #1053#1086#1084#1077#1088
+        ParentColor = False
+        ParentFont = False
+        Transparent = True
+        Height = 17
+        Width = 100
+      end
+      object cxDBCheckBox3: TcxDBCheckBox
+        Left = 3
+        Top = 41
+        Caption = #1042#1110#1076#1089#1091#1090#1085#1110#1081
+        DataBinding.DataField = 'ID_NUMBER_ABSENT'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment = taRightJustify
+        Properties.ValueChecked = 1
+        Properties.ValueUnchecked = 0
+        TabOrder = 2
+        Transparent = True
+        Width = 118
+      end
+      object cxDBLookupComboBox36: TcxDBLookupComboBox
+        Left = 104
+        Top = 15
+        DataBinding.DataField = 'ID_NUMBER'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ID_NUMBER'
+        Properties.ListColumns = <
+          item
+            FieldName = 'ID_NUMBER'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.IdNumberDataSource
+        TabOrder = 3
+        Width = 150
+      end
+      object cxDBLookupComboBox37: TcxDBLookupComboBox
+        Left = 104
+        Top = 69
+        DataBinding.DataField = 'ID_NUMBER_ABSENT_REASON'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ID_NUMBER_ABSENT_REASON'
+        Properties.ListColumns = <
+          item
+            FieldName = 'ID_NUMBER_ABSENT_REASON'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.IdNumberAbsentReasonDataSource
+        TabOrder = 4
+        Width = 150
+      end
+    end
+    object cxGroupBox10: TcxGroupBox
+      Left = 12
+      Top = 26
+      Caption = #1047#1072#1075#1072#1083#1100#1085#1110
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 8
+      Height = 316
+      Width = 260
+      object cxLabel4: TcxLabel
+        Left = 3
+        Top = 16
+        AutoSize = False
+        Caption = #1055#1088#1110#1079#1074#1080#1097#1077
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel5: TcxLabel
+        Left = 3
+        Top = 43
+        AutoSize = False
+        Caption = #1030#1084#39#1103
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel6: TcxLabel
+        Left = 3
+        Top = 70
+        AutoSize = False
+        Caption = #1055#1086' '#1073#1072#1090#1100#1082#1086#1074#1110
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel7: TcxLabel
+        Left = 3
+        Top = 97
+        AutoSize = False
+        Caption = #1057#1090#1072#1090#1100
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel8: TcxLabel
+        Left = 3
+        Top = 124
+        AutoSize = False
+        Caption = #1062#1080#1074#1110#1083#1100#1085#1080#1081' '#1089#1090#1072#1085
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel9: TcxLabel
+        Left = 3
+        Top = 151
+        AutoSize = False
+        Caption = #1044#1086#1082#1091#1084#1077#1085#1090
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel11: TcxLabel
+        Left = 3
+        Top = 178
+        AutoSize = False
+        Caption = #1044#1072#1090#1072' '#1085#1072#1088#1086#1076#1078#1077#1085#1085#1103
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel12: TcxLabel
+        Left = 3
+        Top = 205
+        AutoSize = False
+        Caption = #1052#1110#1089#1094#1077' '#1085#1072#1088#1086#1076#1078#1077#1085#1085#1103
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel45: TcxLabel
+        Left = 3
+        Top = 281
+        AutoSize = False
+        Caption = #1055#1088#1080#1084#1110#1090#1082#1072
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxDBLookupComboBox1: TcxDBLookupComboBox
+        Left = 104
+        Top = 15
+        DataBinding.DataField = 'SURNAME'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'SURNAME'
+        Properties.ListColumns = <
+          item
+            FieldName = 'SURNAME'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        TabOrder = 9
+        Width = 150
+      end
+      object cxDBLookupComboBox2: TcxDBLookupComboBox
+        Left = 104
+        Top = 42
+        DataBinding.DataField = 'NAME'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'NAME'
+        Properties.ListColumns = <
+          item
+            FieldName = 'NAME'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        TabOrder = 10
+        Width = 150
+      end
+      object cxDBLookupComboBox3: TcxDBLookupComboBox
+        Left = 104
+        Top = 69
+        DataBinding.DataField = 'MIDDLE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'MIDDLE'
+        Properties.ListColumns = <
+          item
+            FieldName = 'MIDDLE'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        TabOrder = 11
+        Width = 150
+      end
+      object cxDBLookupComboBox4: TcxDBLookupComboBox
+        Left = 104
+        Top = 96
+        DataBinding.DataField = 'GENDER'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ID'
+        Properties.ListColumns = <
+          item
+            FieldName = 'GENDER'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.GenderDataSource
+        TabOrder = 12
+        Width = 150
+      end
+      object cxDBLookupComboBox5: TcxDBLookupComboBox
+        Left = 104
+        Top = 123
+        DataBinding.DataField = 'STATE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ID'
+        Properties.ListColumns = <
+          item
+            FieldName = 'STATE'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.StateDataSource
+        TabOrder = 13
+        Width = 150
+      end
+      object cxDBLookupComboBox6: TcxDBLookupComboBox
+        Left = 104
+        Top = 150
+        DataBinding.DataField = 'PERSONAL_DOCUMENT'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ID'
+        Properties.ListColumns = <
+          item
+            FieldName = 'PERSONAL_DOCUMENT'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.PersonalDocumentsDataSource
+        TabOrder = 14
+        Width = 150
+      end
+      object cxDBDateEdit1: TcxDBDateEdit
+        Left = 104
+        Top = 177
+        DataBinding.DataField = 'BIRTH_DATE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        TabOrder = 15
+        Width = 150
+      end
+      object cxDBLookupComboBox7: TcxDBLookupComboBox
+        Left = 104
+        Top = 204
+        DataBinding.DataField = 'BIRTH_PLACE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'BIRTH_PLACE'
+        Properties.ListColumns = <
+          item
+            FieldName = 'BIRTH_PLACE'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.BirthPlaceDataSource
+        TabOrder = 16
+        Width = 150
+      end
+      object cxDBCheckBox1: TcxDBCheckBox
+        Left = 3
+        Top = 231
+        Caption = #1030#1085#1074#1072#1083#1110#1076#1085#1110#1089#1090#1100
+        DataBinding.DataField = 'DISABLEMENT'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment = taRightJustify
+        Properties.ValueChecked = 1
+        Properties.ValueUnchecked = 0
+        TabOrder = 17
+        Transparent = True
+        Width = 118
+      end
+      object cxDBCheckBox2: TcxDBCheckBox
+        Left = 3
+        Top = 256
+        Caption = #1030#1085#1086#1079#1077#1084#1085#1072' '#1072#1076#1088#1077#1089#1072
+        DataBinding.DataField = 'FOREIGN_ADDRESS_TYPE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment = taRightJustify
+        TabOrder = 18
+        Transparent = True
+        Width = 118
+      end
+      object cxDBLookupComboBox8: TcxDBLookupComboBox
+        Left = 104
+        Top = 281
+        DataBinding.DataField = 'DESCRIPTION'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'DESCRIPTION'
+        Properties.ListColumns = <
+          item
+            FieldName = 'DESCRIPTION'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.DescriptionDataSource
+        TabOrder = 19
+        Width = 150
+      end
+    end
+    object cxGroupBox11: TcxGroupBox
+      Left = 544
+      Top = 490
+      Caption = #1042#1110#1076#1086#1073#1088#1072#1078#1077#1085#1085#1103
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 9
+      Height = 76
+      Width = 260
+      object cxDBCheckBox4: TcxDBCheckBox
+        Left = 3
+        Top = 16
+        Caption = #1044#1072#1090#1072' '#1085#1072#1088#1086#1076#1078#1077#1085#1085#1103
+        DataBinding.DataField = 'SHOW_BIRTH_DATE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment = taRightJustify
+        Properties.ValueChecked = 1
+        Properties.ValueUnchecked = 0
+        TabOrder = 0
+        Transparent = True
+        Width = 118
+      end
+      object cxDBCheckBox5: TcxDBCheckBox
+        Left = 3
+        Top = 41
+        Caption = #1030#1076#1077#1085#1090'. '#1085#1086#1084#1077#1088
+        DataBinding.DataField = 'SHOW_ID_NUMBER'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment = taRightJustify
+        Properties.ValueChecked = 1
+        Properties.ValueUnchecked = 0
+        TabOrder = 1
+        Transparent = True
+        Width = 118
+      end
+      object cxDBCheckBox6: TcxDBCheckBox
+        Left = 136
+        Top = 16
+        Caption = #1040#1076#1088#1077#1089#1072
+        DataBinding.DataField = 'SHOW_ADDRESS'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment = taRightJustify
+        Properties.ValueChecked = 1
+        Properties.ValueUnchecked = 0
+        TabOrder = 2
+        Transparent = True
+        Width = 118
+      end
+      object cxDBCheckBox7: TcxDBCheckBox
+        Left = 136
+        Top = 41
+        Caption = #1055#1072#1089#1087#1086#1088#1090#1085#1110' '#1076#1072#1085#1110
+        DataBinding.DataField = 'SHOW_PASSPORT_DATA'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment = taRightJustify
+        Properties.ValueChecked = 1
+        Properties.ValueUnchecked = 0
+        TabOrder = 3
+        Transparent = True
+        Width = 118
+      end
+    end
+    object cxButton1: TcxButton
+      Left = 278
+      Top = 564
+      Width = 75
+      Height = 25
+      Caption = 'New'
+      TabOrder = 10
+      OnClick = cxButton1Click
+    end
+    object cxButton2: TcxButton
+      Left = 278
+      Top = 595
+      Width = 75
+      Height = 25
+      Caption = 'Add'
+      TabOrder = 11
+      OnClick = cxButton2Click
+    end
+  end
 end
