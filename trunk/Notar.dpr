@@ -9,6 +9,7 @@ uses
   ufmIDEDialog in 'ufmIDEDialog.pas',
   uUtils in 'uUtils.pas';
 
+
 {$R *.res}
 
 begin
@@ -31,6 +32,7 @@ begin
 
   fmSplash.ShowMessage('Creating main form...');
   Application.CreateForm(TfmMain, fmMain);
+
   fmSplash.ShowMessage('Creating data module...');
   Application.CreateForm(TRemoteDataModule, RemoteDataModule);
 
