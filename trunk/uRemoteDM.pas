@@ -34,6 +34,7 @@ type
     function registerDataSet(const ADataSet: TpFIBDataSet): boolean;
     function unregisterDataSet(const ADataSet: TpFIBDataSet): boolean;
     function notifyDataSets(const ATableName: string): boolean;
+    function generateGroups(const ATable: string): boolean;
   end;
 
 var
@@ -184,6 +185,21 @@ begin
       tableName := Copy(tmpStr, 1, Pos(' ', tmpStr) -1);
     end;
   end;
+end;
+
+function TRemoteDataModule.generateGroups(const ATable: string): boolean;
+var
+  fields: TStringList;
+  i: byte;
+  s: string;
+begin
+  fields := getFieldsList(ATable);
+  for I := 0 to fields.Count -1 do
+  begin
+    s := Format('create view GROUP_%s ( %s ) as SELECT %s FROM CATALOG_INDIVIDUALS GROUP BY %s ORDER BY %s;', [fields[i], fields[i], fields[i], fields[i], fields[i]]);
+    log(s);
+  end;
+
 end;
 
 function TRemoteDataModule.getFieldInfo(const ATable: string; AField, AType: string): string;

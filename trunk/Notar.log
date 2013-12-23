@@ -526,3 +526,9 @@ The insert failed because a column definition includes validation constraints.Va
 ", Stack: ""
 =====================
 
+=====[EXCEPTION]=====
+[23.12.2013 18:18:26]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Can't  change transaction  because fmMain.fmIndividual.IndividualsDataSet dataset open.", Exception: "Can't  change transaction  because fmMain.fmIndividual.IndividualsDataSet dataset open.", Stack: ""
+=====================
+

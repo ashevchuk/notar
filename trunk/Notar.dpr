@@ -9,7 +9,6 @@ uses
   ufmIDEDialog in 'ufmIDEDialog.pas',
   uUtils in 'uUtils.pas';
 
-
 {$R *.res}
 
 begin
