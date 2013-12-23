@@ -2,8 +2,8 @@ object fmIndividual: TfmIndividual
   Left = 0
   Top = 0
   Caption = #1060#1110#1079#1080#1095#1085#1072' '#1086#1089#1086#1073#1072
-  ClientHeight = 638
-  ClientWidth = 817
+  ClientHeight = 632
+  ClientWidth = 810
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -502,17 +502,17 @@ object fmIndividual: TfmIndividual
     TabOrder = 0
     ExplicitWidth = 969
     ExplicitHeight = 617
-    Height = 638
-    Width = 817
+    Height = 632
+    Width = 810
     object cxGroupBox2: TcxGroupBox
       Left = 12
-      Top = 348
+      Top = 323
       Caption = #1055#1072#1089#1087#1086#1088#1090
       ParentBackground = False
       ParentColor = False
       ParentFont = False
       TabOrder = 0
-      Height = 188
+      Height = 183
       Width = 260
       object cxLabel13: TcxLabel
         Left = 3
@@ -704,13 +704,13 @@ object fmIndividual: TfmIndividual
     end
     object cxGroupBox3: TcxGroupBox
       Left = 544
-      Top = 298
+      Top = 303
       Caption = #1057#1074#1110#1076#1086#1094#1090#1074#1086' '#1087#1088#1086' '#1085#1072#1088#1086#1076#1078#1077#1085#1085#1103
       ParentBackground = False
       ParentColor = False
       ParentFont = False
       TabOrder = 1
-      Height = 186
+      Height = 184
       Width = 260
       object cxLabel19: TcxLabel
         Left = 3
@@ -880,7 +880,7 @@ object fmIndividual: TfmIndividual
         Width = 150
       end
       object cxDBLookupComboBox35: TcxDBLookupComboBox
-        Left = 107
+        Left = 104
         Top = 150
         DataBinding.DataField = 'BIRTH_CERTIFICATE_ISSUER_STATE'
         DataBinding.DataSource = dmIndividual.IndividualsDataSource
@@ -908,7 +908,7 @@ object fmIndividual: TfmIndividual
       ParentColor = False
       ParentFont = False
       TabOrder = 2
-      Height = 159
+      Height = 156
       Width = 260
       object cxLabel25: TcxLabel
         Left = 3
@@ -1062,7 +1062,7 @@ object fmIndividual: TfmIndividual
       ParentColor = False
       ParentFont = False
       TabOrder = 3
-      Height = 340
+      Height = 337
       Width = 260
       object cxLabel30: TcxLabel
         Left = 3
@@ -1469,7 +1469,7 @@ object fmIndividual: TfmIndividual
       ParentColor = False
       ParentFont = False
       TabOrder = 4
-      Height = 76
+      Height = 81
       Width = 260
       object cxDBMemo2: TcxDBMemo
         Left = 3
@@ -1478,10 +1478,11 @@ object fmIndividual: TfmIndividual
         DataBinding.DataField = 'FOREIGN_ADDRESS'
         DataBinding.DataSource = dmIndividual.IndividualsDataSource
         ParentFont = False
+        Properties.ScrollBars = ssVertical
         TabOrder = 0
         ExplicitWidth = 110
         ExplicitHeight = 65
-        Height = 51
+        Height = 56
         Width = 254
       end
     end
@@ -1563,14 +1564,14 @@ object fmIndividual: TfmIndividual
       end
     end
     object cxGroupBox5: TcxGroupBox
-      Left = 12
-      Top = 542
+      Left = 278
+      Top = 534
       Caption = #1055#1086#1089#1074#1110#1076#1095#1091#1074#1072#1083#1100#1085#1080#1081' '#1076#1086#1082#1091#1084#1077#1085#1090
       ParentBackground = False
       ParentColor = False
       ParentFont = False
       TabOrder = 6
-      Height = 76
+      Height = 81
       Width = 260
       object cxDBMemo1: TcxDBMemo
         Left = 3
@@ -1579,10 +1580,11 @@ object fmIndividual: TfmIndividual
         DataBinding.DataField = 'PERSONAL_CERTIFICATE'
         DataBinding.DataSource = dmIndividual.IndividualsDataSource
         ParentFont = False
+        Properties.ScrollBars = ssVertical
         TabOrder = 0
         ExplicitWidth = 246
         ExplicitHeight = 65
-        Height = 51
+        Height = 56
         Width = 254
       end
     end
@@ -1678,7 +1680,7 @@ object fmIndividual: TfmIndividual
       ParentColor = False
       ParentFont = False
       TabOrder = 8
-      Height = 316
+      Height = 291
       Width = 260
       object cxLabel4: TcxLabel
         Left = 3
@@ -1786,7 +1788,7 @@ object fmIndividual: TfmIndividual
       end
       object cxLabel45: TcxLabel
         Left = 3
-        Top = 281
+        Top = 257
         AutoSize = False
         Caption = #1055#1088#1080#1084#1110#1090#1082#1072
         ParentColor = False
@@ -1960,8 +1962,8 @@ object fmIndividual: TfmIndividual
         Width = 83
       end
       object cxDBCheckBox2: TcxDBCheckBox
-        Left = 15
-        Top = 256
+        Left = 148
+        Top = 231
         Caption = #1030#1085#1086#1079#1077#1084#1085#1072' '#1072#1076#1088#1077#1089#1072
         DataBinding.DataField = 'FOREIGN_ADDRESS_TYPE'
         DataBinding.DataSource = dmIndividual.IndividualsDataSource
@@ -1975,7 +1977,7 @@ object fmIndividual: TfmIndividual
       end
       object cxDBMemo3: TcxDBMemo
         Left = 104
-        Top = 281
+        Top = 257
         DataBinding.DataField = 'DESCRIPTION'
         DataBinding.DataSource = dmIndividual.IndividualsDataSource
         ParentFont = False
@@ -1987,13 +1989,13 @@ object fmIndividual: TfmIndividual
     end
     object cxGroupBox11: TcxGroupBox
       Left = 544
-      Top = 490
+      Top = 493
       Caption = #1042#1110#1076#1086#1073#1088#1072#1078#1077#1085#1085#1103
       ParentBackground = False
       ParentColor = False
       ParentFont = False
       TabOrder = 9
-      Height = 76
+      Height = 72
       Width = 260
       object cxDBCheckBox4: TcxDBCheckBox
         Left = 3
@@ -2060,23 +2062,122 @@ object fmIndividual: TfmIndividual
         Width = 118
       end
     end
-    object cxButton1: TcxButton
-      Left = 278
-      Top = 564
-      Width = 75
-      Height = 25
-      Caption = 'New'
+    object cxGroupBox12: TcxGroupBox
+      Left = 12
+      Top = 512
+      Caption = #1064#1083#1102#1073
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
       TabOrder = 10
-      OnClick = cxButton1Click
+      Height = 103
+      Width = 260
+      object cxLabel2: TcxLabel
+        Left = 3
+        Top = 16
+        AutoSize = False
+        Caption = #1055'.'#1030'.'#1041'. '#1095#1086#1083'/'#1076#1088#1091#1078
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel10: TcxLabel
+        Left = 3
+        Top = 43
+        AutoSize = False
+        Caption = #1054#1088#1075#1072#1085' '#1088#1077#1108#1089#1090#1088#1072#1090#1086#1088
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel44: TcxLabel
+        Left = 3
+        Top = 70
+        AutoSize = False
+        Caption = #1044#1072#1090#1072' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1111
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxDBDateEdit6: TcxDBDateEdit
+        Left = 104
+        Top = 69
+        DataBinding.DataField = 'MARRIAGE_REGISTERED_DATE'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        TabOrder = 3
+        Width = 150
+      end
+      object cxDBLookupComboBox8: TcxDBLookupComboBox
+        Left = 104
+        Top = 15
+        DataBinding.DataField = 'MARRIAGE_MEMBER'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'MARRIAGE_MEMBER'
+        Properties.ListColumns = <
+          item
+            FieldName = 'MARRIAGE_MEMBER'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.MarriageMemberDataSource
+        TabOrder = 4
+        Width = 150
+      end
+      object cxDBLookupComboBox37: TcxDBLookupComboBox
+        Left = 104
+        Top = 42
+        DataBinding.DataField = 'MARRIAGE_REGISTRATOR'
+        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'MARRIAGE_REGISTRATOR'
+        Properties.ListColumns = <
+          item
+            FieldName = 'MARRIAGE_REGISTRATOR'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmIndividual.MarriageRegistratorDataSource
+        TabOrder = 5
+        Width = 150
+      end
     end
-    object cxButton2: TcxButton
-      Left = 278
-      Top = 595
+    object PostButton: TcxButton
+      Left = 590
+      Top = 584
       Width = 75
       Height = 25
-      Caption = 'Add'
+      Caption = #1057#1090#1074#1086#1088#1080#1090#1080
       TabOrder = 11
-      OnClick = cxButton2Click
+      OnClick = PostButtonClick
+    end
+    object CancelButton: TcxButton
+      Left = 680
+      Top = 584
+      Width = 75
+      Height = 25
+      Caption = #1042#1110#1076#1084#1110#1085#1080#1090#1080
+      TabOrder = 12
+      OnClick = CancelButtonClick
     end
   end
 end
