@@ -316,6 +316,7 @@ object fmMain: TfmMain
     0000000F0000FE000000000F0000FE000000001F0000FF8000007FFF0000}
   OldCreateOrder = False
   Position = poScreenCenter
+  ShowHint = True
   Visible = True
   WindowState = wsMaximized
   OnCreate = FormCreate
@@ -373,6 +374,7 @@ object fmMain: TfmMain
       ItemHeight = 13
       ParentFont = False
       PopupMenu = LogPopupMenu
+      Style.Shadow = False
       Style.StyleController = cxEditStyleController
       Style.TransparentBorder = True
       TabOrder = 0
@@ -452,6 +454,10 @@ object fmMain: TfmMain
         item
           Visible = True
           ItemName = 'dxBarButton4'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButton5'
         end>
       MultiLine = True
       OneOnRow = True
@@ -502,6 +508,13 @@ object fmMain: TfmMain
       Hint = 'Individual'
       Visible = ivAlways
       OnClick = dxBarButton4Click
+    end
+    object dxBarButton5: TdxBarButton
+      Caption = 'Authorization'
+      Category = 0
+      Hint = 'Authorization'
+      Visible = ivAlways
+      OnClick = dxBarButton5Click
     end
     object dxBarButtonExit: TdxBarButton
       Caption = 'Exit'

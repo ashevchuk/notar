@@ -976,3 +976,33 @@ ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitN
 ClassType.ClassName: "TcxDBLookupComboBox", UnitScope: "cxDBLookupComboBox", UnitName: "cxDBLookupComboBox", ClassName: "TcxDBLookupComboBox", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
 =====================
 
+=====[EXCEPTION]=====
+[24.12.2013 18:09:01]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (-1)", Exception: "List index out of bounds (-1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[24.12.2013 18:09:17]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (-1)", Exception: "List index out of bounds (-1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[24.12.2013 18:09:21]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (-1)", Exception: "List index out of bounds (-1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[24.12.2013 18:11:40]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (-1)", Exception: "List index out of bounds (-1)", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[24.12.2013 18:11:48]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (-1)", Exception: "List index out of bounds (-1)", Stack: ""
+=====================
+

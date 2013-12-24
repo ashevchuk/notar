@@ -78,4 +78,21 @@ object RemoteDataModule: TRemoteDataModule
     Left = 232
     Top = 168
   end
+  object TableListDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TABLE_NAME'
+      'FROM'
+      '    VIEW_TABLE_NAMES ')
+    Transaction = FIBTransaction
+    Database = FIBDatabase
+    UpdateTransaction = FIBUpdateTransaction
+    Left = 40
+    Top = 232
+    object TableListDataSetTABLE_NAME: TFIBWideStringField
+      FieldName = 'TABLE_NAME'
+      Size = 31
+      EmptyStrToNull = True
+    end
+  end
 end

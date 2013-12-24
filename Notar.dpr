@@ -35,6 +35,9 @@ begin
   fmSplash.ShowMessage('Creating data module...');
   Application.CreateForm(TRemoteDataModule, RemoteDataModule);
 
+  fmSplash.ShowMessage('Preloading tables data...');
+  RemoteDataModule.preloadTablesData;
+
   fmSplash.ShowMessage('Connecting to Database...');
   RemoteDataModule.ConnectDataBase;
 

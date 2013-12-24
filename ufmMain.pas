@@ -93,6 +93,7 @@ type
     Copy1: TMenuItem;
     LogSaveDialog: TSaveDialog;
     dxBarButton4: TdxBarButton;
+    dxBarButton5: TdxBarButton;
     procedure FormCreate(Sender: TObject);
     procedure dxBarButtonExitClick(Sender: TObject);
     procedure dxBarButtonEditorClick(Sender: TObject);
@@ -105,6 +106,7 @@ type
     procedure Clear1Click(Sender: TObject);
     procedure Save1Click(Sender: TObject);
     procedure dxBarButton4Click(Sender: TObject);
+    procedure dxBarButton5Click(Sender: TObject);
   private
     procedure OnException(Sender: TObject; E: Exception);
 
@@ -124,7 +126,7 @@ var
 implementation
 uses uRemoteDM, uLicenseDM,
   ufmIndividual,
-
+  ufmAuthorization,
   ufmIDE,
  // ufmRichEditor,
   ufmCatalogs,
@@ -181,6 +183,14 @@ begin
   with TfmIndividual.Create(self) do
   begin
     appendIndividual;
+    Show;
+  end;
+end;
+
+procedure TfmMain.dxBarButton5Click(Sender: TObject);
+begin
+  with TfmAuthorization.Create(self) do
+  begin
     Show;
   end;
 end;
