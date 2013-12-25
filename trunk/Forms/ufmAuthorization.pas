@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
-  ufmMain, uUtils, uRemoteDM, udmAuthorization,
+  ufmMain, uUtils, uRemoteDM, udmAuthorization, uTypes,
   cxGraphics, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore, dxSkinOffice2007Blue,
   cxMemo, cxDBEdit, cxDropDownEdit, cxLookupEdit, cxDBLookupEdit,
@@ -66,7 +66,7 @@ type
     cxGroupBox8: TcxGroupBox;
     cxGroupBox4: TcxGroupBox;
     dxBevel1: TdxBevel;
-    cxListBox1: TcxListBox;
+    ConstituentsListBox: TcxListBox;
     AddConstituentButton: TcxButton;
     ConstituentPopupMenu: TPopupMenu;
     ConstituentIndividualPopUpMenuItem: TMenuItem;
@@ -77,7 +77,7 @@ type
   private
     { Private declarations }
   public
-    { Public declarations }
+    procedure gotConstituentIndividualID(AID: string);
   end;
 
 var
@@ -90,7 +90,11 @@ uses ufmIndividualSelector;
 procedure TfmAuthorization.ConstituentIndividualPopUpMenuItemClick(
   Sender: TObject);
 begin
-  fmIndividualSelector := TfmIndividualSelector.Create(self);
+  with TfmIndividualSelector.Create(self) do
+  begin
+    Show;
+    registerSelectorCallback(gotConstituentIndividualID);
+  end;
 end;
 
 procedure TfmAuthorization.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -106,6 +110,11 @@ end;
 procedure TfmAuthorization.FormDestroy(Sender: TObject);
 begin
   dmAuthorization.Free;
+end;
+
+procedure TfmAuthorization.gotConstituentIndividualID(AID: string);
+begin
+  ConstituentsListBox.Items.Add(AID);
 end;
 
 end.

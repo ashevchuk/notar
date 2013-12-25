@@ -488,6 +488,7 @@ object fmIndividualSelector: TfmIndividualSelector
   OldCreateOrder = False
   Visible = True
   OnClose = FormClose
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object dxBevel1: TdxBevel
@@ -898,6 +899,7 @@ object fmIndividualSelector: TfmIndividualSelector
     Height = 25
     Caption = #1042#1110#1076#1084#1110#1085#1072
     TabOrder = 1
+    OnClick = CancelButtonClick
   end
   object OkButton: TcxButton
     Left = 8
@@ -906,6 +908,7 @@ object fmIndividualSelector: TfmIndividualSelector
     Height = 25
     Caption = #1054#1073#1088#1072#1090#1080
     TabOrder = 2
+    OnClick = OkButtonClick
   end
   object IndividualsDataSet: TpFIBDataSet
     SelectSQL.Strings = (

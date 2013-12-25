@@ -1012,3 +1012,45 @@ ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupB
 ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
 =====================
 
+=====[EXCEPTION]=====
+[25.12.2013 23:00:16]
+=====================
+ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[25.12.2013 23:00:29]
+=====================
+ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[25.12.2013 23:00:29]
+=====================
+ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[25.12.2013 23:00:30]
+=====================
+ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[25.12.2013 23:03:39]
+=====================
+ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[25.12.2013 23:03:46]
+=====================
+ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[25.12.2013 23:05:28]
+=====================
+ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+=====================
+
