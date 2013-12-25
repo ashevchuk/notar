@@ -7,7 +7,8 @@ uses
   uRemoteDM in 'uRemoteDM.pas' {RemoteDataModule: TDataModule},
   uLicenseDM in 'uLicenseDM.pas' {LicenseDataModule: TDataModule},
   ufmIDEDialog in 'ufmIDEDialog.pas',
-  uUtils in 'uUtils.pas';
+  uUtils in 'uUtils.pas',
+  uTypes in 'uTypes.pas';
 
 {$R *.res}
 
@@ -31,7 +32,6 @@ begin
 
   fmSplash.ShowMessage('Creating main form...');
   Application.CreateForm(TfmMain, fmMain);
-
   fmSplash.ShowMessage('Creating data module...');
   Application.CreateForm(TRemoteDataModule, RemoteDataModule);
 

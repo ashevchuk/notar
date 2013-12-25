@@ -112,6 +112,7 @@
         </DCCReference>
         <DCCReference Include="ufmIDEDialog.pas"/>
         <DCCReference Include="uUtils.pas"/>
+        <DCCReference Include="uTypes.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
-  ufmMain, uUtils, uRemoteDM, dxBevel, cxGraphics, cxControls, cxLookAndFeels,
+  ufmMain, uUtils, uRemoteDM, uTypes,
+  dxBevel, cxGraphics, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxStyles, dxSkinsCore, dxSkinOffice2007Blue,
   dxSkinscxPCPainter, cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit,
   cxNavigator, Data.DB, cxDBData, Vcl.Menus, Vcl.StdCtrls, cxButtons,
@@ -136,10 +137,13 @@ type
     CancelButton: TcxButton;
     OkButton: TcxButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure CancelButtonClick(Sender: TObject);
+    procedure OkButtonClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
-    { Private declarations }
+    FSelectorCallback: TCatalogSelectorCallback;
   public
-    { Public declarations }
+    procedure registerSelectorCallback(ACallback: TCatalogSelectorCallback);
   end;
 
 var
@@ -149,9 +153,29 @@ implementation
 
 {$R *.dfm}
 
+procedure TfmIndividualSelector.CancelButtonClick(Sender: TObject);
+begin
+  Close;
+end;
+
 procedure TfmIndividualSelector.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Action := caFree;
+end;
+
+procedure TfmIndividualSelector.FormCreate(Sender: TObject);
+begin
+  FSelectorCallback := nil;
+end;
+
+procedure TfmIndividualSelector.OkButtonClick(Sender: TObject);
+begin
+  if Assigned(FSelectorCallback) then FSelectorCallback(IndividualsDataSetID.AsString);
+end;
+
+procedure TfmIndividualSelector.registerSelectorCallback(ACallback: TCatalogSelectorCallback);
+begin
+  FSelectorCallback := ACallback;
 end;
 
 end.

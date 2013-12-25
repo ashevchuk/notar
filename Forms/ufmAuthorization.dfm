@@ -1237,7 +1237,7 @@ object fmAuthorization: TfmAuthorization
         Align = alBottom
         Shape = dxbsFrame
       end
-      object cxListBox1: TcxListBox
+      object ConstituentsListBox: TcxListBox
         Left = 3
         Top = 15
         Width = 254
