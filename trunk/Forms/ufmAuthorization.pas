@@ -5,15 +5,16 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
-  ufmMain, uUtils, uRemoteDM, cxGraphics, cxControls, cxLookAndFeels,
+  ufmMain, uUtils, uRemoteDM, udmAuthorization,
+  cxGraphics, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore, dxSkinOffice2007Blue,
   cxMemo, cxDBEdit, cxDropDownEdit, cxLookupEdit, cxDBLookupEdit,
-  cxDBLookupComboBox, cxTextEdit, cxMaskEdit, cxCalendar, cxLabel, cxGroupBox;
+  cxDBLookupComboBox, cxTextEdit, cxMaskEdit, cxCalendar, cxLabel, cxGroupBox,
+  cxCheckBox, Vcl.Menus, Vcl.StdCtrls, cxButtons, cxListBox, dxBevel;
 
 type
   TfmAuthorization = class(TForm)
     cxGroupBox1: TcxGroupBox;
-    cxGroupBox2: TcxGroupBox;
     cxGroupBox5: TcxGroupBox;
     cxGroupBox7: TcxGroupBox;
     cxLabel25: TcxLabel;
@@ -60,7 +61,19 @@ type
     cxDBLookupComboBox19: TcxDBLookupComboBox;
     cxDBLookupComboBox20: TcxDBLookupComboBox;
     cxDBDateEdit5: TcxDBDateEdit;
+    cxDBCheckBox1: TcxDBCheckBox;
+    cxDBCheckBox2: TcxDBCheckBox;
+    cxGroupBox8: TcxGroupBox;
+    cxGroupBox4: TcxGroupBox;
+    dxBevel1: TdxBevel;
+    cxListBox1: TcxListBox;
+    AddConstituentButton: TcxButton;
+    ConstituentPopupMenu: TPopupMenu;
+    ConstituentIndividualPopUpMenuItem: TMenuItem;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure ConstituentIndividualPopUpMenuItemClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -71,12 +84,28 @@ var
   fmAuthorization: TfmAuthorization;
 
 implementation
-
+uses ufmIndividualSelector;
 {$R *.dfm}
+
+procedure TfmAuthorization.ConstituentIndividualPopUpMenuItemClick(
+  Sender: TObject);
+begin
+  fmIndividualSelector := TfmIndividualSelector.Create(self);
+end;
 
 procedure TfmAuthorization.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Action := caFree;
+end;
+
+procedure TfmAuthorization.FormCreate(Sender: TObject);
+begin
+  dmAuthorization := TdmAuthorization.Create(self);
+end;
+
+procedure TfmAuthorization.FormDestroy(Sender: TObject);
+begin
+  dmAuthorization.Free;
 end;
 
 end.

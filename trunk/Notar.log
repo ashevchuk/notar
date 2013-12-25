@@ -1006,3 +1006,9 @@ ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupB
 ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (-1)", Exception: "List index out of bounds (-1)", Stack: ""
 =====================
 
+=====[EXCEPTION]=====
+[26.12.2013 21:16:26]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
+=====================
+
