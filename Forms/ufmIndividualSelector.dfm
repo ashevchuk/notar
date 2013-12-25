@@ -1,9 +1,9 @@
-object fmAuthorization: TfmAuthorization
+object fmIndividualSelector: TfmIndividualSelector
   Left = 0
   Top = 0
-  Caption = #1044#1086#1074#1110#1088#1077#1085#1110#1089#1090#1100' '#1075#1077#1085#1077#1088#1072#1083#1100#1085#1072
-  ClientHeight = 598
-  ClientWidth = 818
+  Caption = #1042#1080#1073#1110#1088' '#1092#1110#1079#1080#1095#1085#1086#1111' '#1086#1089#1086#1073#1080
+  ClientHeight = 420
+  ClientWidth = 957
   Color = clBtnFace
   DefaultMonitor = dmMainForm
   Font.Charset = DEFAULT_CHARSET
@@ -488,789 +488,757 @@ object fmAuthorization: TfmAuthorization
   OldCreateOrder = False
   Visible = True
   OnClose = FormClose
-  OnCreate = FormCreate
-  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
-  object cxGroupBox1: TcxGroupBox
+  object dxBevel1: TdxBevel
+    Left = 0
+    Top = 376
+    Width = 957
+    Height = 44
+    Align = alBottom
+    Shape = dxbsFrame
+    ExplicitTop = 368
+  end
+  object IndividualsGrid: TcxGrid
     Left = 0
     Top = 0
+    Width = 957
+    Height = 376
     Align = alClient
-    Caption = #1044#1086#1074#1110#1088#1077#1085#1110#1089#1090#1100' '#1075#1077#1085#1077#1088#1072#1083#1100#1085#1072
-    ParentBackground = False
-    ParentColor = False
-    ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 847
-    ExplicitHeight = 395
-    Height = 598
-    Width = 818
-    object cxGroupBox5: TcxGroupBox
-      Left = 546
-      Top = 164
-      Caption = #1058#1088#1072#1085#1079#1080#1090#1085#1110' '#1085#1086#1084#1077#1088#1080
-      ParentBackground = False
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 0
-      Height = 76
-      Width = 260
-      object cxDBDateEdit2: TcxDBDateEdit
-        Left = 104
-        Top = 15
-        DataBinding.DataField = 'PASSPORT_FOREIGN_ISSUE_DATE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        TabOrder = 0
-        Width = 150
+    ExplicitTop = 5
+    ExplicitWidth = 553
+    object IndividualsGridDBTableView1: TcxGridDBTableView
+      Navigator.Buttons.CustomButtons = <>
+      Navigator.Buttons.Insert.Visible = False
+      Navigator.Buttons.Append.Visible = False
+      Navigator.Buttons.Delete.Visible = False
+      Navigator.Buttons.Edit.Visible = False
+      Navigator.Buttons.Post.Visible = False
+      Navigator.Buttons.Cancel.Visible = False
+      Navigator.Visible = True
+      DataController.DataModeController.GridMode = True
+      DataController.DataModeController.SmartRefresh = True
+      DataController.DataSource = IndividualsDataSource
+      DataController.KeyFieldNames = 'ID'
+      DataController.Options = [dcoCaseInsensitive, dcoAssignGroupingValues, dcoAssignMasterDetailKeys, dcoSaveExpanding]
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <>
+      DataController.Summary.SummaryGroups = <>
+      OptionsBehavior.CellHints = True
+      OptionsBehavior.IncSearch = True
+      OptionsBehavior.IncSearchItem = IndividualsGridDBTableView1SURNAME
+      OptionsBehavior.NavigatorHints = True
+      OptionsCustomize.ColumnHiding = True
+      OptionsCustomize.ColumnsQuickCustomization = True
+      OptionsCustomize.DataRowSizing = True
+      OptionsCustomize.GroupBySorting = True
+      OptionsCustomize.GroupRowSizing = True
+      OptionsData.CancelOnExit = False
+      OptionsData.Deleting = False
+      OptionsData.DeletingConfirmation = False
+      OptionsData.Editing = False
+      OptionsData.Inserting = False
+      OptionsSelection.CellSelect = False
+      OptionsSelection.MultiSelect = True
+      OptionsView.CellAutoHeight = True
+      OptionsView.ColumnAutoWidth = True
+      OptionsView.HeaderAutoHeight = True
+      OptionsView.HeaderEndEllipsis = True
+      object IndividualsGridDBTableView1ID: TcxGridDBColumn
+        DataBinding.FieldName = 'ID'
+        Visible = False
       end
-      object cxLabel4: TcxLabel
-        Left = 3
-        Top = 43
-        AutoSize = False
-        Caption = #1042#1080#1076#1072#1085#1086
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1SURNAME: TcxGridDBColumn
+        Caption = #1060#1072#1084#1110#1083#1110#1103
+        DataBinding.FieldName = 'SURNAME'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Width = 181
       end
-      object cxLabel5: TcxLabel
-        Left = 3
-        Top = 16
-        AutoSize = False
-        Caption = #1044#1072#1090#1072' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1111
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1NAME: TcxGridDBColumn
+        Caption = #1030#1084#39#1103
+        DataBinding.FieldName = 'NAME'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Width = 182
       end
-      object cxDBLookupComboBox2: TcxDBLookupComboBox
-        Left = 104
-        Top = 42
-        DataBinding.DataField = 'PASSPORT_FOREIGN_ISSUER'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'PASSPORT_FOREIGN_ISSUER'
-        Properties.ListColumns = <
-          item
-            FieldName = 'PASSPORT_FOREIGN_ISSUER'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.PassportForeignIssuerDataSource
-        TabOrder = 3
-        Width = 150
+      object IndividualsGridDBTableView1MIDDLE: TcxGridDBColumn
+        Caption = #1055#1086' '#1073#1072#1090#1100#1082#1086#1074#1110
+        DataBinding.FieldName = 'MIDDLE'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Width = 181
       end
-    end
-    object cxGroupBox7: TcxGroupBox
-      Left = 546
-      Top = 246
-      Caption = #1044#1086#1074#1110#1088#1077#1085#1110#1089#1090#1100
-      ParentBackground = False
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 1
-      Height = 159
-      Width = 260
-      object cxLabel25: TcxLabel
-        Left = 3
-        Top = 16
-        AutoSize = False
-        Caption = #1056#1077#1108#1089#1090#1088#1086#1074#1080#1081' '#8470
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1GENDER: TcxGridDBColumn
+        Caption = #1057#1090#1072#1090#1100
+        DataBinding.FieldName = 'GENDER'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxLabel27: TcxLabel
-        Left = 3
-        Top = 43
-        AutoSize = False
-        Caption = #1058#1077#1088#1084#1110#1085' '#1076#1110#1111
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1STATE: TcxGridDBColumn
+        Caption = #1062#1080#1074#1110#1083#1100#1085#1080#1081' '#1089#1090#1072#1085
+        DataBinding.FieldName = 'STATE'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxLabel28: TcxLabel
-        Left = 3
-        Top = 97
-        AutoSize = False
-        Caption = #1055#1088#1080#1084#1110#1090#1082#1072
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1ID_NUMBER: TcxGridDBColumn
+        Caption = #1030#1076#1077#1085#1090#1080#1092#1110#1082#1072#1094#1110#1081#1085#1080#1081' '#1082#1086#1076
+        DataBinding.FieldName = 'ID_NUMBER'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Width = 128
       end
-      object cxLabel29: TcxLabel
-        Left = 3
-        Top = 70
-        AutoSize = False
-        Caption = #1044#1072#1090#1072' '#1087#1086#1089#1074#1110#1076#1095#1077#1085#1085#1103
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1PERSONAL_DOCUMENT: TcxGridDBColumn
+        Caption = #1044#1086#1082#1091#1084#1077#1085#1090' '#1086#1089#1086#1073#1080
+        DataBinding.FieldName = 'PERSONAL_DOCUMENT'
+        PropertiesClassName = 'TcxMemoProperties'
+        Width = 182
       end
-      object cxDBDateEdit3: TcxDBDateEdit
-        Left = 104
-        Top = 42
-        DataBinding.DataField = 'PASSPORT_FOREIGN_ISSUE_DATE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        TabOrder = 4
-        Width = 150
+      object IndividualsGridDBTableView1BIRTH_DATE: TcxGridDBColumn
+        Caption = #1044#1072#1090#1072' '#1085#1072#1088#1086#1076#1078#1077#1085#1085#1103
+        DataBinding.FieldName = 'BIRTH_DATE'
+        PropertiesClassName = 'TcxDateEditProperties'
+        Visible = False
       end
-      object cxDBDateEdit4: TcxDBDateEdit
-        Left = 104
-        Top = 69
-        DataBinding.DataField = 'PASSPORT_FOREIGN_EXPIRATION'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        TabOrder = 5
-        Width = 150
+      object IndividualsGridDBTableView1BIRTH_PLACE: TcxGridDBColumn
+        Caption = #1052#1110#1089#1094#1077' '#1085#1072#1088#1086#1076#1078#1077#1085#1085#1103
+        DataBinding.FieldName = 'BIRTH_PLACE'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxDBLookupComboBox28: TcxDBLookupComboBox
-        Left = 104
-        Top = 15
-        DataBinding.DataField = 'PASSPORT_FOREIGN_SERIAL'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'PASSPORT_FOREIGN_SERIAL'
-        Properties.ListColumns = <
-          item
-            FieldName = 'PASSPORT_FOREIGN_SERIAL'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.PassportForeignSerialDataSource
-        TabOrder = 6
-        Width = 150
-      end
-      object cxDBMemo4: TcxDBMemo
-        Left = 104
-        Top = 96
-        DataBinding.DataField = 'ID_NUMBER_ABSENT_REASON'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.ScrollBars = ssVertical
-        TabOrder = 7
-        Height = 21
-        Width = 150
-      end
-      object cxDBCheckBox1: TcxDBCheckBox
-        Left = 164
-        Top = 123
-        Caption = #1058#1088#1072#1085#1079#1080#1090
-        DataBinding.DataField = 'DISABLEMENT'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentBackground = False
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment = taRightJustify
+      object IndividualsGridDBTableView1DISABLEMENT: TcxGridDBColumn
+        Caption = #1030#1085#1074#1072#1083#1110#1076#1085#1110#1089#1090#1100
+        DataBinding.FieldName = 'DISABLEMENT'
+        PropertiesClassName = 'TcxCheckBoxProperties'
         Properties.ValueChecked = 1
         Properties.ValueUnchecked = 0
-        TabOrder = 8
-        Transparent = True
-        Width = 83
+        Visible = False
       end
-      object cxDBCheckBox2: TcxDBCheckBox
-        Left = 3
-        Top = 123
-        Caption = #1055#1088#1072#1074#1086' '#1087#1077#1088#1077#1076#1086#1088#1091#1095#1077#1085#1085#1103
-        DataBinding.DataField = 'FOREIGN_ADDRESS_TYPE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentBackground = False
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment = taRightJustify
-        TabOrder = 9
-        Transparent = True
-        Width = 137
+      object IndividualsGridDBTableView1DISABLEMENT_GROUP: TcxGridDBColumn
+        Caption = #1043#1088#1091#1087#1072' '#1110#1085#1074#1072#1083#1110#1076#1085#1086#1089#1090#1110
+        DataBinding.FieldName = 'DISABLEMENT_GROUP'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-    end
-    object cxGroupBox6: TcxGroupBox
-      Left = 546
-      Top = 26
-      Caption = #1057#1074#1110#1076#1086#1094#1090#1074#1086' '#1087#1088#1086' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1102
-      ParentBackground = False
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 2
-      Height = 132
-      Width = 260
-      object cxLabel1: TcxLabel
-        Left = 3
-        Top = 16
-        AutoSize = False
-        Caption = #1057#1077#1088#1110#1103
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1DISABLEMENT_DOCUMENT: TcxGridDBColumn
+        Caption = #1044#1086#1082#1091#1084#1077#1085#1090' '#1110#1085#1074#1072#1083#1110#1076#1085#1086#1089#1090#1110
+        DataBinding.FieldName = 'DISABLEMENT_DOCUMENT'
+        PropertiesClassName = 'TcxMemoProperties'
+        Visible = False
       end
-      object cxLabel26: TcxLabel
-        Left = 3
-        Top = 43
-        AutoSize = False
-        Caption = #1053#1086#1084#1077#1088
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1FOREIGN_ADDRESS_TYPE: TcxGridDBColumn
+        Caption = #1053#1072#1103#1074#1085#1110#1089#1090#1100' '#1110#1085#1086#1079#1077#1084#1085#1086#1111' '#1072#1076#1088#1077#1089#1080
+        DataBinding.FieldName = 'FOREIGN_ADDRESS_TYPE'
+        PropertiesClassName = 'TcxCheckBoxProperties'
+        Properties.ValueChecked = 1
+        Properties.ValueUnchecked = 0
+        Visible = False
       end
-      object cxLabel2: TcxLabel
-        Left = 3
-        Top = 70
-        AutoSize = False
-        Caption = #1044#1072#1090#1072' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1111
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1FOREIGN_ADDRESS: TcxGridDBColumn
+        Caption = #1030#1085#1086#1079#1077#1084#1085#1072' '#1072#1076#1088#1077#1089#1072
+        DataBinding.FieldName = 'FOREIGN_ADDRESS'
+        PropertiesClassName = 'TcxMemoProperties'
+        Visible = False
       end
-      object cxLabel3: TcxLabel
-        Left = 3
-        Top = 97
-        AutoSize = False
-        Caption = #1042#1080#1076#1072#1085#1086
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1ID_NUMBER_ABSENT: TcxGridDBColumn
+        Caption = #1042#1110#1076#1089#1091#1090#1085#1110#1089#1090#1100' '#1110#1076#1077#1085#1090#1080#1092#1110#1082#1072#1094#1110#1081#1085#1086#1075#1086' '#1082#1086#1076#1091
+        DataBinding.FieldName = 'ID_NUMBER_ABSENT'
+        PropertiesClassName = 'TcxCheckBoxProperties'
+        Properties.ValueChecked = 1
+        Properties.ValueUnchecked = 0
+        Visible = False
       end
-      object cxDBDateEdit1: TcxDBDateEdit
-        Left = 104
-        Top = 69
-        DataBinding.DataField = 'PASSPORT_FOREIGN_ISSUE_DATE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        TabOrder = 4
-        Width = 150
+      object IndividualsGridDBTableView1ID_NUMBER_ABSENT_REASON: TcxGridDBColumn
+        Caption = #1055#1088#1080#1095#1080#1085#1072' '#1074#1110#1076#1089#1091#1090#1085#1086#1089#1090#1110' '#1110#1076#1077#1085#1090#1080#1092#1110#1082#1072#1094#1110#1081#1085#1086#1075#1086' '#1082#1086#1076#1091
+        DataBinding.FieldName = 'ID_NUMBER_ABSENT_REASON'
+        PropertiesClassName = 'TcxMemoProperties'
+        Visible = False
       end
-      object cxDBLookupComboBox1: TcxDBLookupComboBox
-        Left = 104
-        Top = 15
-        DataBinding.DataField = 'PASSPORT_FOREIGN_SERIAL'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'PASSPORT_FOREIGN_SERIAL'
-        Properties.ListColumns = <
-          item
-            FieldName = 'PASSPORT_FOREIGN_SERIAL'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.PassportForeignSerialDataSource
-        TabOrder = 5
-        Width = 150
+      object IndividualsGridDBTableView1PASSPORT_SERIAL: TcxGridDBColumn
+        Caption = #1057#1077#1088#1110#1103' '#1087#1072#1089#1087#1086#1088#1090#1072
+        DataBinding.FieldName = 'PASSPORT_SERIAL'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxDBLookupComboBox29: TcxDBLookupComboBox
-        Left = 104
-        Top = 42
-        DataBinding.DataField = 'PASSPORT_FOREIGN_NUMBER'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'PASSPORT_FOREIGN_NUMBER'
-        Properties.ListColumns = <
-          item
-            FieldName = 'PASSPORT_FOREIGN_NUMBER'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.PassportForeignNumberDataSource
-        TabOrder = 6
-        Width = 150
+      object IndividualsGridDBTableView1PASSPORT_NUMBER: TcxGridDBColumn
+        Caption = #1053#1086#1084#1077#1088' '#1087#1072#1089#1087#1086#1088#1090#1072
+        DataBinding.FieldName = 'PASSPORT_NUMBER'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxDBLookupComboBox30: TcxDBLookupComboBox
-        Left = 104
-        Top = 96
-        DataBinding.DataField = 'PASSPORT_FOREIGN_ISSUER'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'PASSPORT_FOREIGN_ISSUER'
-        Properties.ListColumns = <
-          item
-            FieldName = 'PASSPORT_FOREIGN_ISSUER'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.PassportForeignIssuerDataSource
-        TabOrder = 7
-        Width = 150
+      object IndividualsGridDBTableView1PASSPORT_ISSUE_DATE: TcxGridDBColumn
+        Caption = #1044#1072#1090#1072' '#1074#1080#1076#1072#1095#1110' '#1087#1072#1089#1087#1086#1088#1090#1072
+        DataBinding.FieldName = 'PASSPORT_ISSUE_DATE'
+        PropertiesClassName = 'TcxDateEditProperties'
+        Visible = False
       end
-    end
-    object cxGroupBox3: TcxGroupBox
-      Left = 280
-      Top = 26
-      Caption = #1058#1088#1072#1085#1089#1087#1086#1088#1090#1085#1080#1081' '#1079#1072#1089#1110#1073
-      ParentBackground = False
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 3
-      Height = 319
-      Width = 260
-      object cxLabel30: TcxLabel
-        Left = 3
-        Top = 16
-        AutoSize = False
-        Caption = #1042#1080#1076
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1PASSPORT_ISSUER: TcxGridDBColumn
+        Caption = #1050#1080#1084' '#1074#1080#1076#1072#1085#1080#1081' '#1087#1072#1089#1087#1086#1088#1090
+        DataBinding.FieldName = 'PASSPORT_ISSUER'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxLabel31: TcxLabel
-        Left = 3
-        Top = 43
-        AutoSize = False
-        Caption = #1052#1072#1088#1082#1072
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1PASSPORT_ISSUER_DEPT: TcxGridDBColumn
+        Caption = #1042#1110#1076#1076#1110#1083' '#1074#1080#1076#1072#1095#1110' '#1087#1072#1089#1087#1086#1088#1090#1072
+        DataBinding.FieldName = 'PASSPORT_ISSUER_DEPT'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxLabel32: TcxLabel
-        Left = 3
-        Top = 70
-        AutoSize = False
-        Caption = #1052#1086#1076#1077#1083#1100
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1PASSPORT_ISSUER_STATE: TcxGridDBColumn
+        Caption = #1054#1073#1083#1072#1089#1090#1100' '#1074#1080#1076#1072#1095#1110' '#1087#1072#1089#1087#1086#1088#1090#1072
+        DataBinding.FieldName = 'PASSPORT_ISSUER_STATE'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxLabel33: TcxLabel
-        Left = 3
-        Top = 97
-        AutoSize = False
-        Caption = #1058#1080#1087
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1PASSPORT_FOREIGN_SERIAL: TcxGridDBColumn
+        Caption = #1057#1077#1088#1110#1103' '#1079#1072#1082#1086#1088#1076#1086#1085#1085#1086#1075#1086' '#1087#1072#1089#1087#1086#1088#1090#1072
+        DataBinding.FieldName = 'PASSPORT_FOREIGN_SERIAL'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxLabel34: TcxLabel
-        Left = 3
-        Top = 124
-        AutoSize = False
-        Caption = #1050#1086#1083#1110#1088
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1PASSPORT_FOREIGN_NUMBER: TcxGridDBColumn
+        Caption = #1053#1086#1084#1077#1088' '#1079#1072#1082#1086#1088#1076#1086#1085#1085#1086#1075#1086' '#1087#1072#1089#1087#1086#1088#1090#1072
+        DataBinding.FieldName = 'PASSPORT_FOREIGN_NUMBER'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxLabel35: TcxLabel
-        Left = 3
-        Top = 151
-        AutoSize = False
-        Caption = #1053#1086#1084#1077#1088' '#1096#1072#1089#1110
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1PASSPORT_FOREIGN_ISSUE_DATE: TcxGridDBColumn
+        Caption = #1044#1072#1090#1072' '#1074#1080#1076#1072#1095#1110' '#1079#1072#1082#1086#1088#1076#1086#1085#1085#1086#1075#1086' '#1087#1072#1089#1087#1086#1088#1090#1072
+        DataBinding.FieldName = 'PASSPORT_FOREIGN_ISSUE_DATE'
+        PropertiesClassName = 'TcxDateEditProperties'
+        Visible = False
       end
-      object cxLabel36: TcxLabel
-        Left = 3
-        Top = 181
-        AutoSize = False
-        Caption = #1055#1086#1074#1085#1072' '#1084#1072#1089#1072
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1PASSPORT_FOREIGN_EXPIRATION: TcxGridDBColumn
+        Caption = #1047#1072#1082#1086#1088#1076#1086#1085#1085#1080#1081' '#1087#1072#1089#1087#1086#1088#1090' '#1076#1110#1081#1089#1085#1080#1081' '#1076#1086
+        DataBinding.FieldName = 'PASSPORT_FOREIGN_EXPIRATION'
+        PropertiesClassName = 'TcxDateEditProperties'
+        Visible = False
       end
-      object cxLabel37: TcxLabel
-        Left = 3
-        Top = 205
-        AutoSize = False
-        Caption = #1052#1072#1089#1072' '#1073#1077#1079' '#1085#1072#1074#1072#1085#1090'.'
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1PASSPORT_FOREIGN_ISSUER: TcxGridDBColumn
+        Caption = #1050#1080#1084' '#1074#1080#1076#1072#1085#1080#1081' '#1079#1072#1082#1086#1088#1076#1086#1085#1085#1080#1081' '#1087#1072#1089#1087#1086#1088#1090
+        DataBinding.FieldName = 'PASSPORT_FOREIGN_ISSUER'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxLabel38: TcxLabel
-        Left = 3
-        Top = 233
-        AutoSize = False
-        Caption = #1054#1073#39#1108#1084' '#1076#1074#1080#1075#1091#1085#1072
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1BIRTH_CERTIFICATE_SERIAL: TcxGridDBColumn
+        Caption = #1057#1077#1088#1110#1103' '#1089#1074#1110#1076#1086#1094#1090#1074#1072' '#1087#1088#1086' '#1085#1072#1088#1086#1076#1078#1077#1085#1085#1103
+        DataBinding.FieldName = 'BIRTH_CERTIFICATE_SERIAL'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxLabel39: TcxLabel
-        Left = 3
-        Top = 260
-        AutoSize = False
-        Caption = #1056#1077#1108#1089#1090#1088'. '#1085#1086#1084#1077#1088
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1BIRTH_CERTIFICATE_NUMBER: TcxGridDBColumn
+        Caption = #1053#1086#1084#1077#1088' '#1089#1074#1110#1076#1086#1094#1090#1074#1072' '#1087#1088#1086' '#1085#1072#1088#1086#1076#1078#1077#1085#1085#1103
+        DataBinding.FieldName = 'BIRTH_CERTIFICATE_NUMBER'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxLabel40: TcxLabel
-        Left = 3
-        Top = 287
-        AutoSize = False
-        Caption = #1056#1110#1082' '#1074#1080#1087#1091#1089#1082#1091
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
+      object IndividualsGridDBTableView1BIRTH_CERTIFICATE_ISSUE_DATE: TcxGridDBColumn
+        Caption = #1044#1072#1090#1072' '#1074#1080#1076#1072#1095#1110' '#1089#1074#1110#1076#1086#1094#1090#1074#1072' '#1087#1088#1086' '#1085#1072#1088#1086#1076#1078#1077#1085#1085#1103
+        DataBinding.FieldName = 'BIRTH_CERTIFICATE_ISSUE_DATE'
+        PropertiesClassName = 'TcxDateEditProperties'
+        Visible = False
       end
-      object cxDBLookupComboBox11: TcxDBLookupComboBox
-        Left = 104
-        Top = 15
-        DataBinding.DataField = 'ADDRESS_STATE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_STATE'
-        Properties.ListColumns = <
-          item
-            FieldName = 'ADDRESS_STATE'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressStateDataSource
-        TabOrder = 11
-        Width = 150
+      object IndividualsGridDBTableView1BIRTH_CERTIFICATE_ISSUER: TcxGridDBColumn
+        Caption = #1050#1080#1084' '#1074#1080#1076#1072#1085#1086' '#1089#1074#1110#1076#1086#1094#1090#1074#1086' '#1087#1088#1086' '#1085#1072#1088#1086#1076#1078#1077#1085#1085#1103
+        DataBinding.FieldName = 'BIRTH_CERTIFICATE_ISSUER'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxDBLookupComboBox12: TcxDBLookupComboBox
-        Left = 104
-        Top = 42
-        DataBinding.DataField = 'ADDRESS_REGION'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_REGION'
-        Properties.ListColumns = <
-          item
-            FieldName = 'ADDRESS_REGION'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressRegionDataSource
-        TabOrder = 12
-        Width = 150
+      object IndividualsGridDBTableView1BIRTH_CERTIFICATE_ISSUER_DEPT: TcxGridDBColumn
+        Caption = #1059#1087#1088#1072#1074#1083#1110#1085#1085#1103' '#1074#1080#1076#1072#1095#1110' '#1089#1074#1110#1076#1086#1094#1090#1074#1072' '#1087#1088#1086' '#1085#1072#1088#1086#1076#1078#1077#1085#1085#1103
+        DataBinding.FieldName = 'BIRTH_CERTIFICATE_ISSUER_DEPT'
+        Visible = False
       end
-      object cxDBLookupComboBox13: TcxDBLookupComboBox
-        Left = 104
-        Top = 69
-        DataBinding.DataField = 'ADDRESS_LOCALITY_TYPE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_LOCALITY_TYPE'
-        Properties.ListColumns = <
-          item
-            FieldName = 'ADDRESS_LOCALITY_TYPE'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressLocalityTypeDataSource
-        TabOrder = 13
-        Width = 150
+      object IndividualsGridDBTableView1BIRTH_CERTIFICATE_ISSUER_STATE: TcxGridDBColumn
+        Caption = #1054#1073#1083#1072#1089#1090#1100' '#1074#1080#1076#1072#1095#1110' '#1089#1074#1110#1076#1086#1094#1090#1074#1072' '#1087#1088#1086' '#1085#1072#1088#1086#1076#1078#1077#1085#1085#1103
+        DataBinding.FieldName = 'BIRTH_CERTIFICATE_ISSUER_STATE'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxDBLookupComboBox14: TcxDBLookupComboBox
-        Left = 104
-        Top = 96
-        DataBinding.DataField = 'ADDRESS_LOCALITY'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_LOCALITY'
-        Properties.ListColumns = <
-          item
-            FieldName = 'ADDRESS_LOCALITY'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressLocalityDataSource
-        TabOrder = 14
-        Width = 150
+      object IndividualsGridDBTableView1PERSONAL_CERTIFICATE: TcxGridDBColumn
+        Caption = #1055#1086#1089#1074#1110#1076#1095#1091#1074#1072#1083#1100#1085#1080#1081' '#1076#1086#1082#1091#1084#1077#1085#1090
+        DataBinding.FieldName = 'PERSONAL_CERTIFICATE'
+        PropertiesClassName = 'TcxMemoProperties'
+        Visible = False
       end
-      object cxDBLookupComboBox15: TcxDBLookupComboBox
-        Left = 104
-        Top = 123
-        DataBinding.DataField = 'ADDRESS_STREET_TYPE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_STREET_TYPE'
-        Properties.ListColumns = <
-          item
-            FieldName = 'ADDRESS_STREET_TYPE'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressStreetTypeDataSource
-        TabOrder = 15
-        Width = 150
+      object IndividualsGridDBTableView1ADDRESS_STATE: TcxGridDBColumn
+        Caption = #1054#1073#1083#1072#1089#1090#1100
+        DataBinding.FieldName = 'ADDRESS_STATE'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxDBLookupComboBox16: TcxDBLookupComboBox
-        Left = 104
-        Top = 150
-        DataBinding.DataField = 'ADDRESS_STREET'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_STREET'
-        Properties.ListColumns = <
-          item
-            FieldName = 'ADDRESS_STREET'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressStreetDataSource
-        TabOrder = 16
-        Width = 150
+      object IndividualsGridDBTableView1ADDRESS_REGION: TcxGridDBColumn
+        Caption = #1056#1072#1081#1086#1085
+        DataBinding.FieldName = 'ADDRESS_REGION'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxDBLookupComboBox17: TcxDBLookupComboBox
-        Left = 104
-        Top = 177
-        DataBinding.DataField = 'ADDRESS_BUILDING'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_BUILDING'
-        Properties.ListColumns = <
-          item
-            FieldName = 'ADDRESS_BUILDING'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressBuildingDataSource
-        TabOrder = 17
-        Width = 150
+      object IndividualsGridDBTableView1ADDRESS_LOCALITY_TYPE: TcxGridDBColumn
+        Caption = #1042#1080#1076' '#1085#1072#1089#1077#1083#1077#1085#1086#1075#1086' '#1087#1091#1085#1082#1090#1072
+        DataBinding.FieldName = 'ADDRESS_LOCALITY_TYPE'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxDBLookupComboBox18: TcxDBLookupComboBox
-        Left = 104
-        Top = 204
-        DataBinding.DataField = 'ADDRESS_FLAT'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_FLAT'
-        Properties.ListColumns = <
-          item
-            FieldName = 'ADDRESS_FLAT'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressFlatDataSource
-        TabOrder = 18
-        Width = 150
+      object IndividualsGridDBTableView1ADDRESS_LOCALITY: TcxGridDBColumn
+        Caption = #1053#1072#1089#1077#1083#1077#1085#1080#1081' '#1087#1091#1085#1082#1090
+        DataBinding.FieldName = 'ADDRESS_LOCALITY'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxDBLookupComboBox19: TcxDBLookupComboBox
-        Left = 104
-        Top = 232
-        DataBinding.DataField = 'ADDRESS_CORPS'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_CORPS'
-        Properties.ListColumns = <
-          item
-            FieldName = 'ADDRESS_CORPS'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressCorpsDataSource
-        TabOrder = 19
-        Width = 150
+      object IndividualsGridDBTableView1ADDRESS_STREET_TYPE: TcxGridDBColumn
+        Caption = #1058#1080#1087' '#1074#1091#1083#1080#1094#1110
+        DataBinding.FieldName = 'ADDRESS_STREET_TYPE'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxDBLookupComboBox20: TcxDBLookupComboBox
-        Left = 104
-        Top = 259
-        DataBinding.DataField = 'ADDRESS_SECTION'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_SECTION'
-        Properties.ListColumns = <
-          item
-            FieldName = 'ADDRESS_SECTION'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressSectionDataSource
-        TabOrder = 20
-        Width = 150
+      object IndividualsGridDBTableView1ADDRESS_STREET: TcxGridDBColumn
+        Caption = #1042#1091#1083#1080#1094#1103
+        DataBinding.FieldName = 'ADDRESS_STREET'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
       end
-      object cxDBDateEdit5: TcxDBDateEdit
-        Left = 104
-        Top = 286
-        DataBinding.DataField = 'PASSPORT_FOREIGN_ISSUE_DATE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
-        ParentFont = False
-        TabOrder = 21
-        Width = 150
+      object IndividualsGridDBTableView1ADDRESS_BUILDING: TcxGridDBColumn
+        Caption = #1041#1091#1076#1080#1085#1086#1082
+        DataBinding.FieldName = 'ADDRESS_BUILDING'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
+      end
+      object IndividualsGridDBTableView1ADDRESS_FLAT: TcxGridDBColumn
+        Caption = #1050#1074#1072#1088#1090#1080#1088#1072
+        DataBinding.FieldName = 'ADDRESS_FLAT'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
+      end
+      object IndividualsGridDBTableView1ADDRESS_CORPS: TcxGridDBColumn
+        Caption = #1050#1086#1088#1087#1091#1089
+        DataBinding.FieldName = 'ADDRESS_CORPS'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
+      end
+      object IndividualsGridDBTableView1ADDRESS_SECTION: TcxGridDBColumn
+        Caption = #1057#1077#1082#1094#1110#1103
+        DataBinding.FieldName = 'ADDRESS_SECTION'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
+      end
+      object IndividualsGridDBTableView1ADDRESS_INDEX: TcxGridDBColumn
+        Caption = #1030#1085#1076#1077#1082#1089
+        DataBinding.FieldName = 'ADDRESS_INDEX'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
+      end
+      object IndividualsGridDBTableView1ADDRESS_OTHER: TcxGridDBColumn
+        Caption = #1055#1088#1080#1084#1110#1090#1082#1072' '#1072#1076#1088#1077#1089#1080
+        DataBinding.FieldName = 'ADDRESS_OTHER'
+        PropertiesClassName = 'TcxMemoProperties'
+        Visible = False
+      end
+      object IndividualsGridDBTableView1DESCRIPTION: TcxGridDBColumn
+        Caption = #1055#1088#1080#1084#1110#1090#1082#1072
+        DataBinding.FieldName = 'DESCRIPTION'
+        PropertiesClassName = 'TcxMemoProperties'
+        Width = 73
+      end
+      object IndividualsGridDBTableView1MARRIAGE_REGISTRATOR: TcxGridDBColumn
+        Caption = #1054#1088#1075#1072#1085' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1111' '#1096#1083#1102#1073#1091
+        DataBinding.FieldName = 'MARRIAGE_REGISTRATOR'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
+      end
+      object IndividualsGridDBTableView1MARRIAGE_REGISTERED_DATE: TcxGridDBColumn
+        Caption = #1044#1072#1090#1072' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1111' '#1096#1083#1102#1073#1091
+        DataBinding.FieldName = 'MARRIAGE_REGISTERED_DATE'
+        PropertiesClassName = 'TcxDateEditProperties'
+        Visible = False
+      end
+      object IndividualsGridDBTableView1MARRIAGE_MEMBER: TcxGridDBColumn
+        Caption = #1055'.'#1030'.'#1041'. '#1095#1086#1083#1086#1074#1110#1082#1072' '#1072#1073#1086' '#1076#1088#1091#1078#1080#1085#1080
+        DataBinding.FieldName = 'MARRIAGE_MEMBER'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Visible = False
+      end
+      object IndividualsGridDBTableView1SHOW_BIRTH_DATE: TcxGridDBColumn
+        Caption = #1055#1086#1082#1072#1079#1091#1074#1072#1090#1080' '#1076#1072#1090#1091' '#1085#1072#1088#1086#1076#1078#1077#1085#1085#1103
+        DataBinding.FieldName = 'SHOW_BIRTH_DATE'
+        PropertiesClassName = 'TcxCheckBoxProperties'
+        Properties.ValueChecked = 1
+        Properties.ValueUnchecked = 0
+        Visible = False
+      end
+      object IndividualsGridDBTableView1SHOW_ADDRESS: TcxGridDBColumn
+        Caption = #1055#1086#1082#1072#1079#1091#1074#1072#1090#1080' '#1072#1076#1088#1077#1089#1091
+        DataBinding.FieldName = 'SHOW_ADDRESS'
+        PropertiesClassName = 'TcxCheckBoxProperties'
+        Properties.ValueChecked = 1
+        Properties.ValueUnchecked = 0
+        Visible = False
+      end
+      object IndividualsGridDBTableView1SHOW_ID_NUMBER: TcxGridDBColumn
+        Caption = #1055#1086#1082#1072#1079#1091#1074#1072#1090#1080' '#1110#1076#1077#1085#1090#1080#1092#1110#1082#1072#1094#1110#1081#1085#1080#1081' '#1082#1086#1076
+        DataBinding.FieldName = 'SHOW_ID_NUMBER'
+        PropertiesClassName = 'TcxCheckBoxProperties'
+        Properties.ValueChecked = 1
+        Properties.ValueUnchecked = 0
+        Visible = False
+      end
+      object IndividualsGridDBTableView1SHOW_PASSPORT_DATA: TcxGridDBColumn
+        Caption = #1055#1086#1082#1072#1079#1091#1074#1072#1090#1080' '#1087#1072#1089#1087#1086#1088#1090#1085#1110' '#1076#1072#1085#1110
+        DataBinding.FieldName = 'SHOW_PASSPORT_DATA'
+        PropertiesClassName = 'TcxCheckBoxProperties'
+        Properties.ValueChecked = 1
+        Properties.ValueUnchecked = 0
+        Visible = False
       end
     end
-    object cxGroupBox8: TcxGroupBox
-      Left = 280
-      Top = 351
-      Caption = #1055#1088#1077#1076#1089#1090#1072#1074#1085#1080#1082#1080
-      ParentBackground = False
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 4
-      Height = 105
-      Width = 260
-    end
-    object cxGroupBox4: TcxGroupBox
-      Left = 14
-      Top = 26
-      Caption = #1044#1086#1074#1110#1088#1080#1090#1077#1083#1100
-      ParentBackground = False
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 5
-      Height = 187
-      Width = 260
-      object dxBevel1: TdxBevel
-        Left = 3
-        Top = 152
-        Width = 254
-        Height = 25
-        Align = alBottom
-        Shape = dxbsFrame
-      end
-      object cxListBox1: TcxListBox
-        Left = 3
-        Top = 15
-        Width = 254
-        Height = 137
-        Align = alClient
-        ItemHeight = 13
-        ParentFont = False
-        TabOrder = 0
-        ExplicitLeft = 120
-        ExplicitTop = 40
-        ExplicitWidth = 121
-        ExplicitHeight = 97
-      end
-      object AddConstituentButton: TcxButton
-        Left = 6
-        Top = 155
-        Width = 78
-        Height = 19
-        Caption = #1054#1073#1088#1072#1090#1080
-        DropDownMenu = ConstituentPopupMenu
-        Kind = cxbkOfficeDropDown
-        LookAndFeel.Kind = lfUltraFlat
-        LookAndFeel.NativeStyle = False
-        TabOrder = 1
-      end
+    object IndividualsGridLevel1: TcxGridLevel
+      GridView = IndividualsGridDBTableView1
     end
   end
-  object ConstituentPopupMenu: TPopupMenu
-    Left = 88
-    Top = 248
-    object ConstituentIndividualPopUpMenuItem: TMenuItem
-      Caption = #1060#1110#1079#1080#1095#1085#1072' '#1086#1089#1086#1073#1072
-      OnClick = ConstituentIndividualPopUpMenuItemClick
+  object CancelButton: TcxButton
+    Left = 96
+    Top = 387
+    Width = 75
+    Height = 25
+    Caption = #1042#1110#1076#1084#1110#1085#1072
+    TabOrder = 1
+  end
+  object OkButton: TcxButton
+    Left = 8
+    Top = 387
+    Width = 75
+    Height = 25
+    Caption = #1054#1073#1088#1072#1090#1080
+    TabOrder = 2
+  end
+  object IndividualsDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    SURNAME,'
+      '    NAME,'
+      '    MIDDLE,'
+      '    GENDER,'
+      '    STATE,'
+      '    PERSONAL_DOCUMENT,'
+      '    BIRTH_DATE,'
+      '    BIRTH_PLACE,'
+      '    DISABLEMENT,'
+      '    DISABLEMENT_GROUP,'
+      '    DISABLEMENT_DOCUMENT,'
+      '    FOREIGN_ADDRESS_TYPE,'
+      '    FOREIGN_ADDRESS,'
+      '    ID_NUMBER,'
+      '    ID_NUMBER_ABSENT,'
+      '    ID_NUMBER_ABSENT_REASON,'
+      '    PASSPORT_SERIAL,'
+      '    PASSPORT_NUMBER,'
+      '    PASSPORT_ISSUE_DATE,'
+      '    PASSPORT_ISSUER,'
+      '    PASSPORT_ISSUER_DEPT,'
+      '    PASSPORT_ISSUER_STATE,'
+      '    PASSPORT_FOREIGN_SERIAL,'
+      '    PASSPORT_FOREIGN_NUMBER,'
+      '    PASSPORT_FOREIGN_ISSUE_DATE,'
+      '    PASSPORT_FOREIGN_EXPIRATION,'
+      '    PASSPORT_FOREIGN_ISSUER,'
+      '    BIRTH_CERTIFICATE_SERIAL,'
+      '    BIRTH_CERTIFICATE_NUMBER,'
+      '    BIRTH_CERTIFICATE_ISSUE_DATE,'
+      '    BIRTH_CERTIFICATE_ISSUER,'
+      '    BIRTH_CERTIFICATE_ISSUER_DEPT,'
+      '    BIRTH_CERTIFICATE_ISSUER_STATE,'
+      '    PERSONAL_CERTIFICATE,'
+      '    ADDRESS_STATE,'
+      '    ADDRESS_REGION,'
+      '    ADDRESS_LOCALITY_TYPE,'
+      '    ADDRESS_LOCALITY,'
+      '    ADDRESS_STREET_TYPE,'
+      '    ADDRESS_STREET,'
+      '    ADDRESS_BUILDING,'
+      '    ADDRESS_FLAT,'
+      '    ADDRESS_CORPS,'
+      '    ADDRESS_SECTION,'
+      '    ADDRESS_INDEX,'
+      '    ADDRESS_OTHER,'
+      '    DESCRIPTION,'
+      '    MARRIAGE_REGISTRATOR,'
+      '    MARRIAGE_REGISTERED_DATE,'
+      '    MARRIAGE_MEMBER,'
+      '    SHOW_BIRTH_DATE,'
+      '    SHOW_ADDRESS,'
+      '    SHOW_ID_NUMBER,'
+      '    SHOW_PASSPORT_DATA'
+      'FROM'
+      '    VIEW_CATALOG_INDIVIDUALS ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 64
+    Top = 32
+    object IndividualsDataSetID: TFIBBCDField
+      FieldName = 'ID'
+      Size = 0
+    end
+    object IndividualsDataSetSURNAME: TFIBWideStringField
+      FieldName = 'SURNAME'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetNAME: TFIBWideStringField
+      FieldName = 'NAME'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetMIDDLE: TFIBWideStringField
+      FieldName = 'MIDDLE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetGENDER: TFIBWideStringField
+      FieldName = 'GENDER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetSTATE: TFIBWideStringField
+      FieldName = 'STATE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPERSONAL_DOCUMENT: TFIBWideStringField
+      FieldName = 'PERSONAL_DOCUMENT'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetBIRTH_DATE: TFIBDateField
+      FieldName = 'BIRTH_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object IndividualsDataSetBIRTH_PLACE: TFIBWideStringField
+      FieldName = 'BIRTH_PLACE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetDISABLEMENT: TFIBSmallIntField
+      FieldName = 'DISABLEMENT'
+    end
+    object IndividualsDataSetDISABLEMENT_GROUP: TFIBWideStringField
+      FieldName = 'DISABLEMENT_GROUP'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetDISABLEMENT_DOCUMENT: TFIBWideStringField
+      FieldName = 'DISABLEMENT_DOCUMENT'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetFOREIGN_ADDRESS_TYPE: TFIBSmallIntField
+      FieldName = 'FOREIGN_ADDRESS_TYPE'
+    end
+    object IndividualsDataSetFOREIGN_ADDRESS: TFIBMemoField
+      FieldName = 'FOREIGN_ADDRESS'
+      BlobType = ftWideMemo
+      Size = 8
+    end
+    object IndividualsDataSetID_NUMBER: TFIBWideStringField
+      FieldName = 'ID_NUMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetID_NUMBER_ABSENT: TFIBSmallIntField
+      FieldName = 'ID_NUMBER_ABSENT'
+    end
+    object IndividualsDataSetID_NUMBER_ABSENT_REASON: TFIBMemoField
+      FieldName = 'ID_NUMBER_ABSENT_REASON'
+      BlobType = ftWideMemo
+      Size = 8
+    end
+    object IndividualsDataSetPASSPORT_SERIAL: TFIBWideStringField
+      FieldName = 'PASSPORT_SERIAL'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPASSPORT_NUMBER: TFIBWideStringField
+      FieldName = 'PASSPORT_NUMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPASSPORT_ISSUE_DATE: TFIBDateField
+      FieldName = 'PASSPORT_ISSUE_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object IndividualsDataSetPASSPORT_ISSUER: TFIBWideStringField
+      FieldName = 'PASSPORT_ISSUER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPASSPORT_ISSUER_DEPT: TFIBWideStringField
+      FieldName = 'PASSPORT_ISSUER_DEPT'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPASSPORT_ISSUER_STATE: TFIBWideStringField
+      FieldName = 'PASSPORT_ISSUER_STATE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPASSPORT_FOREIGN_SERIAL: TFIBWideStringField
+      FieldName = 'PASSPORT_FOREIGN_SERIAL'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPASSPORT_FOREIGN_NUMBER: TFIBWideStringField
+      FieldName = 'PASSPORT_FOREIGN_NUMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPASSPORT_FOREIGN_ISSUE_DATE: TFIBDateField
+      FieldName = 'PASSPORT_FOREIGN_ISSUE_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object IndividualsDataSetPASSPORT_FOREIGN_EXPIRATION: TFIBDateField
+      FieldName = 'PASSPORT_FOREIGN_EXPIRATION'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object IndividualsDataSetPASSPORT_FOREIGN_ISSUER: TFIBWideStringField
+      FieldName = 'PASSPORT_FOREIGN_ISSUER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetBIRTH_CERTIFICATE_SERIAL: TFIBWideStringField
+      FieldName = 'BIRTH_CERTIFICATE_SERIAL'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetBIRTH_CERTIFICATE_NUMBER: TFIBWideStringField
+      FieldName = 'BIRTH_CERTIFICATE_NUMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetBIRTH_CERTIFICATE_ISSUE_DATE: TFIBDateField
+      FieldName = 'BIRTH_CERTIFICATE_ISSUE_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object IndividualsDataSetBIRTH_CERTIFICATE_ISSUER: TFIBWideStringField
+      FieldName = 'BIRTH_CERTIFICATE_ISSUER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetBIRTH_CERTIFICATE_ISSUER_DEPT: TFIBWideStringField
+      FieldName = 'BIRTH_CERTIFICATE_ISSUER_DEPT'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetBIRTH_CERTIFICATE_ISSUER_STATE: TFIBWideStringField
+      FieldName = 'BIRTH_CERTIFICATE_ISSUER_STATE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPERSONAL_CERTIFICATE: TFIBMemoField
+      FieldName = 'PERSONAL_CERTIFICATE'
+      BlobType = ftWideMemo
+      Size = 8
+    end
+    object IndividualsDataSetADDRESS_STATE: TFIBWideStringField
+      FieldName = 'ADDRESS_STATE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_REGION: TFIBWideStringField
+      FieldName = 'ADDRESS_REGION'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_LOCALITY_TYPE: TFIBWideStringField
+      FieldName = 'ADDRESS_LOCALITY_TYPE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_LOCALITY: TFIBWideStringField
+      FieldName = 'ADDRESS_LOCALITY'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_STREET_TYPE: TFIBWideStringField
+      FieldName = 'ADDRESS_STREET_TYPE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_STREET: TFIBWideStringField
+      FieldName = 'ADDRESS_STREET'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_BUILDING: TFIBWideStringField
+      FieldName = 'ADDRESS_BUILDING'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_FLAT: TFIBWideStringField
+      FieldName = 'ADDRESS_FLAT'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_CORPS: TFIBWideStringField
+      FieldName = 'ADDRESS_CORPS'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_SECTION: TFIBWideStringField
+      FieldName = 'ADDRESS_SECTION'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_INDEX: TFIBWideStringField
+      FieldName = 'ADDRESS_INDEX'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_OTHER: TFIBWideStringField
+      FieldName = 'ADDRESS_OTHER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetDESCRIPTION: TFIBMemoField
+      FieldName = 'DESCRIPTION'
+      BlobType = ftWideMemo
+      Size = 8
+    end
+    object IndividualsDataSetMARRIAGE_REGISTRATOR: TFIBWideStringField
+      FieldName = 'MARRIAGE_REGISTRATOR'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetMARRIAGE_REGISTERED_DATE: TFIBDateField
+      FieldName = 'MARRIAGE_REGISTERED_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object IndividualsDataSetMARRIAGE_MEMBER: TFIBWideStringField
+      FieldName = 'MARRIAGE_MEMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetSHOW_BIRTH_DATE: TFIBSmallIntField
+      FieldName = 'SHOW_BIRTH_DATE'
+    end
+    object IndividualsDataSetSHOW_ADDRESS: TFIBSmallIntField
+      FieldName = 'SHOW_ADDRESS'
+    end
+    object IndividualsDataSetSHOW_ID_NUMBER: TFIBSmallIntField
+      FieldName = 'SHOW_ID_NUMBER'
+    end
+    object IndividualsDataSetSHOW_PASSPORT_DATA: TFIBSmallIntField
+      FieldName = 'SHOW_PASSPORT_DATA'
+    end
+  end
+  object IndividualsDataSource: TDataSource
+    DataSet = IndividualsDataSet
+    Left = 196
+    Top = 32
+  end
+  object IndividualSelectorCustomizeGridPopupMenu: TPopupMenu
+    Left = 472
+    Top = 296
+    object IndividualSelectorCustomizeGridMenuItem: TMenuItem
+      Caption = #1053#1072#1083#1072#1096#1090#1091#1074#1072#1090#1080
     end
   end
 end

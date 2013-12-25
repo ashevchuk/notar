@@ -236,7 +236,7 @@ begin
   fields := getFieldsList(ATable);
   for I := 0 to fields.Count -1 do
   begin
-    s := Format('create view GROUP_%s ( %s ) as SELECT %s FROM CATALOG_INDIVIDUALS GROUP BY %s ORDER BY %s;', [fields[i], fields[i], fields[i], fields[i], fields[i]]);
+    s := Format('%s, ', [fields[i]]);
     log(s);
   end;
 
