@@ -3,7 +3,8 @@ unit udmIndividual;
 interface
 
 uses
-  System.SysUtils, System.Classes, Data.DB, FIBDataSet, pFIBDataSet;
+  System.SysUtils, System.Classes, Data.DB, FIBDataSet, pFIBDataSet,
+  ufmMain, uUtils, uRemoteDM;
 
 type
   TdmIndividual = class(TDataModule)

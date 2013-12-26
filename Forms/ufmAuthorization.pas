@@ -63,21 +63,30 @@ type
     cxDBDateEdit5: TcxDBDateEdit;
     cxDBCheckBox1: TcxDBCheckBox;
     cxDBCheckBox2: TcxDBCheckBox;
-    cxGroupBox8: TcxGroupBox;
     cxGroupBox4: TcxGroupBox;
-    dxBevel1: TdxBevel;
     ConstituentsListBox: TcxListBox;
-    AddConstituentButton: TcxButton;
     ConstituentPopupMenu: TPopupMenu;
     ConstituentIndividualPopUpMenuItem: TMenuItem;
+    cxGroupBox2: TcxGroupBox;
+    AddConstituentButton: TcxButton;
+    cxGroupBox9: TcxGroupBox;
+    RepresentativesListBox: TcxListBox;
+    cxGroupBox10: TcxGroupBox;
+    AddRepresentativeButton: TcxButton;
+    RepresentativesPopupMenu: TPopupMenu;
+    RepresentativesIndividualPopUpMenuItem: TMenuItem;
+    RemoveRepresentativeButton: TcxButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure ConstituentIndividualPopUpMenuItemClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure RepresentativesIndividualPopUpMenuItemClick(Sender: TObject);
+    procedure RemoveRepresentativeButtonClick(Sender: TObject);
   private
     { Private declarations }
   public
-    procedure gotConstituentIndividualID(AID: string);
+    procedure gotConstituentIndividualID(AID: Variant);
+    procedure gotRepresentativeIndividualID(AID: Variant);
   end;
 
 var
@@ -112,9 +121,54 @@ begin
   dmAuthorization.Free;
 end;
 
-procedure TfmAuthorization.gotConstituentIndividualID(AID: string);
+procedure TfmAuthorization.gotConstituentIndividualID(AID: Variant);
+var
+  ConstituentID: TIdStorage;
 begin
-  ConstituentsListBox.Items.Add(AID);
+  ConstituentsListBox.Items.Clear;
+  dmAuthorization.IndividualConstituentsDataSet.Close;
+  dmAuthorization.IndividualConstituentsDataSet.ParamByName('ID').Value := AID;
+  dmAuthorization.IndividualConstituentsDataSet.Open;
+
+  ConstituentID := TIdStorage.Create(AID);
+
+  ConstituentsListBox.Items.AddObject(Format('%s %s %s', [dmAuthorization.IndividualConstituentsDataSetSURNAME.asString, dmAuthorization.IndividualConstituentsDataSetNAME.asString, dmAuthorization.IndividualConstituentsDataSetMIDDLE.asString]), ConstituentID);
+
+  dmAuthorization.IndividualConstituentsDataSet.Close;
+end;
+
+procedure TfmAuthorization.gotRepresentativeIndividualID(AID: Variant);
+var
+  RepresentativeID: TIdStorage;
+begin
+  dmAuthorization.IndividualRepresentativesDataSet.Close;
+  dmAuthorization.IndividualRepresentativesDataSet.ParamByName('ID').Value := AID;
+  dmAuthorization.IndividualRepresentativesDataSet.Open;
+
+  RepresentativeID := TIdStorage.Create(AID);
+
+  RepresentativesListBox.Items.AddObject(Format('%s %s %s', [dmAuthorization.IndividualRepresentativesDataSetSURNAME.asString, dmAuthorization.IndividualRepresentativesDataSetNAME.asString, dmAuthorization.IndividualRepresentativesDataSetMIDDLE.asString]), RepresentativeID);
+
+  dmAuthorization.IndividualRepresentativesDataSet.Close;
+end;
+
+procedure TfmAuthorization.RemoveRepresentativeButtonClick(Sender: TObject);
+begin
+  if RepresentativesListBox.ItemIndex <0 then Exit;
+
+  TIdStorage(RepresentativesListBox.Items.Objects[RepresentativesListBox.ItemIndex]).Free;
+  RepresentativesListBox.Items.Delete(RepresentativesListBox.ItemIndex);
+  if RepresentativesListBox.ItemIndex >0 then RepresentativesListBox.ItemIndex := RepresentativesListBox.ItemIndex -1;
+end;
+
+procedure TfmAuthorization.RepresentativesIndividualPopUpMenuItemClick(
+  Sender: TObject);
+begin
+  with TfmIndividualSelector.Create(self) do
+  begin
+    Show;
+    registerSelectorCallback(gotRepresentativeIndividualID);
+  end;
 end;
 
 end.
