@@ -280,7 +280,7 @@ end;
 function TfmMain.GetCustomTagValue(const Tag: AnsiString;  var Value: string): boolean;
 begin
   Result := True;
-  Value := 'Test value for ' + Tag;
+ // Value := 'Test value for ' + Tag;
 end;
 
 procedure TfmMain.OnException(Sender: TObject; E: Exception);

@@ -501,8 +501,6 @@ object fmAuthorization: TfmAuthorization
     ParentColor = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 847
-    ExplicitHeight = 395
     Height = 598
     Width = 818
     object cxGroupBox5: TcxGroupBox
@@ -1208,17 +1206,6 @@ object fmAuthorization: TfmAuthorization
         Width = 150
       end
     end
-    object cxGroupBox8: TcxGroupBox
-      Left = 280
-      Top = 351
-      Caption = #1055#1088#1077#1076#1089#1090#1072#1074#1085#1080#1082#1080
-      ParentBackground = False
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 4
-      Height = 105
-      Width = 260
-    end
     object cxGroupBox4: TcxGroupBox
       Left = 14
       Top = 26
@@ -1226,51 +1213,129 @@ object fmAuthorization: TfmAuthorization
       ParentBackground = False
       ParentColor = False
       ParentFont = False
-      TabOrder = 5
-      Height = 187
+      TabOrder = 4
+      Height = 73
       Width = 260
-      object dxBevel1: TdxBevel
-        Left = 3
-        Top = 152
-        Width = 254
-        Height = 25
-        Align = alBottom
-        Shape = dxbsFrame
-      end
       object ConstituentsListBox: TcxListBox
         Left = 3
         Top = 15
         Width = 254
-        Height = 137
+        Height = 19
         Align = alClient
         ItemHeight = 13
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 120
-        ExplicitTop = 40
-        ExplicitWidth = 121
-        ExplicitHeight = 97
+        ExplicitHeight = 18
       end
-      object AddConstituentButton: TcxButton
-        Left = 6
-        Top = 155
-        Width = 78
-        Height = 19
-        Caption = #1054#1073#1088#1072#1090#1080
-        DropDownMenu = ConstituentPopupMenu
-        Kind = cxbkOfficeDropDown
-        LookAndFeel.Kind = lfUltraFlat
-        LookAndFeel.NativeStyle = False
+      object cxGroupBox2: TcxGroupBox
+        Left = 3
+        Top = 34
+        Align = alBottom
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        Style.BorderStyle = ebsNone
+        Style.Shadow = False
+        Style.TransparentBorder = True
         TabOrder = 1
+        ExplicitTop = 48
+        Height = 29
+        Width = 254
+        object AddConstituentButton: TcxButton
+          Left = 3
+          Top = 6
+          Width = 78
+          Height = 19
+          Caption = #1054#1073#1088#1072#1090#1080
+          DropDownMenu = ConstituentPopupMenu
+          Kind = cxbkOfficeDropDown
+          LookAndFeel.Kind = lfUltraFlat
+          LookAndFeel.NativeStyle = False
+          TabOrder = 0
+        end
+      end
+    end
+    object cxGroupBox9: TcxGroupBox
+      Left = 14
+      Top = 105
+      Caption = #1055#1088#1077#1076#1089#1090#1072#1074#1085#1080#1082#1080
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 5
+      Height = 125
+      Width = 260
+      object RepresentativesListBox: TcxListBox
+        Left = 3
+        Top = 15
+        Width = 254
+        Height = 71
+        Align = alClient
+        ItemHeight = 13
+        ParentFont = False
+        TabOrder = 0
+        ExplicitLeft = 2
+        ExplicitTop = -2
+        ExplicitWidth = 256
+        ExplicitHeight = 58
+      end
+      object cxGroupBox10: TcxGroupBox
+        Left = 3
+        Top = 86
+        Align = alBottom
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        Style.BorderStyle = ebsNone
+        Style.Shadow = False
+        Style.TransparentBorder = True
+        TabOrder = 1
+        ExplicitLeft = 2
+        ExplicitTop = 56
+        ExplicitWidth = 256
+        Height = 29
+        Width = 254
+        object AddRepresentativeButton: TcxButton
+          Left = 3
+          Top = 6
+          Width = 78
+          Height = 19
+          Caption = #1054#1073#1088#1072#1090#1080
+          DropDownMenu = RepresentativesPopupMenu
+          Kind = cxbkOfficeDropDown
+          LookAndFeel.Kind = lfUltraFlat
+          LookAndFeel.NativeStyle = False
+          TabOrder = 0
+        end
+        object RemoveRepresentativeButton: TcxButton
+          Left = 173
+          Top = 6
+          Width = 78
+          Height = 19
+          Caption = #1054#1073#1088#1072#1090#1080
+          DropDownMenu = RepresentativesPopupMenu
+          LookAndFeel.Kind = lfUltraFlat
+          LookAndFeel.NativeStyle = False
+          TabOrder = 1
+          OnClick = RemoveRepresentativeButtonClick
+        end
       end
     end
   end
   object ConstituentPopupMenu: TPopupMenu
-    Left = 88
+    Left = 64
     Top = 248
     object ConstituentIndividualPopUpMenuItem: TMenuItem
       Caption = #1060#1110#1079#1080#1095#1085#1072' '#1086#1089#1086#1073#1072
       OnClick = ConstituentIndividualPopUpMenuItemClick
+    end
+  end
+  object RepresentativesPopupMenu: TPopupMenu
+    Left = 192
+    Top = 248
+    object RepresentativesIndividualPopUpMenuItem: TMenuItem
+      Caption = #1060#1110#1079#1080#1095#1085#1072' '#1086#1089#1086#1073#1072
+      OnClick = RepresentativesIndividualPopUpMenuItemClick
     end
   end
 end

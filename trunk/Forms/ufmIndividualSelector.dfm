@@ -507,8 +507,6 @@ object fmIndividualSelector: TfmIndividualSelector
     Height = 376
     Align = alClient
     TabOrder = 0
-    ExplicitTop = 5
-    ExplicitWidth = 553
     object IndividualsGridDBTableView1: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
       Navigator.Buttons.Insert.Visible = False
@@ -518,6 +516,7 @@ object fmIndividualSelector: TfmIndividualSelector
       Navigator.Buttons.Post.Visible = False
       Navigator.Buttons.Cancel.Visible = False
       Navigator.Visible = True
+      OnCellDblClick = IndividualsGridDBTableView1CellDblClick
       DataController.DataModeController.GridMode = True
       DataController.DataModeController.SmartRefresh = True
       DataController.DataSource = IndividualsDataSource

@@ -140,6 +140,10 @@ type
     procedure CancelButtonClick(Sender: TObject);
     procedure OkButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure IndividualsGridDBTableView1CellDblClick(
+      Sender: TcxCustomGridTableView;
+      ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton;
+      AShift: TShiftState; var AHandled: Boolean);
   private
     FSelectorCallback: TCatalogSelectorCallback;
   public
@@ -168,9 +172,17 @@ begin
   FSelectorCallback := nil;
 end;
 
+procedure TfmIndividualSelector.IndividualsGridDBTableView1CellDblClick(
+  Sender: TcxCustomGridTableView; ACellViewInfo: TcxGridTableDataCellViewInfo;
+  AButton: TMouseButton; AShift: TShiftState; var AHandled: Boolean);
+begin
+  OkButtonClick(Sender);
+end;
+
 procedure TfmIndividualSelector.OkButtonClick(Sender: TObject);
 begin
-  if Assigned(FSelectorCallback) then FSelectorCallback(IndividualsDataSetID.AsString);
+  if Assigned(FSelectorCallback) then FSelectorCallback(IndividualsDataSetID.Value);
+  Close;
 end;
 
 procedure TfmIndividualSelector.registerSelectorCallback(ACallback: TCatalogSelectorCallback);
