@@ -236,7 +236,7 @@ begin
   fields := getFieldsList(ATable);
   for I := 0 to fields.Count -1 do
   begin
-    s := Format('%s, ', [fields[i]]);
+    s := Format('CREATE OR ALTER VIEW CAT_AUTH_%s(%s) AS SELECT %s FROM CATALOG_AUTHORIZATIONS GROUP BY %s ORDER BY %s;', [fields[i], fields[i], fields[i], fields[i], fields[i]]);
     log(s);
   end;
 

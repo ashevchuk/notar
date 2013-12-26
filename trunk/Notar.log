@@ -1,1158 +1,215 @@
-=====[EXCEPTION]=====
-[21.12.2013 18:38:20]
-=====================
-ClassType.ClassName: "TcxGridSite", UnitScope: "cxGridCustomView", UnitName: "cxGridCustomView", ClassName: "TcxGridSite", Message: "fmMain.fmCatalogs.CatalogsRegistryDataSet.UpdateQuery:
-The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
-", Exception: "fmMain.fmCatalogs.CatalogsRegistryDataSet.UpdateQuery:
-The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
-", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 18:38:21]
-=====================
-ClassType.ClassName: "TcxGridSite", UnitScope: "cxGridCustomView", UnitName: "cxGridCustomView", ClassName: "TcxGridSite", Message: "fmMain.fmCatalogs.CatalogsRegistryDataSet.UpdateQuery:
-The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
-", Exception: "fmMain.fmCatalogs.CatalogsRegistryDataSet.UpdateQuery:
-The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
-", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 18:38:21]
-=====================
-ClassType.ClassName: "TcxGridSite", UnitScope: "cxGridCustomView", UnitName: "cxGridCustomView", ClassName: "TcxGridSite", Message: "fmMain.fmCatalogs.CatalogsRegistryDataSet.UpdateQuery:
-The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
-", Exception: "fmMain.fmCatalogs.CatalogsRegistryDataSet.UpdateQuery:
-The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
-", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 21:36:20]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Format '%s;%s;%s;%s;%s' invalid or incompatible with argument", Exception: "Format '%s;%s;%s;%s;%s' invalid or incompatible with argument", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 21:53:03]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 21:53:05]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 21:54:02]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 21:54:03]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 21:54:04]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 21:54:05]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 21:54:25]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:13:11]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:13:17]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:13:18]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:13:19]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:13:19]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:13:20]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:13:21]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:13:22]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:13:22]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:13:23]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:15:30]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:15:46]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:15:49]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:15:52]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:16:08]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:16:11]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:16:18]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:16:21]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:16:23]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:18:36]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:18:37]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:18:41]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:18:46]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:18:46]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:20:03]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:20:08]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:20:16]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:20:18]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:20:23]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:20:24]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:20:24]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:22:44]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:23:54]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:23:58]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:23:59]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:23:59]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:24:00]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:24:01]
-=====================
-ClassType.ClassName: "TcxMCInnerPanel", UnitScope: "cxMCListBox", UnitName: "cxMCListBox", ClassName: "TcxMCInnerPanel", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:51:50]
-=====================
-ClassType.ClassName: "TcxTextEdit", UnitScope: "cxTextEdit", UnitName: "cxTextEdit", ClassName: "TcxTextEdit", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 22:54:20]
-=====================
-ClassType.ClassName: "TcxTextEdit", UnitScope: "cxTextEdit", UnitName: "cxTextEdit", ClassName: "TcxTextEdit", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 23:04:45]
-=====================
-ClassType.ClassName: "TcxTextEdit", UnitScope: "cxTextEdit", UnitName: "cxTextEdit", ClassName: "TcxTextEdit", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 23:04:47]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 23:04:55]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[21.12.2013 23:04:55]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 1:06:52]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00407B88 in module 'Notar.exe'. Read of address 04177000", Exception: "Access violation at address 00407B88 in module 'Notar.exe'. Read of address 04177000", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 1:06:55]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00407B88 in module 'Notar.exe'. Read of address 04177000", Exception: "Access violation at address 00407B88 in module 'Notar.exe'. Read of address 04177000", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 1:30:14]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 1:30:23]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 1:30:23]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 1:30:23]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 1:30:24]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 1:30:24]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (1)", Exception: "List index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 17:31:37]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (40)", Exception: "List index out of bounds (40)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 18:36:28]
-=====================
-ClassType.ClassName: "TdxBarButton", UnitScope: "dxBar", UnitName: "dxBar", ClassName: "TdxBarButton", Message: "Access violation at address 00F9E800 in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00F9E800 in module 'Notar.exe'. Read of address 00000000", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 18:36:36]
-=====================
-ClassType.ClassName: "TdxBarButton", UnitScope: "dxBar", UnitName: "dxBar", ClassName: "TdxBarButton", Message: "Access violation at address 00F9E800 in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00F9E800 in module 'Notar.exe'. Read of address 00000000", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 18:37:41]
-=====================
-ClassType.ClassName: "TdxBarButton", UnitScope: "dxBar", UnitName: "dxBar", ClassName: "TdxBarButton", Message: "Access violation at address 00F9E804 in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00F9E804 in module 'Notar.exe'. Read of address 00000000", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 19:27:54]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 19:28:07]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 19:28:07]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 19:28:07]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 19:28:07]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 19:28:07]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 19:28:07]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 19:28:07]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 19:28:07]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 19:28:07]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Index out of bounds (1)", Exception: "Index out of bounds (1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 21:21:14]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Access violation at address 00FC2DBB in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FC2DBB in module 'Notar.exe'. Read of address 00000000", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 21:22:01]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Access violation at address 00FC2DBB in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FC2DBB in module 'Notar.exe'. Read of address 00000000", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 21:40:41]
-=====================
-ClassType.ClassName: "TcxGridSite", UnitScope: "cxGridCustomView", UnitName: "cxGridCustomView", ClassName: "TcxGridSite", Message: "fmMain.fmCatalogs.CatalogDataSet.UpdateQuery:
-Invalid token.
-Dynamic SQL Error.
-SQL error code = -104.
-A string constant is delimited by double quotes.
-", Exception: "fmMain.fmCatalogs.CatalogDataSet.UpdateQuery:
-Invalid token.
-Dynamic SQL Error.
-SQL error code = -104.
-A string constant is delimited by double quotes.
-", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 21:41:09]
-=====================
-ClassType.ClassName: "TcxGridSite", UnitScope: "cxGridCustomView", UnitName: "cxGridCustomView", ClassName: "TcxGridSite", Message: "fmMain.fmCatalogs.CatalogDataSet.UpdateQuery:
-Invalid token.
-Dynamic SQL Error.
-SQL error code = -104.
-A string constant is delimited by double quotes.
-", Exception: "fmMain.fmCatalogs.CatalogDataSet.UpdateQuery:
-Invalid token.
-Dynamic SQL Error.
-SQL error code = -104.
-A string constant is delimited by double quotes.
-", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[22.12.2013 21:43:47]
-=====================
-ClassType.ClassName: "TcxGridSite", UnitScope: "cxGridCustomView", UnitName: "cxGridCustomView", ClassName: "TcxGridSite", Message: "fmMain.fmCatalogs.CatalogsRegistryDataSet.InsertQuery:
-The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
-", Exception: "fmMain.fmCatalogs.CatalogsRegistryDataSet.InsertQuery:
-The insert failed because a column definition includes validation constraints.Validation error for column TABLE_NAME, value "*** null ***".
-", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 18:18:26]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Can't  change transaction  because fmMain.fmIndividual.IndividualsDataSet dataset open.", Exception: "Can't  change transaction  because fmMain.fmIndividual.IndividualsDataSet dataset open.", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:14]
-=====================
-ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:14]
-=====================
-ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:18]
-=====================
-ClassType.ClassName: "TcxDBLookupComboBox", UnitScope: "cxDBLookupComboBox", UnitName: "cxDBLookupComboBox", ClassName: "TcxDBLookupComboBox", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:23]
-=====================
-ClassType.ClassName: "TcxDBLookupComboBox", UnitScope: "cxDBLookupComboBox", UnitName: "cxDBLookupComboBox", ClassName: "TcxDBLookupComboBox", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:41]
-=====================
-ClassType.ClassName: "TcxDBLookupComboBox", UnitScope: "cxDBLookupComboBox", UnitName: "cxDBLookupComboBox", ClassName: "TcxDBLookupComboBox", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:41]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:44]
-=====================
-ClassType.ClassName: "TcxDBLookupComboBox", UnitScope: "cxDBLookupComboBox", UnitName: "cxDBLookupComboBox", ClassName: "TcxDBLookupComboBox", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:44]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:49]
-=====================
-ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:57]
-=====================
-ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:57]
-=====================
-ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:58]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:58]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:58]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:58]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:58]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:58]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:58]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:58]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:58]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:58]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:27:58]
-=====================
-ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:08]
-=====================
-ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:09]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:58]
-=====================
-ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:59]
-=====================
-ClassType.ClassName: "TcxCustomComboBoxInnerEdit", UnitScope: "cxDropDownEdit", UnitName: "cxDropDownEdit", ClassName: "TcxCustomComboBoxInnerEdit", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:59]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:59]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:59]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:59]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:59]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:59]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:59]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:59]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:59]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:59]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:28:59]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:29:02]
-=====================
-ClassType.ClassName: "TcxCustomLookupDBGrid", UnitScope: "cxLookupDBGrid", UnitName: "cxLookupDBGrid", ClassName: "TcxCustomLookupDBGrid", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[23.12.2013 21:30:30]
-=====================
-ClassType.ClassName: "TcxDBLookupComboBox", UnitScope: "cxDBLookupComboBox", UnitName: "cxDBLookupComboBox", ClassName: "TcxDBLookupComboBox", Message: "Key Field not found", Exception: "Key Field not found", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[24.12.2013 18:09:01]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (-1)", Exception: "List index out of bounds (-1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[24.12.2013 18:09:17]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (-1)", Exception: "List index out of bounds (-1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[24.12.2013 18:09:21]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (-1)", Exception: "List index out of bounds (-1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[24.12.2013 18:11:40]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (-1)", Exception: "List index out of bounds (-1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[24.12.2013 18:11:48]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (-1)", Exception: "List index out of bounds (-1)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[26.12.2013 21:16:26]
-=====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (0)", Exception: "List index out of bounds (0)", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[25.12.2013 23:00:16]
-=====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[25.12.2013 23:00:29]
-=====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[25.12.2013 23:00:29]
-=====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[25.12.2013 23:00:30]
-=====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[25.12.2013 23:03:39]
-=====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[25.12.2013 23:03:46]
-=====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
-=====================
-
-=====[EXCEPTION]=====
-[25.12.2013 23:05:28]
-=====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
-=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF3EDF in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF3EDF in module 'Notar.exe'. Read of address 00000000", Stack: ""
+
+[Application: Notar.exe]
+AuthorizationsDataSet.InsertQuery: [Execute] INSERT INTO CATALOG_AUTHORIZATIONS(
+    TRANSPORT_KIND,
+    TRANSPORT_BRAND,
+    TRANSPORT_MODEL,
+    TRANSPORT_TYPE,
+    TRANSPORT_COLOR,
+    TRANSPORT_CHASSIS_NUMBER,
+    TRANSPORT_LOAD_WEIGHT,
+    TRANSPORT_WEIGHT,
+    TRANSPORT_ENGINE_VOLUME,
+    TRANSPORT_REG_NUMBER,
+    TRANSPORT_FABRICATION_DATE,
+    TRANSPORT_CERTIFICATE_SERIAL,
+    TRANSPORT_CERTIFICATE_NUMBER,
+    TRANSPORT_CERTIFICATE_REG_DATE,
+    TRANSPORT_CERTIFICATE_ISSUER,
+    TRANSITE_NUMBER,
+    TRANSITE_NUMBER_REMOVED_DATE,
+    AUTHORIZATION_NUMBER,
+    AUTHORIZATION_VALIDITY_DATE,
+    AUTHORIZATION_DATE,
+    AUTHORIZATION_DESCRIPTION,
+    TRANSITE,
+    SUBSTITUTION
+)
+VALUES(
+    :TRANSPORT_KIND,
+    :TRANSPORT_BRAND,
+    :TRANSPORT_MODEL,
+    :TRANSPORT_TYPE,
+    :TRANSPORT_COLOR,
+    :TRANSPORT_CHASSIS_NUMBER,
+    :TRANSPORT_LOAD_WEIGHT,
+    :TRANSPORT_WEIGHT,
+    :TRANSPORT_ENGINE_VOLUME,
+    :TRANSPORT_REG_NUMBER,
+    :TRANSPORT_FABRICATION_DATE,
+    :TRANSPORT_CERTIFICATE_SERIAL,
+    :TRANSPORT_CERTIFICATE_NUMBER,
+    :TRANSPORT_CERTIFICATE_REG_DATE,
+    :TRANSPORT_CERTIFICATE_ISSUER,
+    :TRANSITE_NUMBER,
+    :TRANSITE_NUMBER_REMOVED_DATE,
+    :AUTHORIZATION_NUMBER,
+    :AUTHORIZATION_VALIDITY_DATE,
+    :AUTHORIZATION_DATE,
+    :AUTHORIZATION_DESCRIPTION,
+    :TRANSITE,
+    :SUBSTITUTION
+)
+
+  TRANSPORT_KIND = '1'
+  TRANSPORT_BRAND = '1'
+  TRANSPORT_MODEL = '1'
+  TRANSPORT_TYPE = '1'
+  TRANSPORT_COLOR = '1'
+  TRANSPORT_CHASSIS_NUMBER = '1'
+  TRANSPORT_LOAD_WEIGHT = '1'
+  TRANSPORT_WEIGHT = '1'
+  TRANSPORT_ENGINE_VOLUME = '1'
+  TRANSPORT_REG_NUMBER = '10'
+  TRANSPORT_FABRICATION_DATE = 31.12.1899
+  TRANSPORT_CERTIFICATE_SERIAL = '11'
+  TRANSPORT_CERTIFICATE_NUMBER = '12'
+  TRANSPORT_CERTIFICATE_REG_DATE = 31.12.1899
+  TRANSPORT_CERTIFICATE_ISSUER = '13'
+  TRANSITE_NUMBER = '14'
+  TRANSITE_NUMBER_REMOVED_DATE = 12.12.2013
+  AUTHORIZATION_NUMBER = '15'
+  AUT
+notifycation: CATALOG_AUTHORIZATIONS
+Error while table refresh CATALOG_AUTHORIZATIONS
+Error while table refresh CATALOG_AUTHORIZATIONS
+Error while table refresh CATALOG_AUTHORIZATIONS
+Error while table refresh CATALOG_AUTHORIZATIONS
+Error while table refresh CATALOG_AUTHORIZATIONS
+Error while table refresh CATALOG_AUTHORIZATIONS
+Error while table refresh CATALOG_AUTHORIZATIONS
+HORIZATION_VALIDITY_DATE = 31.12.1899
+  AUTHORIZATION_DATE = 31.12.1899
+  AUTHORIZATION_DESCRIPTION = '1'
+  TRANSITE = '1'
+  SUBSTITUTION = '0'
+Rows Affected:  1
+Execute tick count 0
 
-=====[EXCEPTION]=====
-[26.12.2013 17:23:15]
-=====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
-=====================
+[Application: Notar.exe]
+AuthorizationsDataSet.RefreshQuery: [Execute] SELECT
+    ID,
+    TRANSPORT_KIND,
+    TRANSPORT_BRAND,
+    TRANSPORT_MODEL,
+    TRANSPORT_TYPE,
+    TRANSPORT_COLOR,
+    TRANSPORT_CHASSIS_NUMBER,
+    TRANSPORT_LOAD_WEIGHT,
+    TRANSPORT_WEIGHT,
+    TRANSPORT_ENGINE_VOLUME,
+    TRANSPORT_REG_NUMBER,
+    TRANSPORT_FABRICATION_DATE,
+    TRANSPORT_CERTIFICATE_SERIAL,
+    TRANSPORT_CERTIFICATE_NUMBER,
+    TRANSPORT_CERTIFICATE_REG_DATE,
+    TRANSPORT_CERTIFICATE_ISSUER,
+    TRANSITE_NUMBER,
+    TRANSITE_NUMBER_REMOVED_DATE,
+    AUTHORIZATION_NUMBER,
+    AUTHORIZATION_VALIDITY_DATE,
+    AUTHORIZATION_DATE,
+    AUTHORIZATION_DESCRIPTION,
+    TRANSITE,
+    SUBSTITUTION
+FROM
+    CATALOG_AUTHORIZATIONS 
 
-=====[EXCEPTION]=====
-[26.12.2013 17:23:33]
-=====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
-=====================
+ WHERE 
+        CATALOG_AUTHORIZATIONS.ID  IS NULL 
+    
 
+  OLD_ID = <NULL>
+Execute tick count 0
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "AuthorizationsDataSet: Dataset not in edit or insert mode", Exception: "AuthorizationsDataSet: Dataset not in edit or insert mode", Stack: ""
 =====[EXCEPTION]=====
-[26.12.2013 17:23:33]
+[26.12.2013 23:02:42]
 =====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Can't  change transaction  because fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet dataset open.", Exception: "Can't  change transaction  because fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet dataset open.", Stack: ""
 =====================
 
 =====[EXCEPTION]=====
-[26.12.2013 17:23:33]
+[26.12.2013 23:10:36]
 =====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
 =====================
 
 =====[EXCEPTION]=====
-[26.12.2013 17:23:33]
+[26.12.2013 23:19:06]
 =====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
 =====================
 
 =====[EXCEPTION]=====
-[26.12.2013 17:23:34]
+[26.12.2013 23:27:40]
 =====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
 =====================
 
 =====[EXCEPTION]=====
-[26.12.2013 17:23:34]
+[26.12.2013 23:29:08]
 =====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
 =====================
 
 =====[EXCEPTION]=====
-[26.12.2013 17:23:34]
+[26.12.2013 23:34:25]
 =====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
 =====================
 
 =====[EXCEPTION]=====
-[26.12.2013 17:23:34]
+[26.12.2013 23:38:35]
 =====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
 =====================
 
 =====[EXCEPTION]=====
-[26.12.2013 17:23:34]
+[26.12.2013 23:40:33]
 =====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
 =====================
 
 =====[EXCEPTION]=====
-[26.12.2013 17:23:35]
+[26.12.2013 23:40:42]
 =====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "AuthorizationsDataSet: Dataset not in edit or insert mode", Exception: "AuthorizationsDataSet: Dataset not in edit or insert mode", Stack: ""
 =====================
 
 =====[EXCEPTION]=====
-[26.12.2013 17:23:35]
+[26.12.2013 23:40:43]
 =====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF49DB in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF49DB in module 'Notar.exe'. Read of address 00000000", Stack: ""
 =====================
 
 =====[EXCEPTION]=====
-[26.12.2013 17:23:35]
+[26.12.2013 23:40:43]
 =====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF49DB in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF49DB in module 'Notar.exe'. Read of address 00000000", Stack: ""
 =====================
 
 =====[EXCEPTION]=====
-[26.12.2013 17:23:36]
+[26.12.2013 23:40:43]
 =====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF49DB in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF49DB in module 'Notar.exe'. Read of address 00000000", Stack: ""
 =====================
 
 =====[EXCEPTION]=====
-[26.12.2013 17:23:36]
+[26.12.2013 23:40:44]
 =====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF49DB in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF49DB in module 'Notar.exe'. Read of address 00000000", Stack: ""
 =====================
 
 =====[EXCEPTION]=====
-[26.12.2013 17:23:36]
+[26.12.2013 23:46:00]
 =====================
-ClassType.ClassName: "TfmIndividualSelector", UnitScope: "ufmIndividualSelector", UnitName: "ufmIndividualSelector", ClassName: "TfmIndividualSelector", Message: "Invalid variant operation", Exception: "Invalid variant operation", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
 =====================
 
 =====[EXCEPTION]=====
-[26.12.2013 18:17:36]
+[26.12.2013 23:49:53]
 =====================
-ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "List index out of bounds (-1)", Exception: "List index out of bounds (-1)", Stack: ""
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
 =====================
 
