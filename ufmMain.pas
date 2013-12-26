@@ -191,6 +191,7 @@ procedure TfmMain.dxBarButton5Click(Sender: TObject);
 begin
   with TfmAuthorization.Create(self) do
   begin
+    appendAuthorization;
     Show;
   end;
 end;

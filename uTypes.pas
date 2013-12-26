@@ -12,9 +12,10 @@ type
     constructor Create(AID: Variant); overload;
     private
       FID: Variant;
-    public
       function getID: Variant;
-      function setID(AID: Variant): Variant;
+      procedure setID(AID: Variant);
+    public
+      property ID: Variant read getID write setID;
   end;
 
 implementation
@@ -37,10 +38,9 @@ begin
   Result := FID;
 end;
 
-function TIdStorage.setID(AID: Variant): Variant;
+procedure TIdStorage.setID(AID: Variant);
 begin
   FID := AID;
-  Result := FID;
 end;
 
 end.

@@ -10,7 +10,8 @@ uses
   cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore, dxSkinOffice2007Blue,
   cxMemo, cxDBEdit, cxDropDownEdit, cxLookupEdit, cxDBLookupEdit,
   cxDBLookupComboBox, cxTextEdit, cxMaskEdit, cxCalendar, cxLabel, cxGroupBox,
-  cxCheckBox, Vcl.Menus, Vcl.StdCtrls, cxButtons, cxListBox, dxBevel;
+  cxCheckBox, Vcl.Menus, Vcl.StdCtrls, cxButtons, cxListBox, dxBevel,
+  dxSkinOffice2010Blue;
 
 type
   TfmAuthorization = class(TForm)
@@ -76,17 +77,22 @@ type
     RepresentativesPopupMenu: TPopupMenu;
     RepresentativesIndividualPopUpMenuItem: TMenuItem;
     RemoveRepresentativeButton: TcxButton;
+    CancelButton: TcxButton;
+    PostButton: TcxButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure ConstituentIndividualPopUpMenuItemClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure RepresentativesIndividualPopUpMenuItemClick(Sender: TObject);
     procedure RemoveRepresentativeButtonClick(Sender: TObject);
+    procedure PostButtonClick(Sender: TObject);
   private
     { Private declarations }
   public
     procedure gotConstituentIndividualID(AID: Variant);
     procedure gotRepresentativeIndividualID(AID: Variant);
+    function saveAuthorization: boolean;
+    function appendAuthorization: boolean;
   end;
 
 var
@@ -95,6 +101,15 @@ var
 implementation
 uses ufmIndividualSelector;
 {$R *.dfm}
+
+function TfmAuthorization.appendAuthorization: boolean;
+begin
+  dmAuthorization.AuthorizationsDataSet.Close;
+  dmAuthorization.AuthorizationsDataSet.Transaction := RemoteDataModule.createTransaction;
+  dmAuthorization.AuthorizationsDataSet.Transaction.StartTransaction;
+  dmAuthorization.AuthorizationsDataSet.Open;
+  dmAuthorization.AuthorizationsDataSet.Append;
+end;
 
 procedure TfmAuthorization.ConstituentIndividualPopUpMenuItemClick(
   Sender: TObject);
@@ -152,6 +167,13 @@ begin
   dmAuthorization.IndividualRepresentativesDataSet.Close;
 end;
 
+procedure TfmAuthorization.PostButtonClick(Sender: TObject);
+begin
+  saveAuthorization;
+  dmAuthorization.AuthorizationsDataSet.Close;
+  Close;
+end;
+
 procedure TfmAuthorization.RemoveRepresentativeButtonClick(Sender: TObject);
 begin
   if RepresentativesListBox.ItemIndex <0 then Exit;
@@ -168,6 +190,42 @@ begin
   begin
     Show;
     registerSelectorCallback(gotRepresentativeIndividualID);
+  end;
+end;
+
+function TfmAuthorization.saveAuthorization: boolean;
+begin
+  try
+    dmAuthorization.AddConstituentDataSet.Close;
+    dmAuthorization.AddConstituentDataSet.Transaction := dmAuthorization.AuthorizationsDataSet.Transaction;
+    dmAuthorization.AddConstituentDataSet.ParamByName('AUTHORIZATION_ID').AsString := dmAuthorization.AuthorizationsDataSetID.AsString;
+    dmAuthorization.AddConstituentDataSet.ParamByName('CONSTITUENT_ID').AsString := '1';
+
+    dmAuthorization.AddConstituentDataSet.Open;
+    dmAuthorization.AddConstituentDataSet.Append;
+    dmAuthorization.AddConstituentDataSet.Post;
+    dmAuthorization.AddConstituentDataSet.Close;
+
+    dmAuthorization.AddRepresentativeDataSet.Close;
+    dmAuthorization.AddRepresentativeDataSet.Transaction := dmAuthorization.AuthorizationsDataSet.Transaction;
+    dmAuthorization.AddRepresentativeDataSet.ParamByName('AUTHORIZATION_ID').AsString := dmAuthorization.AuthorizationsDataSetID.AsString;
+    dmAuthorization.AddRepresentativeDataSet.ParamByName('REPRESENTATIVE_ID').AsString := '1';
+    dmAuthorization.AddRepresentativeDataSet.Open;
+    dmAuthorization.AddRepresentativeDataSet.Append;
+    dmAuthorization.AddRepresentativeDataSet.Post;
+    dmAuthorization.AddRepresentativeDataSet.Close;
+
+    dmAuthorization.AuthorizationsDataSet.Post;
+  finally
+    dmAuthorization.AuthorizationsDataSet.Transaction.Commit;
+
+    dmAuthorization.AuthorizationsDataSet.Close;
+    dmAuthorization.AddConstituentDataSet.Close;
+    dmAuthorization.AddRepresentativeDataSet.Close;
+    dmAuthorization.AuthorizationsDataSet.Transaction.Free;
+    dmAuthorization.AuthorizationsDataSet.Transaction := RemoteDataModule.FIBTransaction;
+    dmAuthorization.AddConstituentDataSet.Transaction := RemoteDataModule.FIBTransaction;
+    dmAuthorization.AddRepresentativeDataSet.Transaction := RemoteDataModule.FIBTransaction;
   end;
 end;
 

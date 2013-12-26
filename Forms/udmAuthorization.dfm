@@ -1,7 +1,7 @@
 object dmAuthorization: TdmAuthorization
   OldCreateOrder = False
-  Height = 571
-  Width = 764
+  Height = 606
+  Width = 874
   object IndividualConstituentsDataSource: TDataSource
     DataSet = IndividualConstituentsDataSet
     Left = 196
@@ -894,7 +894,7 @@ object dmAuthorization: TdmAuthorization
   end
   object DataSource1: TDataSource
     DataSet = pFIBDataSet1
-    Left = 460
+    Left = 468
     Top = 88
   end
   object pFIBDataSet1: TpFIBDataSet
@@ -1209,12 +1209,12 @@ object dmAuthorization: TdmAuthorization
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
     AutoCommit = True
-    Left = 328
+    Left = 336
     Top = 88
   end
   object DataSource2: TDataSource
     DataSet = pFIBDataSet2
-    Left = 460
+    Left = 468
     Top = 32
   end
   object pFIBDataSet2: TpFIBDataSet
@@ -1529,7 +1529,838 @@ object dmAuthorization: TdmAuthorization
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
     AutoCommit = True
-    Left = 328
+    Left = 336
     Top = 32
+  end
+  object AuthorizationsDataSource: TDataSource
+    DataSet = AuthorizationsDataSet
+    Left = 196
+    Top = 152
+  end
+  object AuthorizationsDataSet: TpFIBDataSet
+    UpdateSQL.Strings = (
+      'UPDATE CATALOG_AUTHORIZATIONS'
+      'SET '
+      '    TRANSPORT_KIND = :TRANSPORT_KIND,'
+      '    TRANSPORT_BRAND = :TRANSPORT_BRAND,'
+      '    TRANSPORT_MODEL = :TRANSPORT_MODEL,'
+      '    TRANSPORT_TYPE = :TRANSPORT_TYPE,'
+      '    TRANSPORT_COLOR = :TRANSPORT_COLOR,'
+      '    TRANSPORT_CHASSIS_NUMBER = :TRANSPORT_CHASSIS_NUMBER,'
+      '    TRANSPORT_LOAD_WEIGHT = :TRANSPORT_LOAD_WEIGHT,'
+      '    TRANSPORT_WEIGHT = :TRANSPORT_WEIGHT,'
+      '    TRANSPORT_ENGINE_VOLUME = :TRANSPORT_ENGINE_VOLUME,'
+      '    TRANSPORT_REG_NUMBER = :TRANSPORT_REG_NUMBER,'
+      '    TRANSPORT_FABRICATION_DATE = :TRANSPORT_FABRICATION_DATE,'
+      
+        '    TRANSPORT_CERTIFICATE_SERIAL = :TRANSPORT_CERTIFICATE_SERIAL' +
+        ','
+      
+        '    TRANSPORT_CERTIFICATE_NUMBER = :TRANSPORT_CERTIFICATE_NUMBER' +
+        ','
+      
+        '    TRANSPORT_CERTIFICATE_REG_DATE = :TRANSPORT_CERTIFICATE_REG_' +
+        'DATE,'
+      
+        '    TRANSPORT_CERTIFICATE_ISSUER = :TRANSPORT_CERTIFICATE_ISSUER' +
+        ','
+      '    TRANSITE_NUMBER = :TRANSITE_NUMBER,'
+      
+        '    TRANSITE_NUMBER_REMOVED_DATE = :TRANSITE_NUMBER_REMOVED_DATE' +
+        ','
+      '    AUTHORIZATION_NUMBER = :AUTHORIZATION_NUMBER,'
+      '    AUTHORIZATION_VALIDITY_DATE = :AUTHORIZATION_VALIDITY_DATE,'
+      '    AUTHORIZATION_DATE = :AUTHORIZATION_DATE,'
+      '    AUTHORIZATION_DESCRIPTION = :AUTHORIZATION_DESCRIPTION,'
+      '    TRANSITE = :TRANSITE,'
+      '    SUBSTITUTION = :SUBSTITUTION'
+      'WHERE'
+      '    ID = :OLD_ID'
+      '    ')
+    DeleteSQL.Strings = (
+      'DELETE FROM'
+      '    CATALOG_AUTHORIZATIONS'
+      'WHERE'
+      '        ID = :OLD_ID'
+      '    ')
+    InsertSQL.Strings = (
+      'INSERT INTO CATALOG_AUTHORIZATIONS('
+      '    TRANSPORT_KIND,'
+      '    TRANSPORT_BRAND,'
+      '    TRANSPORT_MODEL,'
+      '    TRANSPORT_TYPE,'
+      '    TRANSPORT_COLOR,'
+      '    TRANSPORT_CHASSIS_NUMBER,'
+      '    TRANSPORT_LOAD_WEIGHT,'
+      '    TRANSPORT_WEIGHT,'
+      '    TRANSPORT_ENGINE_VOLUME,'
+      '    TRANSPORT_REG_NUMBER,'
+      '    TRANSPORT_FABRICATION_DATE,'
+      '    TRANSPORT_CERTIFICATE_SERIAL,'
+      '    TRANSPORT_CERTIFICATE_NUMBER,'
+      '    TRANSPORT_CERTIFICATE_REG_DATE,'
+      '    TRANSPORT_CERTIFICATE_ISSUER,'
+      '    TRANSITE_NUMBER,'
+      '    TRANSITE_NUMBER_REMOVED_DATE,'
+      '    AUTHORIZATION_NUMBER,'
+      '    AUTHORIZATION_VALIDITY_DATE,'
+      '    AUTHORIZATION_DATE,'
+      '    AUTHORIZATION_DESCRIPTION,'
+      '    TRANSITE,'
+      '    SUBSTITUTION'
+      ')'
+      'VALUES('
+      '    :TRANSPORT_KIND,'
+      '    :TRANSPORT_BRAND,'
+      '    :TRANSPORT_MODEL,'
+      '    :TRANSPORT_TYPE,'
+      '    :TRANSPORT_COLOR,'
+      '    :TRANSPORT_CHASSIS_NUMBER,'
+      '    :TRANSPORT_LOAD_WEIGHT,'
+      '    :TRANSPORT_WEIGHT,'
+      '    :TRANSPORT_ENGINE_VOLUME,'
+      '    :TRANSPORT_REG_NUMBER,'
+      '    :TRANSPORT_FABRICATION_DATE,'
+      '    :TRANSPORT_CERTIFICATE_SERIAL,'
+      '    :TRANSPORT_CERTIFICATE_NUMBER,'
+      '    :TRANSPORT_CERTIFICATE_REG_DATE,'
+      '    :TRANSPORT_CERTIFICATE_ISSUER,'
+      '    :TRANSITE_NUMBER,'
+      '    :TRANSITE_NUMBER_REMOVED_DATE,'
+      '    :AUTHORIZATION_NUMBER,'
+      '    :AUTHORIZATION_VALIDITY_DATE,'
+      '    :AUTHORIZATION_DATE,'
+      '    :AUTHORIZATION_DESCRIPTION,'
+      '    :TRANSITE,'
+      '    :SUBSTITUTION'
+      ')')
+    RefreshSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    TRANSPORT_KIND,'
+      '    TRANSPORT_BRAND,'
+      '    TRANSPORT_MODEL,'
+      '    TRANSPORT_TYPE,'
+      '    TRANSPORT_COLOR,'
+      '    TRANSPORT_CHASSIS_NUMBER,'
+      '    TRANSPORT_LOAD_WEIGHT,'
+      '    TRANSPORT_WEIGHT,'
+      '    TRANSPORT_ENGINE_VOLUME,'
+      '    TRANSPORT_REG_NUMBER,'
+      '    TRANSPORT_FABRICATION_DATE,'
+      '    TRANSPORT_CERTIFICATE_SERIAL,'
+      '    TRANSPORT_CERTIFICATE_NUMBER,'
+      '    TRANSPORT_CERTIFICATE_REG_DATE,'
+      '    TRANSPORT_CERTIFICATE_ISSUER,'
+      '    TRANSITE_NUMBER,'
+      '    TRANSITE_NUMBER_REMOVED_DATE,'
+      '    AUTHORIZATION_NUMBER,'
+      '    AUTHORIZATION_VALIDITY_DATE,'
+      '    AUTHORIZATION_DATE,'
+      '    AUTHORIZATION_DESCRIPTION,'
+      '    TRANSITE,'
+      '    SUBSTITUTION'
+      'FROM'
+      '    CATALOG_AUTHORIZATIONS '
+      ''
+      ' WHERE '
+      '        CATALOG_AUTHORIZATIONS.ID = :OLD_ID'
+      '    ')
+    SelectSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    TRANSPORT_KIND,'
+      '    TRANSPORT_BRAND,'
+      '    TRANSPORT_MODEL,'
+      '    TRANSPORT_TYPE,'
+      '    TRANSPORT_COLOR,'
+      '    TRANSPORT_CHASSIS_NUMBER,'
+      '    TRANSPORT_LOAD_WEIGHT,'
+      '    TRANSPORT_WEIGHT,'
+      '    TRANSPORT_ENGINE_VOLUME,'
+      '    TRANSPORT_REG_NUMBER,'
+      '    TRANSPORT_FABRICATION_DATE,'
+      '    TRANSPORT_CERTIFICATE_SERIAL,'
+      '    TRANSPORT_CERTIFICATE_NUMBER,'
+      '    TRANSPORT_CERTIFICATE_REG_DATE,'
+      '    TRANSPORT_CERTIFICATE_ISSUER,'
+      '    TRANSITE_NUMBER,'
+      '    TRANSITE_NUMBER_REMOVED_DATE,'
+      '    AUTHORIZATION_NUMBER,'
+      '    AUTHORIZATION_VALIDITY_DATE,'
+      '    AUTHORIZATION_DATE,'
+      '    AUTHORIZATION_DESCRIPTION,'
+      '    TRANSITE,'
+      '    SUBSTITUTION'
+      'FROM'
+      '    CATALOG_AUTHORIZATIONS ')
+    AutoUpdateOptions.UpdateTableName = 'CATALOG_AUTHORIZATIONS'
+    AutoUpdateOptions.KeyFields = 'ID'
+    AutoUpdateOptions.CanChangeSQLs = True
+    AutoUpdateOptions.GeneratorName = 'GEN_CATALOG_AUTHORIZATIONS_ID'
+    AutoUpdateOptions.WhenGetGenID = wgOnNewRecord
+    AutoUpdateOptions.UseReturningFields = [rfKeyFields]
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 64
+    Top = 152
+    object AuthorizationsDataSetID: TFIBBCDField
+      AutoGenerateValue = arAutoInc
+      FieldKind = fkInternalCalc
+      FieldName = 'ID'
+      Size = 0
+    end
+    object AuthorizationsDataSetTRANSPORT_KIND: TFIBWideStringField
+      FieldName = 'TRANSPORT_KIND'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSPORT_BRAND: TFIBWideStringField
+      FieldName = 'TRANSPORT_BRAND'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSPORT_MODEL: TFIBWideStringField
+      FieldName = 'TRANSPORT_MODEL'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSPORT_TYPE: TFIBWideStringField
+      FieldName = 'TRANSPORT_TYPE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSPORT_COLOR: TFIBWideStringField
+      FieldName = 'TRANSPORT_COLOR'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSPORT_CHASSIS_NUMBER: TFIBWideStringField
+      FieldName = 'TRANSPORT_CHASSIS_NUMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSPORT_LOAD_WEIGHT: TFIBWideStringField
+      FieldName = 'TRANSPORT_LOAD_WEIGHT'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSPORT_WEIGHT: TFIBWideStringField
+      FieldName = 'TRANSPORT_WEIGHT'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSPORT_ENGINE_VOLUME: TFIBWideStringField
+      FieldName = 'TRANSPORT_ENGINE_VOLUME'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSPORT_REG_NUMBER: TFIBWideStringField
+      FieldName = 'TRANSPORT_REG_NUMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSPORT_FABRICATION_DATE: TFIBDateField
+      FieldName = 'TRANSPORT_FABRICATION_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object AuthorizationsDataSetTRANSPORT_CERTIFICATE_SERIAL: TFIBWideStringField
+      FieldName = 'TRANSPORT_CERTIFICATE_SERIAL'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSPORT_CERTIFICATE_NUMBER: TFIBWideStringField
+      FieldName = 'TRANSPORT_CERTIFICATE_NUMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSPORT_CERTIFICATE_REG_DATE: TFIBDateField
+      FieldName = 'TRANSPORT_CERTIFICATE_REG_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object AuthorizationsDataSetTRANSPORT_CERTIFICATE_ISSUER: TFIBWideStringField
+      FieldName = 'TRANSPORT_CERTIFICATE_ISSUER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSITE_NUMBER: TFIBWideStringField
+      FieldName = 'TRANSITE_NUMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSITE_NUMBER_REMOVED_DATE: TFIBDateField
+      FieldName = 'TRANSITE_NUMBER_REMOVED_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object AuthorizationsDataSetAUTHORIZATION_NUMBER: TFIBWideStringField
+      FieldName = 'AUTHORIZATION_NUMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetAUTHORIZATION_VALIDITY_DATE: TFIBDateField
+      FieldName = 'AUTHORIZATION_VALIDITY_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object AuthorizationsDataSetAUTHORIZATION_DATE: TFIBDateField
+      FieldName = 'AUTHORIZATION_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object AuthorizationsDataSetAUTHORIZATION_DESCRIPTION: TFIBWideStringField
+      FieldName = 'AUTHORIZATION_DESCRIPTION'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetTRANSITE: TFIBWideStringField
+      FieldName = 'TRANSITE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object AuthorizationsDataSetSUBSTITUTION: TFIBWideStringField
+      FieldName = 'SUBSTITUTION'
+      Size = 255
+      EmptyStrToNull = True
+    end
+  end
+  object TransportKindDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TRANSPORT_KIND'
+      'FROM'
+      '    CAT_AUTH_TRANS_KIND ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 64
+    Top = 256
+  end
+  object TransportKindDataSource: TDataSource
+    DataSet = TransportKindDataSet
+    Left = 196
+    Top = 256
+  end
+  object TransportBrandDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TRANSPORT_BRAND'
+      'FROM'
+      '    CAT_AUTH_TRANS_BRAND ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 64
+    Top = 312
+  end
+  object TransportBrandDataSource: TDataSource
+    DataSet = TransportBrandDataSet
+    Left = 196
+    Top = 312
+  end
+  object TransportModelDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TRANSPORT_MODEL'
+      'FROM'
+      '    CAT_AUTH_TRANS_MODEL ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 64
+    Top = 360
+  end
+  object TransportModelDataSource: TDataSource
+    DataSet = TransportModelDataSet
+    Left = 196
+    Top = 360
+  end
+  object TransportTypeDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TRANSPORT_TYPE'
+      'FROM'
+      '    CAT_AUTH_TRANS_TYPE ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 64
+    Top = 424
+  end
+  object TransportTypeDataSource: TDataSource
+    DataSet = TransportTypeDataSet
+    Left = 196
+    Top = 424
+  end
+  object TransportColorDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TRANSPORT_COLOR'
+      'FROM'
+      '    CAT_AUTH_TRANS_COLOR ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 64
+    Top = 480
+  end
+  object TransportColorDataSource: TDataSource
+    DataSet = TransportColorDataSet
+    Left = 196
+    Top = 480
+  end
+  object TransportRegNumberDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TRANSPORT_REG_NUMBER'
+      'FROM'
+      '    CAT_AUTH_TRANS_REG_NUMBER ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 336
+    Top = 480
+  end
+  object TransportRegNumberDataSource: TDataSource
+    DataSet = TransportRegNumberDataSet
+    Left = 468
+    Top = 480
+  end
+  object TransportEngineVolumeDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TRANSPORT_ENGINE_VOLUME'
+      'FROM'
+      '    CAT_AUTH_TRANS_ENGINE_VOLUME ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 336
+    Top = 424
+  end
+  object TransportEngineVolumeDataSource: TDataSource
+    DataSet = TransportEngineVolumeDataSet
+    Left = 468
+    Top = 424
+  end
+  object TransportWeightDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TRANSPORT_WEIGHT'
+      'FROM'
+      '    CAT_AUTH_TRANS_WEIGHT ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 336
+    Top = 360
+  end
+  object TransportWeightDataSource: TDataSource
+    DataSet = TransportWeightDataSet
+    Left = 468
+    Top = 360
+  end
+  object TransportChassisNumberDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TRANSPORT_CHASSIS_NUMBER'
+      'FROM'
+      '    CAT_AUTH_TRANS_CHASSIS_NUMBER ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 336
+    Top = 256
+  end
+  object TransportChassisNumberDataSource: TDataSource
+    DataSet = TransportChassisNumberDataSet
+    Left = 468
+    Top = 256
+  end
+  object TransportLoadWeightDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TRANSPORT_LOAD_WEIGHT'
+      'FROM'
+      '    CAT_AUTH_TRANS_LOAD_WEIGHT ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 336
+    Top = 312
+  end
+  object TransportLoadWeightDataSource: TDataSource
+    DataSet = TransportLoadWeightDataSet
+    Left = 468
+    Top = 312
+  end
+  object AuthorizationDescriptionDataSource: TDataSource
+    DataSet = AuthorizationDescriptionDataSet
+    Left = 740
+    Top = 536
+  end
+  object AuthorizationDescriptionDataSet: TpFIBDataSet
+    UpdateSQL.Strings = (
+      'UPDATE CATALOG_AUTHORIZATIONS'
+      'SET '
+      '    TRANSPORT_KIND = :TRANSPORT_KIND,'
+      '    TRANSPORT_BRAND = :TRANSPORT_BRAND,'
+      '    TRANSPORT_MODEL = :TRANSPORT_MODEL,'
+      '    TRANSPORT_TYPE = :TRANSPORT_TYPE,'
+      '    TRANSPORT_COLOR = :TRANSPORT_COLOR,'
+      '    TRANSPORT_CHASSIS_NUMBER = :TRANSPORT_CHASSIS_NUMBER,'
+      '    TRANSPORT_LOAD_WEIGHT = :TRANSPORT_LOAD_WEIGHT,'
+      '    TRANSPORT_WEIGHT = :TRANSPORT_WEIGHT,'
+      '    TRANSPORT_ENGINE_VOLUME = :TRANSPORT_ENGINE_VOLUME,'
+      '    TRANSPORT_REG_NUMBER = :TRANSPORT_REG_NUMBER,'
+      '    TRANSPORT_FABRICATION_DATE = :TRANSPORT_FABRICATION_DATE,'
+      
+        '    TRANSPORT_CERTIFICATE_SERIAL = :TRANSPORT_CERTIFICATE_SERIAL' +
+        ','
+      
+        '    TRANSPORT_CERTIFICATE_NUMBER = :TRANSPORT_CERTIFICATE_NUMBER' +
+        ','
+      
+        '    TRANSPORT_CERTIFICATE_REG_DATE = :TRANSPORT_CERTIFICATE_REG_' +
+        'DATE,'
+      
+        '    TRANSPORT_CERTIFICATE_ISSUER = :TRANSPORT_CERTIFICATE_ISSUER' +
+        ','
+      '    TRANSITE_NUMBER = :TRANSITE_NUMBER,'
+      
+        '    TRANSITE_NUMBER_REMOVED_DATE = :TRANSITE_NUMBER_REMOVED_DATE' +
+        ','
+      '    AUTHORIZATION_NUMBER = :AUTHORIZATION_NUMBER,'
+      '    AUTHORIZATION_VALIDITY_DATE = :AUTHORIZATION_VALIDITY_DATE,'
+      '    AUTHORIZATION_DATE = :AUTHORIZATION_DATE,'
+      '    AUTHORIZATION_DESCRIPTION = :AUTHORIZATION_DESCRIPTION,'
+      '    TRANSITE = :TRANSITE,'
+      '    SUBSTITUTION = :SUBSTITUTION'
+      'WHERE'
+      '    ID = :OLD_ID'
+      '    ')
+    DeleteSQL.Strings = (
+      'DELETE FROM'
+      '    CATALOG_AUTHORIZATIONS'
+      'WHERE'
+      '        ID = :OLD_ID'
+      '    ')
+    InsertSQL.Strings = (
+      'INSERT INTO CATALOG_AUTHORIZATIONS('
+      '    TRANSPORT_KIND,'
+      '    TRANSPORT_BRAND,'
+      '    TRANSPORT_MODEL,'
+      '    TRANSPORT_TYPE,'
+      '    TRANSPORT_COLOR,'
+      '    TRANSPORT_CHASSIS_NUMBER,'
+      '    TRANSPORT_LOAD_WEIGHT,'
+      '    TRANSPORT_WEIGHT,'
+      '    TRANSPORT_ENGINE_VOLUME,'
+      '    TRANSPORT_REG_NUMBER,'
+      '    TRANSPORT_FABRICATION_DATE,'
+      '    TRANSPORT_CERTIFICATE_SERIAL,'
+      '    TRANSPORT_CERTIFICATE_NUMBER,'
+      '    TRANSPORT_CERTIFICATE_REG_DATE,'
+      '    TRANSPORT_CERTIFICATE_ISSUER,'
+      '    TRANSITE_NUMBER,'
+      '    TRANSITE_NUMBER_REMOVED_DATE,'
+      '    AUTHORIZATION_NUMBER,'
+      '    AUTHORIZATION_VALIDITY_DATE,'
+      '    AUTHORIZATION_DATE,'
+      '    AUTHORIZATION_DESCRIPTION,'
+      '    TRANSITE,'
+      '    SUBSTITUTION'
+      ')'
+      'VALUES('
+      '    :TRANSPORT_KIND,'
+      '    :TRANSPORT_BRAND,'
+      '    :TRANSPORT_MODEL,'
+      '    :TRANSPORT_TYPE,'
+      '    :TRANSPORT_COLOR,'
+      '    :TRANSPORT_CHASSIS_NUMBER,'
+      '    :TRANSPORT_LOAD_WEIGHT,'
+      '    :TRANSPORT_WEIGHT,'
+      '    :TRANSPORT_ENGINE_VOLUME,'
+      '    :TRANSPORT_REG_NUMBER,'
+      '    :TRANSPORT_FABRICATION_DATE,'
+      '    :TRANSPORT_CERTIFICATE_SERIAL,'
+      '    :TRANSPORT_CERTIFICATE_NUMBER,'
+      '    :TRANSPORT_CERTIFICATE_REG_DATE,'
+      '    :TRANSPORT_CERTIFICATE_ISSUER,'
+      '    :TRANSITE_NUMBER,'
+      '    :TRANSITE_NUMBER_REMOVED_DATE,'
+      '    :AUTHORIZATION_NUMBER,'
+      '    :AUTHORIZATION_VALIDITY_DATE,'
+      '    :AUTHORIZATION_DATE,'
+      '    :AUTHORIZATION_DESCRIPTION,'
+      '    :TRANSITE,'
+      '    :SUBSTITUTION'
+      ')')
+    RefreshSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    TRANSPORT_KIND,'
+      '    TRANSPORT_BRAND,'
+      '    TRANSPORT_MODEL,'
+      '    TRANSPORT_TYPE,'
+      '    TRANSPORT_COLOR,'
+      '    TRANSPORT_CHASSIS_NUMBER,'
+      '    TRANSPORT_LOAD_WEIGHT,'
+      '    TRANSPORT_WEIGHT,'
+      '    TRANSPORT_ENGINE_VOLUME,'
+      '    TRANSPORT_REG_NUMBER,'
+      '    TRANSPORT_FABRICATION_DATE,'
+      '    TRANSPORT_CERTIFICATE_SERIAL,'
+      '    TRANSPORT_CERTIFICATE_NUMBER,'
+      '    TRANSPORT_CERTIFICATE_REG_DATE,'
+      '    TRANSPORT_CERTIFICATE_ISSUER,'
+      '    TRANSITE_NUMBER,'
+      '    TRANSITE_NUMBER_REMOVED_DATE,'
+      '    AUTHORIZATION_NUMBER,'
+      '    AUTHORIZATION_VALIDITY_DATE,'
+      '    AUTHORIZATION_DATE,'
+      '    AUTHORIZATION_DESCRIPTION,'
+      '    TRANSITE,'
+      '    SUBSTITUTION'
+      'FROM'
+      '    CATALOG_AUTHORIZATIONS '
+      ''
+      ' WHERE '
+      '        CATALOG_AUTHORIZATIONS.ID = :OLD_ID'
+      '    ')
+    SelectSQL.Strings = (
+      'SELECT'
+      '    AUTHORIZATION_DESCRIPTION'
+      'FROM'
+      '    CAT_AUTH_DESCRIPTION ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 608
+    Top = 536
+  end
+  object AuthorizationNumberDataSource: TDataSource
+    DataSet = AuthorizationNumberDataSet
+    Left = 740
+    Top = 480
+  end
+  object AuthorizationNumberDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    AUTHORIZATION_NUMBER'
+      'FROM'
+      '    CAT_AUTH_NUMBER ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 608
+    Top = 480
+  end
+  object TransiteNumberDataSource: TDataSource
+    DataSet = TransiteNumberDataSet
+    Left = 740
+    Top = 424
+  end
+  object TransiteNumberDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TRANSITE_NUMBER'
+      'FROM'
+      '    CAT_AUTH_TRANSITE_NUMBER ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 608
+    Top = 424
+  end
+  object TransportCertificateIssuerDataSource: TDataSource
+    DataSet = TransportCertificateIssuerDataSet
+    Left = 740
+    Top = 360
+  end
+  object TransportCertificateIssuerDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TRANSPORT_CERTIFICATE_ISSUER'
+      'FROM'
+      '    CAT_AUTH_TRANS_CERT_ISSUER ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 608
+    Top = 360
+  end
+  object TransportCertificateNumberDataSource: TDataSource
+    DataSet = TransportCertificateNumberDataSet
+    Left = 740
+    Top = 312
+  end
+  object TransportCertificateNumberDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TRANSPORT_CERTIFICATE_NUMBER'
+      'FROM'
+      '    CAT_AUTH_TRANS_CERT_NUMBER ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 608
+    Top = 312
+  end
+  object TransportCertificateSerialDataSource: TDataSource
+    DataSet = TransportCertificateSerialDataSet
+    Left = 740
+    Top = 256
+  end
+  object TransportCertificateSerialDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    TRANSPORT_CERTIFICATE_SERIAL'
+      'FROM'
+      '    CAT_AUTH_TRANS_CERT_SERIAL ')
+    Active = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 608
+    Top = 256
+  end
+  object AddConstituentDataSet: TpFIBDataSet
+    UpdateSQL.Strings = (
+      'UPDATE RELATION_AUTH_CONST'
+      'SET '
+      '    AUTHORIZATION_ID = :AUTHORIZATION_ID,'
+      '    CONSTITUENT_ID = :CONSTITUENT_ID'
+      'WHERE'
+      '    ID = :OLD_ID'
+      '    ')
+    DeleteSQL.Strings = (
+      'DELETE FROM'
+      '    RELATION_AUTH_CONST'
+      'WHERE'
+      '        ID = :OLD_ID'
+      '    ')
+    InsertSQL.Strings = (
+      'INSERT INTO RELATION_AUTH_CONST('
+      '    AUTHORIZATION_ID,'
+      '    CONSTITUENT_ID'
+      ')'
+      'VALUES('
+      '    :AUTHORIZATION_ID,'
+      '    :CONSTITUENT_ID'
+      ')')
+    RefreshSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    AUTHORIZATION_ID,'
+      '    CONSTITUENT_ID'
+      'FROM'
+      '    RELATION_AUTH_CONST '
+      ''
+      ' WHERE '
+      '        RELATION_AUTH_CONST.ID = :OLD_ID'
+      '    ')
+    SelectSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    AUTHORIZATION_ID,'
+      '    CONSTITUENT_ID'
+      'FROM'
+      '    RELATION_AUTH_CONST ')
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 608
+    Top = 32
+  end
+  object AddConstituentDataSource: TDataSource
+    DataSet = AddConstituentDataSet
+    Left = 740
+    Top = 32
+  end
+  object AddRepresentativeDataSet: TpFIBDataSet
+    UpdateSQL.Strings = (
+      'UPDATE RELATION_AUTH_REPRES'
+      'SET '
+      '    AUTHORIZATION_ID = :AUTHORIZATION_ID,'
+      '    REPRESENTATIVE_ID = :REPRESENTATIVE_ID'
+      'WHERE'
+      '    ID = :OLD_ID'
+      '    ')
+    DeleteSQL.Strings = (
+      'DELETE FROM'
+      '    RELATION_AUTH_REPRES'
+      'WHERE'
+      '        ID = :OLD_ID'
+      '    ')
+    InsertSQL.Strings = (
+      'INSERT INTO RELATION_AUTH_REPRES('
+      '    AUTHORIZATION_ID,'
+      '    REPRESENTATIVE_ID'
+      ')'
+      'VALUES('
+      '    :AUTHORIZATION_ID,'
+      '    :REPRESENTATIVE_ID'
+      ')')
+    RefreshSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    AUTHORIZATION_ID,'
+      '    REPRESENTATIVE_ID'
+      'FROM'
+      '    RELATION_AUTH_REPRES '
+      ''
+      ' WHERE '
+      '        RELATION_AUTH_REPRES.ID = :OLD_ID'
+      '    ')
+    SelectSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    AUTHORIZATION_ID,'
+      '    REPRESENTATIVE_ID'
+      'FROM'
+      '    RELATION_AUTH_REPRES ')
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 608
+    Top = 88
+  end
+  object AddRepresentativeDataSource: TDataSource
+    DataSet = AddRepresentativeDataSet
+    Left = 740
+    Top = 88
   end
 end

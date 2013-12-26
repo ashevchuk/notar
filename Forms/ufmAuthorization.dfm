@@ -516,8 +516,8 @@ object fmAuthorization: TfmAuthorization
       object cxDBDateEdit2: TcxDBDateEdit
         Left = 104
         Top = 15
-        DataBinding.DataField = 'PASSPORT_FOREIGN_ISSUE_DATE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSITE_NUMBER_REMOVED_DATE'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         TabOrder = 0
         Width = 150
@@ -526,7 +526,7 @@ object fmAuthorization: TfmAuthorization
         Left = 3
         Top = 43
         AutoSize = False
-        Caption = #1042#1080#1076#1072#1085#1086
+        Caption = #1053#1086#1084#1077#1088
         ParentColor = False
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
@@ -539,7 +539,7 @@ object fmAuthorization: TfmAuthorization
         Left = 3
         Top = 16
         AutoSize = False
-        Caption = #1044#1072#1090#1072' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1111
+        Caption = #1047#1085#1103#1090#1080#1081
         ParentColor = False
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
@@ -551,20 +551,20 @@ object fmAuthorization: TfmAuthorization
       object cxDBLookupComboBox2: TcxDBLookupComboBox
         Left = 104
         Top = 42
-        DataBinding.DataField = 'PASSPORT_FOREIGN_ISSUER'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSITE_NUMBER'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'PASSPORT_FOREIGN_ISSUER'
+        Properties.KeyFieldNames = 'TRANSITE_NUMBER'
         Properties.ListColumns = <
           item
-            FieldName = 'PASSPORT_FOREIGN_ISSUER'
+            FieldName = 'TRANSITE_NUMBER'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.PassportForeignIssuerDataSource
+        Properties.ListSource = dmAuthorization.TransiteNumberDataSource
         TabOrder = 3
         Width = 150
       end
@@ -634,8 +634,8 @@ object fmAuthorization: TfmAuthorization
       object cxDBDateEdit3: TcxDBDateEdit
         Left = 104
         Top = 42
-        DataBinding.DataField = 'PASSPORT_FOREIGN_ISSUE_DATE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'AUTHORIZATION_VALIDITY_DATE'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         TabOrder = 4
         Width = 150
@@ -643,8 +643,8 @@ object fmAuthorization: TfmAuthorization
       object cxDBDateEdit4: TcxDBDateEdit
         Left = 104
         Top = 69
-        DataBinding.DataField = 'PASSPORT_FOREIGN_EXPIRATION'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'AUTHORIZATION_DATE'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         TabOrder = 5
         Width = 150
@@ -652,28 +652,28 @@ object fmAuthorization: TfmAuthorization
       object cxDBLookupComboBox28: TcxDBLookupComboBox
         Left = 104
         Top = 15
-        DataBinding.DataField = 'PASSPORT_FOREIGN_SERIAL'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'AUTHORIZATION_NUMBER'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'PASSPORT_FOREIGN_SERIAL'
+        Properties.KeyFieldNames = 'AUTHORIZATION_NUMBER'
         Properties.ListColumns = <
           item
-            FieldName = 'PASSPORT_FOREIGN_SERIAL'
+            FieldName = 'AUTHORIZATION_NUMBER'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.PassportForeignSerialDataSource
+        Properties.ListSource = dmAuthorization.AuthorizationNumberDataSource
         TabOrder = 6
         Width = 150
       end
       object cxDBMemo4: TcxDBMemo
         Left = 104
         Top = 96
-        DataBinding.DataField = 'ID_NUMBER_ABSENT_REASON'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'AUTHORIZATION_DESCRIPTION'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.ScrollBars = ssVertical
         TabOrder = 7
@@ -684,8 +684,8 @@ object fmAuthorization: TfmAuthorization
         Left = 164
         Top = 123
         Caption = #1058#1088#1072#1085#1079#1080#1090
-        DataBinding.DataField = 'DISABLEMENT'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSITE'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentBackground = False
         ParentColor = False
         ParentFont = False
@@ -700,12 +700,14 @@ object fmAuthorization: TfmAuthorization
         Left = 3
         Top = 123
         Caption = #1055#1088#1072#1074#1086' '#1087#1077#1088#1077#1076#1086#1088#1091#1095#1077#1085#1085#1103
-        DataBinding.DataField = 'FOREIGN_ADDRESS_TYPE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'SUBSTITUTION'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentBackground = False
         ParentColor = False
         ParentFont = False
         Properties.Alignment = taRightJustify
+        Properties.ValueChecked = 1
+        Properties.ValueUnchecked = 0
         TabOrder = 9
         Transparent = True
         Width = 137
@@ -776,8 +778,8 @@ object fmAuthorization: TfmAuthorization
       object cxDBDateEdit1: TcxDBDateEdit
         Left = 104
         Top = 69
-        DataBinding.DataField = 'PASSPORT_FOREIGN_ISSUE_DATE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_CERTIFICATE_REG_DATE'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         TabOrder = 4
         Width = 150
@@ -785,60 +787,60 @@ object fmAuthorization: TfmAuthorization
       object cxDBLookupComboBox1: TcxDBLookupComboBox
         Left = 104
         Top = 15
-        DataBinding.DataField = 'PASSPORT_FOREIGN_SERIAL'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_CERTIFICATE_SERIAL'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'PASSPORT_FOREIGN_SERIAL'
+        Properties.KeyFieldNames = 'TRANSPORT_CERTIFICATE_SERIAL'
         Properties.ListColumns = <
           item
-            FieldName = 'PASSPORT_FOREIGN_SERIAL'
+            FieldName = 'TRANSPORT_CERTIFICATE_SERIAL'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.PassportForeignSerialDataSource
+        Properties.ListSource = dmAuthorization.TransportCertificateSerialDataSource
         TabOrder = 5
         Width = 150
       end
       object cxDBLookupComboBox29: TcxDBLookupComboBox
         Left = 104
         Top = 42
-        DataBinding.DataField = 'PASSPORT_FOREIGN_NUMBER'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_CERTIFICATE_NUMBER'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'PASSPORT_FOREIGN_NUMBER'
+        Properties.KeyFieldNames = 'TRANSPORT_CERTIFICATE_NUMBER'
         Properties.ListColumns = <
           item
-            FieldName = 'PASSPORT_FOREIGN_NUMBER'
+            FieldName = 'TRANSPORT_CERTIFICATE_NUMBER'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.PassportForeignNumberDataSource
+        Properties.ListSource = dmAuthorization.TransportCertificateNumberDataSource
         TabOrder = 6
         Width = 150
       end
       object cxDBLookupComboBox30: TcxDBLookupComboBox
         Left = 104
         Top = 96
-        DataBinding.DataField = 'PASSPORT_FOREIGN_ISSUER'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_CERTIFICATE_ISSUER'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'PASSPORT_FOREIGN_ISSUER'
+        Properties.KeyFieldNames = 'TRANSPORT_CERTIFICATE_ISSUER'
         Properties.ListColumns = <
           item
-            FieldName = 'PASSPORT_FOREIGN_ISSUER'
+            FieldName = 'TRANSPORT_CERTIFICATE_ISSUER'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.PassportForeignIssuerDataSource
+        Properties.ListSource = dmAuthorization.TransportCertificateIssuerDataSource
         TabOrder = 7
         Width = 150
       end
@@ -999,208 +1001,208 @@ object fmAuthorization: TfmAuthorization
       object cxDBLookupComboBox11: TcxDBLookupComboBox
         Left = 104
         Top = 15
-        DataBinding.DataField = 'ADDRESS_STATE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_KIND'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_STATE'
+        Properties.KeyFieldNames = 'TRANSPORT_KIND'
         Properties.ListColumns = <
           item
-            FieldName = 'ADDRESS_STATE'
+            FieldName = 'TRANSPORT_KIND'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressStateDataSource
+        Properties.ListSource = dmAuthorization.TransportKindDataSource
         TabOrder = 11
         Width = 150
       end
       object cxDBLookupComboBox12: TcxDBLookupComboBox
         Left = 104
         Top = 42
-        DataBinding.DataField = 'ADDRESS_REGION'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_BRAND'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_REGION'
+        Properties.KeyFieldNames = 'TRANSPORT_BRAND'
         Properties.ListColumns = <
           item
-            FieldName = 'ADDRESS_REGION'
+            FieldName = 'TRANSPORT_BRAND'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressRegionDataSource
+        Properties.ListSource = dmAuthorization.TransportBrandDataSource
         TabOrder = 12
         Width = 150
       end
       object cxDBLookupComboBox13: TcxDBLookupComboBox
         Left = 104
         Top = 69
-        DataBinding.DataField = 'ADDRESS_LOCALITY_TYPE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_MODEL'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_LOCALITY_TYPE'
+        Properties.KeyFieldNames = 'TRANSPORT_MODEL'
         Properties.ListColumns = <
           item
-            FieldName = 'ADDRESS_LOCALITY_TYPE'
+            FieldName = 'TRANSPORT_MODEL'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressLocalityTypeDataSource
+        Properties.ListSource = dmAuthorization.TransportModelDataSource
         TabOrder = 13
         Width = 150
       end
       object cxDBLookupComboBox14: TcxDBLookupComboBox
         Left = 104
         Top = 96
-        DataBinding.DataField = 'ADDRESS_LOCALITY'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_TYPE'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_LOCALITY'
+        Properties.KeyFieldNames = 'TRANSPORT_TYPE'
         Properties.ListColumns = <
           item
-            FieldName = 'ADDRESS_LOCALITY'
+            FieldName = 'TRANSPORT_TYPE'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressLocalityDataSource
+        Properties.ListSource = dmAuthorization.TransportTypeDataSource
         TabOrder = 14
         Width = 150
       end
       object cxDBLookupComboBox15: TcxDBLookupComboBox
         Left = 104
         Top = 123
-        DataBinding.DataField = 'ADDRESS_STREET_TYPE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_COLOR'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_STREET_TYPE'
+        Properties.KeyFieldNames = 'TRANSPORT_COLOR'
         Properties.ListColumns = <
           item
-            FieldName = 'ADDRESS_STREET_TYPE'
+            FieldName = 'TRANSPORT_COLOR'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressStreetTypeDataSource
+        Properties.ListSource = dmAuthorization.TransportColorDataSource
         TabOrder = 15
         Width = 150
       end
       object cxDBLookupComboBox16: TcxDBLookupComboBox
         Left = 104
         Top = 150
-        DataBinding.DataField = 'ADDRESS_STREET'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_CHASSIS_NUMBER'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_STREET'
+        Properties.KeyFieldNames = 'TRANSPORT_CHASSIS_NUMBER'
         Properties.ListColumns = <
           item
-            FieldName = 'ADDRESS_STREET'
+            FieldName = 'TRANSPORT_CHASSIS_NUMBER'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressStreetDataSource
+        Properties.ListSource = dmAuthorization.TransportChassisNumberDataSource
         TabOrder = 16
         Width = 150
       end
       object cxDBLookupComboBox17: TcxDBLookupComboBox
         Left = 104
         Top = 177
-        DataBinding.DataField = 'ADDRESS_BUILDING'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_LOAD_WEIGHT'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_BUILDING'
+        Properties.KeyFieldNames = 'TRANSPORT_LOAD_WEIGHT'
         Properties.ListColumns = <
           item
-            FieldName = 'ADDRESS_BUILDING'
+            FieldName = 'TRANSPORT_LOAD_WEIGHT'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressBuildingDataSource
+        Properties.ListSource = dmAuthorization.TransportLoadWeightDataSource
         TabOrder = 17
         Width = 150
       end
       object cxDBLookupComboBox18: TcxDBLookupComboBox
         Left = 104
         Top = 204
-        DataBinding.DataField = 'ADDRESS_FLAT'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_WEIGHT'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_FLAT'
+        Properties.KeyFieldNames = 'TRANSPORT_WEIGHT'
         Properties.ListColumns = <
           item
-            FieldName = 'ADDRESS_FLAT'
+            FieldName = 'TRANSPORT_WEIGHT'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressFlatDataSource
+        Properties.ListSource = dmAuthorization.TransportWeightDataSource
         TabOrder = 18
         Width = 150
       end
       object cxDBLookupComboBox19: TcxDBLookupComboBox
         Left = 104
         Top = 232
-        DataBinding.DataField = 'ADDRESS_CORPS'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_ENGINE_VOLUME'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_CORPS'
+        Properties.KeyFieldNames = 'TRANSPORT_ENGINE_VOLUME'
         Properties.ListColumns = <
           item
-            FieldName = 'ADDRESS_CORPS'
+            FieldName = 'TRANSPORT_ENGINE_VOLUME'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressCorpsDataSource
+        Properties.ListSource = dmAuthorization.TransportEngineVolumeDataSource
         TabOrder = 19
         Width = 150
       end
       object cxDBLookupComboBox20: TcxDBLookupComboBox
         Left = 104
         Top = 259
-        DataBinding.DataField = 'ADDRESS_SECTION'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_REG_NUMBER'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ADDRESS_SECTION'
+        Properties.KeyFieldNames = 'TRANSPORT_REG_NUMBER'
         Properties.ListColumns = <
           item
-            FieldName = 'ADDRESS_SECTION'
+            FieldName = 'TRANSPORT_REG_NUMBER'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmIndividual.AddressSectionDataSource
+        Properties.ListSource = dmAuthorization.TransportRegNumberDataSource
         TabOrder = 20
         Width = 150
       end
       object cxDBDateEdit5: TcxDBDateEdit
         Left = 104
         Top = 286
-        DataBinding.DataField = 'PASSPORT_FOREIGN_ISSUE_DATE'
-        DataBinding.DataSource = dmIndividual.IndividualsDataSource
+        DataBinding.DataField = 'TRANSPORT_FABRICATION_DATE'
+        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
         TabOrder = 21
         Width = 150
@@ -1225,7 +1227,10 @@ object fmAuthorization: TfmAuthorization
         ItemHeight = 13
         ParentFont = False
         TabOrder = 0
-        ExplicitHeight = 18
+        ExplicitLeft = 2
+        ExplicitTop = 18
+        ExplicitWidth = 256
+        ExplicitHeight = 24
       end
       object cxGroupBox2: TcxGroupBox
         Left = 3
@@ -1238,7 +1243,9 @@ object fmAuthorization: TfmAuthorization
         Style.Shadow = False
         Style.TransparentBorder = True
         TabOrder = 1
-        ExplicitTop = 48
+        ExplicitLeft = 2
+        ExplicitTop = 42
+        ExplicitWidth = 256
         Height = 29
         Width = 254
         object AddConstituentButton: TcxButton
@@ -1275,9 +1282,9 @@ object fmAuthorization: TfmAuthorization
         ParentFont = False
         TabOrder = 0
         ExplicitLeft = 2
-        ExplicitTop = -2
+        ExplicitTop = 18
         ExplicitWidth = 256
-        ExplicitHeight = 58
+        ExplicitHeight = 76
       end
       object cxGroupBox10: TcxGroupBox
         Left = 3
@@ -1291,7 +1298,7 @@ object fmAuthorization: TfmAuthorization
         Style.TransparentBorder = True
         TabOrder = 1
         ExplicitLeft = 2
-        ExplicitTop = 56
+        ExplicitTop = 94
         ExplicitWidth = 256
         Height = 29
         Width = 254
@@ -1320,6 +1327,23 @@ object fmAuthorization: TfmAuthorization
           OnClick = RemoveRepresentativeButtonClick
         end
       end
+    end
+    object CancelButton: TcxButton
+      Left = 426
+      Top = 380
+      Width = 75
+      Height = 25
+      Caption = #1042#1110#1076#1084#1110#1085#1080#1090#1080
+      TabOrder = 6
+    end
+    object PostButton: TcxButton
+      Left = 336
+      Top = 380
+      Width = 75
+      Height = 25
+      Caption = #1057#1090#1074#1086#1088#1080#1090#1080
+      TabOrder = 7
+      OnClick = PostButtonClick
     end
   end
   object ConstituentPopupMenu: TPopupMenu
