@@ -4,7 +4,8 @@ interface
 
 uses
   ufmMain, uUtils, uRemoteDM,
-  System.SysUtils, System.Classes, Data.DB, FIBDataSet, pFIBDataSet;
+  System.SysUtils, System.Classes, Data.DB, FIBDataSet, pFIBDataSet,
+  FIBDatabase, pFIBDatabase;
 
 type
   TdmAuthorization = class(TDataModule)
@@ -188,6 +189,12 @@ type
     AuthorizationsDataSetAUTHORIZATION_DESCRIPTION: TFIBWideStringField;
     AuthorizationsDataSetTRANSITE: TFIBWideStringField;
     AuthorizationsDataSetSUBSTITUTION: TFIBWideStringField;
+    AddConstituentDataSetID: TFIBBCDField;
+    AddConstituentDataSetAUTHORIZATION_ID: TFIBBCDField;
+    AddConstituentDataSetCONSTITUENT_ID: TFIBBCDField;
+    AddRepresentativeDataSetID: TFIBBCDField;
+    AddRepresentativeDataSetAUTHORIZATION_ID: TFIBBCDField;
+    AddRepresentativeDataSetREPRESENTATIVE_ID: TFIBBCDField;
   private
     { Private declarations }
   public

@@ -40,10 +40,21 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
+        <ImageDebugInfo>true</ImageDebugInfo>
+        <DCC_MapFile>3</DCC_MapFile>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <VerInfo_Keys>CompanyName=Cloud computing research initiative;FileDescription=Notarial automated workplace;FileVersion=1.0.0.9;InternalName=Notar AWP;LegalCopyright=Cloud computing research initiative;LegalTrademarks=;OriginalFilename=Notar.exe;ProductName=Notar;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_MapFileARM>2</DCC_MapFileARM>
+        <DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
+        <DCC_XmlOutput>.\</DCC_XmlOutput>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_RangeChecking>true</DCC_RangeChecking>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <DCC_OutputDependencies>true</DCC_OutputDependencies>
+        <VerInfo_Locale>1049</VerInfo_Locale>
         <DCC_UnitSearchPath>.\Forms\;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
-        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
-        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_DcuOutput>.\</DCC_DcuOutput>
         <DCC_ExeOutput>.\</DCC_ExeOutput>
         <DCC_E>false</DCC_E>
         <DCC_N>false</DCC_N>
@@ -52,35 +63,42 @@
         <DCC_K>false</DCC_K>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <DCC_UsePackage>FireDACSqliteDriver;DBXSqliteDriver;FireDACPgDriver;fmx;IndySystem;TeeDB;frx19;vclib;inetdbbde;DBXInterBaseDriver;DataSnapClient;DataSnapCommon;DataSnapServer;DataSnapProviderClient;DBXSybaseASEDriver;DbxCommonDriver;vclimg;dbxcds;DatasnapConnectorsFreePascal;MetropolisUILiveTile;vcldb;vcldsnap;fmxFireDAC;DBXDb2Driver;DBXOracleDriver;CustomIPTransport;vclribbon;dsnap;IndyIPServer;fmxase;vcl;IndyCore;IndyIPCommon;CloudService;DBXMSSQLDriver;FmxTeeUI;FireDACIBDriver;CodeSiteExpressPkg;FireDACDBXDriver;inetdbxpress;frxe19;FireDACDb2Driver;adortl;frxDB19;FireDACASADriver;bindcompfmx;vcldbx;FireDACODBCDriver;rtl;dbrtl;DbxClientDriver;FireDACCommon;bindcomp;inetdb;Tee;DBXOdbcDriver;vclFireDAC;xmlrtl;svnui;ibxpress;IndyProtocols;DBXMySQLDriver;FireDACCommonDriver;bindengine;vclactnband;soaprtl;bindcompdbx;FMXTee;TeeUI;bindcompvcl;vclie;FireDACADSDriver;vcltouch;VclSmp;FireDACMSSQLDriver;FireDAC;VCLRESTComponents;Intraweb;DBXInformixDriver;DataSnapConnectors;FireDACDataSnapDriver;dsnapcon;DBXFirebirdDriver;inet;fmxobj;FireDACMySQLDriver;vclx;svn;DBXSybaseASADriver;FireDACOracleDriver;fmxdae;RESTComponents;bdertl;FireDACMSAccDriver;DataSnapIndy10ServerTransport;dbexpress;IndyIPClient;dxCoreRS19;cxLibraryRS19;dxGDIPlusRS19;dxThemeRS19;cxSpreadSheetRS19;cxDataRS19;cxEditorsRS19;cxExportRS19;cxVerticalGridRS19;cxPageControlRS19;cxGridRS19;cxSchedulerRS19;cxSchedulerTreeBrowserRS19;cxSchedulerGridRS19;dxBarRS19;dxComnRS19;cxTreeListRS19;cxTreeListdxBarPopupMenuRS19;dxPSCoreRS19;dxPSLnksRS19;dxPScxCommonRS19;dxPScxSchedulerLnkRS19;dxPScxSSLnkRS19;dxLayoutControlRS19;dxPSdxLCLnkRS19;dxPScxGridLnkRS19;dxmdsRS19;cxPivotGridRS19;dxPScxPivotGridLnkRS19;dxPScxExtCommonRS19;cxPivotGridOLAPRS19;cxPivotGridChartRS19;cxPageControldxBarPopupMenuRS19;dxorgcRS19;dxNavBarRS19;dxFlowChartRS19;dxdbtrRS19;dxDockingRS19;dxdborRS19;dxBarExtItemsRS19;dxBarDBNavRS19;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_MapFile>3</DCC_MapFile>
+        <DCC_UsePackage>FireDACSqliteDriver;DBXSqliteDriver;FireDACPgDriver;fmx;IndySystem;TeeDB;frx19;vclib;inetdbbde;DBXInterBaseDriver;DataSnapClient;DataSnapCommon;DataSnapServer;DataSnapProviderClient;DBXSybaseASEDriver;DbxCommonDriver;vclimg;dbxcds;DatasnapConnectorsFreePascal;MetropolisUILiveTile;vcldb;vcldsnap;fmxFireDAC;DBXDb2Driver;DBXOracleDriver;CustomIPTransport;vclribbon;dsnap;IndyIPServer;fmxase;vcl;IndyCore;IndyIPCommon;CloudService;DBXMSSQLDriver;FmxTeeUI;FireDACIBDriver;CodeSiteExpressPkg;FireDACDBXDriver;inetdbxpress;frxe19;FireDACDb2Driver;adortl;frxDB19;FireDACASADriver;bindcompfmx;vcldbx;FireDACODBCDriver;rtl;dbrtl;DbxClientDriver;FireDACCommon;bindcomp;inetdb;Tee;DBXOdbcDriver;vclFireDAC;xmlrtl;svnui;ibxpress;IndyProtocols;DBXMySQLDriver;FireDACCommonDriver;bindengine;vclactnband;soaprtl;bindcompdbx;FMXTee;TeeUI;bindcompvcl;vclie;FireDACADSDriver;vcltouch;VclSmp;FireDACMSSQLDriver;FireDAC;VCLRESTComponents;Intraweb;DBXInformixDriver;DataSnapConnectors;FireDACDataSnapDriver;dsnapcon;DBXFirebirdDriver;inet;fmxobj;FireDACMySQLDriver;vclx;svn;DBXSybaseASADriver;FireDACOracleDriver;fmxdae;RESTComponents;bdertl;FireDACMSAccDriver;DataSnapIndy10ServerTransport;dbexpress;IndyIPClient;dxCoreRS19;cxLibraryRS19;dxGDIPlusRS19;dxThemeRS19;cxSpreadSheetRS19;cxDataRS19;cxEditorsRS19;cxExportRS19;cxVerticalGridRS19;cxPageControlRS19;cxGridRS19;cxSchedulerRS19;cxSchedulerTreeBrowserRS19;cxSchedulerGridRS19;dxBarRS19;dxComnRS19;cxTreeListRS19;cxTreeListdxBarPopupMenuRS19;dxPSCoreRS19;dxPSLnksRS19;dxPScxCommonRS19;dxPScxSchedulerLnkRS19;dxPScxSSLnkRS19;dxLayoutControlRS19;dxPSdxLCLnkRS19;dxPScxGridLnkRS19;dxmdsRS19;cxPivotGridRS19;dxPScxPivotGridLnkRS19;dxPScxExtCommonRS19;cxPivotGridOLAPRS19;cxPivotGridChartRS19;cxPageControldxBarPopupMenuRS19;dxorgcRS19;dxNavBarRS19;dxFlowChartRS19;dxdbtrRS19;dxDockingRS19;dxdborRS19;dxBarExtItemsRS19;dxBarDBNavRS19;dxDBXServerModeRS19;dxADOServerModeRS19;$(DCC_UsePackage)</DCC_UsePackage>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
-        <DCC_UsePackage>FireDACSqliteDriver;DBXSqliteDriver;FireDACPgDriver;fmx;IndySystem;TeeDB;vclib;DBXInterBaseDriver;DataSnapClient;DataSnapCommon;DataSnapServer;DataSnapProviderClient;DBXSybaseASEDriver;DbxCommonDriver;vclimg;dbxcds;DatasnapConnectorsFreePascal;MetropolisUILiveTile;vcldb;vcldsnap;fmxFireDAC;DBXDb2Driver;DBXOracleDriver;CustomIPTransport;vclribbon;dsnap;IndyIPServer;fmxase;vcl;IndyCore;IndyIPCommon;CloudService;DBXMSSQLDriver;FmxTeeUI;FireDACIBDriver;FireDACDBXDriver;inetdbxpress;FireDACDb2Driver;adortl;FireDACASADriver;bindcompfmx;FireDACODBCDriver;rtl;dbrtl;DbxClientDriver;FireDACCommon;bindcomp;inetdb;Tee;DBXOdbcDriver;vclFireDAC;xmlrtl;ibxpress;IndyProtocols;DBXMySQLDriver;FireDACCommonDriver;bindengine;vclactnband;soaprtl;bindcompdbx;FMXTee;TeeUI;bindcompvcl;vclie;FireDACADSDriver;vcltouch;VclSmp;FireDACMSSQLDriver;FireDAC;VCLRESTComponents;Intraweb;DBXInformixDriver;DataSnapConnectors;FireDACDataSnapDriver;dsnapcon;DBXFirebirdDriver;inet;fmxobj;FireDACMySQLDriver;vclx;DBXSybaseASADriver;FireDACOracleDriver;fmxdae;RESTComponents;FireDACMSAccDriver;DataSnapIndy10ServerTransport;dbexpress;IndyIPClient;dxCoreRS19;cxLibraryRS19;dxGDIPlusRS19;dxThemeRS19;cxSpreadSheetRS19;cxDataRS19;cxEditorsRS19;cxExportRS19;cxVerticalGridRS19;cxPageControlRS19;cxGridRS19;cxSchedulerRS19;cxSchedulerTreeBrowserRS19;cxSchedulerGridRS19;dxBarRS19;dxComnRS19;cxTreeListRS19;cxTreeListdxBarPopupMenuRS19;dxPSCoreRS19;dxPSLnksRS19;dxPScxCommonRS19;dxPScxSchedulerLnkRS19;dxPScxSSLnkRS19;dxLayoutControlRS19;dxPSdxLCLnkRS19;dxPScxGridLnkRS19;dxmdsRS19;cxPivotGridRS19;dxPScxPivotGridLnkRS19;dxPScxExtCommonRS19;cxPivotGridOLAPRS19;cxPivotGridChartRS19;cxPageControldxBarPopupMenuRS19;dxorgcRS19;dxNavBarRS19;dxFlowChartRS19;dxdbtrRS19;dxDockingRS19;dxdborRS19;dxBarExtItemsRS19;dxBarDBNavRS19;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>FireDACSqliteDriver;DBXSqliteDriver;FireDACPgDriver;fmx;IndySystem;TeeDB;vclib;DBXInterBaseDriver;DataSnapClient;DataSnapCommon;DataSnapServer;DataSnapProviderClient;DBXSybaseASEDriver;DbxCommonDriver;vclimg;dbxcds;DatasnapConnectorsFreePascal;MetropolisUILiveTile;vcldb;vcldsnap;fmxFireDAC;DBXDb2Driver;DBXOracleDriver;CustomIPTransport;vclribbon;dsnap;IndyIPServer;fmxase;vcl;IndyCore;IndyIPCommon;CloudService;DBXMSSQLDriver;FmxTeeUI;FireDACIBDriver;FireDACDBXDriver;inetdbxpress;FireDACDb2Driver;adortl;FireDACASADriver;bindcompfmx;FireDACODBCDriver;rtl;dbrtl;DbxClientDriver;FireDACCommon;bindcomp;inetdb;Tee;DBXOdbcDriver;vclFireDAC;xmlrtl;ibxpress;IndyProtocols;DBXMySQLDriver;FireDACCommonDriver;bindengine;vclactnband;soaprtl;bindcompdbx;FMXTee;TeeUI;bindcompvcl;vclie;FireDACADSDriver;vcltouch;VclSmp;FireDACMSSQLDriver;FireDAC;VCLRESTComponents;Intraweb;DBXInformixDriver;DataSnapConnectors;FireDACDataSnapDriver;dsnapcon;DBXFirebirdDriver;inet;fmxobj;FireDACMySQLDriver;vclx;DBXSybaseASADriver;FireDACOracleDriver;fmxdae;RESTComponents;FireDACMSAccDriver;DataSnapIndy10ServerTransport;dbexpress;IndyIPClient;dxCoreRS19;cxLibraryRS19;dxGDIPlusRS19;dxThemeRS19;cxSpreadSheetRS19;cxDataRS19;cxEditorsRS19;cxExportRS19;cxVerticalGridRS19;cxPageControlRS19;cxGridRS19;cxSchedulerRS19;cxSchedulerTreeBrowserRS19;cxSchedulerGridRS19;dxBarRS19;dxComnRS19;cxTreeListRS19;cxTreeListdxBarPopupMenuRS19;dxPSCoreRS19;dxPSLnksRS19;dxPScxCommonRS19;dxPScxSchedulerLnkRS19;dxPScxSSLnkRS19;dxLayoutControlRS19;dxPSdxLCLnkRS19;dxPScxGridLnkRS19;dxmdsRS19;cxPivotGridRS19;dxPScxPivotGridLnkRS19;dxPScxExtCommonRS19;cxPivotGridOLAPRS19;cxPivotGridChartRS19;cxPageControldxBarPopupMenuRS19;dxorgcRS19;dxNavBarRS19;dxFlowChartRS19;dxdbtrRS19;dxDockingRS19;dxdborRS19;dxBarExtItemsRS19;dxBarDBNavRS19;dxDBXServerModeRS19;dxADOServerModeRS19;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
-        <VerInfo_Locale>1049</VerInfo_Locale>
-        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
-        <DCC_DebugDCUs>true</DCC_DebugDCUs>
-        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_MapFile>3</DCC_MapFile>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
-        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
-        <DCC_RemoteDebug>true</DCC_RemoteDebug>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <BRCC_EnableMultiByte>true</BRCC_EnableMultiByte>
+        <DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
+        <DCC_DebugDCUs>false</DCC_DebugDCUs>
+        <BRCC_Verbose>true</BRCC_Verbose>
+        <DCC_RangeChecking>true</DCC_RangeChecking>
         <DCC_DcuOutput>.\</DCC_DcuOutput>
-        <Icon_MainIcon>Notar_Icon.ico</Icon_MainIcon>
         <VerInfo_Locale>1058</VerInfo_Locale>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
-        <VerInfo_Keys>CompanyName=Cloud computing research initiative;FileDescription=Notarial automated workplace;FileVersion=1.0.0.8;InternalName=Notar AWP;LegalCopyright=Cloud computing research initiative;LegalTrademarks=;OriginalFilename=Notar.exe;ProductName=Notar;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-        <VerInfo_Build>8</VerInfo_Build>
-        <DCC_RemoteDebug>false</DCC_RemoteDebug>
+    </PropertyGroup>
+    <Import Project="..\def.optset" Condition="'$(Cfg_1_Win32)'!='' And Exists('..\def.optset')"/>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_MinorVer>1</VerInfo_MinorVer>
+        <VerInfo_Release>9</VerInfo_Release>
+        <Icon_MainIcon>Notar_Icon1.ico</Icon_MainIcon>
+        <VerInfo_Keys>CompanyName=Cloud Computing Research Initiative;FileDescription=Notarial automated workingplace main unit;FileVersion=1.1.9.19;InternalName=Notar;LegalCopyright=Cloud Computing Research Initiative;LegalTrademarks=Notar (c) Cloud Computing Research Initiative;OriginalFilename=Notar.exe;ProductName=Notarial automated workingplace;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_Define>EUREKALOG;EUREKALOG_VER7;$(DCC_Define)</DCC_Define>
+        <VerInfo_Build>19</VerInfo_Build>
+        <DCC_CBuilderOutput>All</DCC_CBuilderOutput>
+        <DCC_DcuOutput>.\</DCC_DcuOutput>
+        <DCC_ExeOutput>.\</DCC_ExeOutput>
+        <CfgDependentOn>..\def.optset</CfgDependentOn>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -184,8 +202,6 @@
                     <Source Name="MainSource">Notar.dpr</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="C:\Documents and Settings\All Users\Документы\RAD Studio\12.0\Bpl\dcldxADOServerModeRS19.bpl">ADO Data Source for ExpressDataController Server Mode by Developer Express Inc.</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Documents and Settings\All Users\Документы\RAD Studio\12.0\Bpl\dcldxDBXServerModeRS19.bpl">dbExpress Data Source for ExpressDataController Server Mode by Developer Express Inc.</Excluded_Packages>
                     <Excluded_Packages Name="C:\Documents and Settings\All Users\Документы\RAD Studio\12.0\Bpl\dcldxFireDACServerModeRS19.bpl">FireDAC Data Source for ExpressDataController Server Mode by Developer Express Inc.</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcboffice2k190.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcbofficexp190.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
@@ -204,3 +220,30 @@
     <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
     <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
 </Project>
+
+<!-- EurekaLog First Line
+[Exception Log]
+EurekaLog Version=7001
+Activate=1
+atVCL=1
+atWin32=1
+csoShowRTLThreads=1
+csoShowWindowsThreads=1
+DeleteMapAfterCompile=1
+dpJCL=1
+edoShowInTopMostMode=1
+edoUseRealIcon=1
+edoUseRealName=1
+Encrypt Password=""
+Freeze Activate=1
+idEurekaLog=1
+idEurekaLogDetailed=1
+idMSClassic=1
+idStepsToReproduce=1
+InjectCode=1
+InjectInfo=1
+InjectOptions=1
+loResCatchLeaks=1
+ProjectID="{EC7B7521-CAEE-4786-B555-8C122DB729D9}"
+sndShowFailureMsg=1
+EurekaLog Last Line -->

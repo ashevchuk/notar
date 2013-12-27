@@ -232,7 +232,7 @@ var
   PathLength       : integer;
 begin
   ToggleLogWindow(false);
-  Application.OnException := OnException;
+//  Application.OnException := OnException;
 
   ForceCurrentDirectory := true;
  CurrentDir := ExtractFilePath(ParamStr(0));
@@ -301,6 +301,7 @@ begin
   CloseFile(ExceptionLog);
 
   SetStatusText(ExceptionInfo);
+  raise E;
 end;
 
 end.

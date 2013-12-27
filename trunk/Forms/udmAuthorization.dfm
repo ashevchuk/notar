@@ -1,7 +1,7 @@
 object dmAuthorization: TdmAuthorization
   OldCreateOrder = False
   Height = 606
-  Width = 874
+  Width = 1015
   object IndividualConstituentsDataSource: TDataSource
     DataSet = IndividualConstituentsDataSet
     Left = 196
@@ -1585,6 +1585,7 @@ object dmAuthorization: TdmAuthorization
       '    ')
     InsertSQL.Strings = (
       'INSERT INTO CATALOG_AUTHORIZATIONS('
+      '    ID,'
       '    TRANSPORT_KIND,'
       '    TRANSPORT_BRAND,'
       '    TRANSPORT_MODEL,'
@@ -1610,6 +1611,7 @@ object dmAuthorization: TdmAuthorization
       '    SUBSTITUTION'
       ')'
       'VALUES('
+      '    :ID,'
       '    :TRANSPORT_KIND,'
       '    :TRANSPORT_BRAND,'
       '    :TRANSPORT_MODEL,'
@@ -2297,12 +2299,25 @@ object dmAuthorization: TdmAuthorization
       '    CONSTITUENT_ID'
       'FROM'
       '    RELATION_AUTH_CONST ')
+    AutoCalcFields = False
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
     AutoCommit = True
     Left = 608
     Top = 32
+    object AddConstituentDataSetID: TFIBBCDField
+      FieldName = 'ID'
+      Size = 0
+    end
+    object AddConstituentDataSetAUTHORIZATION_ID: TFIBBCDField
+      FieldName = 'AUTHORIZATION_ID'
+      Size = 0
+    end
+    object AddConstituentDataSetCONSTITUENT_ID: TFIBBCDField
+      FieldName = 'CONSTITUENT_ID'
+      Size = 0
+    end
   end
   object AddConstituentDataSource: TDataSource
     DataSet = AddConstituentDataSet
@@ -2351,12 +2366,25 @@ object dmAuthorization: TdmAuthorization
       '    REPRESENTATIVE_ID'
       'FROM'
       '    RELATION_AUTH_REPRES ')
+    AutoCalcFields = False
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
     AutoCommit = True
     Left = 608
     Top = 88
+    object AddRepresentativeDataSetID: TFIBBCDField
+      FieldName = 'ID'
+      Size = 0
+    end
+    object AddRepresentativeDataSetAUTHORIZATION_ID: TFIBBCDField
+      FieldName = 'AUTHORIZATION_ID'
+      Size = 0
+    end
+    object AddRepresentativeDataSetREPRESENTATIVE_ID: TFIBBCDField
+      FieldName = 'REPRESENTATIVE_ID'
+      Size = 0
+    end
   end
   object AddRepresentativeDataSource: TDataSource
     DataSet = AddRepresentativeDataSet

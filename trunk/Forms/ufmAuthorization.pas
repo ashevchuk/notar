@@ -194,38 +194,59 @@ begin
 end;
 
 function TfmAuthorization.saveAuthorization: boolean;
+var
+  AuthorizationID: string;
+  iList: byte;
 begin
+  if ConstituentsListBox.Items.Count = 0 then Exit;
+  if RepresentativesListBox.Items.Count = 0 then Exit;
+
   try
-    dmAuthorization.AddConstituentDataSet.Close;
-    dmAuthorization.AddConstituentDataSet.Transaction := dmAuthorization.AuthorizationsDataSet.Transaction;
-    dmAuthorization.AddConstituentDataSet.ParamByName('AUTHORIZATION_ID').AsString := dmAuthorization.AuthorizationsDataSetID.AsString;
-    dmAuthorization.AddConstituentDataSet.ParamByName('CONSTITUENT_ID').AsString := '1';
-
-    dmAuthorization.AddConstituentDataSet.Open;
-    dmAuthorization.AddConstituentDataSet.Append;
-    dmAuthorization.AddConstituentDataSet.Post;
-    dmAuthorization.AddConstituentDataSet.Close;
-
-    dmAuthorization.AddRepresentativeDataSet.Close;
-    dmAuthorization.AddRepresentativeDataSet.Transaction := dmAuthorization.AuthorizationsDataSet.Transaction;
-    dmAuthorization.AddRepresentativeDataSet.ParamByName('AUTHORIZATION_ID').AsString := dmAuthorization.AuthorizationsDataSetID.AsString;
-    dmAuthorization.AddRepresentativeDataSet.ParamByName('REPRESENTATIVE_ID').AsString := '1';
-    dmAuthorization.AddRepresentativeDataSet.Open;
-    dmAuthorization.AddRepresentativeDataSet.Append;
-    dmAuthorization.AddRepresentativeDataSet.Post;
-    dmAuthorization.AddRepresentativeDataSet.Close;
-
     dmAuthorization.AuthorizationsDataSet.Post;
-  finally
+    AuthorizationID := dmAuthorization.AuthorizationsDataSetID.AsString;
     dmAuthorization.AuthorizationsDataSet.Transaction.Commit;
+
+    dmAuthorization.AddConstituentDataSet.Close;
+    dmAuthorization.AddConstituentDataSet.Open;
+
+    for iList := 0 to ConstituentsListBox.Items.Count -1 do
+    begin
+      dmAuthorization.AddConstituentDataSet.Append;
+      dmAuthorization.AddConstituentDataSetAUTHORIZATION_ID.AsString := AuthorizationID;
+      dmAuthorization.AddConstituentDataSetCONSTITUENT_ID.Value := TIdStorage(ConstituentsListBox.Items.Objects[iList]).ID;
+      dmAuthorization.AddConstituentDataSet.Post;
+      TIdStorage(ConstituentsListBox.Items.Objects[iList]).Free;
+    end;
+
+    dmAuthorization.AddConstituentDataSet.Close;
+
+    dmAuthorization.AddRepresentativeDataSet.Close;
+    dmAuthorization.AddRepresentativeDataSet.Open;
+
+    for iList := 0 to RepresentativesListBox.Items.Count -1 do
+    begin
+      dmAuthorization.AddRepresentativeDataSet.Append;
+      dmAuthorization.AddRepresentativeDataSetAUTHORIZATION_ID.AsString := AuthorizationID;
+      dmAuthorization.AddRepresentativeDataSetREPRESENTATIVE_ID.AsString := TIdStorage(RepresentativesListBox.Items.Objects[iList]).ID;
+      dmAuthorization.AddRepresentativeDataSet.Post;
+      TIdStorage(RepresentativesListBox.Items.Objects[iList]).Free;
+    end;
+
+    ConstituentsListBox.Items.Clear;
+    RepresentativesListBox.Items.Clear;
+
+    dmAuthorization.AddRepresentativeDataSet.Close;
+
+  finally
+ {   dmAuthorization.AddConstituentDataSet.Transaction.Commit;
+    dmAuthorization.AddRepresentativeDataSet.Transaction.Commit;   }
 
     dmAuthorization.AuthorizationsDataSet.Close;
     dmAuthorization.AddConstituentDataSet.Close;
     dmAuthorization.AddRepresentativeDataSet.Close;
+
     dmAuthorization.AuthorizationsDataSet.Transaction.Free;
     dmAuthorization.AuthorizationsDataSet.Transaction := RemoteDataModule.FIBTransaction;
-    dmAuthorization.AddConstituentDataSet.Transaction := RemoteDataModule.FIBTransaction;
-    dmAuthorization.AddRepresentativeDataSet.Transaction := RemoteDataModule.FIBTransaction;
   end;
 end;
 
