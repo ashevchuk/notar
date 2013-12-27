@@ -213,3 +213,271 @@ ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupB
 ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
 =====================
 
+=====[EXCEPTION]=====
+[26.12.2013 23:57:02]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 12:58:03]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 13:05:14]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 13:38:37]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:36:59]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:37:00]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:37:00]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:37:00]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:37:01]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:37:01]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:37:01]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:37:01]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:37:01]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:54:50]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:54:54]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:54:54]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:54:54]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:56:34]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:56:35]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:56:36]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:56:36]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:56:36]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:56:36]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 14:56:38]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 15:11:42]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 15:11:43]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 15:11:43]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 15:11:43]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 15:11:43]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 15:13:59]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 15:14:00]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 15:14:00]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 15:14:00]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Exception: "Access violation at address 00FF4A0B in module 'Notar.exe'. Read of address 00000000", Stack: ""
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 15:28:24]
+=====================
+ClassType.ClassName: "TcxGroupBox", UnitScope: "cxGroupBox", UnitName: "cxGroupBox", ClassName: "TcxGroupBox", Message: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Exception: "Parameter "AUTHORIZATION_ID" does not exist in fmMain.fmAuthorization.dmAuthorization.AddConstituentDataSet", Stack: "Call Stack Information
+[00F4394A] pFIBDataSet.TpFIBDataSet.ParamByName (Line 1736, "pFIBDataset.pas")
+[0100DDA7] ufmAuthorization.TfmAuthorization.saveAuthorization (Line 201, "ufmAuthorization.pas")
+[7E3688CC] USER32.GetWindowLongW
+[7E3688D5] USER32.GetWindowLongW
+[7E3799D3] USER32.NotifyWinEvent
+[7E3688CC] USER32.GetWindowLongW
+[0040B2E8] System.TMonitor.TryEnter
+[7C90D328] ntdll.ZwFindAtom
+[7E3792DE] USER32.SendMessageW
+[7E37A034] USER32.CallWindowProcW
+[7E37B3FC] USER32.CallNextHookEx
+[7E37ACE8] USER32.MonitorFromPoint
+[7E368A0B] USER32.DispatchMessageW
+[0076120F] Vcl.Forms.TApplication.ProcessMessage
+[00761252] Vcl.Forms.TApplication.HandleMessage
+[0076158D] Vcl.Forms.TApplication.Run
+[01485B3B] Notar.Initialization (Line 61, "Notar.dpr")
+"
+=====================
+
+=====[EXCEPTION]=====
+[27.12.2013 15:28:24]
+=====================
+ClassType.ClassName: "TApplication", UnitScope: "Vcl.Forms", UnitName: "Vcl.Forms", ClassName: "TApplication", Message: "Access violation at address 0040A454 in module 'Notar.exe'. Read of address FFFFFFFC", Exception: "Access violation at address 0040A454 in module 'Notar.exe'. Read of address FFFFFFFC", Stack: "Call Stack Information
+[0040A454] System.TObject.Free
+[0040B869] System._HandleFinallyInternal
+[7C9032A6] ntdll.RtlConvertUlongToLargeInteger
+[7C903275] ntdll.RtlConvertUlongToLargeInteger
+[7C92AB7C] ntdll.RtlUnwind
+[00421B08] EMemLeaks.SetOurPointer (Line 848, "EMemLeaks.pas")
+[7C910380] ntdll.RtlImageDirectoryEntryToData
+[7C9032A6] ntdll.RtlConvertUlongToLargeInteger
+[7C903275] ntdll.RtlConvertUlongToLargeInteger
+[7C812AF5] kernel32.RaiseException
+[7C90E485] ntdll.KiUserExceptionDispatcher
+[7C812AF5] kernel32.RaiseException
+[0146900D] ufmMain.TfmMain.OnException (Line 304, "ufmMain.pas")
+[7C9032A6] ntdll.RtlConvertUlongToLargeInteger
+[7C903275] ntdll.RtlConvertUlongToLargeInteger
+[7C90E485] ntdll.KiUserExceptionDispatcher
+[7C812AF5] kernel32.RaiseException
+[0044ECB2] System.SysUtils.RaiseExceptObject
+[0040B9A1] System._RaiseExcept
+[00F4394A] pFIBDataSet.TpFIBDataSet.ParamByName (Line 1736, "pFIBDataset.pas")
+[7C9032A6] ntdll.RtlConvertUlongToLargeInteger
+[7C903275] ntdll.RtlConvertUlongToLargeInteger
+[7C90E485] ntdll.KiUserExceptionDispatcher
+[7C812AF5] kernel32.RaiseException
+[7E3688CC] USER32.GetWindowLongW
+[7E3688D5] USER32.GetWindowLongW
+[7E3799D3] USER32.NotifyWinEvent
+[7E3688CC] USER32.GetWindowLongW
+[0040B2E8] System.TMonitor.TryEnter
+[7C90D328] ntdll.ZwFindAtom
+[7E3792DE] USER32.SendMessageW
+[7E37A034] USER32.CallWindowProcW
+[7E37B3FC] USER32.CallNextHookEx
+[7E37ACE8] USER32.MonitorFromPoint
+[7E368A0B] USER32.DispatchMessageW
+[0076120F] Vcl.Forms.TApplication.ProcessMessage
+[00761252] Vcl.Forms.TApplication.HandleMessage
+[0076158D] Vcl.Forms.TApplication.Run
+[01485B3B] Notar.Initialization (Line 61, "Notar.dpr")
+"
+=====================
+

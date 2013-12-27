@@ -2,7 +2,7 @@ object fmAuthorization: TfmAuthorization
   Left = 0
   Top = 0
   Caption = #1044#1086#1074#1110#1088#1077#1085#1110#1089#1090#1100' '#1075#1077#1085#1077#1088#1072#1083#1100#1085#1072
-  ClientHeight = 598
+  ClientHeight = 427
   ClientWidth = 818
   Color = clBtnFace
   DefaultMonitor = dmMainForm
@@ -501,7 +501,7 @@ object fmAuthorization: TfmAuthorization
     ParentColor = False
     ParentFont = False
     TabOrder = 0
-    Height = 598
+    Height = 427
     Width = 818
     object cxGroupBox5: TcxGroupBox
       Left = 546
@@ -781,7 +781,7 @@ object fmAuthorization: TfmAuthorization
         DataBinding.DataField = 'TRANSPORT_CERTIFICATE_REG_DATE'
         DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
-        TabOrder = 4
+        TabOrder = 7
         Width = 150
       end
       object cxDBLookupComboBox1: TcxDBLookupComboBox
@@ -841,7 +841,7 @@ object fmAuthorization: TfmAuthorization
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmAuthorization.TransportCertificateIssuerDataSource
-        TabOrder = 7
+        TabOrder = 4
         Width = 150
       end
     end
@@ -1015,7 +1015,7 @@ object fmAuthorization: TfmAuthorization
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmAuthorization.TransportKindDataSource
-        TabOrder = 11
+        TabOrder = 5
         Width = 150
       end
       object cxDBLookupComboBox12: TcxDBLookupComboBox
@@ -1035,7 +1035,7 @@ object fmAuthorization: TfmAuthorization
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmAuthorization.TransportBrandDataSource
-        TabOrder = 12
+        TabOrder = 6
         Width = 150
       end
       object cxDBLookupComboBox13: TcxDBLookupComboBox
@@ -1055,7 +1055,7 @@ object fmAuthorization: TfmAuthorization
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmAuthorization.TransportModelDataSource
-        TabOrder = 13
+        TabOrder = 7
         Width = 150
       end
       object cxDBLookupComboBox14: TcxDBLookupComboBox
@@ -1075,7 +1075,7 @@ object fmAuthorization: TfmAuthorization
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmAuthorization.TransportTypeDataSource
-        TabOrder = 14
+        TabOrder = 8
         Width = 150
       end
       object cxDBLookupComboBox15: TcxDBLookupComboBox
@@ -1095,7 +1095,7 @@ object fmAuthorization: TfmAuthorization
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmAuthorization.TransportColorDataSource
-        TabOrder = 15
+        TabOrder = 9
         Width = 150
       end
       object cxDBLookupComboBox16: TcxDBLookupComboBox
@@ -1115,7 +1115,7 @@ object fmAuthorization: TfmAuthorization
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmAuthorization.TransportChassisNumberDataSource
-        TabOrder = 16
+        TabOrder = 10
         Width = 150
       end
       object cxDBLookupComboBox17: TcxDBLookupComboBox
@@ -1135,7 +1135,7 @@ object fmAuthorization: TfmAuthorization
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmAuthorization.TransportLoadWeightDataSource
-        TabOrder = 17
+        TabOrder = 11
         Width = 150
       end
       object cxDBLookupComboBox18: TcxDBLookupComboBox
@@ -1155,7 +1155,7 @@ object fmAuthorization: TfmAuthorization
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmAuthorization.TransportWeightDataSource
-        TabOrder = 18
+        TabOrder = 12
         Width = 150
       end
       object cxDBLookupComboBox19: TcxDBLookupComboBox
@@ -1175,7 +1175,7 @@ object fmAuthorization: TfmAuthorization
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmAuthorization.TransportEngineVolumeDataSource
-        TabOrder = 19
+        TabOrder = 13
         Width = 150
       end
       object cxDBLookupComboBox20: TcxDBLookupComboBox
@@ -1195,7 +1195,7 @@ object fmAuthorization: TfmAuthorization
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmAuthorization.TransportRegNumberDataSource
-        TabOrder = 20
+        TabOrder = 14
         Width = 150
       end
       object cxDBDateEdit5: TcxDBDateEdit
@@ -1204,7 +1204,7 @@ object fmAuthorization: TfmAuthorization
         DataBinding.DataField = 'TRANSPORT_FABRICATION_DATE'
         DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
         ParentFont = False
-        TabOrder = 21
+        TabOrder = 15
         Width = 150
       end
     end
@@ -1227,10 +1227,6 @@ object fmAuthorization: TfmAuthorization
         ItemHeight = 13
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 2
-        ExplicitTop = 18
-        ExplicitWidth = 256
-        ExplicitHeight = 24
       end
       object cxGroupBox2: TcxGroupBox
         Left = 3
@@ -1243,9 +1239,6 @@ object fmAuthorization: TfmAuthorization
         Style.Shadow = False
         Style.TransparentBorder = True
         TabOrder = 1
-        ExplicitLeft = 2
-        ExplicitTop = 42
-        ExplicitWidth = 256
         Height = 29
         Width = 254
         object AddConstituentButton: TcxButton
@@ -1280,11 +1273,7 @@ object fmAuthorization: TfmAuthorization
         Align = alClient
         ItemHeight = 13
         ParentFont = False
-        TabOrder = 0
-        ExplicitLeft = 2
-        ExplicitTop = 18
-        ExplicitWidth = 256
-        ExplicitHeight = 76
+        TabOrder = 1
       end
       object cxGroupBox10: TcxGroupBox
         Left = 3
@@ -1296,10 +1285,7 @@ object fmAuthorization: TfmAuthorization
         Style.BorderStyle = ebsNone
         Style.Shadow = False
         Style.TransparentBorder = True
-        TabOrder = 1
-        ExplicitLeft = 2
-        ExplicitTop = 94
-        ExplicitWidth = 256
+        TabOrder = 0
         Height = 29
         Width = 254
         object AddRepresentativeButton: TcxButton
