@@ -94,6 +94,7 @@ type
     LogSaveDialog: TSaveDialog;
     dxBarButton4: TdxBarButton;
     dxBarButton5: TdxBarButton;
+    dxBarButton6: TdxBarButton;
     procedure FormCreate(Sender: TObject);
     procedure dxBarButtonExitClick(Sender: TObject);
     procedure dxBarButtonEditorClick(Sender: TObject);
@@ -107,6 +108,7 @@ type
     procedure Save1Click(Sender: TObject);
     procedure dxBarButton4Click(Sender: TObject);
     procedure dxBarButton5Click(Sender: TObject);
+    procedure dxBarButton6Click(Sender: TObject);
   private
     procedure OnException(Sender: TObject; E: Exception);
 
@@ -127,6 +129,7 @@ implementation
 uses uRemoteDM, uLicenseDM,
   ufmIndividual,
   ufmAuthorization,
+  ufmAuthorizations,
   ufmIDE,
  // ufmRichEditor,
   ufmCatalogs,
@@ -192,6 +195,14 @@ begin
   with TfmAuthorization.Create(self) do
   begin
     appendAuthorization;
+    Show;
+  end;
+end;
+
+procedure TfmMain.dxBarButton6Click(Sender: TObject);
+begin
+  with TfmAuthorizations.Create(self) do
+  begin
     Show;
   end;
 end;

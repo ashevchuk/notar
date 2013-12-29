@@ -42,6 +42,7 @@ begin
 
   fmSplash.ShowMessage('Creating main form...');
   Application.CreateForm(TfmMain, fmMain);
+
   fmSplash.ShowMessage('Creating data module...');
   Application.CreateForm(TRemoteDataModule, RemoteDataModule);
 
