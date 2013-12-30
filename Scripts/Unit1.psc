@@ -1,5 +1,5 @@
 uses
-  Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, Unit2;
+  Classes, Graphics, Controls, Forms, Dialogs, Unit2;
 
 var
   MainForm: TForm2;

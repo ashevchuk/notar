@@ -1,9 +1,9 @@
-object Form2_6: TScriptForm
-  Left = 0
-  Top = 0
+object Form2: TScriptForm
+  Left = 5
+  Top = 5
   Caption = 'Form2'
-  ClientHeight = 114
-  ClientWidth = 175
+  ClientHeight = 399
+  ClientWidth = 736
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,43 +13,76 @@ object Form2_6: TScriptForm
   OldCreateOrder = False
   Position = poDesigned
   SaveProps.Strings = (
-    'Visible=False'
-    'FormStyle=fsMDIChild')
-  SaveEvents.Strings = (
-    'Button2.OnClick=Button2Click'
-    'Button1.OnClick=Button1Click'
-    'Self.OnClose=Form2_6Close')
+    'Visible=False')
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 8
-    Top = 8
-    Width = 31
-    Height = 13
-    Caption = 'Label1'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 0
+    Width = 736
+    Height = 374
+    Align = alClient
+    DataSource = DataSource1
+    TabOrder = 8
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
   end
-  object Edit1: TEdit
-    Left = 8
-    Top = 32
-    Width = 161
-    Height = 21
-    TabOrder = 0
-    Text = 'Edit1'
-  end
-  object Button1: TButton
-    Left = 8
-    Top = 80
-    Width = 75
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 374
+    Width = 736
     Height = 25
-    Caption = 'Set'
-    TabOrder = 1
+    DataSource = DataSource1
+    Align = alBottom
+    TabOrder = 9
+    ExplicitLeft = 440
+    ExplicitTop = 336
+    ExplicitWidth = 240
   end
-  object Button2: TButton
-    Left = 96
+  object FIBDatabase1: TFIBDatabase
+    AutoReconnect = True
+    Connected = True
+    DBName = '127.0.0.1/3050:C:\db\NOTAR.FDB'
+    DBParams.Strings = (
+      'user_name=SYSDBA'
+      'password=masterkey'
+      'lc_ctype=UTF8'
+      '')
+    SQLDialect = 2
+    Timeout = 0
+    LibraryName = 'fbclient.dll'
+    Left = 112
     Top = 80
-    Width = 75
-    Height = 25
-    Caption = 'Close'
-    TabOrder = 2
+  end
+  object FIBTransaction1: TFIBTransaction
+    Active = True
+    DefaultDatabase = FIBDatabase1
+    Left = 168
+    Top = 80
+  end
+  object FIBDataSet1: TFIBDataSet
+    SelectSQL.Strings = (
+      'select * from CATALOG_AUTHORIZATIONS')
+    Active = True
+    Transaction = FIBTransaction1
+    Database = FIBDatabase1
+    Left = 112
+    Top = 128
+  end
+  object FIBQuery1: TFIBQuery
+    Transaction = FIBTransaction1
+    Database = FIBDatabase1
+    SQL.Strings = (
+      'select * from CATALOG_AUTHORIZATIONS')
+    Left = 168
+    Top = 128
+  end
+  object DataSource1: TDataSource
+    DataSet = FIBDataSet1
+    Left = 112
+    Top = 176
   end
 end

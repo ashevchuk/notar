@@ -11,12 +11,14 @@ uses
   dxRibbon, cxPC, dxSkinscxPCPainter, dxTabbedMDI, dxScreenTip, dxSkinsForm,
   cxLocalization, cxStyles, dxCustomHint, cxHint, cxEdit, cxContainer,
 
-    atScript, atScripter, IDEMain, IDEDialog,
+  atScript, atScripter, IDEMain, IDEDialog,
 
   ap_Sysutils, ap_Classes, ap_Graphics, ap_Controls, ap_Forms, ap_Dialogs,
   ap_StdCtrls, ap_Windows, ap_System,
   ap_ExtCtrls, ap_ComCtrls, ap_Menus, ap_Buttons,
   ap_ImgList,
+
+  uScript,
 
   cxGridTableView, Vcl.ComCtrls, ScriptCtrls, ShellApi, atPascal, FormScript,
   atScriptDebug, atMemoInterface, cxPCdxBarPopupMenu, cxTL, cxScrollBox,
@@ -67,10 +69,6 @@ type
     dxBarButtonEditTemplate: TdxBarButton;
     dxBarButton1: TdxBarButton;
     dxBarButton2: TdxBarButton;
-    atScripter1: TatPascalFormScripter;
-    atMemoInterface1: TatMemoInterface;
-    atScriptDebugger1: TatScriptDebugger;
-    IDEEngine1: TIDEEngine;
     dxBarButton3: TdxBarButton;
     TreeListStyleSheetHighContrast1: TcxTreeListStyleSheet;
     cxStyle12: TcxStyle;
@@ -95,6 +93,7 @@ type
     dxBarButton4: TdxBarButton;
     dxBarButton5: TdxBarButton;
     dxBarButton6: TdxBarButton;
+    dxBarButton7: TdxBarButton;
     procedure FormCreate(Sender: TObject);
     procedure dxBarButtonExitClick(Sender: TObject);
     procedure dxBarButtonEditorClick(Sender: TObject);
@@ -164,13 +163,10 @@ end;
 procedure TfmMain.dxBarButton2Click(Sender: TObject);
 var lib: TatStdCtrlsLibrary;
 begin
- lib := TatStdCtrlsLibrary.Create(atScripter1);
- lib.Init;
-
- // RegisterClasses([TLabel, TEdit, TButton]);
-// RegisterScripterLibrary(TatStdCtrlsLibrary, True);
-  atScripter1.Compile;
-  atScripter1.Execute;
+  with TScript.Create(self) do
+  begin
+    Run('.\Scripts\Unit1.psc');
+  end;
 end;
 
 procedure TfmMain.dxBarButton3Click(Sender: TObject);
