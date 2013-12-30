@@ -1,13 +1,8 @@
 object MVCAuthorization: TMVCAuthorization
   OldCreateOrder = False
-  Height = 485
-  Width = 742
-  object AuthorizationsDataSource: TDataSource
-    DataSet = AuthorizationsDataSet
-    Left = 296
-    Top = 96
-  end
-  object AuthorizationsDataSet: TpFIBDataSet
+  Height = 316
+  Width = 314
+  object Authorization: TpFIBDataSet
     UpdateSQL.Strings = (
       'UPDATE CATALOG_AUTHORIZATIONS'
       'SET '
@@ -163,127 +158,165 @@ object MVCAuthorization: TMVCAuthorization
       '    TRANSITE,'
       '    SUBSTITUTION'
       'FROM'
-      '    CATALOG_AUTHORIZATIONS ')
-    Active = True
+      '    CATALOG_AUTHORIZATIONS '
+      'WHERE'
+      '    ID = :ID')
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
     AutoCommit = True
-    Left = 192
-    Top = 96
-    object AuthorizationsDataSetID: TFIBBCDField
-      FieldName = 'ID'
-      Size = 0
-    end
-    object AuthorizationsDataSetTRANSPORT_KIND: TFIBWideStringField
-      FieldName = 'TRANSPORT_KIND'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSPORT_BRAND: TFIBWideStringField
-      FieldName = 'TRANSPORT_BRAND'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSPORT_MODEL: TFIBWideStringField
-      FieldName = 'TRANSPORT_MODEL'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSPORT_TYPE: TFIBWideStringField
-      FieldName = 'TRANSPORT_TYPE'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSPORT_COLOR: TFIBWideStringField
-      FieldName = 'TRANSPORT_COLOR'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSPORT_CHASSIS_NUMBER: TFIBWideStringField
-      FieldName = 'TRANSPORT_CHASSIS_NUMBER'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSPORT_LOAD_WEIGHT: TFIBWideStringField
-      FieldName = 'TRANSPORT_LOAD_WEIGHT'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSPORT_WEIGHT: TFIBWideStringField
-      FieldName = 'TRANSPORT_WEIGHT'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSPORT_ENGINE_VOLUME: TFIBWideStringField
-      FieldName = 'TRANSPORT_ENGINE_VOLUME'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSPORT_REG_NUMBER: TFIBWideStringField
-      FieldName = 'TRANSPORT_REG_NUMBER'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSPORT_FABRICATION_DATE: TFIBDateField
-      FieldName = 'TRANSPORT_FABRICATION_DATE'
-      DisplayFormat = 'dd.mm.yyyy'
-    end
-    object AuthorizationsDataSetTRANSPORT_CERTIFICATE_SERIAL: TFIBWideStringField
-      FieldName = 'TRANSPORT_CERTIFICATE_SERIAL'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSPORT_CERTIFICATE_NUMBER: TFIBWideStringField
-      FieldName = 'TRANSPORT_CERTIFICATE_NUMBER'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSPORT_CERTIFICATE_REG_DATE: TFIBDateField
-      FieldName = 'TRANSPORT_CERTIFICATE_REG_DATE'
-      DisplayFormat = 'dd.mm.yyyy'
-    end
-    object AuthorizationsDataSetTRANSPORT_CERTIFICATE_ISSUER: TFIBWideStringField
-      FieldName = 'TRANSPORT_CERTIFICATE_ISSUER'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSITE_NUMBER: TFIBWideStringField
-      FieldName = 'TRANSITE_NUMBER'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSITE_NUMBER_REMOVED_DATE: TFIBDateField
-      FieldName = 'TRANSITE_NUMBER_REMOVED_DATE'
-      DisplayFormat = 'dd.mm.yyyy'
-    end
-    object AuthorizationsDataSetAUTHORIZATION_NUMBER: TFIBWideStringField
-      FieldName = 'AUTHORIZATION_NUMBER'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetAUTHORIZATION_VALIDITY_DATE: TFIBDateField
-      FieldName = 'AUTHORIZATION_VALIDITY_DATE'
-      DisplayFormat = 'dd.mm.yyyy'
-    end
-    object AuthorizationsDataSetAUTHORIZATION_DATE: TFIBDateField
-      FieldName = 'AUTHORIZATION_DATE'
-      DisplayFormat = 'dd.mm.yyyy'
-    end
-    object AuthorizationsDataSetAUTHORIZATION_DESCRIPTION: TFIBWideStringField
-      FieldName = 'AUTHORIZATION_DESCRIPTION'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetTRANSITE: TFIBWideStringField
-      FieldName = 'TRANSITE'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object AuthorizationsDataSetSUBSTITUTION: TFIBWideStringField
-      FieldName = 'SUBSTITUTION'
-      Size = 255
-      EmptyStrToNull = True
-    end
+    Left = 32
+    Top = 16
+  end
+  object Constituent: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    SURNAME,'
+      '    NAME,'
+      '    MIDDLE,'
+      '    GENDER,'
+      '    STATE,'
+      '    PERSONAL_DOCUMENT,'
+      '    BIRTH_DATE,'
+      '    BIRTH_PLACE,'
+      '    DISABLEMENT,'
+      '    DISABLEMENT_GROUP,'
+      '    DISABLEMENT_DOCUMENT,'
+      '    FOREIGN_ADDRESS_TYPE,'
+      '    FOREIGN_ADDRESS,'
+      '    ID_NUMBER,'
+      '    ID_NUMBER_ABSENT,'
+      '    ID_NUMBER_ABSENT_REASON,'
+      '    PASSPORT_SERIAL,'
+      '    PASSPORT_NUMBER,'
+      '    PASSPORT_ISSUE_DATE,'
+      '    PASSPORT_ISSUER,'
+      '    PASSPORT_ISSUER_DEPT,'
+      '    PASSPORT_ISSUER_STATE,'
+      '    PASSPORT_FOREIGN_SERIAL,'
+      '    PASSPORT_FOREIGN_NUMBER,'
+      '    PASSPORT_FOREIGN_ISSUE_DATE,'
+      '    PASSPORT_FOREIGN_EXPIRATION,'
+      '    PASSPORT_FOREIGN_ISSUER,'
+      '    BIRTH_CERTIFICATE_SERIAL,'
+      '    BIRTH_CERTIFICATE_NUMBER,'
+      '    BIRTH_CERTIFICATE_ISSUE_DATE,'
+      '    BIRTH_CERTIFICATE_ISSUER,'
+      '    BIRTH_CERTIFICATE_ISSUER_DEPT,'
+      '    BIRTH_CERTIFICATE_ISSUER_STATE,'
+      '    PERSONAL_CERTIFICATE,'
+      '    ADDRESS_STATE,'
+      '    ADDRESS_REGION,'
+      '    ADDRESS_LOCALITY_TYPE,'
+      '    ADDRESS_LOCALITY,'
+      '    ADDRESS_STREET_TYPE,'
+      '    ADDRESS_STREET,'
+      '    ADDRESS_BUILDING,'
+      '    ADDRESS_FLAT,'
+      '    ADDRESS_CORPS,'
+      '    ADDRESS_SECTION,'
+      '    ADDRESS_INDEX,'
+      '    ADDRESS_OTHER,'
+      '    DESCRIPTION,'
+      '    MARRIAGE_REGISTRATOR,'
+      '    MARRIAGE_REGISTERED_DATE,'
+      '    MARRIAGE_MEMBER,'
+      '    SHOW_BIRTH_DATE,'
+      '    SHOW_ADDRESS,'
+      '    SHOW_ID_NUMBER,'
+      '    SHOW_PASSPORT_DATA,'
+      '    AUTHORIZATION_ID,'
+      '    RELATION_AUTH_CONST_ID'
+      'FROM'
+      '    VIEW_REL_AUTH_CONST'
+      'WHERE'
+      '    AUTHORIZATION_ID = :MAS_ID ')
+    AutoUpdateOptions.AutoParamsToFields = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    DataSource = AuthorizationDataSource
+    Left = 32
+    Top = 72
+  end
+  object Representatives: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    SURNAME,'
+      '    NAME,'
+      '    MIDDLE,'
+      '    GENDER,'
+      '    STATE,'
+      '    PERSONAL_DOCUMENT,'
+      '    BIRTH_DATE,'
+      '    BIRTH_PLACE,'
+      '    DISABLEMENT,'
+      '    DISABLEMENT_GROUP,'
+      '    DISABLEMENT_DOCUMENT,'
+      '    FOREIGN_ADDRESS_TYPE,'
+      '    FOREIGN_ADDRESS,'
+      '    ID_NUMBER,'
+      '    ID_NUMBER_ABSENT,'
+      '    ID_NUMBER_ABSENT_REASON,'
+      '    PASSPORT_SERIAL,'
+      '    PASSPORT_NUMBER,'
+      '    PASSPORT_ISSUE_DATE,'
+      '    PASSPORT_ISSUER,'
+      '    PASSPORT_ISSUER_DEPT,'
+      '    PASSPORT_ISSUER_STATE,'
+      '    PASSPORT_FOREIGN_SERIAL,'
+      '    PASSPORT_FOREIGN_NUMBER,'
+      '    PASSPORT_FOREIGN_ISSUE_DATE,'
+      '    PASSPORT_FOREIGN_EXPIRATION,'
+      '    PASSPORT_FOREIGN_ISSUER,'
+      '    BIRTH_CERTIFICATE_SERIAL,'
+      '    BIRTH_CERTIFICATE_NUMBER,'
+      '    BIRTH_CERTIFICATE_ISSUE_DATE,'
+      '    BIRTH_CERTIFICATE_ISSUER,'
+      '    BIRTH_CERTIFICATE_ISSUER_DEPT,'
+      '    BIRTH_CERTIFICATE_ISSUER_STATE,'
+      '    PERSONAL_CERTIFICATE,'
+      '    ADDRESS_STATE,'
+      '    ADDRESS_REGION,'
+      '    ADDRESS_LOCALITY_TYPE,'
+      '    ADDRESS_LOCALITY,'
+      '    ADDRESS_STREET_TYPE,'
+      '    ADDRESS_STREET,'
+      '    ADDRESS_BUILDING,'
+      '    ADDRESS_FLAT,'
+      '    ADDRESS_CORPS,'
+      '    ADDRESS_SECTION,'
+      '    ADDRESS_INDEX,'
+      '    ADDRESS_OTHER,'
+      '    DESCRIPTION,'
+      '    MARRIAGE_REGISTRATOR,'
+      '    MARRIAGE_REGISTERED_DATE,'
+      '    MARRIAGE_MEMBER,'
+      '    SHOW_BIRTH_DATE,'
+      '    SHOW_ADDRESS,'
+      '    SHOW_ID_NUMBER,'
+      '    SHOW_PASSPORT_DATA,'
+      '    AUTHORIZATION_ID,'
+      '    RELATION_AUTH_REPRES_ID'
+      'FROM'
+      '    VIEW_REL_AUTH_REPRES '
+      'WHERE'
+      '    AUTHORIZATION_ID = :MAS_ID')
+    AutoUpdateOptions.AutoParamsToFields = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    DataSource = AuthorizationDataSource
+    Left = 32
+    Top = 128
+  end
+  object AuthorizationDataSource: TDataSource
+    DataSet = Authorization
+    Left = 136
+    Top = 16
   end
 end
