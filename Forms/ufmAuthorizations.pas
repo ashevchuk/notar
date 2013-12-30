@@ -135,6 +135,10 @@ type
     procedure AuthorizationsGridDBTableView2RELATION_TYPEGetDisplayText(
       Sender: TcxCustomGridTableItem; ARecord: TcxCustomGridRecord;
       var AText: string);
+    procedure AuthorizationsGridDBTableView1CellDblClick(
+      Sender: TcxCustomGridTableView;
+      ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton;
+      AShift: TShiftState; var AHandled: Boolean);
   private
     { Private declarations }
   public
@@ -150,8 +154,28 @@ var
   fmAuthorizations: TfmAuthorizations;
 
 implementation
+uses uMVCAuthorization, RVARibbonFrm;
 
 {$R *.dfm}
+
+procedure TfmAuthorizations.AuthorizationsGridDBTableView1CellDblClick(Sender: TcxCustomGridTableView; ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton; AShift: TShiftState; var AHandled: Boolean);
+var
+  InputFileName: string;
+  OutputFileName: string;
+begin
+  InputFileName := 'Report0.template.rtf';
+  OutputFileName := 'Report0.output.rtf';
+  with TMVCAuthorization.Create(self) do
+  begin
+    setID(AuthorizationsDataSetID.asString);
+    buildReport(InputFileName, OutputFileName);
+    Free;
+  end;
+  with RVARibbonFrm.TfrmMain.Create(self) do begin
+  LoadFile(OutputFileName);
+  Show;
+end;
+end;
 
 procedure TfmAuthorizations.AuthorizationsGridDBTableView2RELATION_TYPEGetDataText(
   Sender: TcxCustomGridTableItem; ARecordIndex: Integer; var AText: string);

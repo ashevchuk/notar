@@ -497,7 +497,6 @@ object fmAuthorizations: TfmAuthorizations
     Height = 479
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 609
     object AuthorizationsGridDBTableView1: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
       Navigator.Buttons.Insert.Visible = False
@@ -506,6 +505,7 @@ object fmAuthorizations: TfmAuthorizations
       Navigator.Buttons.Post.Visible = False
       Navigator.Buttons.Cancel.Visible = False
       Navigator.Visible = True
+      OnCellDblClick = AuthorizationsGridDBTableView1CellDblClick
       DataController.DataSource = AuthorizationsDataSource
       DataController.Summary.DefaultGroupSummaryItems = <>
       DataController.Summary.FooterSummaryItems = <>
