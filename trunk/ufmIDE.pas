@@ -15,6 +15,14 @@ uses
   ap_StdCtrls, ap_Windows, ap_System,
   ap_ExtCtrls, ap_ComCtrls, ap_Menus, ap_Buttons,
   ap_ImgList,
+
+  ap_fib,
+  ap_FIBConsts,
+  ap_FIBDatabase,
+  ap_FIBDataSet,
+  ap_FIBQuery,
+
+
     
   {$IFDEF DELPHI9_LVL}
   XPMan,
@@ -39,7 +47,8 @@ var
 
 implementation
 uses imglist, ShellApi, fIDEEditor,
-  IDERegDBPalette, IDERegAdoPalette;
+  IDERegDBPalette, IDERegAdoPalette,
+  uRegFIBPlus;
 
 {$R *.DFM}
 
@@ -56,6 +65,7 @@ begin
   IDERegisterDataAccessTab(IDEEngine1);
   IDERegisterDataControlsTab(IDEEngine1);
   IDERegisterADOTab(IDEEngine1);
+  IDERegisterFIBPlusTab(IDEEngine1);
   //Application.ShowMainForm := false;
  // IDEDialog1.OnCreateIDEForm := OnCreateEditor;
   IDEDialog1.Execute(self);

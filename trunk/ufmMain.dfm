@@ -457,6 +457,10 @@ object fmMain: TfmMain
         end
         item
           Visible = True
+          ItemName = 'dxBarButton7'
+        end
+        item
+          Visible = True
           ItemName = 'dxBarButton5'
         end
         item
@@ -514,18 +518,24 @@ object fmMain: TfmMain
       OnClick = dxBarButton4Click
     end
     object dxBarButton5: TdxBarButton
-      Caption = 'Authorization'
+      Caption = 'New Authorization'
       Category = 0
-      Hint = 'Authorization'
+      Hint = 'New Authorization'
       Visible = ivAlways
       OnClick = dxBarButton5Click
     end
     object dxBarButton6: TdxBarButton
-      Caption = 'Authorizations'
+      Caption = 'View Authorizations'
       Category = 0
-      Hint = 'Authorizations'
+      Hint = 'View Authorizations'
       Visible = ivAlways
       OnClick = dxBarButton6Click
+    end
+    object dxBarButton7: TdxBarButton
+      Caption = 'Generate'
+      Category = 0
+      Hint = 'Generate'
+      Visible = ivAlways
     end
     object dxBarButtonExit: TdxBarButton
       Caption = 'Exit'
@@ -863,55 +873,6 @@ object fmMain: TfmMain
     SkinName = 'Office2007Blue'
     Left = 72
     Top = 384
-  end
-  object atScripter1: TatPascalFormScripter
-    SourceCode.Strings = (
-      'uses                                                 '
-      '  Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, Unit2;'
-      ''
-      'var'
-      '  MainForm: TForm2;                                    '
-      'begin'
-      '  MainForm := TForm2.Create(Application);'
-      '  MainForm.Show;'
-      'end;'
-      '                 ')
-    SaveCompiledCode = False
-    ShortBooleanEval = False
-    LibOptions.SearchPath.Strings = (
-      '$(CURDIR)'
-      '$(APPDIR)'
-      
-        'C:\Documents and Settings\Slayer\'#1052#1086#1080' '#1076#1086#1082#1091#1084#1077#1085#1090#1099'\RAD Studio\Projec' +
-        'ts\Notar\Scripts\'
-      '.\Scripts\')
-    LibOptions.SourceFileExt = '.psc'
-    LibOptions.CompiledFileExt = '.pcu'
-    LibOptions.UseScriptFiles = True
-    CallExecHookEvent = False
-    Left = 72
-    Top = 320
-  end
-  object atMemoInterface1: TatMemoInterface
-    Scripter = atScripter1
-    Left = 680
-    Top = 352
-  end
-  object atScriptDebugger1: TatScriptDebugger
-    Scripter = atScripter1
-    UpdateSourceCode = True
-    MemoReadOnly = False
-    Left = 728
-    Top = 352
-  end
-  object IDEEngine1: TIDEEngine
-    Options.AutoHideTabControl = True
-    FileExtPascalUnit = '.psc'
-    FileExtForm = '.sfm'
-    FileExtBasicUnit = '.bsc'
-    AutoStyler = True
-    Left = 520
-    Top = 184
   end
   object LogPopupMenu: TPopupMenu
     Left = 456
