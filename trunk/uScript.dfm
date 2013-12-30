@@ -21,7 +21,7 @@ object Script: TScript
       '')
     LibOptions.SourceFileExt = '.psc'
     LibOptions.CompiledFileExt = '.pcu'
-    LibOptions.UseScriptFiles = False
+    LibOptions.UseScriptFiles = True
     CallExecHookEvent = False
     Left = 56
     Top = 32
