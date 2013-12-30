@@ -11,17 +11,7 @@ uses
   dxRibbon, cxPC, dxSkinscxPCPainter, dxTabbedMDI, dxScreenTip, dxSkinsForm,
   cxLocalization, cxStyles, dxCustomHint, cxHint, cxEdit, cxContainer,
 
-  atScript, atScripter, IDEMain, IDEDialog,
-
-  ap_Sysutils, ap_Classes, ap_Graphics, ap_Controls, ap_Forms, ap_Dialogs,
-  ap_StdCtrls, ap_Windows, ap_System,
-  ap_ExtCtrls, ap_ComCtrls, ap_Menus, ap_Buttons,
-  ap_ImgList,
-
-  uScript,
-
-  cxGridTableView, Vcl.ComCtrls, ScriptCtrls, ShellApi, atPascal, FormScript,
-  atScriptDebug, atMemoInterface, cxPCdxBarPopupMenu, cxTL, cxScrollBox,
+  cxGridTableView, Vcl.ComCtrls, ScriptCtrls, ShellApi, cxPCdxBarPopupMenu, cxTL, cxScrollBox,
   cxSplitter, cxGroupBox, cxListBox, dxSkinOffice2007Blue, Vcl.Menus;
 
 const
@@ -135,7 +125,10 @@ uses uRemoteDM, uLicenseDM,
 
   RVARibbonFrm,
   uDbFreeReporter,
-  uFreeReporter;
+  uFreeReporter,
+  uScriptEngine,
+
+  uMVCAuthorization;
 {$R *.dfm}
 
 procedure Log(AText: string);
@@ -161,9 +154,8 @@ begin
 end;
 
 procedure TfmMain.dxBarButton2Click(Sender: TObject);
-var lib: TatStdCtrlsLibrary;
 begin
-  with TScript.Create(self) do
+  with TScriptEngine.Create(self) do
   begin
     Run('.\Scripts\Unit1.psc');
   end;

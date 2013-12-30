@@ -1,29 +1,19 @@
 object Script: TScript
   OldCreateOrder = False
-  Height = 146
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  Height = 123
   Width = 325
-  object Debugger: TatScriptDebugger
-    UpdateSourceCode = True
-    MemoReadOnly = False
-    Left = 128
-    Top = 32
-  end
-  object Engine: TatPascalScripter
+  object atScripter1: TatScripter
+    DefaultLanguage = slPascal
     SaveCompiledCode = False
-    OnCompileError = EngineCompileError
-    OnRuntimeError = EngineRuntimeError
-    ShortBooleanEval = False
+    ShortBooleanEval = True
     LibOptions.SearchPath.Strings = (
       '$(CURDIR)'
-      '$(APPDIR)'
-      '$(CURDIR)\Scripts'
-      '$(APPDIR)\Scripts'
-      '')
-    LibOptions.SourceFileExt = '.psc'
-    LibOptions.CompiledFileExt = '.pcu'
-    LibOptions.UseScriptFiles = True
+      '$(APPDIR)')
+    LibOptions.UseScriptFiles = False
     CallExecHookEvent = False
-    Left = 56
-    Top = 32
+    Left = 240
+    Top = 72
   end
 end
