@@ -1,9 +1,9 @@
-object Form2: TScriptForm
+object Form2_1_1: TScriptForm
   Left = 5
   Top = 5
   Caption = 'Form2'
-  ClientHeight = 399
-  ClientWidth = 736
+  ClientHeight = 213
+  ClientWidth = 312
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,75 +14,12 @@ object Form2: TScriptForm
   Position = poDesigned
   SaveProps.Strings = (
     'Visible=False')
+  SaveEvents.Strings = (
+    'Self.OnCreate=Form2_1Create')
   PixelsPerInch = 96
   TextHeight = 13
-  object DBGrid1: TDBGrid
-    Left = 0
-    Top = 0
-    Width = 736
-    Height = 374
-    Align = alClient
-    DataSource = DataSource1
-    TabOrder = 8
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
-  end
-  object DBNavigator1: TDBNavigator
-    Left = 0
-    Top = 374
-    Width = 736
-    Height = 25
-    DataSource = DataSource1
-    Align = alBottom
-    TabOrder = 9
-    ExplicitLeft = 440
-    ExplicitTop = 336
-    ExplicitWidth = 240
-  end
-  object FIBDatabase1: TFIBDatabase
-    AutoReconnect = True
-    Connected = True
-    DBName = '127.0.0.1/3050:C:\db\NOTAR.FDB'
-    DBParams.Strings = (
-      'user_name=SYSDBA'
-      'password=masterkey'
-      'lc_ctype=UTF8'
-      '')
-    SQLDialect = 2
-    Timeout = 0
-    LibraryName = 'fbclient.dll'
-    Left = 112
-    Top = 80
-  end
-  object FIBTransaction1: TFIBTransaction
-    Active = True
-    DefaultDatabase = FIBDatabase1
-    Left = 168
-    Top = 80
-  end
   object FIBDataSet1: TFIBDataSet
-    SelectSQL.Strings = (
-      'select * from CATALOG_AUTHORIZATIONS')
-    Active = True
-    Transaction = FIBTransaction1
-    Database = FIBDatabase1
-    Left = 112
-    Top = 128
-  end
-  object FIBQuery1: TFIBQuery
-    Transaction = FIBTransaction1
-    Database = FIBDatabase1
-    SQL.Strings = (
-      'select * from CATALOG_AUTHORIZATIONS')
-    Left = 168
-    Top = 128
-  end
-  object DataSource1: TDataSource
-    DataSet = FIBDataSet1
-    Left = 112
-    Top = 176
+    Left = 120
+    Top = 96
   end
 end

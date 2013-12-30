@@ -35,6 +35,9 @@ type
     procedure DataModuleDestroy(Sender: TObject);
     procedure FibErrorHandlerFIBErrorEvent(Sender: TObject; ErrorValue: EFIBError; KindIBError: TKindIBError; var DoRaise: Boolean);
     procedure FIBSQLMonitorSQL(EventText: string; EventTime: TDateTime);
+  published
+    function getDatabase: TpFIBDatabase;
+    function getTransaction: TpFIBTransaction;
   private
     FDataSetList: TList;
     FTablesList: TStringList;
@@ -242,6 +245,11 @@ begin
 
 end;
 
+function TRemoteDataModule.getDatabase: TpFIBDatabase;
+begin
+  Result := FIBDatabase;
+end;
+
 function TRemoteDataModule.getFieldInfo(const ATable: string; AField, AType: string): string;
 var
   FieldsList: TStringList;
@@ -311,6 +319,11 @@ begin
   FieldsListResult.Assign(TStringList(FTablesList.Objects[FTablesList.IndexOf(ATable)]));
 
   Result := FieldsListResult;
+end;
+
+function TRemoteDataModule.getTransaction: TpFIBTransaction;
+begin
+  Result := FIBTransaction;
 end;
 
 function TRemoteDataModule.notifyDataSets(const ATableName: string): boolean;

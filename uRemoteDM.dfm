@@ -2,7 +2,7 @@ object RemoteDataModule: TRemoteDataModule
   OldCreateOrder = False
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
-  Height = 610
+  Height = 323
   Width = 332
   object FIBDatabase: TpFIBDatabase
     AutoReconnect = True
