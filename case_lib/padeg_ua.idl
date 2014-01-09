@@ -1,0 +1,83 @@
+[
+  uuid(C789218C-37FF-4D22-B978-9B54C03A2D25), 
+  version(1.0), 
+  helpstring("padeg_ua Library")
+    
+]
+library padeg_ua
+{
+
+  importlib("STDOLE2.TLB");
+
+  [
+    uuid(A8E51E43-937F-414B-85DB-FC1BB7A38734), 
+    version(1.0), 
+    helpstring("Dispatch interface for Declension Object"), 
+    dual, 
+    oleautomation
+  ]
+   interface IDeclension: IDispatch
+  {
+    [
+    id(0x000000C9)
+    ]
+    HRESULT _stdcall GetFIOPadeg([in] BSTR cLastName, [in] BSTR cFirstName, [in] BSTR cMiddleName, [in] BSTR cSex, [in] long nPadeg, [out, retval] BSTR * Res );
+    [
+    id(0x000000CA)
+    ]
+    HRESULT _stdcall GetFIOPadegFS([in] BSTR cFIO, [in] BSTR cSex, [in] long nPadeg, [out, retval] BSTR * Res );
+    [
+    id(0x000000CB)
+    ]
+    HRESULT _stdcall GetIFPadeg([in] BSTR cFirstName, [in] BSTR cLastName, [in] BSTR cSex, [in] long nPadeg, [out, retval] BSTR * Res );
+    [
+    id(0x000000CC)
+    ]
+    HRESULT _stdcall GetIFPadegFS([in] BSTR cIF, [in] BSTR cSex, [in] long nPadeg, [out, retval] BSTR * Res );
+    [
+    id(0x000000CD)
+    ]
+    HRESULT _stdcall GetAppointmentPadeg([in] BSTR cAppointment, [in] long nPadeg, [out, retval] BSTR * Res );
+    [
+    id(0x000000CE)
+    ]
+    HRESULT _stdcall GetOfficePadeg([in] BSTR cOffice, [in] long nPadeg, [out, retval] BSTR * Res );
+    [
+    id(0x000000D0)
+    ]
+    HRESULT _stdcall GetSex([in] BSTR cMiddleName, [out, retval] long * Res );
+    [
+    id(0x000000D1)
+    ]
+    HRESULT _stdcall SeparateFIO([in] BSTR cFIO, [in, out] BSTR * cLastName, [in, out] BSTR * cFirstName, [in, out] BSTR * cMiddleName );
+    [
+    id(0x000000CF)
+    ]
+    HRESULT _stdcall GetFullAppointmentPadeg([in] BSTR cAppointment, [in] BSTR cOffice, [in] long nPadeg, [out, retval] BSTR * Res );
+    [
+    id(0x000000D2)
+    ]
+    HRESULT _stdcall UpdateDictionary([out, retval] VARIANT_BOOL * Res );
+    [
+    propget, 
+    id(0x000000D3)
+    ]
+    HRESULT _stdcall DictionaryFileName([out, retval] BSTR * Value );
+    [
+    propput, 
+    id(0x000000D3)
+    ]
+    HRESULT _stdcall DictionaryFileName([in] BSTR Value );
+  };
+
+  [
+    uuid(B21B2752-8C41-41D8-A0DC-98A368D8296E), 
+    version(1.0), 
+    helpstring("Declension Object")
+  ]
+  coclass Declension
+  {
+    [default] interface IDeclension;
+  };
+
+};

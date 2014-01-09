@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2007.11.04 18:56:34.093.bdsproj,C:\Documents and Settings\Rat\Мои документы\Borland Studio Projects\Project1.bdsproj=F:\Turbo Delphi\Padeg_ua.dll\padeg_ua.bdsproj</Transaction>
+    <Transaction>2007.11.06 18:00:01.546.pas,F:\Turbo Delphi\Padeg_ua.dll\Unit2.pas=F:\Turbo Delphi\Padeg_ua.dll\Padeg_ua_dll.pas</Transaction>
+    <Transaction>2007.11.06 18:19:19.265.pas,F:\Turbo Delphi\Padeg_ua.dll\Unit2.pas=F:\Turbo Delphi\Padeg_ua.dll\Export_imp.pas</Transaction>
+    <Transaction>2007.11.06 18:19:41.484.pas,F:\Turbo Delphi\Padeg_ua.dll\Export_imp.pas=F:\Turbo Delphi\Padeg_ua.dll\Export_functions.pas</Transaction>
+    <Transaction>2007.11.06 18:21:18.578.pas,F:\Turbo Delphi\Padeg_ua.dll\Padeg_ua_dll.pas=F:\Turbo Delphi\Padeg_ua.dll\Core.pas</Transaction>
+    <Transaction>2007.11.06 18:39:45.859.pas,F:\Turbo Delphi\Padeg_ua.dll\Unit2.pas=F:\Turbo Delphi\Padeg_ua.dll\Ole_object.pas</Transaction>
+    <Transaction>2007.11.06 22:32:24.733.pas,F:\Turbo Delphi\Padeg_ua.dll\Unit2.pas=F:\Turbo Delphi\Padeg_ua.dll\uProtection.pas</Transaction>
+    <Transaction>2007.11.06 22:43:20.826.pas,F:\Turbo Delphi\Padeg_ua.dll\Export_functions.pas=F:\Turbo Delphi\Padeg_ua.dll\uExport_functions.pas</Transaction>
+    <Transaction>2007.11.06 22:43:31.358.pas,F:\Turbo Delphi\Padeg_ua.dll\Ole_object.pas=F:\Turbo Delphi\Padeg_ua.dll\uOle_object.pas</Transaction>
+    <Transaction>2007.11.06 22:43:37.092.pas,F:\Turbo Delphi\Padeg_ua.dll\Core.pas=F:\Turbo Delphi\Padeg_ua.dll\uCore.pas</Transaction>
+    <Transaction>2007.11.06 22:57:40.998.pas,F:\Turbo Delphi\Padeg_ua.dll\uProtection.pas=F:\Turbo Delphi\Padeg_ua.dll\uCoreExt.pas</Transaction>
+    <Transaction>2007.11.06 22:58:14.701.pas,F:\Turbo Delphi\Padeg_ua.dll\uCoreExt.pas=F:\Turbo Delphi\Padeg_ua.dll\uDic.pas</Transaction>
+  </Transactions>
+</BorlandProject>
