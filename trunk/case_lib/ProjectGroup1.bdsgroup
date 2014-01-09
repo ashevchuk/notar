@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<PersonalityInfo>
+		<Option>
+			<Option Name="Personality">Default.Personality</Option>
+			<Option Name="ProjectType"></Option>
+			<Option Name="Version">1.0</Option>
+			<Option Name="GUID">{52167978-D174-478D-91AF-D1F517EA8383}</Option>
+		</Option>
+	</PersonalityInfo>
+	<Default.Personality>  <Projects>
+      <Projects Name="padeg_ua.dll">padeg_ua.bdsproj</Projects>
+      <Projects Name="Project1.exe">..\..\Delphi 7\Morphology\Project1.bdsproj</Projects>
+      <Projects Name="Keygen_padeg_ua.exe">Keygen\Keygen_padeg_ua.bdsproj</Projects>
+      <Projects Name="Targets">padeg_ua.dll Project1.exe Keygen_padeg_ua.exe</Projects>
+    </Projects>
+    <Dependencies/>
+  </Default.Personality>
+</BorlandProject>
