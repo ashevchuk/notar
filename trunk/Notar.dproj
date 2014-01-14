@@ -199,6 +199,7 @@
                     <Source Name="MainSource">Notar.dpr</Source>
                 </Source>
                 <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files\FastReports\LibD19\dclfrx19.bpl">FastReport 4.0 Components</Excluded_Packages>
                     <Excluded_Packages Name="C:\Documents and Settings\All Users\Документы\RAD Studio\12.0\Bpl\dcldxFireDACServerModeRS19.bpl">FireDAC Data Source for ExpressDataController Server Mode by Developer Express Inc.</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcboffice2k190.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcbofficexp190.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>

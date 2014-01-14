@@ -126,9 +126,7 @@ uses uRemoteDM, uLicenseDM,
   RVARibbonFrm,
   uDbFreeReporter,
   uFreeReporter,
-  uScriptEngine,
-
-  uMVCAuthorization;
+  uScriptEngine;
 {$R *.dfm}
 
 procedure Log(AText: string);
@@ -207,7 +205,7 @@ var
   TemplateName, OutputName, sTemplate: string;
   Reporter: TDbFreeReporter;
 begin
-  sTemplate := 'Report0.template.rtf';
+ { sTemplate := 'Report0.template.rtf';
   TemplateName := CurrentDir + 'Templates\Repository\' + sTemplate;
   OutputName := CurrentDir + 'Templates\Output\' + StringReplace(sTemplate, '.template.', '.', [rfIgnoreCase]);
 
@@ -218,7 +216,7 @@ begin
   with RVARibbonFrm.TfrmMain.Create(self) do begin
     LoadFile(OutputName);
     Show;
-  end;
+  end;       }
 end;
 
 procedure TfmMain.dxBarButtonExitClick(Sender: TObject);

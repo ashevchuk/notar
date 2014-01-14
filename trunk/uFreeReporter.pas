@@ -211,11 +211,13 @@ procedure TFreeReporter.LoadTemplate(const TemplateName: string);
   procedure ExtractRtfFormatting(const s: AnsiString; var Tag, Formatting: AnsiString);
   var
     i, i1: integer;
+    delta: integer;
     ch: AnsiChar;
   begin
     Tag := '';
     Formatting := '';
     i := 1;
+    delta := 0;
     while i <= length(s) do begin 
       case s[i] of
         #0..#31, '{', '}': Formatting := Formatting + s[i];
@@ -227,6 +229,7 @@ procedure TFreeReporter.LoadTemplate(const TemplateName: string);
             HexToBin(PAnsiChar(@s[i]), PAnsiChar(@ch), 1);
             Tag := Tag + ch;
             inc(i);
+            inc(delta, 3);
           end else begin
             while (i <= length(s)) and not (s[i] in [' ', '\', '{', '}']) do
               inc(i);
@@ -240,7 +243,7 @@ procedure TFreeReporter.LoadTemplate(const TemplateName: string);
       end;
       inc(i);
     end;
-    assert(length(Tag) + length(Formatting) = length(s), 'FreeReporter: Internal error #01');
+    assert((length(Tag)+delta) + length(Formatting) = length(s), 'FreeReporter: Internal error #01');
   end;
 
   // Get the next reporter tag from a template

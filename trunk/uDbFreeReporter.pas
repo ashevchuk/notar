@@ -484,7 +484,7 @@ begin
       end;
     end;
     // It's a database field?
-    i := {$IFDEF Unicode}AnsiStrings.{$ENDIF}AnsiPos('.', TagName);
+    i := {$IFDEF Unicode}AnsiStrings.{$ENDIF}AnsiPos(':', TagName);
     if i > 0 then begin
       s := copy(TagName, 1, i-1);
       ds := FindDataSet(string(s));
