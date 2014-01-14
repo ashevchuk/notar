@@ -5,10 +5,9 @@ interface
 uses
   System.SysUtils, System.Classes, Forms,
   ufmMain, uUtils, uRemoteDM, uTypes, Data.DB, FIBDataSet, pFIBDataSet,
-  PaxCompiler, PaxRunner, PaxProgram, PaxInvoke,
+  PaxCompiler, PaxRunner, PaxProgram, PaxInvoke, PaxEval,
   PAXCOMP_CONSTANTS,
-
-  IMPORT_COMMON, PaxEval;
+  IMPORT_COMMON;
 
 type
   TMVCAuthorization = class(TDataModule)
@@ -80,13 +79,22 @@ end;
 function TMVCAuthorization.GetCustomTagValue(const Tag: AnsiString; var Value: string): boolean;
 var
   PaxEval: TPaxEval;
+  I: word;
 begin
+  Log('request tag: '+Tag);
   PaxEval := TPaxEval.Create(self);
   PaxEval.RegisterCompiler(PaxCompiler, PaxProgram);
-  PaxEval.CompileExpression(Tag);
-  PaxEval.Run;
 
-  Value := PaxEval.ResultAsString;
+  try
+    PaxEval.CompileExpression(Tag);
+    PaxEval.Run;
+
+    Value := PaxEval.ResultAsString;
+  except
+    Value := '[ERROR: (' + Tag + ')]';
+    Log('program error');
+    for I:=0 to PaxCompiler.ErrorCount do Log(PaxCompiler.ErrorMessage[I]);
+  end;
 
   PaxEval.Reset;
   PaxEval.Free;
@@ -126,6 +134,8 @@ begin
   PaxCompiler.RegisterVariable(0, 'DataModule: TMVCAuthorization', @Self);
 
   RepresentativesHandle := PaxCompiler.RegisterVariable(0, 'Representatives', datasetHandle, @Representatives);
+  RepresentativesHandle := PaxCompiler.RegisterVariable(0, 'Authorization', datasetHandle, @Authorization);
+  RepresentativesHandle := PaxCompiler.RegisterVariable(0, 'Constituent', datasetHandle, @Constituent);
 
   PaxCompiler.AddCode('1', 'uses SysUtils;');
 
@@ -142,6 +152,34 @@ begin
   PaxCompiler.AddCode('1', 'function RepresentativesCount: Integer; cdecl;');
   PaxCompiler.AddCode('1', 'begin');
   PaxCompiler.AddCode('1', '  Result := Representatives.RecordCount;');
+  PaxCompiler.AddCode('1', 'end;');
+
+  PaxCompiler.AddCode('1', 'function ifSingle(ACheckValue: integer; AResultString: string): string; cdecl;');
+  PaxCompiler.AddCode('1', 'begin');
+  PaxCompiler.AddCode('1', '  if ACheckValue = 1 then');
+  PaxCompiler.AddCode('1', '    Result := AResultString');
+  PaxCompiler.AddCode('1', '  else Result := '''';');
+  PaxCompiler.AddCode('1', 'end;');
+
+  PaxCompiler.AddCode('1', 'function ifNone(ACheckValue: integer; AResultString: string): string; cdecl;');
+  PaxCompiler.AddCode('1', 'begin');
+  PaxCompiler.AddCode('1', '  if ACheckValue = 0 then');
+  PaxCompiler.AddCode('1', '    Result := AResultString');
+  PaxCompiler.AddCode('1', '  else Result := '''';');
+  PaxCompiler.AddCode('1', 'end;');
+
+  PaxCompiler.AddCode('1', 'function ifMore(ACheckValue: integer; AResultString: string): string; cdecl;');
+  PaxCompiler.AddCode('1', 'begin');
+  PaxCompiler.AddCode('1', '  if ACheckValue > 1 then');
+  PaxCompiler.AddCode('1', '    Result := AResultString');
+  PaxCompiler.AddCode('1', '  else Result := '''';');
+  PaxCompiler.AddCode('1', 'end;');
+
+  PaxCompiler.AddCode('1', 'function ifAny(ACheckValue: integer; AResultString: string): string; cdecl;');
+  PaxCompiler.AddCode('1', 'begin');
+  PaxCompiler.AddCode('1', '  if ACheckValue > 0 then');
+  PaxCompiler.AddCode('1', '    Result := AResultString');
+  PaxCompiler.AddCode('1', '  else Result := '''';');
   PaxCompiler.AddCode('1', 'end;');
 
   PaxCompiler.AddCode('1', 'begin');

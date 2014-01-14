@@ -371,12 +371,19 @@ object fmMain: TfmMain
       Width = 909
       Height = 99
       Align = alClient
+      AutoComplete = False
       ItemHeight = 13
       ParentFont = False
       PopupMenu = LogPopupMenu
+      Style.Font.Charset = DEFAULT_CHARSET
+      Style.Font.Color = clWindowText
+      Style.Font.Height = -11
+      Style.Font.Name = 'Tahoma'
+      Style.Font.Style = []
       Style.Shadow = False
       Style.StyleController = cxEditStyleController
       Style.TransparentBorder = True
+      Style.IsFontAssigned = True
       TabOrder = 0
       OnDblClick = StatusBarDblClick
     end
