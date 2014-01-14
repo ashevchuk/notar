@@ -90,6 +90,7 @@
     <Import Project="..\def.optset" Condition="'$(Cfg_1_Win32)'!='' And Exists('..\def.optset')"/>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_Define>EUREKALOG;EUREKALOG_VER7;$(DCC_Define)</DCC_Define>
+        <DCC_UnitSearchPath>.\lib\;.\imports\;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <VerInfo_MinorVer>1</VerInfo_MinorVer>
         <VerInfo_Release>9</VerInfo_Release>
         <Icon_MainIcon>Notar_Icon1.ico</Icon_MainIcon>
