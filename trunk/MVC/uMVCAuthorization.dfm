@@ -1,7 +1,9 @@
 object MVCAuthorization: TMVCAuthorization
   OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
   Height = 316
-  Width = 314
+  Width = 405
   object Authorization: TpFIBDataSet
     UpdateSQL.Strings = (
       'UPDATE CATALOG_AUTHORIZATIONS'
@@ -226,10 +228,33 @@ object MVCAuthorization: TMVCAuthorization
       '    SHOW_ADDRESS,'
       '    SHOW_ID_NUMBER,'
       '    SHOW_PASSPORT_DATA,'
+      '    SURNAME_CASE_NOMINATIVE,'
+      '    SURNAME_CASE_GENITIVE,'
+      '    SURNAME_CASE_DATIVE,'
+      '    SURNAME_CASE_ACCUSATIVE,'
+      '    SURNAME_CASE_ABLATIVE,'
+      '    SURNAME_CASE_LOCATIVE,'
+      '    SURNAME_CASE_VOCATIVE,'
+      '    NAME_CASE_NOMINATIVE,'
+      '    NAME_CASE_GENITIVE,'
+      '    NAME_CASE_DATIVE,'
+      '    NAME_CASE_ACCUSATIVE,'
+      '    NAME_CASE_ABLATIVE,'
+      '    NAME_CASE_LOCATIVE,'
+      '    NAME_CASE_VOCATIVE,'
+      '    NAME_CASE_ABBREVIATION,'
+      '    MIDDLE_CASE_NOMINATIVE,'
+      '    MIDDLE_CASE_GENITIVE,'
+      '    MIDDLE_CASE_DATIVE,'
+      '    MIDDLE_CASE_ACCUSATIVE,'
+      '    MIDDLE_CASE_ABLATIVE,'
+      '    MIDDLE_CASE_LOCATIVE,'
+      '    MIDDLE_CASE_VOCATIVE,'
+      '    MIDDLE_CASE_ABBREVIATION,'
       '    AUTHORIZATION_ID,'
       '    RELATION_AUTH_CONST_ID'
       'FROM'
-      '    VIEW_REL_AUTH_CONST'
+      '    VIEW_REL_AUTH_CONST '
       'WHERE'
       '    AUTHORIZATION_ID = :MAS_ID ')
     AutoUpdateOptions.AutoParamsToFields = True
@@ -299,12 +324,35 @@ object MVCAuthorization: TMVCAuthorization
       '    SHOW_ADDRESS,'
       '    SHOW_ID_NUMBER,'
       '    SHOW_PASSPORT_DATA,'
+      '    SURNAME_CASE_NOMINATIVE,'
+      '    SURNAME_CASE_GENITIVE,'
+      '    SURNAME_CASE_DATIVE,'
+      '    SURNAME_CASE_ACCUSATIVE,'
+      '    SURNAME_CASE_ABLATIVE,'
+      '    SURNAME_CASE_LOCATIVE,'
+      '    SURNAME_CASE_VOCATIVE,'
+      '    NAME_CASE_NOMINATIVE,'
+      '    NAME_CASE_GENITIVE,'
+      '    NAME_CASE_DATIVE,'
+      '    NAME_CASE_ACCUSATIVE,'
+      '    NAME_CASE_ABLATIVE,'
+      '    NAME_CASE_LOCATIVE,'
+      '    NAME_CASE_VOCATIVE,'
+      '    NAME_CASE_ABBREVIATION,'
+      '    MIDDLE_CASE_NOMINATIVE,'
+      '    MIDDLE_CASE_GENITIVE,'
+      '    MIDDLE_CASE_DATIVE,'
+      '    MIDDLE_CASE_ACCUSATIVE,'
+      '    MIDDLE_CASE_ABLATIVE,'
+      '    MIDDLE_CASE_LOCATIVE,'
+      '    MIDDLE_CASE_VOCATIVE,'
+      '    MIDDLE_CASE_ABBREVIATION,'
       '    AUTHORIZATION_ID,'
       '    RELATION_AUTH_REPRES_ID'
       'FROM'
       '    VIEW_REL_AUTH_REPRES '
       'WHERE'
-      '    AUTHORIZATION_ID = :MAS_ID')
+      '    AUTHORIZATION_ID = :MAS_ID ')
     AutoUpdateOptions.AutoParamsToFields = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
@@ -318,5 +366,29 @@ object MVCAuthorization: TMVCAuthorization
     DataSet = Authorization
     Left = 136
     Top = 16
+  end
+  object PaxCompiler: TPaxCompiler
+    Alignment = 8
+    DebugMode = False
+    Left = 152
+    Top = 112
+  end
+  object PaxPascalLanguage: TPaxPascalLanguage
+    ExplicitOff = False
+    CompleteBooleanEval = False
+    UnitLookup = True
+    PrintKeyword = 'print'
+    PrintlnKeyword = 'println'
+    Left = 216
+    Top = 112
+  end
+  object PaxProgram: TPaxProgram
+    Console = False
+    Left = 280
+    Top = 112
+  end
+  object PaxInvoke: TPaxInvoke
+    Left = 344
+    Top = 112
   end
 end

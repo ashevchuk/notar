@@ -1,6 +1,3 @@
-{
-Модуль определения ф-ций Padeg.dll
-}
 unit padegFIO;
 
 
@@ -67,6 +64,8 @@ function GetFIOParts(pFIO: String): TFIOParts; stdcall;
 
 // вспомогательные ф-ции
 function GetSex(pMiddleName: String): Integer; stdcall;
+
+procedure SeparateFIO(const cFIO: WideString; var cLastName: PChar; var cFirstName: PChar; var cMiddleName: PChar); stdcall;
 
 // файл исключений
 function GetExceptionsFileName: String; stdcall;
@@ -138,6 +137,9 @@ Type
   TSetDictionary = function (DicName: PChar): Boolean; stdcall;
 
   TGetSex = function(pMiddleName: PChar): Integer; stdcall;
+
+  TSeparateFIO = procedure(const cFIO: PChar; var cLastName: PChar; var cFirstName: PChar; var cMiddleName: PChar); stdcall;
+
   TGetNameFileExceptions = function(pResult: PChar; var nLen: LongInt): Integer; stdcall;
 
   TGetAppointmentPadeg = function(pAppointment: PChar; nPadeg: LongInt;
@@ -201,6 +203,16 @@ begin
   if not Assigned(pGetSex) then
     raise Exception.Create('Функция ''GetSex'' в библиотеке PADEG.DLL не найдена');
   Result:=pGetSex(PChar(pMiddleName));
+end;
+
+procedure SeparateFIO(const cFIO: WideString; var cLastName: PChar; var cFirstName: PChar; var cMiddleName: PChar); stdcall;
+var pSeparateFIO: TSeparateFIO;
+begin
+  LoadPadeg;
+  pSeparateFIO:=GetProcAddress(LibPadeg, 'SeparateFIO');
+  if not Assigned(pSeparateFIO) then
+    raise Exception.Create('Функция ''SeparateFIO'' в библиотеке PADEG.DLL не найдена');
+  pSeparateFIO(PChar(cFIO), cLastName, cFirstName, cMiddleName);
 end;
 
 function GetExceptionsFileName: String; stdcall;
@@ -501,7 +513,10 @@ finalization
 
 if LibPadeg <> 0 then begin
   FreeLibrary(LibPadeg);
-  LibPadeg:=0;
+  try
+    LibPadeg:=0;
+  except
+  end;
 end;
 
 end.
