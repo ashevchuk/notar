@@ -141,6 +141,43 @@ var
       Result := dtHtml;
   end;
 
+  function StripRTFFormating(s: AnsiString): string;
+  var
+    i, i1: integer;
+    ch: AnsiChar;
+    Tag : AnsiString;
+    Formatting : AnsiString;
+  begin
+    Tag := '';
+    Formatting := '';
+    i := 1;
+    while i <= length(s) do begin
+      case s[i] of
+        #0..#31, '{', '}': Formatting := Formatting + s[i];
+        '\': begin
+          i1 := i;
+          inc(i);
+          if s[i] = '''' then begin // \'ee --> non-ASCII character
+            inc(i);
+            HexToBin(PAnsiChar(@s[i]), PAnsiChar(@ch), 1);
+            Tag := Tag + ch;
+            inc(i);
+          end else begin
+            while (i <= length(s)) and not (s[i] in [' ', '\', '{', '}']) do
+              inc(i);
+            Formatting := Formatting + copy(s, i1, i-i1);
+            if (i <= length(s)) and (s[i] = '\') then
+              continue;
+            Formatting := Formatting + copy(s, i, 1);
+          end;
+        end;
+        else Tag := Tag + s[i];
+      end;
+      inc(i);
+    end;
+    Result := Tag;
+  end;
+
   procedure ProcessPieces(iFrom, iTo: integer);
   var
     i: integer;
@@ -148,6 +185,7 @@ var
     ansis: AnsiString;
     Piece: PPiece;
     bCycle: boolean;
+    ss:string;
   begin
     i := iFrom;
     while i <= iTo do begin
@@ -155,6 +193,8 @@ var
       case Piece.PieceKind of
         pkNone: begin
           if Piece.Len > 0 then
+            ss := Copy(Template, Piece.Pos, Piece.Len);
+            s := ss;
             fs.Write(Template[Piece.Pos], Piece.Len);
         end;
         pkFor: begin // Begin of the 'for' cycle
@@ -177,7 +217,7 @@ var
           continue;
         end;
         pkTag: begin // Other tag
-          s := GetTagValue(Piece.Param);
+          s := GetTagValue(StripRTFFormating(Piece.Param));
           if length(s) > 0 then begin
             if DocType = dtRtf then
               ansis := FormatRtf(s)
@@ -211,13 +251,11 @@ procedure TFreeReporter.LoadTemplate(const TemplateName: string);
   procedure ExtractRtfFormatting(const s: AnsiString; var Tag, Formatting: AnsiString);
   var
     i, i1: integer;
-    delta: integer;
     ch: AnsiChar;
   begin
     Tag := '';
     Formatting := '';
     i := 1;
-    delta := 0;
     while i <= length(s) do begin 
       case s[i] of
         #0..#31, '{', '}': Formatting := Formatting + s[i];
@@ -225,11 +263,14 @@ procedure TFreeReporter.LoadTemplate(const TemplateName: string);
           i1 := i;
           inc(i);
           if s[i] = '''' then begin // \'ee --> non-ASCII character
+              Tag := Tag + '\';
+              Tag := Tag + s[i];
             inc(i);
             HexToBin(PAnsiChar(@s[i]), PAnsiChar(@ch), 1);
-            Tag := Tag + ch;
+//            Tag := Tag + ch;
+              Tag := Tag + s[i];
             inc(i);
-            inc(delta, 3);
+            Tag := Tag + s[i];
           end else begin
             while (i <= length(s)) and not (s[i] in [' ', '\', '{', '}']) do
               inc(i);
@@ -243,7 +284,7 @@ procedure TFreeReporter.LoadTemplate(const TemplateName: string);
       end;
       inc(i);
     end;
-    assert((length(Tag)+delta) + length(Formatting) = length(s), 'FreeReporter: Internal error #01');
+    assert(length(Tag) + length(Formatting) = length(s), 'FreeReporter: Internal error #01');
   end;
 
   // Get the next reporter tag from a template
@@ -353,6 +394,7 @@ begin
      else
       i2 := length(Template) + 1;
     Piece.Len := i2 - Piece.Pos;
+//    if (i > 0) then if PPiece(Pieces[i-1]).PieceKind = pkTag then Piece.Len := 0;
   end;
 end;
 

@@ -463,7 +463,7 @@ begin
       if AggregateFunc <> afNone then begin
         s := copy(slcFieldName, i+1, length(slcFieldName)-i-1); 
         // Table.Field
-        i := {$IFDEF Unicode}AnsiStrings.{$ENDIF}AnsiPos('.', s);
+        i := {$IFDEF Unicode}AnsiStrings.{$ENDIF}AnsiPos(':', s);
         if i > 0 then begin
           ds := FindDataSet(string(copy(s, 1, i-1)));
           if ds <> Nil then begin

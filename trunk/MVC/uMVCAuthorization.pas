@@ -11,6 +11,8 @@ uses
 
 type
   TMVCAuthorization = class(TDataModule)
+    ConstituentDataSource: TDataSource;
+    RepresentativesDataSource: TDataSource;
   published
     Authorization: TpFIBDataSet;
     Constituent: TpFIBDataSet;
@@ -81,6 +83,7 @@ var
   PaxEval: TPaxEval;
   I: word;
 begin
+  Value := '';
   Log('request tag: '+Tag);
   PaxEval := TPaxEval.Create(self);
   PaxEval.RegisterCompiler(PaxCompiler, PaxProgram);

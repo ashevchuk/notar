@@ -89,7 +89,6 @@
     </PropertyGroup>
     <Import Project="..\def.optset" Condition="'$(Cfg_1_Win32)'!='' And Exists('..\def.optset')"/>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
-        <DCC_Define>EUREKALOG;EUREKALOG_VER7;$(DCC_Define)</DCC_Define>
         <DCC_UnitSearchPath>.\lib\;.\imports\;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <VerInfo_MinorVer>1</VerInfo_MinorVer>
         <VerInfo_Release>9</VerInfo_Release>
@@ -222,12 +221,12 @@
 <!-- EurekaLog First Line
 [Exception Log]
 EurekaLog Version=7001
-Activate=1
+Activate=0
 atVCL=1
 atWin32=1
 csoShowRTLThreads=1
 csoShowWindowsThreads=1
-DeleteMapAfterCompile=1
+DeleteMapAfterCompile=0
 dpJCL=1
 edoShowInTopMostMode=1
 edoUseRealIcon=1
@@ -238,9 +237,6 @@ idEurekaLog=1
 idEurekaLogDetailed=1
 idMSClassic=1
 idStepsToReproduce=1
-InjectCode=1
-InjectInfo=1
-InjectOptions=1
 loResCatchLeaks=1
 ProjectID="{EC7B7521-CAEE-4786-B555-8C122DB729D9}"
 sndShowFailureMsg=1
