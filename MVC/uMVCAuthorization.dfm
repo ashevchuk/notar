@@ -163,6 +163,7 @@ object MVCAuthorization: TMVCAuthorization
       '    CATALOG_AUTHORIZATIONS '
       'WHERE'
       '    ID = :ID')
+    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -258,6 +259,7 @@ object MVCAuthorization: TMVCAuthorization
       'WHERE'
       '    AUTHORIZATION_ID = :MAS_ID ')
     AutoUpdateOptions.AutoParamsToFields = True
+    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -390,5 +392,15 @@ object MVCAuthorization: TMVCAuthorization
   object PaxInvoke: TPaxInvoke
     Left = 344
     Top = 112
+  end
+  object ConstituentDataSource: TDataSource
+    DataSet = Constituent
+    Left = 224
+    Top = 16
+  end
+  object RepresentativesDataSource: TDataSource
+    DataSet = Representatives
+    Left = 304
+    Top = 16
   end
 end

@@ -1,16 +1,7 @@
 program Notar;
 
 uses
-  EMemLeaks,
-  EResLeaks,
-  EDialogWinAPIMSClassic,
-  EDialogWinAPIEurekaLogDetailed,
-  EDialogWinAPIStepsToReproduce,
-  EDebugExports,
-  EDebugJCL,
   EMapWin32,
-  EAppVCL,
-  ExceptionLog7,
   Vcl.Forms,
   ufmMain in 'ufmMain.pas' {fmMain},
   ufmSplash in 'ufmSplash.pas' {fmSplash},
