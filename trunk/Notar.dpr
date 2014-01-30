@@ -52,7 +52,7 @@ begin
 
   Application.Run;
 
-  LicenseDataModule.Free;
+//  LicenseDataModule.Free;
 end.
 
 

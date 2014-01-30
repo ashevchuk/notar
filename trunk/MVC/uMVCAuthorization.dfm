@@ -179,6 +179,7 @@ object MVCAuthorization: TMVCAuthorization
       '    NAME,'
       '    MIDDLE,'
       '    GENDER,'
+      '    GENDER_ID,'
       '    STATE,'
       '    PERSONAL_DOCUMENT,'
       '    BIRTH_DATE,'
@@ -276,6 +277,7 @@ object MVCAuthorization: TMVCAuthorization
       '    NAME,'
       '    MIDDLE,'
       '    GENDER,'
+      '    GENDER_ID,'
       '    STATE,'
       '    PERSONAL_DOCUMENT,'
       '    BIRTH_DATE,'
@@ -356,6 +358,7 @@ object MVCAuthorization: TMVCAuthorization
       'WHERE'
       '    AUTHORIZATION_ID = :MAS_ID ')
     AutoUpdateOptions.AutoParamsToFields = True
+    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction

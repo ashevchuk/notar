@@ -27,7 +27,7 @@ type
     function LogToMain(AMsg: string): boolean;
     function getRepresentatives: TpFIBDataSet;
   private
-    { Private declarations }
+
   public
     function setID(AID: string): boolean;
     function buildReport(AInputFileName: string; AOutputFileName: string): boolean;
@@ -80,11 +80,12 @@ end;
 
 function TMVCAuthorization.GetCustomTagValue(const Tag: AnsiString; var Value: string): boolean;
 var
+  I: Integer;
   PaxEval: TPaxEval;
-  I: word;
 begin
   Value := '';
-  Log('request tag: '+Tag);
+  Log('[d] request tag: ' + Tag);
+
   PaxEval := TPaxEval.Create(self);
   PaxEval.RegisterCompiler(PaxCompiler, PaxProgram);
 
@@ -94,14 +95,17 @@ begin
 
     Value := PaxEval.ResultAsString;
   except
-    Value := '[ERROR: (' + Tag + ')]';
-    Log('program error');
-    for I:=0 to PaxCompiler.ErrorCount do Log(PaxCompiler.ErrorMessage[I]);
+    Value := '[!ERROR: (' + Tag + ')]';
+
+    for I:=0 to PaxCompiler.ErrorCount -1 do Log('[!] Program error:' + PaxCompiler.ErrorMessage[I]);
+    for I:=0 to PaxEval.ErrorCount -1 do Log('[!] Program eval error:' + PaxEval.ErrorMessage[I]);
   end;
 
   PaxEval.Reset;
   PaxEval.Free;
-  Log('iplement: '+Tag+'='+Value);
+
+  Log('[i] interpreted as: '+Tag+'='+Value);
+
   Result := True;
 end;
 
@@ -112,7 +116,7 @@ end;
 
 function TMVCAuthorization.prepareScript: boolean;
 var
-  I: word;
+  I: Integer;
   funcPointer: Pointer;
   funcHandle: Integer;
 
@@ -185,6 +189,13 @@ begin
   PaxCompiler.AddCode('1', '  else Result := '''';');
   PaxCompiler.AddCode('1', 'end;');
 
+  PaxCompiler.AddCode('1', 'function ifFieldEq(ADataSet: TpFIBDataSet; AFieldName: string; AValue: string; AResultString: string): string; cdecl;');
+  PaxCompiler.AddCode('1', 'begin');
+  PaxCompiler.AddCode('1', '  if ADataSet.FieldByName(AFieldName).AsString = AValue then');
+  PaxCompiler.AddCode('1', '    Result := AResultString');
+  PaxCompiler.AddCode('1', '  else Result := '''';');
+  PaxCompiler.AddCode('1', 'end;');
+
   PaxCompiler.AddCode('1', 'begin');
   PaxCompiler.AddCode('1', 'end.');
 
@@ -212,7 +223,7 @@ begin
  end;
 { Log(IntToStr(Res));       }
 
-  end else for I:=0 to PaxCompiler.ErrorCount do ufmMain.Log(PaxCompiler.ErrorMessage[I]);
+  end else for I:=0 to PaxCompiler.ErrorCount -1 do ufmMain.Log(PaxCompiler.ErrorMessage[I]);
 end;
 
 function TMVCAuthorization.getRepresentatives: TpFIBDataSet;
