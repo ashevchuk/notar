@@ -31,7 +31,7 @@ type
   public
     function setID(AID: string): boolean;
     function buildReport(AInputFileName: string; AOutputFileName: string): boolean;
-    function GetCustomTagValue(const Tag: AnsiString;  var Value: string): boolean;
+    function GetCustomTagValue(const Tag: AnsiString; var Value: string): boolean;
     function prepareScript: boolean;
   end;
 
@@ -78,7 +78,7 @@ begin
   Authorization.Close;
 end;
 
-function TMVCAuthorization.GetCustomTagValue(const Tag: AnsiString; var Value: string): boolean;
+function TMVCAuthorization.GetCustomTagValue(const Tag: AnsiString; var Value: String): boolean;
 var
   I: Integer;
   PaxEval: TPaxEval;

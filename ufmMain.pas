@@ -12,7 +12,8 @@ uses
   cxLocalization, cxStyles, dxCustomHint, cxHint, cxEdit, cxContainer,
 
   cxGridTableView, Vcl.ComCtrls, ScriptCtrls, ShellApi, cxPCdxBarPopupMenu, cxTL, cxScrollBox,
-  cxSplitter, cxGroupBox, cxListBox, dxSkinOffice2007Blue, Vcl.Menus;
+  cxSplitter, cxGroupBox, cxListBox, dxSkinOffice2007Blue, Vcl.Menus,
+  dxCustomTileControl, dxTileControl, dxRibbonSkins, dxSkinsdxRibbonPainter;
 
 const
   IDX_STATUS_TEXT : byte = 0;
@@ -29,11 +30,9 @@ const
 type
   TfmMain = class(TForm)
     StatusBar: TdxStatusBar;
-    dxBarManager: TdxBarManager;
+    dxMainBarManager: TdxBarManager;
     dxTabbedMDIManager: TdxTabbedMDIManager;
     dxBarManagerBar1: TdxBar;
-    dxBarButtonExit: TdxBarButton;
-    dxBarSubItemFile: TdxBarSubItem;
     dxBarButtonEditor: TdxBarButton;
     cxEditStyleController: TcxEditStyleController;
     cxDefaultEditStyleController: TcxDefaultEditStyleController;
@@ -84,6 +83,8 @@ type
     dxBarButton5: TdxBarButton;
     dxBarButton6: TdxBarButton;
     dxBarButton7: TdxBarButton;
+    dxRibbon1Tab1: TdxRibbonTab;
+    dxRibbon1: TdxRibbon;
     procedure FormCreate(Sender: TObject);
     procedure dxBarButtonExitClick(Sender: TObject);
     procedure dxBarButtonEditorClick(Sender: TObject);

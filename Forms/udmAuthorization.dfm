@@ -1709,8 +1709,6 @@ object dmAuthorization: TdmAuthorization
     Left = 64
     Top = 152
     object AuthorizationsDataSetID: TFIBBCDField
-      AutoGenerateValue = arAutoInc
-      FieldKind = fkInternalCalc
       FieldName = 'ID'
       Size = 0
     end
@@ -1766,7 +1764,6 @@ object dmAuthorization: TdmAuthorization
     end
     object AuthorizationsDataSetTRANSPORT_FABRICATION_DATE: TFIBDateField
       FieldName = 'TRANSPORT_FABRICATION_DATE'
-      DisplayFormat = 'dd.mm.yyyy'
     end
     object AuthorizationsDataSetTRANSPORT_CERTIFICATE_SERIAL: TFIBWideStringField
       FieldName = 'TRANSPORT_CERTIFICATE_SERIAL'
@@ -1780,7 +1777,6 @@ object dmAuthorization: TdmAuthorization
     end
     object AuthorizationsDataSetTRANSPORT_CERTIFICATE_REG_DATE: TFIBDateField
       FieldName = 'TRANSPORT_CERTIFICATE_REG_DATE'
-      DisplayFormat = 'dd.mm.yyyy'
     end
     object AuthorizationsDataSetTRANSPORT_CERTIFICATE_ISSUER: TFIBWideStringField
       FieldName = 'TRANSPORT_CERTIFICATE_ISSUER'
@@ -1794,7 +1790,6 @@ object dmAuthorization: TdmAuthorization
     end
     object AuthorizationsDataSetTRANSITE_NUMBER_REMOVED_DATE: TFIBDateField
       FieldName = 'TRANSITE_NUMBER_REMOVED_DATE'
-      DisplayFormat = 'dd.mm.yyyy'
     end
     object AuthorizationsDataSetAUTHORIZATION_NUMBER: TFIBWideStringField
       FieldName = 'AUTHORIZATION_NUMBER'
@@ -1803,11 +1798,9 @@ object dmAuthorization: TdmAuthorization
     end
     object AuthorizationsDataSetAUTHORIZATION_VALIDITY_DATE: TFIBDateField
       FieldName = 'AUTHORIZATION_VALIDITY_DATE'
-      DisplayFormat = 'dd.mm.yyyy'
     end
     object AuthorizationsDataSetAUTHORIZATION_DATE: TFIBDateField
       FieldName = 'AUTHORIZATION_DATE'
-      DisplayFormat = 'dd.mm.yyyy'
     end
     object AuthorizationsDataSetAUTHORIZATION_DESCRIPTION: TFIBWideStringField
       FieldName = 'AUTHORIZATION_DESCRIPTION'

@@ -15,7 +15,7 @@ type
   // Calls when the reporter meets with unknown tag in the template
   // Tag - name of the unknown tag
   // Value - a return value of the tag
-  TGetCustomTagValueFunc = function(const Tag: AnsiString; var Value: string):
+  TGetCustomTagValueFunc = function(const Tag: AnsiString; var Value: String):
     boolean of object;
 
   // Database-related reporter which supports an evaluation of values of

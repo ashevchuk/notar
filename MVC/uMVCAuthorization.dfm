@@ -163,7 +163,6 @@ object MVCAuthorization: TMVCAuthorization
       '    CATALOG_AUTHORIZATIONS '
       'WHERE'
       '    ID = :ID')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -260,7 +259,6 @@ object MVCAuthorization: TMVCAuthorization
       'WHERE'
       '    AUTHORIZATION_ID = :MAS_ID ')
     AutoUpdateOptions.AutoParamsToFields = True
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -358,7 +356,6 @@ object MVCAuthorization: TMVCAuthorization
       'WHERE'
       '    AUTHORIZATION_ID = :MAS_ID ')
     AutoUpdateOptions.AutoParamsToFields = True
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction

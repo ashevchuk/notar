@@ -633,7 +633,7 @@ object fmAuthorizations: TfmAuthorizations
         PropertiesClassName = 'TcxCheckBoxProperties'
         Properties.ValueChecked = 1
         Properties.ValueUnchecked = 0
-        Width = 64
+        Width = 20
       end
     end
     object AuthorizationsGridDBTableView2: TcxGridDBTableView
