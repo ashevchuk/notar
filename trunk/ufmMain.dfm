@@ -361,7 +361,7 @@ object fmMain: TfmMain
     Align = alBottom
     Caption = 'Log'
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 4
     OnDblClick = StatusBarDblClick
     Height = 124
     Width = 915
@@ -396,20 +396,39 @@ object fmMain: TfmMain
     AlignSplitter = salBottom
     Control = LogGroupBox
   end
-  object dxBarManager: TdxBarManager
+  object dxRibbon1: TdxRibbon
+    Left = 0
+    Top = 0
+    Width = 915
+    Height = 93
+    BarManager = dxMainBarManager
+    ColorSchemeName = 'Blue'
+    ShowTabHeaders = False
+    Contexts = <>
+    TabOrder = 7
+    TabStop = False
+    object dxRibbon1Tab1: TdxRibbonTab
+      Active = True
+      Caption = #1044#1086#1074#1110#1076#1085#1080#1082#1080
+      Groups = <
+        item
+          Caption = #1044#1086#1074#1110#1088#1077#1085#1086#1089#1090#1110
+          ToolbarName = 'dxBarManagerBar1'
+        end>
+      Index = 0
+    end
+  end
+  object dxMainBarManager: TdxBarManager
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'Microsoft Sans Serif'
     Font.Style = []
     Categories.Strings = (
-      'Default'
-      'File')
+      'Default')
     Categories.ItemsVisibles = (
-      2
       2)
     Categories.Visibles = (
-      True
       True)
     PopupMenuLinks = <>
     Style = bmsUseLookAndFeel
@@ -419,25 +438,19 @@ object fmMain: TfmMain
     DockControlHeights = (
       0
       0
-      26
+      0
       0)
     object dxBarManagerBar1: TdxBar
-      Caption = 'Main Menu'
+      Caption = 'Catalogs'
       CaptionButtons = <>
-      DockedDockingStyle = dsTop
       DockedLeft = 0
       DockedTop = 0
-      DockingStyle = dsTop
       FloatLeft = 941
       FloatTop = 8
       FloatClientWidth = 0
       FloatClientHeight = 0
       IsMainMenu = True
       ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarSubItemFile'
-        end
         item
           Visible = True
           ItemName = 'dxBarButtonEditor'
@@ -525,16 +538,16 @@ object fmMain: TfmMain
       OnClick = dxBarButton4Click
     end
     object dxBarButton5: TdxBarButton
-      Caption = 'New Authorization'
+      Caption = #1057#1090#1074#1086#1088#1080#1090#1080
       Category = 0
-      Hint = 'New Authorization'
+      Hint = #1057#1090#1074#1086#1088#1080#1090#1080
       Visible = ivAlways
       OnClick = dxBarButton5Click
     end
     object dxBarButton6: TdxBarButton
-      Caption = 'View Authorizations'
+      Caption = #1055#1077#1088#1077#1075#1083#1103#1076
       Category = 0
-      Hint = 'View Authorizations'
+      Hint = #1055#1077#1088#1077#1075#1083#1103#1076
       Visible = ivAlways
       OnClick = dxBarButton6Click
     end
@@ -543,23 +556,6 @@ object fmMain: TfmMain
       Category = 0
       Hint = 'Generate'
       Visible = ivAlways
-    end
-    object dxBarButtonExit: TdxBarButton
-      Caption = 'Exit'
-      Category = 1
-      Hint = 'Exit'
-      Visible = ivAlways
-      OnClick = dxBarButtonExitClick
-    end
-    object dxBarSubItemFile: TdxBarSubItem
-      Caption = 'File'
-      Category = 1
-      Visible = ivAlways
-      ItemLinks = <
-        item
-          Visible = True
-          ItemName = 'dxBarButtonExit'
-        end>
     end
   end
   object dxTabbedMDIManager: TdxTabbedMDIManager

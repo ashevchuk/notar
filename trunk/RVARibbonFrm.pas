@@ -66,7 +66,6 @@ type
     RibbonQuickAccessToolbar1: TRibbonQuickAccessToolbar;
     ribgInsert: TRibbonGroup;
     rvActionInsertTable1: TrvActionInsertTable;
-    RibbonApplicationMenuBar1: TRibbonApplicationMenuBar;
     rvActionNew1: TrvActionNew;
     rvActionOpen1: TrvActionOpen;
     rvActionSave1: TrvActionSave;
@@ -131,7 +130,6 @@ type
     actLineSpacing: TAction;
     actExit: TAction;
     actLanguage: TAction;
-    StatusBar1: TStatusBar;
     ribgEditing: TRibbonGroup;
     rvActionTableInsertRowsBelow1: TrvActionTableInsertRowsBelow;
     rvActionTableInsertRowsAbove1: TrvActionTableInsertRowsAbove;
@@ -191,7 +189,6 @@ type
     rvActionTableSplit1: TrvActionTableSplit;
     rvActionTableToText1: TrvActionTableToText;
     rvActionTableSort1: TrvActionTableSort;
-    ProgressBar1: TProgressBar;
     ribgStyles: TRibbonGroup;
     rvActionStyleTemplates1: TrvActionStyleTemplates;
     rvActionAddStyleTemplate1: TrvActionAddStyleTemplate;
@@ -201,6 +198,8 @@ type
     cmbStyles: TRVStyleTemplateComboBox;
     RVRulerItemSelector1: TRVRulerItemSelector;
     RVRuler2: TRVRuler;
+    RibbonGroup1: TRibbonGroup;
+    RibbonGroup2: TRibbonGroup;
     procedure FormCreate(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure RichViewEdit1Jump(Sender: TObject; id: Integer);
@@ -230,6 +229,7 @@ type
       PageCompleted: Integer; Step: TRVPrintingStep);
     procedure rvActionStyleInspector1Showing(Sender: TrvAction; Form: TForm);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure rvActionPageSetup1Change(Sender: TObject);
   private
     { Private declarations }
     procedure Localize;
@@ -261,7 +261,13 @@ end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);
 var FileName: String;
+l: DWORD;
 begin
+  l := GetWindowLong(Self.Handle, GWL_STYLE);
+  l := l and not(WS_MINIMIZEBOX);
+  l := l and not(WS_MAXIMIZEBOX);
+  l := SetWindowLong(Self.Handle, GWL_STYLE, l);
+
   cmbFont.Font.Name := RVAControlPanel1.DialogFontName;
   cmbFontSize.Font.Name := RVAControlPanel1.DialogFontName;
   cmbUnits.Font.Name := RVAControlPanel1.DialogFontName;
@@ -525,23 +531,12 @@ begin
   case Stage of
     rvpstgStarting:
       begin
-        ProgressBar1.Left := StatusBar1.Width - StatusBar1.Height - ProgressBar1.Width;
-        ProgressBar1.Top :=  StatusBar1.Top + (StatusBar1.Height-ProgressBar1.Height) div 2;
-        ProgressBar1.Position := 0;
-        ProgressBar1.Visible := True;
-        Application.Hint := RVA_GetProgressMessage(Operation);
       end;
     rvpstgRunning:
       begin
-        ProgressBar1.Position := PercentDone;
-        ProgressBar1.Update;
       end;
     rvpstgEnding:
       begin
-        ProgressBar1.Position := 100;
-        ProgressBar1.Update;
-        Application.Hint := '';
-        ProgressBar1.Visible := False;
       end;
   end;
 end;
@@ -563,6 +558,11 @@ begin
   rvActionInsertTable1.ShowTableSizeDialog(RichViewEdit1,
     rvActionInsertTable1.ActionComponent as TControl);
 end;
+procedure TfrmMain.rvActionPageSetup1Change(Sender: TObject);
+begin
+
+end;
+
 // Showing help
 procedure TfrmMain.Ribbon1HelpButtonClick(Sender: TObject);
 var HelpFileName: String;

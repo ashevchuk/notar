@@ -42,35 +42,10 @@ type
     AuthorizationsGridDBTableView1AUTHORIZATION_DATE: TcxGridDBColumn;
     AuthorizationsGridDBTableView1AUTHORIZATION_DESCRIPTION: TcxGridDBColumn;
     AuthorizationsGridDBTableView1TRANSITE: TcxGridDBColumn;
-    AuthorizationsGridDBTableView1SUBSTITUTION: TcxGridDBColumn;
     AuthorizationsGridDBTableView2: TcxGridDBTableView;
     AuthorizationsGridLevel2: TcxGridLevel;
     RelAuthConstituentDataSet: TpFIBDataSet;
     RelAuthConstituentDataSource: TDataSource;
-    AuthorizationsDataSetID: TFIBBCDField;
-    AuthorizationsDataSetTRANSPORT_KIND: TFIBWideStringField;
-    AuthorizationsDataSetTRANSPORT_BRAND: TFIBWideStringField;
-    AuthorizationsDataSetTRANSPORT_MODEL: TFIBWideStringField;
-    AuthorizationsDataSetTRANSPORT_TYPE: TFIBWideStringField;
-    AuthorizationsDataSetTRANSPORT_COLOR: TFIBWideStringField;
-    AuthorizationsDataSetTRANSPORT_CHASSIS_NUMBER: TFIBWideStringField;
-    AuthorizationsDataSetTRANSPORT_LOAD_WEIGHT: TFIBWideStringField;
-    AuthorizationsDataSetTRANSPORT_WEIGHT: TFIBWideStringField;
-    AuthorizationsDataSetTRANSPORT_ENGINE_VOLUME: TFIBWideStringField;
-    AuthorizationsDataSetTRANSPORT_REG_NUMBER: TFIBWideStringField;
-    AuthorizationsDataSetTRANSPORT_FABRICATION_DATE: TFIBDateField;
-    AuthorizationsDataSetTRANSPORT_CERTIFICATE_SERIAL: TFIBWideStringField;
-    AuthorizationsDataSetTRANSPORT_CERTIFICATE_NUMBER: TFIBWideStringField;
-    AuthorizationsDataSetTRANSPORT_CERTIFICATE_REG_DATE: TFIBDateField;
-    AuthorizationsDataSetTRANSPORT_CERTIFICATE_ISSUER: TFIBWideStringField;
-    AuthorizationsDataSetTRANSITE_NUMBER: TFIBWideStringField;
-    AuthorizationsDataSetTRANSITE_NUMBER_REMOVED_DATE: TFIBDateField;
-    AuthorizationsDataSetAUTHORIZATION_NUMBER: TFIBWideStringField;
-    AuthorizationsDataSetAUTHORIZATION_VALIDITY_DATE: TFIBDateField;
-    AuthorizationsDataSetAUTHORIZATION_DATE: TFIBDateField;
-    AuthorizationsDataSetAUTHORIZATION_DESCRIPTION: TFIBWideStringField;
-    AuthorizationsDataSetTRANSITE: TFIBWideStringField;
-    AuthorizationsDataSetSUBSTITUTION: TFIBWideStringField;
     AuthorizationsGridDBTableView2ID: TcxGridDBColumn;
     AuthorizationsGridDBTableView2SURNAME: TcxGridDBColumn;
     AuthorizationsGridDBTableView2NAME: TcxGridDBColumn;
@@ -129,6 +104,31 @@ type
     AuthorizationsGridDBTableView2AUTHORIZATION_ID: TcxGridDBColumn;
     AuthorizationsGridDBTableView2RELATION_ID: TcxGridDBColumn;
     AuthorizationsGridDBTableView2RELATION_TYPE: TcxGridDBColumn;
+    AuthorizationsDataSetID: TFIBBCDField;
+    AuthorizationsDataSetTRANSPORT_KIND: TFIBWideStringField;
+    AuthorizationsDataSetTRANSPORT_BRAND: TFIBWideStringField;
+    AuthorizationsDataSetTRANSPORT_MODEL: TFIBWideStringField;
+    AuthorizationsDataSetTRANSPORT_TYPE: TFIBWideStringField;
+    AuthorizationsDataSetTRANSPORT_COLOR: TFIBWideStringField;
+    AuthorizationsDataSetTRANSPORT_CHASSIS_NUMBER: TFIBWideStringField;
+    AuthorizationsDataSetTRANSPORT_LOAD_WEIGHT: TFIBWideStringField;
+    AuthorizationsDataSetTRANSPORT_WEIGHT: TFIBWideStringField;
+    AuthorizationsDataSetTRANSPORT_ENGINE_VOLUME: TFIBWideStringField;
+    AuthorizationsDataSetTRANSPORT_REG_NUMBER: TFIBWideStringField;
+    AuthorizationsDataSetTRANSPORT_FABRICATION_DATE: TFIBDateField;
+    AuthorizationsDataSetTRANSPORT_CERTIFICATE_SERIAL: TFIBWideStringField;
+    AuthorizationsDataSetTRANSPORT_CERTIFICATE_NUMBER: TFIBWideStringField;
+    AuthorizationsDataSetTRANSPORT_CERTIFICATE_REG_DATE: TFIBDateField;
+    AuthorizationsDataSetTRANSPORT_CERTIFICATE_ISSUER: TFIBWideStringField;
+    AuthorizationsDataSetTRANSITE_NUMBER: TFIBWideStringField;
+    AuthorizationsDataSetTRANSITE_NUMBER_REMOVED_DATE: TFIBDateField;
+    AuthorizationsDataSetAUTHORIZATION_NUMBER: TFIBWideStringField;
+    AuthorizationsDataSetAUTHORIZATION_VALIDITY_DATE: TFIBDateField;
+    AuthorizationsDataSetAUTHORIZATION_DATE: TFIBDateField;
+    AuthorizationsDataSetAUTHORIZATION_DESCRIPTION: TFIBWideStringField;
+    AuthorizationsDataSetTRANSITE: TFIBWideStringField;
+    AuthorizationsDataSetSUBSTITUTION: TFIBWideStringField;
+    AuthorizationsGridDBTableView1SUBSTITUTION: TcxGridDBColumn;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure AuthorizationsGridDBTableView2RELATION_TYPEGetDataText(
       Sender: TcxCustomGridTableItem; ARecordIndex: Integer; var AText: string);
@@ -165,13 +165,13 @@ var
 begin
   InputFileName := 'Report0.template.rtf';
   OutputFileName := 'Report0.output.rtf';
-  with TMVCAuthorization.Create(self) do
+  with TMVCAuthorization.Create(Application.MainForm) do
   begin
     setID(AuthorizationsDataSetID.asString);
     buildReport(InputFileName, OutputFileName);
     Free;
   end;
-  with RVARibbonFrm.TfrmMain.Create(self) do begin
+  with RVARibbonFrm.TfrmMain.Create(Application.MainForm) do begin
   LoadFile(OutputFileName);
   Show;
 end;
