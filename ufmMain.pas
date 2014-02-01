@@ -108,6 +108,7 @@ type
     function GetCustomTagValue(const Tag: AnsiString;  var Value: string): boolean;
     procedure ToggleLogWindow(AVisible: boolean);
     procedure SwitchLogWindow;
+    procedure Log(AText: string);
   end;
 
 procedure Log(AText: string);
@@ -131,6 +132,11 @@ uses uRemoteDM, uLicenseDM,
 {$R *.dfm}
 
 procedure Log(AText: string);
+begin
+  TfmMain(Application.MainForm).SetStatusText(AText);
+end;
+
+procedure TfmMain.Log(AText: string);
 begin
   TfmMain(Application.MainForm).SetStatusText(AText);
 end;

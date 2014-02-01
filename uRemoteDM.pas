@@ -4,9 +4,12 @@ interface
 
 uses
   System.SysUtils, System.Classes, System.Types, ufmMain, uUtils, fib, FIBDatabase, pFIBDatabase, pFIBSQLLog,
-  SIBEABase, SIBFIBEA, FIBSQLMonitor, pFIBErrorHandler, Data.DB, FIBDataSet,
+  SIBEABase, SIBFIBEA, FIBSQLMonitor, pFIBErrorHandler, Data.DB, FIBDataSet, Forms,
   pFIBDataSet, FIBQuery, pFIBQuery, RegularExpressions,
-  ZInterbaseAnalyser, ZInterbaseToken, ZSelectSchema;
+  ZInterbaseAnalyser, ZInterbaseToken, ZSelectSchema, IdBaseComponent,
+  IdComponent, IdTCPConnection, IdTCPClient, IdNetworkCalculator,
+  IdCustomTransparentProxy, IdSocks, IdStack, IdIPWatch, IdIPAddrMon, IdRawBase,
+  IdRawClient, IdIcmpClient, Winsock, Dialogs;
 
 type
   TTableFieldInfo = class(TObject)
@@ -54,10 +57,36 @@ type
     function notifyDataSets(const ATableName: string): boolean;
     function generateGroups(const ATable: string): boolean;
     function preloadTablesData: boolean;
+
+    function FindDatabaseServer(AHost: string = 'localhost'; APort: Word = 3050; ATimeOut: Word = 100): string;
   end;
 
 var
   RemoteDataModule: TRemoteDataModule;
+
+const
+  DBPort: Word = 3050;
+
+const
+  DBHost: String = 'localhost';
+
+const
+  MainDataBaseFile: string = 'notar.fdb';
+
+const
+  MainDataBaseLocationDrives: array[0..23] of string = (
+    'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+    'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+    'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+  );
+
+const
+  MainDataBaseLocations: array[0..3] of string = (
+    'db',
+    'db\notar',
+    'data\notar',
+    'Program Files\Notar\data'
+  );
 
 implementation
 
@@ -67,11 +96,122 @@ implementation
 
 { TRemoteDataModule }
 
+function TRemoteDataModule.FindDatabaseServer(AHost: string; APort: Word; ATimeOut: Word): string;
+var
+  I, I2: Integer;
+  IdTCPClient: TIdTCPClient;
+  IdIPAddrMon: TIdIPAddrMon;
+  IdNetworkCalculator: TIdNetworkCalculator;
+begin
+  Result := AHost;
+
+  IdTCPClient := TIdTCPClient.Create(Self);
+  IdTCPClient.ConnectTimeout := ATimeout;
+  IdTCPClient.ReadTimeout := ATimeout;
+
+  IdTCPClient.Host := AHost;
+  IdTCPClient.Port := APort;
+
+  try
+    IdTCPClient.Connect;
+  except
+  end;
+
+  if IdTCPClient.Connected then
+    begin
+      Result := AHost;
+      IdTCPClient.Disconnect;
+      IdTCPClient.Free;
+
+      Exit;
+    end else
+      begin
+        //not connected
+      end;
+
+  IdNetworkCalculator := TIdNetworkCalculator.Create(Self);
+  IdNetworkCalculator.NetworkMaskLength := 24;
+
+  IdIPAddrMon := TIdIPAddrMon.Create(Self);
+  IdIPAddrMon.ForceCheck;
+
+  for I := 0 to IdIPAddrMon.IPAddresses.Count -1 do
+    begin
+      IdNetworkCalculator.NetworkAddress.AsString := IdIPAddrMon.IPAddresses[I];
+      for I2 := 0 to IdNetworkCalculator.ListIP.Count -1 do
+        begin
+          IdTCPClient.Host := IdNetworkCalculator.ListIP[I2];
+          try
+            IdTCPClient.Connect;
+          except
+          end;
+
+          if IdTCPClient.Connected then
+            begin
+              Result := IdNetworkCalculator.ListIP[I2];
+              IdTCPClient.Disconnect;
+
+              Exit;
+            end else
+              begin
+                //not connected
+              end;
+          Application.ProcessMessages;
+        end;
+    end;
+
+  IdTCPClient.Free;
+  IdIPAddrMon.Free;
+  IdNetworkCalculator.Free;
+end;
+
 function TRemoteDataModule.ConnectDataBase: boolean;
+var
+  I, I2: Word;
+  DBServer: string;
+  DBLocation: string;
+  DBDrive: string;
+  isConnected: boolean;
 begin
   try
-    FIBDatabase.AutoReconnect := True;
-    FIBDatabase.Connected := True;
+    DBServer := FindDatabaseServer(DBHost, DBPort);
+
+    isConnected := False;
+
+    TfmMain(Application.MainForm).Log('Database @ ' + DBServer);
+
+    for I := Low(MainDataBaseLocationDrives) to High(MainDataBaseLocationDrives) do
+      begin
+        if isConnected then break;
+
+        for I2 := Low(MainDataBaseLocations) to High(MainDataBaseLocations) do
+          begin
+            DBDrive := MainDataBaseLocationDrives[I];
+            DBLocation := MainDataBaseLocations[I2];
+
+            FIBDatabase.Close;
+            FIBDatabase.DBName := Format('%s/%s:%s:\%s\%s', [DBServer, IntToStr(DBPort), DBDrive, DBLocation, MainDataBaseFile]);
+
+            try
+              FIBDatabase.Open;
+            except
+              TfmMain(Application.MainForm).Log('Database file @ ' + FIBDatabase.DBName + ' is not found');
+            end;
+
+            if FIBDatabase.Connected then
+              begin
+                FIBDatabase.AutoReconnect := True;
+                isConnected := True;
+                break;
+              end;
+          end;
+
+      end;
+    TfmMain(Application.MainForm).Log('DSN: ' + FIBDatabase.DBName);
+
+    FIBUpdateTransaction.Active:= True;
+    FIBTransaction.Active:= True;
+    TableListDataSet.Open;
   finally
     Result := FIBDatabase.Connected;
   end;
@@ -115,6 +255,7 @@ end;
 
 procedure TRemoteDataModule.DataModuleCreate(Sender: TObject);
 begin
+  FIBDatabase.Close;
   FDataSetList := TList.Create;
   FTablesList := TStringList.Create;
 end;
