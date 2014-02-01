@@ -127,6 +127,11 @@
         <DCCReference Include="ufmIDEDialog.pas"/>
         <DCCReference Include="uUtils.pas"/>
         <DCCReference Include="uTypes.pas"/>
+        <DCCReference Include="uDMConfig.pas">
+            <Form>Config</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
