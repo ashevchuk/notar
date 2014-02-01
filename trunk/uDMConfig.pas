@@ -15,6 +15,7 @@ type
     FCurrentDir: string;
   public
     property CurrentDir: string read FCurrentDir;
+
     function ReadString(const Section, Ident, Default: String): String;
     procedure WriteString(const Section, Ident, Value: String);
 
@@ -23,6 +24,8 @@ type
 
     function ReadBoolean(const Section, Ident: String; Default: Boolean): Boolean;
     procedure WriteBoolean(const Section, Ident: String; Value: Boolean);
+
+    procedure UpdateFile;
   end;
 
 var
@@ -38,11 +41,11 @@ procedure TConfig.DataModuleCreate(Sender: TObject);
 var
   PathLength: integer;
 begin
- FCurrentDir := ExtractFilePath(ParamStr(0));
- PathLength := Length(FCurrentDir);
- if (PathLength > 3) and (FCurrentDir[PathLength] <> '\') then FCurrentDir := FCurrentDir + '\';
+  FCurrentDir := ExtractFilePath(ParamStr(0));
+  PathLength := Length(FCurrentDir);
+  if (PathLength > 3) and (FCurrentDir[PathLength] <> '\') then FCurrentDir := FCurrentDir + '\';
 
-  FConfigFileName := FCurrentDir + ChangeFileExt(Application.ExeName,'.ini');
+  FConfigFileName := ChangeFileExt(Application.ExeName,'.ini');
   TfmMain(Application.MainForm).Log('Loading configuration: ' + FConfigFileName);
   FIniFile := TIniFile.Create(FConfigFileName);
 end;
@@ -66,6 +69,11 @@ end;
 function TConfig.ReadString(const Section, Ident, Default: String): String;
 begin
   Result := FIniFile.ReadString(Section, Ident, Default);
+end;
+
+procedure TConfig.UpdateFile;
+begin
+  FIniFile.UpdateFile;
 end;
 
 procedure TConfig.WriteBoolean(const Section, Ident: String; Value: Boolean);
