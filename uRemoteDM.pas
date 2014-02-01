@@ -9,7 +9,7 @@ uses
   ZInterbaseAnalyser, ZInterbaseToken, ZSelectSchema, IdBaseComponent,
   IdComponent, IdTCPConnection, IdTCPClient, IdNetworkCalculator,
   IdCustomTransparentProxy, IdSocks, IdStack, IdIPWatch, IdIPAddrMon, IdRawBase,
-  IdRawClient, IdIcmpClient, Winsock, Dialogs;
+  IdRawClient, IdIcmpClient, Winsock, Dialogs, uDMConfig;
 
 type
   TTableFieldInfo = class(TObject)
@@ -59,6 +59,7 @@ type
     function preloadTablesData: boolean;
 
     function FindDatabaseServer(AHost: string = 'localhost'; APort: Word = 3050; ATimeOut: Word = 100): string;
+    function tryLocalDatabaseServer: boolean;
   end;
 
 var
@@ -69,6 +70,18 @@ const
 
 const
   DBHost: String = 'localhost';
+
+const
+  DBUser: String = 'SYSDBA';
+
+const
+  DBPassword: String = 'masterkey';
+
+const
+  DBLocation: string = 'C:\db\notar.fdb';
+
+const
+  DBCharset: string = 'UTF8';
 
 const
   MainDataBaseFile: string = 'notar.fdb';
@@ -174,6 +187,17 @@ var
   isConnected: boolean;
 begin
   try
+    if tryLocalDatabaseServer then
+    begin
+      Result := True;
+
+      FIBUpdateTransaction.Active:= True;
+      FIBTransaction.Active:= True;
+      TableListDataSet.Open;
+
+      Exit;
+    end;
+
     DBServer := FindDatabaseServer(DBHost, DBPort);
 
     isConnected := False;
@@ -202,6 +226,12 @@ begin
               begin
                 FIBDatabase.AutoReconnect := True;
                 isConnected := True;
+
+                Config.WriteString('Database', 'Host', DBServer);
+                Config.WriteInteger('Database', 'Port', DBPort);
+                Config.WriteString('Database', 'Location', Format('%s:\%s\%s', [DBDrive, DBLocation, MainDataBaseFile]));
+                Config.UpdateFile;
+
                 break;
               end;
           end;
@@ -518,6 +548,94 @@ end;
 function TRemoteDataModule.registerDataSet(const ADataSet: TpFIBDataSet): boolean;
 begin
   FDataSetList.Add(ADataSet);
+end;
+
+function TRemoteDataModule.tryLocalDatabaseServer: boolean;
+var
+  I, I2: Word;
+  tDBServer: string;
+  tDBLocation: string;
+  tDBDrive: string;
+  isConnected: boolean;
+  tDBPort: Word;
+  tDBHost: String;
+  tDBUser: String;
+  tDBPassword: String;
+  tDBCharset: string;
+begin
+  Result := False;
+
+  try
+    tDBServer := Config.ReadString('Database', 'Host', 'localhost');
+    tDBPort := Config.ReadInteger('Database', 'Port', 3050);
+
+    tDBUser := Config.ReadString('Database', 'User', 'SYSDBA');
+    tDBPassword := Config.ReadString('Database', 'Password', 'masterkey');
+
+    tDBLocation := Config.ReadString('Database', 'Location', 'C:\db\notar.fdb');
+    tDBCharset := Config.ReadString('Database', 'Charset', 'UTF8');
+
+    isConnected := False;
+
+    FIBDatabase.Close;
+    FIBDatabase.ConnectParams.UserName := tDBUser;
+    FIBDatabase.ConnectParams.Password := tDBPassword;
+
+    FIBDatabase.ConnectParams.CharSet := tDBCharset;
+
+    FIBDatabase.DBName := Format('%s/%s:%s', [tDBServer, IntToStr(tDBPort), tDBLocation]);
+
+    TfmMain(Application.MainForm).Log('Database probe from configuration @ ' + FIBDatabase.DBName);
+
+    try
+      FIBDatabase.Open;
+    except
+      TfmMain(Application.MainForm).Log('Database file from configuration @ ' + FIBDatabase.DBName + ' is not found');
+    end;
+
+    if FIBDatabase.Connected then
+      begin
+        FIBDatabase.AutoReconnect := True;
+        Result := True;
+        Exit;
+      end;
+
+    for I := Low(MainDataBaseLocationDrives) to High(MainDataBaseLocationDrives) do
+      begin
+        if isConnected then break;
+
+        for I2 := Low(MainDataBaseLocations) to High(MainDataBaseLocations) do
+          begin
+            tDBDrive := MainDataBaseLocationDrives[I];
+            tDBLocation := MainDataBaseLocations[I2];
+
+            FIBDatabase.Close;
+            FIBDatabase.DBName := Format('%s/%s:%s:\%s\%s', [tDBServer, IntToStr(tDBPort), tDBDrive, tDBLocation, MainDataBaseFile]);
+
+            try
+              FIBDatabase.Open;
+            except
+              TfmMain(Application.MainForm).Log('Database file @ ' + FIBDatabase.DBName + ' is not found');
+            end;
+
+            if FIBDatabase.Connected then
+              begin
+                FIBDatabase.AutoReconnect := True;
+                isConnected := True;
+                Config.WriteString('Database', 'Host', tDBServer);
+                Config.WriteInteger('Database', 'Port', tDBPort);
+                Config.WriteString('Database', 'Location', Format('%s:\%s\%s', [tDBDrive, tDBLocation, MainDataBaseFile]));
+                Config.UpdateFile;
+
+                break;
+              end;
+          end;
+
+      end;
+    TfmMain(Application.MainForm).Log('DSN: ' + FIBDatabase.DBName);
+  finally
+    Result := FIBDatabase.Connected;
+  end;
 end;
 
 function TRemoteDataModule.unregisterDataSet(const ADataSet: TpFIBDataSet): boolean;
