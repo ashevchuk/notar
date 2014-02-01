@@ -9,7 +9,8 @@ uses
   uLicenseDM in 'uLicenseDM.pas' {LicenseDataModule: TDataModule},
   ufmIDEDialog in 'ufmIDEDialog.pas',
   uUtils in 'uUtils.pas',
-  uTypes in 'uTypes.pas';
+  uTypes in 'uTypes.pas',
+  uDMConfig in 'uDMConfig.pas' {Config: TDataModule};
 
 {$R *.res}
 
@@ -33,6 +34,9 @@ begin
 
   fmSplash.ShowMessage('Creating main form...');
   Application.CreateForm(TfmMain, fmMain);
+
+    fmSplash.ShowMessage('Reading configuration...');
+  Application.CreateForm(TConfig, Config);
 
   fmSplash.ShowMessage('Creating data module...');
   Application.CreateForm(TRemoteDataModule, RemoteDataModule);
