@@ -361,7 +361,7 @@ object fmMain: TfmMain
     Align = alBottom
     Caption = 'Log'
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 2
     OnDblClick = StatusBarDblClick
     Height = 124
     Width = 915
@@ -414,6 +414,9 @@ object fmMain: TfmMain
         item
           Caption = #1044#1086#1074#1110#1088#1077#1085#1086#1089#1090#1110
           ToolbarName = 'dxBarManagerBar1'
+        end
+        item
+          Caption = 'Reports'
         end>
       Index = 0
     end
@@ -486,6 +489,10 @@ object fmMain: TfmMain
         item
           Visible = True
           ItemName = 'dxBarButton6'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButton8'
         end>
       MultiLine = True
       OneOnRow = True
@@ -555,6 +562,19 @@ object fmMain: TfmMain
       Caption = 'Generate'
       Category = 0
       Hint = 'Generate'
+      Visible = ivAlways
+    end
+    object dxBarButton8: TdxBarButton
+      Caption = 'Edit report'
+      Category = 0
+      Hint = 'Edit report'
+      Visible = ivAlways
+      OnClick = dxBarButton8Click
+    end
+    object dxBarButton9: TdxBarButton
+      Caption = 'Show report'
+      Category = 0
+      Hint = 'Show report'
       Visible = ivAlways
     end
   end

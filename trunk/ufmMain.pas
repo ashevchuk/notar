@@ -85,6 +85,8 @@ type
     dxBarButton7: TdxBarButton;
     dxRibbon1Tab1: TdxRibbonTab;
     dxRibbon1: TdxRibbon;
+    dxBarButton8: TdxBarButton;
+    dxBarButton9: TdxBarButton;
     procedure FormCreate(Sender: TObject);
     procedure dxBarButtonExitClick(Sender: TObject);
     procedure dxBarButtonEditorClick(Sender: TObject);
@@ -99,6 +101,7 @@ type
     procedure dxBarButton4Click(Sender: TObject);
     procedure dxBarButton5Click(Sender: TObject);
     procedure dxBarButton6Click(Sender: TObject);
+    procedure dxBarButton8Click(Sender: TObject);
   private
     procedure OnException(Sender: TObject; E: Exception);
 
@@ -124,21 +127,22 @@ uses uRemoteDM, uLicenseDM,
   ufmIDE,
  // ufmRichEditor,
   ufmCatalogs,
-
+  uDMConfig,
   RVARibbonFrm,
   uDbFreeReporter,
   uFreeReporter,
+  uMVCAuthorization,
   uScriptEngine;
 {$R *.dfm}
 
 procedure Log(AText: string);
 begin
-  TfmMain(Application.MainForm).SetStatusText(AText);
+  if Config.Debug then TfmMain(Application.MainForm).SetStatusText(AText);
 end;
 
 procedure TfmMain.Log(AText: string);
 begin
-  TfmMain(Application.MainForm).SetStatusText(AText);
+  if Config.Debug then TfmMain(Application.MainForm).SetStatusText(AText);
 end;
 
 procedure TfmMain.Clear1Click(Sender: TObject);
@@ -198,6 +202,15 @@ begin
   begin
     Show;
   end;
+end;
+
+procedure TfmMain.dxBarButton8Click(Sender: TObject);
+begin
+  with TMVCAuthorization.Create(Self) do
+    begin
+      setID('71');
+      EditReport;
+    end;
 end;
 
 procedure TfmMain.dxBarButtonEditorClick(Sender: TObject);
