@@ -3,7 +3,7 @@ unit uLicenseDM;
 interface
 
 uses
-  System.SysUtils, System.Classes, OnGuard, OgUtil, IniFiles;
+  System.SysUtils, System.Classes, OnGuard, OgUtil, IniFiles, Forms;
 
 type
   TLicenseDataModule = class(TDataModule)
@@ -16,8 +16,8 @@ type
     { Private declarations }
   public
     CurrentDir : string;
-    CKey : TKey;
-    CCode : TCode;
+    FKey : TKey;
+    FCode : TCode;
     IsRegistered : boolean;
     ExpireDate : TDateTime;
     procedure ReadRegistration;
@@ -69,32 +69,26 @@ begin
 end;
 
 procedure TLicenseDataModule.OgDateCodeGetCode(Sender: TObject; var Code: TCode);
-var
-  IniFile : TIniFile;
-  S       : string;
-  SD,
-  ED      : TDateTime;
 begin
- Code := CCode
+ Code := FCode
 end;
 
 procedure TLicenseDataModule.OgDateCodeGetKey(Sender: TObject; var Key: TKey);
 begin
- Key := CKey;
+ Key := FKey;
 end;
 
 procedure TLicenseDataModule.ReadRegistration;
 var
-  IniFile : TIniFile;
-  S  : string;
+  IniFile: TIniFile;
+  S: string;
 begin
-  IniFile := TIniFile.Create(CurrentDir + 'Notar.key');
+  IniFile := TIniFile.Create(ChangeFileExt(Application.ExeName,'.key'));
   try
-    {try to read release code}
-    S := IniFile.ReadString('Codes', 'Code', '');
-    HexToBuffer(S, CCode, SizeOf(CCode));
-    S := IniFile.ReadString('Regs', 'Reg', '2544E2EF35925E50C1E85BB81A7179B3');
-    HexToBuffer(S, CKey, SizeOf(CKey))
+    S := IniFile.ReadString('Code', 'Value', '');
+    HexToBuffer(S, FCode, SizeOf(FCode));
+    S := IniFile.ReadString('Key', 'Value', '');
+    HexToBuffer(S, FKey, SizeOf(FKey))
   finally
     IniFile.Free;
   end;

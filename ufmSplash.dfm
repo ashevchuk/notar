@@ -3862,19 +3862,21 @@ object fmSplash: TfmSplash
       278C1D5826649F8819405FEAAC938F3E50EFAAF2C351D89529924840F2C94D47
       E501166831C120E955409C70FC20AA69CD78FC161DFCDE14F68C7BA0709604E0
       B259631FFFD9}
-    ExplicitLeft = -24
+    ExplicitTop = -1
   end
   object VersionLabel: TLabel
-    Left = 477
-    Top = 8
-    Width = 47
-    Height = 13
-    Caption = 'v.1.0.0.1'
+    Left = 439
+    Top = 331
+    Width = 90
+    Height = 11
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'v.10.00.00.10'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = 56050
-    Font.Height = -11
+    Font.Height = -9
     Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
+    Font.Style = []
     ParentFont = False
     Transparent = True
   end
@@ -3885,7 +3887,7 @@ object fmSplash: TfmSplash
     Height = 13
     Caption = 'Loading...'
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clPurple
+    Font.Color = clMaroon
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
@@ -3893,8 +3895,8 @@ object fmSplash: TfmSplash
     Transparent = True
   end
   object RegistrationLabel: TLabel
-    Left = 397
-    Top = 8
+    Left = 450
+    Top = 6
     Width = 74
     Height = 14
     Alignment = taRightJustify
@@ -3909,30 +3911,30 @@ object fmSplash: TfmSplash
     Transparent = True
   end
   object ExpirationDateLabel: TLabel
-    Left = 462
-    Top = 28
-    Width = 62
-    Height = 13
+    Left = 483
+    Top = 341
+    Width = 46
+    Height = 11
     Caption = '30.12.2010'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = 56050
-    Font.Height = -11
+    Font.Height = -9
     Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
+    Font.Style = []
     ParentFont = False
     Transparent = True
   end
   object ExpirationDateCaptionLabel: TLabel
-    Left = 399
-    Top = 28
-    Width = 57
-    Height = 13
+    Left = 439
+    Top = 341
+    Width = 40
+    Height = 11
     Caption = 'Expiration'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = 56050
-    Font.Height = -11
+    Font.Height = -9
     Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
+    Font.Style = []
     ParentFont = False
     Transparent = True
   end

@@ -13,8 +13,12 @@ type
     FIniFile: TIniFile;
     FConfigFileName: string;
     FCurrentDir: string;
+    FDebugLevel: Word;
+    FDebugState: boolean;
   public
     property CurrentDir: string read FCurrentDir;
+    property DebugLevel: Word read FDebugLevel;
+    property Debug: Boolean read FDebugState;
 
     function ReadString(const Section, Ident, Default: String): String;
     procedure WriteString(const Section, Ident, Value: String);
@@ -46,8 +50,13 @@ begin
   if (PathLength > 3) and (FCurrentDir[PathLength] <> '\') then FCurrentDir := FCurrentDir + '\';
 
   FConfigFileName := ChangeFileExt(Application.ExeName,'.ini');
+
   TfmMain(Application.MainForm).Log('Loading configuration: ' + FConfigFileName);
+
   FIniFile := TIniFile.Create(FConfigFileName);
+
+  FDebugLevel := FIniFile.ReadInteger('Main', 'Debug', 0);
+  FDebugState := FDebugLevel >0;
 end;
 
 procedure TConfig.DataModuleDestroy(Sender: TObject);

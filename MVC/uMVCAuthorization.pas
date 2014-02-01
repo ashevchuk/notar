@@ -7,12 +7,46 @@ uses
   ufmMain, uUtils, uRemoteDM, uTypes, Data.DB, FIBDataSet, pFIBDataSet,
   PaxCompiler, PaxRunner, PaxProgram, PaxInvoke, PaxEval,
   PAXCOMP_CONSTANTS,
-  IMPORT_COMMON;
+  IMPORT_COMMON,
+  uDMConfig, ppComm, ppRelatv, ppDB, ppDBPipe, ppParameter, ppProd, ppClass,
+  ppReport, ppEndUsr, ppDesignLayer, ppBands, ppStrtch, ppSubRpt, ppCtrls,
+  ppPrnabl, ppCache;
 
 type
   TMVCAuthorization = class(TDataModule)
     ConstituentDataSource: TDataSource;
     RepresentativesDataSource: TDataSource;
+    AuthorizationDBPipeline: TppDBPipeline;
+    ConstituentDBPipeline: TppDBPipeline;
+    RepresentativesDBPipeline: TppDBPipeline;
+    ppDesigner: TppDesigner;
+    ppReport: TppReport;
+    ppParameterList1: TppParameterList;
+    ppHeaderBand1: TppHeaderBand;
+    ppDetailBand1: TppDetailBand;
+    ppLabel1: TppLabel;
+    ppDBText1: TppDBText;
+    ppSubReport1: TppSubReport;
+    ppChildReport1: TppChildReport;
+    ppLabel2: TppLabel;
+    ppDBText2: TppDBText;
+    ppLabel3: TppLabel;
+    ppDBText3: TppDBText;
+    ppLabel4: TppLabel;
+    ppDBText4: TppDBText;
+    ppSubReport2: TppSubReport;
+    ppChildReport2: TppChildReport;
+    ppLabel5: TppLabel;
+    ppDBText5: TppDBText;
+    ppLabel6: TppLabel;
+    ppDBText6: TppDBText;
+    ppLabel7: TppLabel;
+    ppDBText7: TppDBText;
+    ppLabel8: TppLabel;
+    ppDBText8: TppDBText;
+    ppFooterBand1: TppFooterBand;
+    ppDesignLayers1: TppDesignLayers;
+    ppDesignLayer1: TppDesignLayer;
   published
     Authorization: TpFIBDataSet;
     Constituent: TpFIBDataSet;
@@ -33,6 +67,7 @@ type
     function buildReport(AInputFileName: string; AOutputFileName: string): boolean;
     function GetCustomTagValue(const Tag: AnsiString; var Value: string): boolean;
     function prepareScript: boolean;
+    procedure EditReport;
   end;
 
 var
@@ -69,6 +104,7 @@ end;
 procedure TMVCAuthorization.DataModuleCreate(Sender: TObject);
 begin
 //
+
 end;
 
 procedure TMVCAuthorization.DataModuleDestroy(Sender: TObject);
@@ -76,6 +112,12 @@ begin
   Constituent.Close;
   Representatives.Close;
   Authorization.Close;
+end;
+
+procedure TMVCAuthorization.EditReport;
+begin
+  ppDesigner.ShowModal;
+  ppReport.PrintReport;
 end;
 
 function TMVCAuthorization.GetCustomTagValue(const Tag: AnsiString; var Value: String): boolean;
@@ -97,8 +139,18 @@ begin
   except
     Value := '[!ERROR: (' + Tag + ')]';
 
-    for I:=0 to PaxCompiler.ErrorCount -1 do Log('[!] Program error:' + PaxCompiler.ErrorMessage[I]);
-    for I:=0 to PaxEval.ErrorCount -1 do Log('[!] Program eval error:' + PaxEval.ErrorMessage[I]);
+    for I:=0 to PaxCompiler.ErrorCount -1 do
+    begin
+      Log('[!] Program error:' + PaxCompiler.ErrorMessage[I]);
+      Value := Value + PaxCompiler.ErrorMessage[I];
+    end;
+
+    for I:=0 to PaxEval.ErrorCount -1 do
+      begin
+        Log('[!] Program eval error:' + PaxEval.ErrorMessage[I]);
+        Value := Value + PaxEval.ErrorMessage[I];
+      end;
+
   end;
 
   PaxEval.Reset;
@@ -143,61 +195,9 @@ begin
   RepresentativesHandle := PaxCompiler.RegisterVariable(0, 'Representatives', datasetHandle, @Representatives);
   RepresentativesHandle := PaxCompiler.RegisterVariable(0, 'Authorization', datasetHandle, @Authorization);
   RepresentativesHandle := PaxCompiler.RegisterVariable(0, 'Constituent', datasetHandle, @Constituent);
+  //Representatives.RecNo
 
-  PaxCompiler.AddCode('1', 'uses SysUtils;');
-
-  PaxCompiler.AddCode('1', 'function FieldByName(ADataSet: TpFIBDataSet; AFieldName: string): string; cdecl;');
-  PaxCompiler.AddCode('1', 'begin');
-  PaxCompiler.AddCode('1', '  Result := ADataSet.FieldByName(AFieldName).AsString;');
-  PaxCompiler.AddCode('1', 'end;');
-
-  PaxCompiler.AddCode('1', 'function Count(ADataSet: TpFIBDataSet): Integer; cdecl;');
-  PaxCompiler.AddCode('1', 'begin');
-  PaxCompiler.AddCode('1', '  Result := ADataSet.RecordCount;');
-  PaxCompiler.AddCode('1', 'end;');
-
-  PaxCompiler.AddCode('1', 'function RepresentativesCount: Integer; cdecl;');
-  PaxCompiler.AddCode('1', 'begin');
-  PaxCompiler.AddCode('1', '  Result := Representatives.RecordCount;');
-  PaxCompiler.AddCode('1', 'end;');
-
-  PaxCompiler.AddCode('1', 'function ifSingle(ACheckValue: integer; AResultString: string): string; cdecl;');
-  PaxCompiler.AddCode('1', 'begin');
-  PaxCompiler.AddCode('1', '  if ACheckValue = 1 then');
-  PaxCompiler.AddCode('1', '    Result := AResultString');
-  PaxCompiler.AddCode('1', '  else Result := '''';');
-  PaxCompiler.AddCode('1', 'end;');
-
-  PaxCompiler.AddCode('1', 'function ifNone(ACheckValue: integer; AResultString: string): string; cdecl;');
-  PaxCompiler.AddCode('1', 'begin');
-  PaxCompiler.AddCode('1', '  if ACheckValue = 0 then');
-  PaxCompiler.AddCode('1', '    Result := AResultString');
-  PaxCompiler.AddCode('1', '  else Result := '''';');
-  PaxCompiler.AddCode('1', 'end;');
-
-  PaxCompiler.AddCode('1', 'function ifMore(ACheckValue: integer; AResultString: string): string; cdecl;');
-  PaxCompiler.AddCode('1', 'begin');
-  PaxCompiler.AddCode('1', '  if ACheckValue > 1 then');
-  PaxCompiler.AddCode('1', '    Result := AResultString');
-  PaxCompiler.AddCode('1', '  else Result := '''';');
-  PaxCompiler.AddCode('1', 'end;');
-
-  PaxCompiler.AddCode('1', 'function ifAny(ACheckValue: integer; AResultString: string): string; cdecl;');
-  PaxCompiler.AddCode('1', 'begin');
-  PaxCompiler.AddCode('1', '  if ACheckValue > 0 then');
-  PaxCompiler.AddCode('1', '    Result := AResultString');
-  PaxCompiler.AddCode('1', '  else Result := '''';');
-  PaxCompiler.AddCode('1', 'end;');
-
-  PaxCompiler.AddCode('1', 'function ifFieldEq(ADataSet: TpFIBDataSet; AFieldName: string; AValue: string; AResultString: string): string; cdecl;');
-  PaxCompiler.AddCode('1', 'begin');
-  PaxCompiler.AddCode('1', '  if ADataSet.FieldByName(AFieldName).AsString = AValue then');
-  PaxCompiler.AddCode('1', '    Result := AResultString');
-  PaxCompiler.AddCode('1', '  else Result := '''';');
-  PaxCompiler.AddCode('1', 'end;');
-
-  PaxCompiler.AddCode('1', 'begin');
-  PaxCompiler.AddCode('1', 'end.');
+  PaxCompiler.AddCodeFromFile('1', TFmMain(Application.MainForm).CurrentDir + 'lib/' + 'Globals.pas');
 
   PaxPascalLanguage.SetCallConv(__ccREGISTER);
 
@@ -238,6 +238,10 @@ begin
   Authorization.Open;
   Constituent.Open;
   Representatives.Open;
+
+  Authorization.FetchAll;
+  Constituent.FetchAll;
+  Representatives.FetchAll;
 end;
 
 end.
