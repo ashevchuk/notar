@@ -74,7 +74,8 @@ var
   MVCAuthorization: TMVCAuthorization;
 
 implementation
-uses uDbFreeReporter, uFreeReporter;
+uses uDbFreeReporter, uFreeReporter,
+  uStrUtils;
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
@@ -187,6 +188,9 @@ begin
   datasetHandle := PaxCompiler.RegisterClassType(0, TpFIBDataSet);
   fieldHandle := PaxCompiler.RegisterClassType(0, TField);
 
+  PaxCompiler.RegisterHeader(0, 'function ExtraSpell(Number:extended; Param: string): string;', @uStrUtils.ExtraSpell);
+
+  PaxCompiler.RegisterHeader(0, 'procedure Log(AText: string);', @TfmMain(Application.MainForm).Log);
   PaxCompiler.RegisterHeader(datasetHandle, 'function FieldByName(const FieldName: string): TField;', @TpFIBDataSet.FieldByName);
 
 
