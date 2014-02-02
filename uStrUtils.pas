@@ -11,6 +11,8 @@ function xVariate(fNText: string; fSex: byte=0; fTag: byte=0):string;
 function Month_Case_Nominative(ADate: TDateTime): string;
 function Month_Case_Genitive(ADate: TDateTime): string;
 
+function GetUnitCase(const AValue: Integer; const AUnit1, AUnit2, AUnit3: String): String;
+
 const
   Month_Case_Nominative_Array: array[0..11] of string = (
     'січень', 'лютий', 'березень', 'квітень', 'травень', 'червень', 'липень', 'серпень', 'вересень', 'жовтень', 'листопад', 'грудень'
@@ -22,7 +24,18 @@ const
   );
 
 implementation
-uses System.SysUtils;
+uses System.SysUtils, DateUtils;
+
+function GetUnitCase(const AValue: Integer; const AUnit1, AUnit2, AUnit3: String): String;
+begin
+  if (Abs(AValue) mod 100) in [11..19] then Result := AUnit3
+    else
+      case Abs(AValue) mod 10 of
+        1:    Result := AUnit1;
+        2..4: Result := AUnit2;
+        else Result := AUnit3;
+      end;
+end;
 
 function Month_Case_Genitive(ADate: TDateTime): string;
 var Year, Month, Day: Word;
@@ -518,6 +531,7 @@ begin
    '0': ntyp:=0;
    'k': ntyp:=3;
    '$': ntyp:=4;
+   ':': ntyp:=5;
   end;
  end;
  if (rid=3) and (typ<>1) then rid:=0;
