@@ -8,8 +8,35 @@ function ExtraSpell(Number:extended; Param:string = ''): string;
 function NameCase(s:string; typ:integer = 0):string;
 function xVariate(fNText: string; fSex: byte=0; fTag: byte=0):string;
 
+function Month_Case_Nominative(ADate: TDateTime): string;
+function Month_Case_Genitive(ADate: TDateTime): string;
+
+const
+  Month_Case_Nominative_Array: array[0..11] of string = (
+    'січень', 'лютий', 'березень', 'квітень', 'травень', 'червень', 'липень', 'серпень', 'вересень', 'жовтень', 'листопад', 'грудень'
+  );
+
+const
+  Month_Case_Genitive_Array: array[0..11] of string = (
+    'січня', 'лютого', 'березня', 'квітеня', 'травня', 'червеня', 'липня', 'серпня', 'вересеня', 'жовтеня', 'листопада', 'грудня'
+  );
+
 implementation
 uses System.SysUtils;
+
+function Month_Case_Genitive(ADate: TDateTime): string;
+var Year, Month, Day: Word;
+begin
+  DecodeDate(Date, Year, Month, Day);
+  Result := Month_Case_Genitive_Array[Month -1];
+end;
+
+function Month_Case_Nominative(ADate: TDateTime): string;
+var Year, Month, Day: Word;
+begin
+  DecodeDate(Date, Year, Month, Day);
+  Result := Month_Case_Nominative_Array[Month];
+end;
 
 function NoTrailSpc(s:string):string;
 var
