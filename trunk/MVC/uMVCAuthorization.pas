@@ -75,7 +75,8 @@ var
 
 implementation
 uses uDbFreeReporter, uFreeReporter,
-  uStrUtils;
+  uStrUtils,
+  DateUtils;
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
@@ -187,6 +188,10 @@ begin
   mainHandle := PaxCompiler.RegisterClassType(0, TMVCAuthorization);
   datasetHandle := PaxCompiler.RegisterClassType(0, TpFIBDataSet);
   fieldHandle := PaxCompiler.RegisterClassType(0, TField);
+
+  PaxCompiler.RegisterHeader(0, 'function GetUnitCase(const AValue: Integer; const AUnit1, AUnit2, AUnit3: String): String;', @uStrUtils.GetUnitCase);
+
+  PaxCompiler.RegisterHeader(0, 'function YearsBetween(const ANow, AThen: TDateTime): Integer;', @DateUtils.YearsBetween);
 
   PaxCompiler.RegisterHeader(0, 'function Month_Case_Nominative(ADate: TDateTime): string;', @uStrUtils.Month_Case_Nominative);
   PaxCompiler.RegisterHeader(0, 'function Month_Case_Genitive(ADate: TDateTime): string;', @uStrUtils.Month_Case_Genitive);
