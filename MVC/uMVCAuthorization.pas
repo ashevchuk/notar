@@ -188,9 +188,12 @@ begin
   datasetHandle := PaxCompiler.RegisterClassType(0, TpFIBDataSet);
   fieldHandle := PaxCompiler.RegisterClassType(0, TField);
 
+  PaxCompiler.RegisterHeader(0, 'function Month_Case_Nominative(ADate: TDateTime): string;', @uStrUtils.Month_Case_Nominative);
+  PaxCompiler.RegisterHeader(0, 'function Month_Case_Genitive(ADate: TDateTime): string;', @uStrUtils.Month_Case_Genitive);
+
   PaxCompiler.RegisterHeader(0, 'function ExtraSpell(Number:extended; Param: string): string;', @uStrUtils.ExtraSpell);
 
-  PaxCompiler.RegisterHeader(0, 'procedure Log(AText: string);', @TfmMain(Application.MainForm).Log);
+  PaxCompiler.RegisterHeader(0, 'procedure Log(AText: string);', @ufmMain.Log);
   PaxCompiler.RegisterHeader(datasetHandle, 'function FieldByName(const FieldName: string): TField;', @TpFIBDataSet.FieldByName);
 
 

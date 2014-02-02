@@ -1,38 +1,26 @@
 uses SysUtils;
 
-const
-  Month_Case_Nominative_Array: array[1..12] of string = (
-    'січень', 'лютий', 'березень', 'квітень', 'травень', 'червень', 'липень', 'серпень', 'вересень', 'жовтень', 'листопад', 'грудень'
-  );
-
-const
-  Month_Case_Genitive_Array: array[1..12] of string = (
-    'січня', 'лютого', 'березня', 'квітеня', 'травня', 'червеня', 'липня', 'серпня', 'вересеня', 'жовтеня', 'листопада', 'грудня'
-  );
-
-function Month_Case_Genitive(Date: TDateTime): String;
+function DatePart(ADate: TDateTime; APart: Char): Word;
 var Year, Month, Day: Word;
 begin
-  DecodeDate(Date, Year, Month, Day);
-  Result := Month_Case_Genitive_Array[Month];
-end;
+  DecodeDate(ADate, Year, Month, Day);
 
-function Month_Case_Nominative(Date: TDateTime): String;
-var Year, Month, Day: Word;
-begin
-  DecodeDate(Date, Year, Month, Day);
-  Result := Month_Case_Nominative_Array[Month];
-end;
-
-function DatePart(Date: TDateTime; Part: Char): Word;
-var Year, Month, Day: Word;
-begin
-  DecodeDate(Date, Year, Month, Day);
-
-  case UpperCase(Part) of
+  case UpperCase(APart) of
     'Y': Result := Year;
     'M': Result := Month;
     'D': Result := Day;
+  end;
+end;
+
+function DatePartStr(ADate: TDateTime; APart: Char): String;
+var Year, Month, Day: Word;
+begin
+  DecodeDate(ADate, Year, Month, Day);
+
+  case UpperCase(APart) of
+    'Y': Result := IntToStr(Year);
+    'M': Result := IntToStr(Month);
+    'D': Result := IntToStr(Day);
   end;
 end;
 
