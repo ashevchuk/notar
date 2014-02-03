@@ -1,11 +1,10 @@
-object fmAuthorization: TfmAuthorization
+object fmNotary: TfmNotary
   Left = 0
   Top = 0
-  Caption = #1044#1086#1074#1110#1088#1077#1085#1110#1089#1090#1100' '#1075#1077#1085#1077#1088#1072#1083#1100#1085#1072
-  ClientHeight = 427
-  ClientWidth = 818
+  Caption = #1053#1086#1090#1072#1088#1110#1091#1089
+  ClientHeight = 378
+  ClientWidth = 548
   Color = clBtnFace
-  DefaultMonitor = dmMainForm
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -496,370 +495,31 @@ object fmAuthorization: TfmAuthorization
     Left = 0
     Top = 0
     Align = alClient
-    Caption = #1044#1086#1074#1110#1088#1077#1085#1110#1089#1090#1100' '#1075#1077#1085#1077#1088#1072#1083#1100#1085#1072
+    Caption = #1044#1086#1076#1072#1090#1080' '#1092#1110#1079#1080#1095#1085#1091' '#1086#1089#1086#1073#1091
     ParentBackground = False
     ParentColor = False
     ParentFont = False
     TabOrder = 0
-    Height = 427
-    Width = 818
-    object cxGroupBox5: TcxGroupBox
-      Left = 546
-      Top = 164
-      Caption = #1058#1088#1072#1085#1079#1080#1090#1085#1110' '#1085#1086#1084#1077#1088#1080
+    ExplicitTop = -8
+    ExplicitWidth = 1120
+    ExplicitHeight = 688
+    Height = 378
+    Width = 548
+    object cxGroupBox6: TcxGroupBox
+      Left = 278
+      Top = 26
+      Caption = #1040#1076#1088#1077#1089#1072
       ParentBackground = False
       ParentColor = False
       ParentFont = False
       TabOrder = 0
-      Height = 76
-      Width = 260
-      object cxDBDateEdit2: TcxDBDateEdit
-        Left = 104
-        Top = 15
-        DataBinding.DataField = 'TRANSITE_NUMBER_REMOVED_DATE'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
-        ParentFont = False
-        TabOrder = 0
-        Width = 150
-      end
-      object cxLabel4: TcxLabel
-        Left = 3
-        Top = 43
-        AutoSize = False
-        Caption = #1053#1086#1084#1077#1088
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
-      end
-      object cxLabel5: TcxLabel
-        Left = 3
-        Top = 16
-        AutoSize = False
-        Caption = #1047#1085#1103#1090#1080#1081
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
-      end
-      object cxDBLookupComboBox2: TcxDBLookupComboBox
-        Left = 104
-        Top = 42
-        DataBinding.DataField = 'TRANSITE_NUMBER'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'TRANSITE_NUMBER'
-        Properties.ListColumns = <
-          item
-            FieldName = 'TRANSITE_NUMBER'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.TransiteNumberDataSource
-        TabOrder = 3
-        Width = 150
-      end
-    end
-    object cxGroupBox7: TcxGroupBox
-      Left = 546
-      Top = 246
-      Caption = #1044#1086#1074#1110#1088#1077#1085#1110#1089#1090#1100
-      ParentBackground = False
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 1
-      Height = 159
-      Width = 260
-      object cxLabel25: TcxLabel
-        Left = 3
-        Top = 16
-        AutoSize = False
-        Caption = #1056#1077#1108#1089#1090#1088#1086#1074#1080#1081' '#8470
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
-      end
-      object cxLabel27: TcxLabel
-        Left = 3
-        Top = 43
-        AutoSize = False
-        Caption = #1058#1077#1088#1084#1110#1085' '#1076#1110#1111
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
-      end
-      object cxLabel28: TcxLabel
-        Left = 3
-        Top = 97
-        AutoSize = False
-        Caption = #1055#1088#1080#1084#1110#1090#1082#1072
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
-      end
-      object cxLabel29: TcxLabel
-        Left = 3
-        Top = 70
-        AutoSize = False
-        Caption = #1044#1072#1090#1072' '#1087#1086#1089#1074#1110#1076#1095#1077#1085#1085#1103
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
-      end
-      object cxDBDateEdit3: TcxDBDateEdit
-        Left = 104
-        Top = 42
-        DataBinding.DataField = 'AUTHORIZATION_VALIDITY_DATE'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
-        ParentFont = False
-        TabOrder = 4
-        Width = 150
-      end
-      object cxDBDateEdit4: TcxDBDateEdit
-        Left = 104
-        Top = 69
-        DataBinding.DataField = 'AUTHORIZATION_DATE'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
-        ParentFont = False
-        TabOrder = 5
-        Width = 150
-      end
-      object cxDBLookupComboBox28: TcxDBLookupComboBox
-        Left = 104
-        Top = 15
-        DataBinding.DataField = 'AUTHORIZATION_NUMBER'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'AUTHORIZATION_NUMBER'
-        Properties.ListColumns = <
-          item
-            FieldName = 'AUTHORIZATION_NUMBER'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.AuthorizationNumberDataSource
-        TabOrder = 6
-        Width = 150
-      end
-      object cxDBMemo4: TcxDBMemo
-        Left = 104
-        Top = 96
-        DataBinding.DataField = 'AUTHORIZATION_DESCRIPTION'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
-        ParentFont = False
-        Properties.ScrollBars = ssVertical
-        TabOrder = 7
-        Height = 21
-        Width = 150
-      end
-      object cxDBCheckBox1: TcxDBCheckBox
-        Left = 164
-        Top = 123
-        Caption = #1058#1088#1072#1085#1079#1080#1090
-        DataBinding.DataField = 'TRANSITE'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
-        ParentBackground = False
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment = taRightJustify
-        Properties.ValueChecked = 1
-        Properties.ValueUnchecked = 0
-        TabOrder = 8
-        Transparent = True
-        Width = 83
-      end
-      object cxDBCheckBox2: TcxDBCheckBox
-        Left = 3
-        Top = 123
-        Caption = #1055#1088#1072#1074#1086' '#1087#1077#1088#1077#1076#1086#1088#1091#1095#1077#1085#1085#1103
-        DataBinding.DataField = 'SUBSTITUTION'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
-        ParentBackground = False
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment = taRightJustify
-        Properties.ValueChecked = 1
-        Properties.ValueUnchecked = 0
-        TabOrder = 9
-        Transparent = True
-        Width = 137
-      end
-    end
-    object cxGroupBox6: TcxGroupBox
-      Left = 546
-      Top = 26
-      Caption = #1057#1074#1110#1076#1086#1094#1090#1074#1086' '#1087#1088#1086' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1102
-      ParentBackground = False
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 2
-      Height = 132
-      Width = 260
-      object cxLabel1: TcxLabel
-        Left = 3
-        Top = 16
-        AutoSize = False
-        Caption = #1057#1077#1088#1110#1103
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
-      end
-      object cxLabel26: TcxLabel
-        Left = 3
-        Top = 43
-        AutoSize = False
-        Caption = #1053#1086#1084#1077#1088
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
-      end
-      object cxLabel2: TcxLabel
-        Left = 3
-        Top = 70
-        AutoSize = False
-        Caption = #1044#1072#1090#1072' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1111
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
-      end
-      object cxLabel3: TcxLabel
-        Left = 3
-        Top = 97
-        AutoSize = False
-        Caption = #1042#1080#1076#1072#1085#1086
-        ParentColor = False
-        ParentFont = False
-        Properties.Alignment.Horz = taRightJustify
-        Transparent = True
-        Height = 17
-        Width = 100
-        AnchorX = 103
-      end
-      object cxDBDateEdit1: TcxDBDateEdit
-        Left = 104
-        Top = 69
-        DataBinding.DataField = 'TRANSPORT_CERTIFICATE_REG_DATE'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
-        ParentFont = False
-        TabOrder = 7
-        Width = 150
-      end
-      object cxDBLookupComboBox1: TcxDBLookupComboBox
-        Left = 104
-        Top = 15
-        DataBinding.DataField = 'TRANSPORT_CERTIFICATE_SERIAL'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'TRANSPORT_CERTIFICATE_SERIAL'
-        Properties.ListColumns = <
-          item
-            FieldName = 'TRANSPORT_CERTIFICATE_SERIAL'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.TransportCertificateSerialDataSource
-        TabOrder = 5
-        Width = 150
-      end
-      object cxDBLookupComboBox29: TcxDBLookupComboBox
-        Left = 104
-        Top = 42
-        DataBinding.DataField = 'TRANSPORT_CERTIFICATE_NUMBER'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'TRANSPORT_CERTIFICATE_NUMBER'
-        Properties.ListColumns = <
-          item
-            FieldName = 'TRANSPORT_CERTIFICATE_NUMBER'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.TransportCertificateNumberDataSource
-        TabOrder = 6
-        Width = 150
-      end
-      object cxDBLookupComboBox30: TcxDBLookupComboBox
-        Left = 104
-        Top = 96
-        DataBinding.DataField = 'TRANSPORT_CERTIFICATE_ISSUER'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
-        ParentFont = False
-        Properties.DropDownListStyle = lsEditList
-        Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'TRANSPORT_CERTIFICATE_ISSUER'
-        Properties.ListColumns = <
-          item
-            FieldName = 'TRANSPORT_CERTIFICATE_ISSUER'
-          end>
-        Properties.ListOptions.CaseInsensitive = True
-        Properties.ListOptions.ShowHeader = False
-        Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.TransportCertificateIssuerDataSource
-        TabOrder = 4
-        Width = 150
-      end
-    end
-    object cxGroupBox3: TcxGroupBox
-      Left = 280
-      Top = 26
-      Caption = #1058#1088#1072#1085#1089#1087#1086#1088#1090#1085#1080#1081' '#1079#1072#1089#1110#1073
-      ParentBackground = False
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 3
-      Height = 319
+      Height = 337
       Width = 260
       object cxLabel30: TcxLabel
         Left = 3
         Top = 16
         AutoSize = False
-        Caption = #1042#1080#1076
+        Caption = #1054#1073#1083#1072#1089#1090#1100
         ParentColor = False
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
@@ -872,7 +532,7 @@ object fmAuthorization: TfmAuthorization
         Left = 3
         Top = 43
         AutoSize = False
-        Caption = #1052#1072#1088#1082#1072
+        Caption = #1056#1072#1081#1086#1085
         ParentColor = False
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
@@ -885,7 +545,7 @@ object fmAuthorization: TfmAuthorization
         Left = 3
         Top = 70
         AutoSize = False
-        Caption = #1052#1086#1076#1077#1083#1100
+        Caption = #1042#1080#1076
         ParentColor = False
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
@@ -898,7 +558,7 @@ object fmAuthorization: TfmAuthorization
         Left = 3
         Top = 97
         AutoSize = False
-        Caption = #1058#1080#1087
+        Caption = #1053#1072#1089#1077#1083#1077#1085#1080#1081' '#1087#1091#1085#1082#1090
         ParentColor = False
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
@@ -911,7 +571,7 @@ object fmAuthorization: TfmAuthorization
         Left = 3
         Top = 124
         AutoSize = False
-        Caption = #1050#1086#1083#1110#1088
+        Caption = #1058#1080#1087' '#1074#1091#1083#1080#1094#1110
         ParentColor = False
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
@@ -924,7 +584,7 @@ object fmAuthorization: TfmAuthorization
         Left = 3
         Top = 151
         AutoSize = False
-        Caption = #1053#1086#1084#1077#1088' '#1096#1072#1089#1110
+        Caption = #1042#1091#1083#1080#1094#1103
         ParentColor = False
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
@@ -935,9 +595,9 @@ object fmAuthorization: TfmAuthorization
       end
       object cxLabel36: TcxLabel
         Left = 3
-        Top = 181
+        Top = 178
         AutoSize = False
-        Caption = #1055#1086#1074#1085#1072' '#1084#1072#1089#1072
+        Caption = #1041#1091#1076#1080#1085#1086#1082
         ParentColor = False
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
@@ -950,7 +610,7 @@ object fmAuthorization: TfmAuthorization
         Left = 3
         Top = 205
         AutoSize = False
-        Caption = #1052#1072#1089#1072' '#1073#1077#1079' '#1085#1072#1074#1072#1085#1090'.'
+        Caption = #1050#1074#1072#1088#1090#1080#1088#1072
         ParentColor = False
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
@@ -963,7 +623,7 @@ object fmAuthorization: TfmAuthorization
         Left = 3
         Top = 233
         AutoSize = False
-        Caption = #1054#1073#39#1108#1084' '#1076#1074#1080#1075#1091#1085#1072
+        Caption = #1050#1086#1088#1087#1091#1089
         ParentColor = False
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
@@ -974,9 +634,9 @@ object fmAuthorization: TfmAuthorization
       end
       object cxLabel39: TcxLabel
         Left = 3
-        Top = 260
+        Top = 258
         AutoSize = False
-        Caption = #1056#1077#1108#1089#1090#1088'. '#1085#1086#1084#1077#1088
+        Caption = #1057#1077#1082#1094#1110#1103
         ParentColor = False
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
@@ -987,9 +647,22 @@ object fmAuthorization: TfmAuthorization
       end
       object cxLabel40: TcxLabel
         Left = 3
-        Top = 287
+        Top = 281
         AutoSize = False
-        Caption = #1056#1110#1082' '#1074#1080#1087#1091#1089#1082#1091
+        Caption = #1030#1085#1076#1077#1082#1089
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel41: TcxLabel
+        Left = 3
+        Top = 304
+        AutoSize = False
+        Caption = #1030#1085#1096#1077
         ParentColor = False
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
@@ -1001,413 +674,435 @@ object fmAuthorization: TfmAuthorization
       object cxDBLookupComboBox11: TcxDBLookupComboBox
         Left = 104
         Top = 15
-        DataBinding.DataField = 'TRANSPORT_KIND'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
+        DataBinding.DataField = 'ADDRESS_STATE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'TRANSPORT_KIND'
+        Properties.KeyFieldNames = 'ADDRESS_STATE'
         Properties.ListColumns = <
           item
-            FieldName = 'TRANSPORT_KIND'
+            FieldName = 'ADDRESS_STATE'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.TransportKindDataSource
-        TabOrder = 5
+        Properties.ListSource = dmNotary.AddressStateDataSource
+        TabOrder = 12
         Width = 150
       end
       object cxDBLookupComboBox12: TcxDBLookupComboBox
         Left = 104
         Top = 42
-        DataBinding.DataField = 'TRANSPORT_BRAND'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
+        DataBinding.DataField = 'ADDRESS_REGION'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'TRANSPORT_BRAND'
+        Properties.KeyFieldNames = 'ADDRESS_REGION'
         Properties.ListColumns = <
           item
-            FieldName = 'TRANSPORT_BRAND'
+            FieldName = 'ADDRESS_REGION'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.TransportBrandDataSource
-        TabOrder = 6
+        Properties.ListSource = dmNotary.AddressRegionDataSource
+        TabOrder = 13
         Width = 150
       end
       object cxDBLookupComboBox13: TcxDBLookupComboBox
         Left = 104
-        Top = 69
-        DataBinding.DataField = 'TRANSPORT_MODEL'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
+        Top = 70
+        DataBinding.DataField = 'ADDRESS_LOCALITY_TYPE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'TRANSPORT_MODEL'
+        Properties.KeyFieldNames = 'ADDRESS_LOCALITY_TYPE'
         Properties.ListColumns = <
           item
-            FieldName = 'TRANSPORT_MODEL'
+            FieldName = 'ADDRESS_LOCALITY_TYPE'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.TransportModelDataSource
-        TabOrder = 7
+        Properties.ListSource = dmNotary.AddressLocalityTypeDataSource
+        TabOrder = 14
         Width = 150
       end
       object cxDBLookupComboBox14: TcxDBLookupComboBox
         Left = 104
         Top = 96
-        DataBinding.DataField = 'TRANSPORT_TYPE'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
+        DataBinding.DataField = 'ADDRESS_LOCALITY'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'TRANSPORT_TYPE'
+        Properties.KeyFieldNames = 'ADDRESS_LOCALITY'
         Properties.ListColumns = <
           item
-            FieldName = 'TRANSPORT_TYPE'
+            FieldName = 'ADDRESS_LOCALITY'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.TransportTypeDataSource
-        TabOrder = 8
+        Properties.ListSource = dmNotary.AddressLocalityDataSource
+        TabOrder = 15
         Width = 150
       end
       object cxDBLookupComboBox15: TcxDBLookupComboBox
         Left = 104
         Top = 123
-        DataBinding.DataField = 'TRANSPORT_COLOR'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
+        DataBinding.DataField = 'ADDRESS_STREET_TYPE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'TRANSPORT_COLOR'
+        Properties.KeyFieldNames = 'ADDRESS_STREET_TYPE'
         Properties.ListColumns = <
           item
-            FieldName = 'TRANSPORT_COLOR'
+            FieldName = 'ADDRESS_STREET_TYPE'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.TransportColorDataSource
-        TabOrder = 9
+        Properties.ListSource = dmNotary.AddressStreetTypeDataSource
+        TabOrder = 16
         Width = 150
       end
       object cxDBLookupComboBox16: TcxDBLookupComboBox
         Left = 104
         Top = 150
-        DataBinding.DataField = 'TRANSPORT_CHASSIS_NUMBER'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
+        DataBinding.DataField = 'ADDRESS_STREET'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'TRANSPORT_CHASSIS_NUMBER'
+        Properties.KeyFieldNames = 'ADDRESS_STREET'
         Properties.ListColumns = <
           item
-            FieldName = 'TRANSPORT_CHASSIS_NUMBER'
+            FieldName = 'ADDRESS_STREET'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.TransportChassisNumberDataSource
-        TabOrder = 10
+        Properties.ListSource = dmNotary.AddressStreetDataSource
+        TabOrder = 17
         Width = 150
       end
       object cxDBLookupComboBox17: TcxDBLookupComboBox
         Left = 104
         Top = 177
-        DataBinding.DataField = 'TRANSPORT_LOAD_WEIGHT'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
+        DataBinding.DataField = 'ADDRESS_BUILDING'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'TRANSPORT_LOAD_WEIGHT'
+        Properties.KeyFieldNames = 'ADDRESS_BUILDING'
         Properties.ListColumns = <
           item
-            FieldName = 'TRANSPORT_LOAD_WEIGHT'
+            FieldName = 'ADDRESS_BUILDING'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.TransportLoadWeightDataSource
-        TabOrder = 11
+        Properties.ListSource = dmNotary.AddressBuildingDataSource
+        TabOrder = 18
         Width = 150
       end
       object cxDBLookupComboBox18: TcxDBLookupComboBox
         Left = 104
         Top = 204
-        DataBinding.DataField = 'TRANSPORT_WEIGHT'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
+        DataBinding.DataField = 'ADDRESS_FLAT'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'TRANSPORT_WEIGHT'
+        Properties.KeyFieldNames = 'ADDRESS_FLAT'
         Properties.ListColumns = <
           item
-            FieldName = 'TRANSPORT_WEIGHT'
+            FieldName = 'ADDRESS_FLAT'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.TransportWeightDataSource
-        TabOrder = 12
+        Properties.ListSource = dmNotary.AddressFlatDataSource
+        TabOrder = 19
         Width = 150
       end
       object cxDBLookupComboBox19: TcxDBLookupComboBox
         Left = 104
         Top = 232
-        DataBinding.DataField = 'TRANSPORT_ENGINE_VOLUME'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
+        DataBinding.DataField = 'ADDRESS_CORPS'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'TRANSPORT_ENGINE_VOLUME'
+        Properties.KeyFieldNames = 'ADDRESS_CORPS'
         Properties.ListColumns = <
           item
-            FieldName = 'TRANSPORT_ENGINE_VOLUME'
+            FieldName = 'ADDRESS_CORPS'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.TransportEngineVolumeDataSource
-        TabOrder = 13
+        Properties.ListSource = dmNotary.AddressCorpsDataSource
+        TabOrder = 20
         Width = 150
       end
       object cxDBLookupComboBox20: TcxDBLookupComboBox
         Left = 104
-        Top = 259
-        DataBinding.DataField = 'TRANSPORT_REG_NUMBER'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
+        Top = 257
+        DataBinding.DataField = 'ADDRESS_SECTION'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
         ParentFont = False
         Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'TRANSPORT_REG_NUMBER'
+        Properties.KeyFieldNames = 'ADDRESS_SECTION'
         Properties.ListColumns = <
           item
-            FieldName = 'TRANSPORT_REG_NUMBER'
+            FieldName = 'ADDRESS_SECTION'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
         Properties.ListOptions.SyncMode = True
-        Properties.ListSource = dmAuthorization.TransportRegNumberDataSource
-        TabOrder = 14
+        Properties.ListSource = dmNotary.AddressSectionDataSource
+        TabOrder = 21
         Width = 150
       end
-      object cxDBDateEdit5: TcxDBDateEdit
+      object cxDBLookupComboBox21: TcxDBLookupComboBox
         Left = 104
-        Top = 286
-        DataBinding.DataField = 'TRANSPORT_FABRICATION_DATE'
-        DataBinding.DataSource = dmAuthorization.AuthorizationsDataSource
+        Top = 281
+        DataBinding.DataField = 'ADDRESS_INDEX'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
         ParentFont = False
-        TabOrder = 15
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ADDRESS_INDEX'
+        Properties.ListColumns = <
+          item
+            FieldName = 'ADDRESS_INDEX'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmNotary.AddressIndexDataSource
+        TabOrder = 22
+        Width = 150
+      end
+      object cxDBLookupComboBox22: TcxDBLookupComboBox
+        Left = 104
+        Top = 303
+        DataBinding.DataField = 'ADDRESS_OTHER'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ADDRESS_OTHER'
+        Properties.ListColumns = <
+          item
+            FieldName = 'ADDRESS_OTHER'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmNotary.AddressOtherDataSource
+        TabOrder = 23
         Width = 150
       end
     end
-    object cxGroupBox4: TcxGroupBox
-      Left = 14
+    object cxGroupBox10: TcxGroupBox
+      Left = 12
       Top = 26
-      Caption = #1044#1086#1074#1110#1088#1080#1090#1077#1083#1100
+      Caption = #1047#1072#1075#1072#1083#1100#1085#1110
       ParentBackground = False
       ParentColor = False
       ParentFont = False
-      TabOrder = 4
-      Height = 73
+      TabOrder = 1
+      Height = 159
       Width = 260
-      object ConstituentsListBox: TcxListBox
+      object cxLabel4: TcxLabel
         Left = 3
-        Top = 15
-        Width = 254
-        Height = 19
-        Align = alClient
-        ItemHeight = 13
-        ParentFont = False
-        TabOrder = 0
-      end
-      object cxGroupBox2: TcxGroupBox
-        Left = 3
-        Top = 34
-        Align = alBottom
-        ParentBackground = False
+        Top = 16
+        AutoSize = False
+        Caption = #1055#1088#1110#1079#1074#1080#1097#1077
         ParentColor = False
         ParentFont = False
-        Style.BorderStyle = ebsNone
-        Style.Shadow = False
-        Style.TransparentBorder = True
-        TabOrder = 1
-        Height = 29
-        Width = 254
-        object AddConstituentButton: TcxButton
-          Left = 3
-          Top = 6
-          Width = 78
-          Height = 19
-          Caption = #1054#1073#1088#1072#1090#1080
-          DropDownMenu = ConstituentPopupMenu
-          Kind = cxbkOfficeDropDown
-          LookAndFeel.Kind = lfUltraFlat
-          LookAndFeel.NativeStyle = False
-          TabOrder = 0
-        end
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
       end
-    end
-    object cxGroupBox9: TcxGroupBox
-      Left = 14
-      Top = 184
-      Caption = #1055#1088#1077#1076#1089#1090#1072#1074#1085#1080#1082#1080
-      ParentBackground = False
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 5
-      Height = 125
-      Width = 260
-      object RepresentativesListBox: TcxListBox
+      object cxLabel5: TcxLabel
         Left = 3
-        Top = 15
-        Width = 254
-        Height = 71
-        Align = alClient
-        ItemHeight = 13
-        ParentFont = False
-        TabOrder = 1
-      end
-      object cxGroupBox10: TcxGroupBox
-        Left = 3
-        Top = 86
-        Align = alBottom
-        ParentBackground = False
+        Top = 43
+        AutoSize = False
+        Caption = #1030#1084#39#1103
         ParentColor = False
         ParentFont = False
-        Style.BorderStyle = ebsNone
-        Style.Shadow = False
-        Style.TransparentBorder = True
-        TabOrder = 0
-        Height = 29
-        Width = 254
-        object AddRepresentativeButton: TcxButton
-          Left = 3
-          Top = 6
-          Width = 78
-          Height = 19
-          Caption = #1054#1073#1088#1072#1090#1080
-          DropDownMenu = RepresentativesPopupMenu
-          Kind = cxbkOfficeDropDown
-          LookAndFeel.Kind = lfUltraFlat
-          LookAndFeel.NativeStyle = False
-          TabOrder = 0
-        end
-        object RemoveRepresentativeButton: TcxButton
-          Left = 173
-          Top = 6
-          Width = 78
-          Height = 19
-          Caption = #1042#1080#1076#1072#1083#1080#1090#1080
-          DropDownMenu = RepresentativesPopupMenu
-          LookAndFeel.Kind = lfUltraFlat
-          LookAndFeel.NativeStyle = False
-          TabOrder = 1
-          OnClick = RemoveRepresentativeButtonClick
-        end
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
       end
-    end
-    object CancelButton: TcxButton
-      Left = 426
-      Top = 380
-      Width = 75
-      Height = 25
-      Caption = #1042#1110#1076#1084#1110#1085#1080#1090#1080
-      TabOrder = 6
+      object cxLabel6: TcxLabel
+        Left = 3
+        Top = 70
+        AutoSize = False
+        Caption = #1055#1086' '#1073#1072#1090#1100#1082#1086#1074#1110
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel7: TcxLabel
+        Left = 3
+        Top = 97
+        AutoSize = False
+        Caption = #1057#1090#1072#1090#1100
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel8: TcxLabel
+        Left = 3
+        Top = 124
+        AutoSize = False
+        Caption = #1054#1082#1088#1091#1075' \ '#1082#1086#1085#1090#1086#1088#1072
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object SurnameLookupComboBox: TcxDBLookupComboBox
+        Left = 104
+        Top = 15
+        DataBinding.DataField = 'SURNAME'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'SURNAME'
+        Properties.ListColumns = <
+          item
+            FieldName = 'SURNAME'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmNotary.SurnamesDataSource
+        TabOrder = 5
+        Width = 150
+      end
+      object NameLookupComboBox: TcxDBLookupComboBox
+        Left = 104
+        Top = 42
+        DataBinding.DataField = 'NAME'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'NAME'
+        Properties.ListColumns = <
+          item
+            FieldName = 'NAME'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmNotary.NameDataSource
+        TabOrder = 6
+        Width = 150
+      end
+      object MiddleNameLookupComboBox: TcxDBLookupComboBox
+        Left = 104
+        Top = 70
+        DataBinding.DataField = 'MIDDLE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        Properties.DropDownListStyle = lsEditList
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'MIDDLE'
+        Properties.ListColumns = <
+          item
+            FieldName = 'MIDDLE'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmNotary.MiddleDataSource
+        TabOrder = 7
+        Width = 150
+      end
+      object GenderLookupComboBox: TcxDBLookupComboBox
+        Left = 104
+        Top = 96
+        DataBinding.DataField = 'GENDER'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ID'
+        Properties.ListColumns = <
+          item
+            FieldName = 'GENDER'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmNotary.GenderDataSource
+        TabOrder = 8
+        Width = 150
+      end
+      object cxDBLookupComboBox5: TcxDBLookupComboBox
+        Left = 104
+        Top = 123
+        DataBinding.DataField = 'COUNTY'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        Properties.DropDownSizeable = True
+        Properties.KeyFieldNames = 'ID'
+        Properties.ListColumns = <
+          item
+            FieldName = 'STATE'
+          end>
+        Properties.ListOptions.CaseInsensitive = True
+        Properties.ListOptions.ShowHeader = False
+        Properties.ListOptions.SyncMode = True
+        Properties.ListSource = dmNotary.CountyDataSource
+        TabOrder = 9
+        Width = 150
+      end
     end
     object PostButton: TcxButton
-      Left = 336
-      Top = 380
+      Left = 56
+      Top = 208
       Width = 75
       Height = 25
       Caption = #1057#1090#1074#1086#1088#1080#1090#1080
-      TabOrder = 7
+      TabOrder = 2
       OnClick = PostButtonClick
     end
-    object cxGroupBox8: TcxGroupBox
-      Left = 14
-      Top = 105
-      Caption = #1053#1086#1090#1072#1088#1110#1091#1089
-      ParentBackground = False
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 8
-      Height = 73
-      Width = 260
-      object NotaryListBox: TcxListBox
-        Left = 3
-        Top = 15
-        Width = 254
-        Height = 19
-        Align = alClient
-        ItemHeight = 13
-        ParentFont = False
-        TabOrder = 0
-        ExplicitLeft = 2
-        ExplicitTop = -2
-        ExplicitWidth = 256
-        ExplicitHeight = 44
-      end
-      object cxGroupBox11: TcxGroupBox
-        Left = 3
-        Top = 34
-        Align = alBottom
-        ParentBackground = False
-        ParentColor = False
-        ParentFont = False
-        Style.BorderStyle = ebsNone
-        Style.Shadow = False
-        Style.TransparentBorder = True
-        TabOrder = 1
-        ExplicitLeft = 2
-        ExplicitTop = 42
-        ExplicitWidth = 256
-        Height = 29
-        Width = 254
-        object AddNotaryButton: TcxButton
-          Left = 3
-          Top = 6
-          Width = 78
-          Height = 19
-          Caption = #1054#1073#1088#1072#1090#1080
-          DropDownMenu = NotaryPopupMenu
-          Kind = cxbkOfficeDropDown
-          LookAndFeel.Kind = lfUltraFlat
-          LookAndFeel.NativeStyle = False
-          TabOrder = 0
-        end
-      end
-    end
-  end
-  object ConstituentPopupMenu: TPopupMenu
-    Left = 64
-    Top = 352
-    object ConstituentIndividualPopUpMenuItem: TMenuItem
-      Caption = #1060#1110#1079#1080#1095#1085#1072' '#1086#1089#1086#1073#1072
-      OnClick = ConstituentIndividualPopUpMenuItemClick
-    end
-  end
-  object RepresentativesPopupMenu: TPopupMenu
-    Left = 168
-    Top = 352
-    object RepresentativesIndividualPopUpMenuItem: TMenuItem
-      Caption = #1060#1110#1079#1080#1095#1085#1072' '#1086#1089#1086#1073#1072
-      OnClick = RepresentativesIndividualPopUpMenuItemClick
-    end
-  end
-  object NotaryPopupMenu: TPopupMenu
-    Left = 256
-    Top = 352
-    object N1: TMenuItem
-      Caption = #1053#1086#1090#1072#1088#1110#1091#1089
-      OnClick = N1Click
+    object CancelButton: TcxButton
+      Left = 137
+      Top = 208
+      Width = 75
+      Height = 25
+      Caption = #1042#1110#1076#1084#1110#1085#1080#1090#1080
+      TabOrder = 3
+      OnClick = CancelButtonClick
     end
   end
 end

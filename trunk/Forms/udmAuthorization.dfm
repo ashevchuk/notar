@@ -2384,4 +2384,290 @@ object dmAuthorization: TdmAuthorization
     Left = 740
     Top = 88
   end
+  object NotaryDataSet: TpFIBDataSet
+    UpdateSQL.Strings = (
+      'UPDATE CATALOG_NOTARIES'
+      'SET '
+      '    NAME = :NAME,'
+      '    SURNAME = :SURNAME,'
+      '    MIDDLE = :MIDDLE,'
+      '    COUNTY = :COUNTY,'
+      '    GENDER = :GENDER,'
+      '    ADDRESS_STATE = :ADDRESS_STATE,'
+      '    ADDRESS_REGION = :ADDRESS_REGION,'
+      '    ADDRESS_LOCALITY_TYPE = :ADDRESS_LOCALITY_TYPE,'
+      '    ADDRESS_LOCALITY = :ADDRESS_LOCALITY,'
+      '    ADDRESS_STREET_TYPE = :ADDRESS_STREET_TYPE,'
+      '    ADDRESS_STREET = :ADDRESS_STREET,'
+      '    ADDRESS_BUILDING = :ADDRESS_BUILDING,'
+      '    ADDRESS_FLAT = :ADDRESS_FLAT,'
+      '    ADDRESS_CORPS = :ADDRESS_CORPS,'
+      '    ADDRESS_SECTION = :ADDRESS_SECTION,'
+      '    ADDRESS_INDEX = :ADDRESS_INDEX,'
+      '    ADDRESS_OTHER = :ADDRESS_OTHER'
+      'WHERE'
+      '    ID = :OLD_ID'
+      '    ')
+    DeleteSQL.Strings = (
+      'DELETE FROM'
+      '    CATALOG_NOTARIES'
+      'WHERE'
+      '        ID = :OLD_ID'
+      '    ')
+    InsertSQL.Strings = (
+      'INSERT INTO CATALOG_NOTARIES('
+      '    NAME,'
+      '    SURNAME,'
+      '    MIDDLE,'
+      '    COUNTY,'
+      '    GENDER,'
+      '    ADDRESS_STATE,'
+      '    ADDRESS_REGION,'
+      '    ADDRESS_LOCALITY_TYPE,'
+      '    ADDRESS_LOCALITY,'
+      '    ADDRESS_STREET_TYPE,'
+      '    ADDRESS_STREET,'
+      '    ADDRESS_BUILDING,'
+      '    ADDRESS_FLAT,'
+      '    ADDRESS_CORPS,'
+      '    ADDRESS_SECTION,'
+      '    ADDRESS_INDEX,'
+      '    ADDRESS_OTHER'
+      ')'
+      'VALUES('
+      '    :NAME,'
+      '    :SURNAME,'
+      '    :MIDDLE,'
+      '    :COUNTY,'
+      '    :GENDER,'
+      '    :ADDRESS_STATE,'
+      '    :ADDRESS_REGION,'
+      '    :ADDRESS_LOCALITY_TYPE,'
+      '    :ADDRESS_LOCALITY,'
+      '    :ADDRESS_STREET_TYPE,'
+      '    :ADDRESS_STREET,'
+      '    :ADDRESS_BUILDING,'
+      '    :ADDRESS_FLAT,'
+      '    :ADDRESS_CORPS,'
+      '    :ADDRESS_SECTION,'
+      '    :ADDRESS_INDEX,'
+      '    :ADDRESS_OTHER'
+      ')')
+    RefreshSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    NAME,'
+      '    SURNAME,'
+      '    MIDDLE,'
+      '    COUNTY,'
+      '    GENDER,'
+      '    ADDRESS_STATE,'
+      '    ADDRESS_REGION,'
+      '    ADDRESS_LOCALITY_TYPE,'
+      '    ADDRESS_LOCALITY,'
+      '    ADDRESS_STREET_TYPE,'
+      '    ADDRESS_STREET,'
+      '    ADDRESS_BUILDING,'
+      '    ADDRESS_FLAT,'
+      '    ADDRESS_CORPS,'
+      '    ADDRESS_SECTION,'
+      '    ADDRESS_INDEX,'
+      '    ADDRESS_OTHER'
+      'FROM'
+      '    CATALOG_NOTARIES '
+      ''
+      ' WHERE '
+      '        CATALOG_NOTARIES.ID = :OLD_ID'
+      '    ')
+    SelectSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    NAME,'
+      '    SURNAME,'
+      '    MIDDLE,'
+      '    COUNTY,'
+      '    GENDER,'
+      '    ADDRESS_STATE,'
+      '    ADDRESS_REGION,'
+      '    ADDRESS_LOCALITY_TYPE,'
+      '    ADDRESS_LOCALITY,'
+      '    ADDRESS_STREET_TYPE,'
+      '    ADDRESS_STREET,'
+      '    ADDRESS_BUILDING,'
+      '    ADDRESS_FLAT,'
+      '    ADDRESS_CORPS,'
+      '    ADDRESS_SECTION,'
+      '    ADDRESS_INDEX,'
+      '    ADDRESS_OTHER'
+      'FROM'
+      '    CATALOG_NOTARIES '
+      'WHERE'
+      '    ID = :ID')
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 848
+    Top = 176
+    object NotaryDataSetID: TFIBBCDField
+      FieldName = 'ID'
+      Size = 0
+    end
+    object NotaryDataSetNAME: TFIBWideStringField
+      FieldName = 'NAME'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetSURNAME: TFIBWideStringField
+      FieldName = 'SURNAME'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetMIDDLE: TFIBWideStringField
+      FieldName = 'MIDDLE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetCOUNTY: TFIBWideStringField
+      FieldName = 'COUNTY'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetGENDER: TFIBBCDField
+      FieldName = 'GENDER'
+      Size = 0
+    end
+    object NotaryDataSetADDRESS_STATE: TFIBWideStringField
+      FieldName = 'ADDRESS_STATE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetADDRESS_REGION: TFIBWideStringField
+      FieldName = 'ADDRESS_REGION'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetADDRESS_LOCALITY_TYPE: TFIBWideStringField
+      FieldName = 'ADDRESS_LOCALITY_TYPE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetADDRESS_LOCALITY: TFIBWideStringField
+      FieldName = 'ADDRESS_LOCALITY'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetADDRESS_STREET_TYPE: TFIBWideStringField
+      FieldName = 'ADDRESS_STREET_TYPE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetADDRESS_STREET: TFIBWideStringField
+      FieldName = 'ADDRESS_STREET'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetADDRESS_BUILDING: TFIBWideStringField
+      FieldName = 'ADDRESS_BUILDING'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetADDRESS_FLAT: TFIBWideStringField
+      FieldName = 'ADDRESS_FLAT'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetADDRESS_CORPS: TFIBWideStringField
+      FieldName = 'ADDRESS_CORPS'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetADDRESS_SECTION: TFIBWideStringField
+      FieldName = 'ADDRESS_SECTION'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetADDRESS_INDEX: TFIBWideStringField
+      FieldName = 'ADDRESS_INDEX'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object NotaryDataSetADDRESS_OTHER: TFIBWideStringField
+      FieldName = 'ADDRESS_OTHER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+  end
+  object NotaryDataSource: TDataSource
+    DataSet = NotaryDataSet
+    Left = 980
+    Top = 176
+  end
+  object AddNotaryDataSet: TpFIBDataSet
+    UpdateSQL.Strings = (
+      'UPDATE RELATION_AUTH_NOTARY'
+      'SET '
+      '    AUTHORIZATION_ID = :AUTHORIZATION_ID,'
+      '    NOTARY_ID = :NOTARY_ID'
+      'WHERE'
+      '    ID = :OLD_ID'
+      '    ')
+    DeleteSQL.Strings = (
+      'DELETE FROM'
+      '    RELATION_AUTH_NOTARY'
+      'WHERE'
+      '        ID = :OLD_ID'
+      '    ')
+    InsertSQL.Strings = (
+      'INSERT INTO RELATION_AUTH_NOTARY('
+      '    AUTHORIZATION_ID,'
+      '    NOTARY_ID'
+      ')'
+      'VALUES('
+      '    :AUTHORIZATION_ID,'
+      '    :NOTARY_ID'
+      ')')
+    RefreshSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    AUTHORIZATION_ID,'
+      '    NOTARY_ID'
+      'FROM'
+      '    RELATION_AUTH_NOTARY '
+      ''
+      ' WHERE '
+      '        RELATION_AUTH_NOTARY.ID = :OLD_ID'
+      '    ')
+    SelectSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    AUTHORIZATION_ID,'
+      '    NOTARY_ID'
+      'FROM'
+      '    RELATION_AUTH_NOTARY ')
+    AutoCalcFields = False
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    Left = 608
+    Top = 144
+    object AddNotaryDataSetID: TFIBBCDField
+      FieldName = 'ID'
+      Size = 0
+    end
+    object AddNotaryDataSetAUTHORIZATION_ID: TFIBBCDField
+      FieldName = 'AUTHORIZATION_ID'
+      Size = 0
+    end
+    object AddNotaryDataSetNOTARY_ID: TFIBBCDField
+      FieldName = 'NOTARY_ID'
+      Size = 0
+    end
+  end
+  object AddNotaryDataSource: TDataSource
+    DataSet = AddNotaryDataSet
+    Left = 740
+    Top = 144
+  end
 end

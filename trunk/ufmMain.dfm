@@ -493,6 +493,10 @@ object fmMain: TfmMain
         item
           Visible = True
           ItemName = 'dxBarButton8'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButton10'
         end>
       MultiLine = True
       OneOnRow = True
@@ -563,6 +567,7 @@ object fmMain: TfmMain
       Category = 0
       Hint = 'Generate'
       Visible = ivAlways
+      OnClick = dxBarButton7Click
     end
     object dxBarButton8: TdxBarButton
       Caption = 'Edit report'
@@ -576,6 +581,13 @@ object fmMain: TfmMain
       Category = 0
       Hint = 'Show report'
       Visible = ivAlways
+    end
+    object dxBarButton10: TdxBarButton
+      Caption = 'New Notary'
+      Category = 0
+      Hint = 'New Notary'
+      Visible = ivAlways
+      OnClick = dxBarButton10Click
     end
   end
   object dxTabbedMDIManager: TdxTabbedMDIManager
