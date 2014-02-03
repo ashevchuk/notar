@@ -87,6 +87,7 @@ type
     dxRibbon1: TdxRibbon;
     dxBarButton8: TdxBarButton;
     dxBarButton9: TdxBarButton;
+    dxBarButton10: TdxBarButton;
     procedure FormCreate(Sender: TObject);
     procedure dxBarButtonExitClick(Sender: TObject);
     procedure dxBarButtonEditorClick(Sender: TObject);
@@ -102,6 +103,8 @@ type
     procedure dxBarButton5Click(Sender: TObject);
     procedure dxBarButton6Click(Sender: TObject);
     procedure dxBarButton8Click(Sender: TObject);
+    procedure dxBarButton7Click(Sender: TObject);
+    procedure dxBarButton10Click(Sender: TObject);
   private
     procedure OnException(Sender: TObject; E: Exception);
 
@@ -132,6 +135,7 @@ uses uRemoteDM, uLicenseDM,
   uDbFreeReporter,
   uFreeReporter,
   uMVCAuthorization,
+  ufmNotary,
   uScriptEngine;
 {$R *.dfm}
 
@@ -154,6 +158,14 @@ end;
 procedure TfmMain.Copy1Click(Sender: TObject);
 begin
   Clipboard.AsText := LogListBox.Items[LogListBox.ItemIndex];
+end;
+
+procedure TfmMain.dxBarButton10Click(Sender: TObject);
+begin
+  with TfmNotary.Create(Application.MainForm) do
+    begin
+      Show;
+    end;
 end;
 
 procedure TfmMain.dxBarButton1Click(Sender: TObject);
@@ -202,6 +214,11 @@ begin
   begin
     Show;
   end;
+end;
+
+procedure TfmMain.dxBarButton7Click(Sender: TObject);
+begin
+//  RemoteDataModule.generateGroups('CATALOG_NOTARIES');
 end;
 
 procedure TfmMain.dxBarButton8Click(Sender: TObject);

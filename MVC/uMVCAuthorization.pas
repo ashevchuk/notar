@@ -47,6 +47,9 @@ type
     ppFooterBand1: TppFooterBand;
     ppDesignLayers1: TppDesignLayers;
     ppDesignLayer1: TppDesignLayer;
+    Notary: TpFIBDataSet;
+    NotaryDataSource: TDataSource;
+    NotaryDBPipeline: TppDBPipeline;
   published
     Authorization: TpFIBDataSet;
     Constituent: TpFIBDataSet;
@@ -99,6 +102,7 @@ begin
   Reporter.AddDataSet(Authorization);
   Reporter.AddDataSet(Constituent);
   Reporter.AddDataSet(Representatives);
+  Reporter.AddDataSet(Notary);
   Reporter.CreateReport(TemplateName, AOutputFileName);
   Reporter.Free;
 end;
@@ -106,13 +110,13 @@ end;
 procedure TMVCAuthorization.DataModuleCreate(Sender: TObject);
 begin
 //
-
 end;
 
 procedure TMVCAuthorization.DataModuleDestroy(Sender: TObject);
 begin
   Constituent.Close;
   Representatives.Close;
+  Notary.Close;
   Authorization.Close;
 end;
 
@@ -248,9 +252,12 @@ begin
   Authorization.Close;
   Authorization.ParamByName('ID').AsString := AID;
   Authorization.Open;
+
   Constituent.Open;
   Representatives.Open;
+  Notary.Open;
 
+  Notary.FetchAll;
   Authorization.FetchAll;
   Constituent.FetchAll;
   Representatives.FetchAll;

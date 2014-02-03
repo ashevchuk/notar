@@ -372,8 +372,8 @@ object MVCAuthorization: TMVCAuthorization
   object PaxCompiler: TPaxCompiler
     Alignment = 8
     DebugMode = False
-    Left = 512
-    Top = 16
+    Left = 600
+    Top = 80
   end
   object PaxPascalLanguage: TPaxPascalLanguage
     ExplicitOff = False
@@ -886,5 +886,51 @@ object MVCAuthorization: TMVCAuthorization
     end
     object ppParameterList1: TppParameterList
     end
+  end
+  object Notary: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    AUTHORIZATION_ID,'
+      '    NOTARY_ID,'
+      '    NAME,'
+      '    SURNAME,'
+      '    MIDDLE,'
+      '    COUNTY,'
+      '    GENDER,'
+      '    ADDRESS_STATE,'
+      '    ADDRESS_REGION,'
+      '    ADDRESS_LOCALITY_TYPE,'
+      '    ADDRESS_LOCALITY,'
+      '    ADDRESS_STREET_TYPE,'
+      '    ADDRESS_STREET,'
+      '    ADDRESS_BUILDING,'
+      '    ADDRESS_FLAT,'
+      '    ADDRESS_CORPS,'
+      '    ADDRESS_SECTION,'
+      '    ADDRESS_INDEX,'
+      '    ADDRESS_OTHER'
+      'FROM'
+      '    VIEW_REL_AUTH_NOTARY '
+      'WHERE'
+      '    AUTHORIZATION_ID = :MAS_ID ')
+    AutoUpdateOptions.AutoParamsToFields = True
+    Transaction = RemoteDataModule.FIBTransaction
+    Database = RemoteDataModule.FIBDatabase
+    UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    AutoCommit = True
+    DataSource = AuthorizationDataSource
+    Left = 472
+    Top = 88
+  end
+  object NotaryDataSource: TDataSource
+    DataSet = Notary
+    Left = 472
+    Top = 16
+  end
+  object NotaryDBPipeline: TppDBPipeline
+    DataSource = NotaryDataSource
+    UserName = 'RepresentativesDBPipeline1'
+    Left = 472
+    Top = 152
   end
 end

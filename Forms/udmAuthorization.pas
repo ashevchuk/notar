@@ -195,6 +195,31 @@ type
     IndividualConstituentsDataSetSHOW_ADDRESS: TFIBSmallIntField;
     IndividualConstituentsDataSetSHOW_ID_NUMBER: TFIBSmallIntField;
     IndividualConstituentsDataSetSHOW_PASSPORT_DATA: TFIBSmallIntField;
+    NotaryDataSet: TpFIBDataSet;
+    NotaryDataSetID: TFIBBCDField;
+    NotaryDataSetNAME: TFIBWideStringField;
+    NotaryDataSetSURNAME: TFIBWideStringField;
+    NotaryDataSetMIDDLE: TFIBWideStringField;
+    NotaryDataSetCOUNTY: TFIBWideStringField;
+    NotaryDataSetGENDER: TFIBBCDField;
+    NotaryDataSetADDRESS_STATE: TFIBWideStringField;
+    NotaryDataSetADDRESS_REGION: TFIBWideStringField;
+    NotaryDataSetADDRESS_LOCALITY_TYPE: TFIBWideStringField;
+    NotaryDataSetADDRESS_LOCALITY: TFIBWideStringField;
+    NotaryDataSetADDRESS_STREET_TYPE: TFIBWideStringField;
+    NotaryDataSetADDRESS_STREET: TFIBWideStringField;
+    NotaryDataSetADDRESS_BUILDING: TFIBWideStringField;
+    NotaryDataSetADDRESS_FLAT: TFIBWideStringField;
+    NotaryDataSetADDRESS_CORPS: TFIBWideStringField;
+    NotaryDataSetADDRESS_SECTION: TFIBWideStringField;
+    NotaryDataSetADDRESS_INDEX: TFIBWideStringField;
+    NotaryDataSetADDRESS_OTHER: TFIBWideStringField;
+    NotaryDataSource: TDataSource;
+    AddNotaryDataSet: TpFIBDataSet;
+    AddNotaryDataSource: TDataSource;
+    AddNotaryDataSetID: TFIBBCDField;
+    AddNotaryDataSetAUTHORIZATION_ID: TFIBBCDField;
+    AddNotaryDataSetNOTARY_ID: TFIBBCDField;
   private
     { Private declarations }
   public

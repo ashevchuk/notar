@@ -79,6 +79,12 @@ type
     RemoveRepresentativeButton: TcxButton;
     CancelButton: TcxButton;
     PostButton: TcxButton;
+    cxGroupBox8: TcxGroupBox;
+    NotaryListBox: TcxListBox;
+    cxGroupBox11: TcxGroupBox;
+    AddNotaryButton: TcxButton;
+    NotaryPopupMenu: TPopupMenu;
+    N1: TMenuItem;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure ConstituentIndividualPopUpMenuItemClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -86,11 +92,13 @@ type
     procedure RepresentativesIndividualPopUpMenuItemClick(Sender: TObject);
     procedure RemoveRepresentativeButtonClick(Sender: TObject);
     procedure PostButtonClick(Sender: TObject);
+    procedure N1Click(Sender: TObject);
   private
     { Private declarations }
   public
     procedure gotConstituentIndividualID(AID: Variant);
     procedure gotRepresentativeIndividualID(AID: Variant);
+    procedure gotNotaryID(AID: Variant);
     function saveAuthorization: boolean;
     function appendAuthorization: boolean;
   end;
@@ -99,7 +107,7 @@ var
   fmAuthorization: TfmAuthorization;
 
 implementation
-uses ufmIndividualSelector;
+uses ufmIndividualSelector, ufmNotarySelector, udmNotary;
 {$R *.dfm}
 
 function TfmAuthorization.appendAuthorization: boolean;
@@ -152,6 +160,23 @@ begin
   dmAuthorization.IndividualConstituentsDataSet.Close;
 end;
 
+procedure TfmAuthorization.gotNotaryID(AID: Variant);
+var
+  NotaryID: TIdStorage;
+begin
+  NotaryListBox.Items.Clear;
+
+  dmAuthorization.NotaryDataSet.Close;
+  dmAuthorization.NotaryDataSet.ParamByName('ID').Value := AID;
+  dmAuthorization.NotaryDataSet.Open;
+
+  NotaryID := TIdStorage.Create(AID);
+
+  NotaryListBox.Items.AddObject(Format('%s %s %s', [dmAuthorization.NotaryDataSetSURNAME.asString, dmAuthorization.NotaryDataSetNAME.asString, dmAuthorization.NotaryDataSetMIDDLE.asString]), NotaryID);
+
+  dmAuthorization.NotaryDataSet.Close;
+end;
+
 procedure TfmAuthorization.gotRepresentativeIndividualID(AID: Variant);
 var
   RepresentativeID: TIdStorage;
@@ -165,6 +190,15 @@ begin
   RepresentativesListBox.Items.AddObject(Format('%s %s %s', [dmAuthorization.IndividualRepresentativesDataSetSURNAME.asString, dmAuthorization.IndividualRepresentativesDataSetNAME.asString, dmAuthorization.IndividualRepresentativesDataSetMIDDLE.asString]), RepresentativeID);
 
   dmAuthorization.IndividualRepresentativesDataSet.Close;
+end;
+
+procedure TfmAuthorization.N1Click(Sender: TObject);
+begin
+  with TfmNotarySelector.Create(self) do
+  begin
+    Show;
+    registerSelectorCallback(gotNotaryID);
+  end;
 end;
 
 procedure TfmAuthorization.PostButtonClick(Sender: TObject);
@@ -200,11 +234,26 @@ var
 begin
   if ConstituentsListBox.Items.Count = 0 then Exit;
   if RepresentativesListBox.Items.Count = 0 then Exit;
+  if NotaryListBox.Items.Count = 0 then Exit;
 
   try
     dmAuthorization.AuthorizationsDataSet.Post;
     AuthorizationID := dmAuthorization.AuthorizationsDataSetID.AsString;
     dmAuthorization.AuthorizationsDataSet.Transaction.Commit;
+
+    dmAuthorization.AddNotaryDataSet.Close;
+    dmAuthorization.AddNotaryDataSet.Open;
+
+    for iList := 0 to NotaryListBox.Items.Count -1 do
+    begin
+      dmAuthorization.AddNotaryDataSet.Append;
+      dmAuthorization.AddNotaryDataSetAUTHORIZATION_ID.AsString := AuthorizationID;
+      dmAuthorization.AddNotaryDataSetNOTARY_ID.Value := TIdStorage(NotaryListBox.Items.Objects[iList]).ID;
+      dmAuthorization.AddNotaryDataSet.Post;
+      TIdStorage(NotaryListBox.Items.Objects[iList]).Free;
+    end;
+
+    dmAuthorization.AddNotaryDataSet.Close;
 
     dmAuthorization.AddConstituentDataSet.Close;
     dmAuthorization.AddConstituentDataSet.Open;
@@ -244,6 +293,7 @@ begin
     dmAuthorization.AuthorizationsDataSet.Close;
     dmAuthorization.AddConstituentDataSet.Close;
     dmAuthorization.AddRepresentativeDataSet.Close;
+    dmAuthorization.AddNotaryDataSet.Close;
 
     dmAuthorization.AuthorizationsDataSet.Transaction.Free;
     dmAuthorization.AuthorizationsDataSet.Transaction := RemoteDataModule.FIBTransaction;
