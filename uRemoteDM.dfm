@@ -7,7 +7,7 @@ object RemoteDataModule: TRemoteDataModule
   object FIBDatabase: TpFIBDatabase
     AutoReconnect = True
     Connected = True
-    DBName = '127.0.0.1/3050:C:\db\NOTAR.FDB'
+    DBName = '127.0.0.1/3050:C:\db\notar.fdb'
     DBParams.Strings = (
       'user_name=SYSDBA'
       'password=masterkey'
