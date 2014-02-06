@@ -1,7 +1,7 @@
 object dmAuthorization: TdmAuthorization
   OldCreateOrder = False
   Height = 606
-  Width = 1015
+  Width = 1070
   object IndividualConstituentsDataSource: TDataSource
     DataSet = IndividualConstituentsDataSet
     Left = 196
@@ -2600,7 +2600,7 @@ object dmAuthorization: TdmAuthorization
   end
   object NotaryDataSource: TDataSource
     DataSet = NotaryDataSet
-    Left = 980
+    Left = 916
     Top = 176
   end
   object AddNotaryDataSet: TpFIBDataSet

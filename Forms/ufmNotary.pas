@@ -38,7 +38,6 @@ type
     NameLookupComboBox: TcxDBLookupComboBox;
     MiddleNameLookupComboBox: TcxDBLookupComboBox;
     GenderLookupComboBox: TcxDBLookupComboBox;
-    cxDBLookupComboBox5: TcxDBLookupComboBox;
     cxDBLookupComboBox11: TcxDBLookupComboBox;
     cxDBLookupComboBox12: TcxDBLookupComboBox;
     cxDBLookupComboBox13: TcxDBLookupComboBox;
@@ -53,6 +52,57 @@ type
     cxDBLookupComboBox22: TcxDBLookupComboBox;
     PostButton: TcxButton;
     CancelButton: TcxButton;
+    cxGroupBox13: TcxGroupBox;
+    cxLabel46: TcxLabel;
+    NameCaseNominativeTextEdit: TcxDBTextEdit;
+    NameCaseGenitiveTextEdit: TcxDBTextEdit;
+    cxLabel47: TcxLabel;
+    NameCaseDativeTextEdit: TcxDBTextEdit;
+    cxLabel48: TcxLabel;
+    NameCaseAccusiveTextEdit: TcxDBTextEdit;
+    cxLabel49: TcxLabel;
+    NameCaseVocativeTextEdit: TcxDBTextEdit;
+    cxLabel50: TcxLabel;
+    cxLabel51: TcxLabel;
+    NameCaseLocativeTextEdit: TcxDBTextEdit;
+    NameCaseAblativeTextEdit: TcxDBTextEdit;
+    cxLabel52: TcxLabel;
+    NameAbbreviationTextEdit: TcxDBTextEdit;
+    cxLabel53: TcxLabel;
+    cxGroupBox14: TcxGroupBox;
+    cxLabel54: TcxLabel;
+    MiddleCaseNominativeTextEdit: TcxDBTextEdit;
+    MiddleCaseGenitiveTextEdit: TcxDBTextEdit;
+    cxLabel55: TcxLabel;
+    MiddleCaseDativeTextEdit: TcxDBTextEdit;
+    cxLabel56: TcxLabel;
+    MiddleCaseAccusativeTextEdit: TcxDBTextEdit;
+    cxLabel57: TcxLabel;
+    MiddleCaseVocativeTextEdit: TcxDBTextEdit;
+    cxLabel58: TcxLabel;
+    cxLabel59: TcxLabel;
+    MiddleCaseLocativeTextEdit: TcxDBTextEdit;
+    MiddleCaseAblativeTextEdit: TcxDBTextEdit;
+    cxLabel60: TcxLabel;
+    MiddleAbbreviationTextEdit: TcxDBTextEdit;
+    cxLabel61: TcxLabel;
+    cxGroupBox15: TcxGroupBox;
+    cxLabel62: TcxLabel;
+    SurnameCaseNominativeTextEdit: TcxDBTextEdit;
+    SurnameCaseGenitiveTextEdit: TcxDBTextEdit;
+    cxLabel63: TcxLabel;
+    SurnameCaseDativeTextEdit: TcxDBTextEdit;
+    cxLabel64: TcxLabel;
+    SurnameCaseAccusiveTextEdit: TcxDBTextEdit;
+    cxLabel65: TcxLabel;
+    SurnameCaseVocativeTextEdit: TcxDBTextEdit;
+    cxLabel66: TcxLabel;
+    cxLabel67: TcxLabel;
+    SurnameCaseLocativeTextEdit: TcxDBTextEdit;
+    SurnameCaseAblativeTextEdit: TcxDBTextEdit;
+    cxLabel68: TcxLabel;
+    cxButton1: TcxButton;
+    cxDBLookupComboBox1: TcxDBLookupComboBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -103,7 +153,7 @@ var
   FullName: String;
   caseGender: Boolean;
 begin
-{  FullName := Format('%s %s %s', [SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text]);
+  FullName := Format('%s %s %s', [SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text]);
   PartsFIO := GetFIOParts(FullName);
   caseGender := false;
 
@@ -132,7 +182,7 @@ begin
   MiddleCaseVocativeTextEdit.EditValue := ExtractWord(3, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_VOCATIVE), [' ']);
   MiddleCaseLocativeTextEdit.EditValue := ExtractWord(3, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_LOCATIVE), [' ']);
   MiddleCaseAblativeTextEdit.EditValue := ExtractWord(3, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_ABLATIVE), [' ']);
-  MiddleAbbreviationTextEdit.EditValue := PartsFIO.MiddleName;}
+  MiddleAbbreviationTextEdit.EditValue := PartsFIO.MiddleName;
 end;
 
 procedure TfmNotary.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -142,7 +192,7 @@ end;
 
 procedure TfmNotary.FormCreate(Sender: TObject);
 begin
-    dmNotary :=   TdmNotary.Create(self);
+    dmNotary := TdmNotary.Create(self);
 end;
 
 procedure TfmNotary.FormDestroy(Sender: TObject);

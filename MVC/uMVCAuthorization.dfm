@@ -168,7 +168,7 @@ object MVCAuthorization: TMVCAuthorization
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
     AutoCommit = True
     Left = 96
-    Top = 88
+    Top = 80
   end
   object Constituent: TpFIBDataSet
     SelectSQL.Strings = (
@@ -265,7 +265,7 @@ object MVCAuthorization: TMVCAuthorization
     AutoCommit = True
     DataSource = AuthorizationDataSource
     Left = 224
-    Top = 88
+    Top = 80
   end
   object Representatives: TpFIBDataSet
     SelectSQL.Strings = (
@@ -362,7 +362,7 @@ object MVCAuthorization: TMVCAuthorization
     AutoCommit = True
     DataSource = AuthorizationDataSource
     Left = 352
-    Top = 88
+    Top = 80
   end
   object AuthorizationDataSource: TDataSource
     DataSet = Authorization
@@ -407,19 +407,19 @@ object MVCAuthorization: TMVCAuthorization
     DataSource = AuthorizationDataSource
     UserName = 'AuthorizationDBPipeline'
     Left = 96
-    Top = 152
+    Top = 144
   end
   object ConstituentDBPipeline: TppDBPipeline
     DataSource = ConstituentDataSource
     UserName = 'ConstituentDBPipeline'
     Left = 224
-    Top = 152
+    Top = 144
   end
   object RepresentativesDBPipeline: TppDBPipeline
     DataSource = RepresentativesDataSource
     UserName = 'RepresentativesDBPipeline'
     Left = 352
-    Top = 152
+    Top = 144
   end
   object ppDesigner: TppDesigner
     Caption = 'ReportBuilder'
@@ -436,8 +436,8 @@ object MVCAuthorization: TMVCAuthorization
     WindowLeft = 100
     WindowTop = 50
     WindowWidth = 600
-    Left = 88
-    Top = 216
+    Left = 96
+    Top = 208
   end
   object ppReport: TppReport
     AutoStop = False
@@ -492,7 +492,7 @@ object MVCAuthorization: TMVCAuthorization
     XLSSettings.Subject = 'Report'
     XLSSettings.Title = 'Report'
     Left = 224
-    Top = 216
+    Top = 208
     Version = '15.02'
     mmColumnWidth = 0
     DataPipelineName = 'AuthorizationDBPipeline'
@@ -908,7 +908,30 @@ object MVCAuthorization: TMVCAuthorization
       '    ADDRESS_CORPS,'
       '    ADDRESS_SECTION,'
       '    ADDRESS_INDEX,'
-      '    ADDRESS_OTHER'
+      '    ADDRESS_OTHER,'
+      '    SURNAME_CASE_NOMINATIVE,'
+      '    SURNAME_CASE_GENITIVE,'
+      '    SURNAME_CASE_DATIVE,'
+      '    SURNAME_CASE_ACCUSATIVE,'
+      '    SURNAME_CASE_ABLATIVE,'
+      '    SURNAME_CASE_LOCATIVE,'
+      '    SURNAME_CASE_VOCATIVE,'
+      '    NAME_CASE_NOMINATIVE,'
+      '    NAME_CASE_GENITIVE,'
+      '    NAME_CASE_DATIVE,'
+      '    NAME_CASE_ACCUSATIVE,'
+      '    NAME_CASE_ABLATIVE,'
+      '    NAME_CASE_LOCATIVE,'
+      '    NAME_CASE_VOCATIVE,'
+      '    NAME_CASE_ABBREVIATION,'
+      '    MIDDLE_CASE_NOMINATIVE,'
+      '    MIDDLE_CASE_GENITIVE,'
+      '    MIDDLE_CASE_DATIVE,'
+      '    MIDDLE_CASE_ACCUSATIVE,'
+      '    MIDDLE_CASE_ABLATIVE,'
+      '    MIDDLE_CASE_LOCATIVE,'
+      '    MIDDLE_CASE_VOCATIVE,'
+      '    MIDDLE_CASE_ABBREVIATION'
       'FROM'
       '    VIEW_REL_AUTH_NOTARY '
       'WHERE'
@@ -920,7 +943,7 @@ object MVCAuthorization: TMVCAuthorization
     AutoCommit = True
     DataSource = AuthorizationDataSource
     Left = 472
-    Top = 88
+    Top = 80
   end
   object NotaryDataSource: TDataSource
     DataSet = Notary
@@ -931,6 +954,6 @@ object MVCAuthorization: TMVCAuthorization
     DataSource = NotaryDataSource
     UserName = 'RepresentativesDBPipeline1'
     Left = 472
-    Top = 152
+    Top = 144
   end
 end

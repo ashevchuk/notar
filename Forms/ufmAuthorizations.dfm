@@ -498,6 +498,7 @@ object fmAuthorizations: TfmAuthorizations
     Align = alClient
     TabOrder = 0
     object AuthorizationsGridDBTableView1: TcxGridDBTableView
+      PopupMenu = AuthorizationPopupMenu
       Navigator.Buttons.CustomButtons = <>
       Navigator.Buttons.Insert.Visible = False
       Navigator.Buttons.Delete.Visible = False
@@ -1295,5 +1296,17 @@ object fmAuthorizations: TfmAuthorizations
     DataSet = RelAuthConstituentDataSet
     Left = 400
     Top = 320
+  end
+  object AuthorizationPopupMenu: TPopupMenu
+    Left = 544
+    Top = 264
+    object N1: TMenuItem
+      Caption = #1055#1077#1088#1077#1075#1083#1103#1076
+      OnClick = N1Click
+    end
+    object N2: TMenuItem
+      Caption = #1055#1077#1088#1077#1092#1086#1088#1084#1091#1074#1072#1090#1080
+      OnClick = N2Click
+    end
   end
 end

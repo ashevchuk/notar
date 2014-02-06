@@ -44,24 +44,6 @@ type
     AddressIndexDataSet: TpFIBDataSet;
     AddressOtherDataSource: TDataSource;
     AddressOtherDataSet: TpFIBDataSet;
-    NotariesDataSetID: TFIBBCDField;
-    NotariesDataSetNAME: TFIBWideStringField;
-    NotariesDataSetSURNAME: TFIBWideStringField;
-    NotariesDataSetMIDDLE: TFIBWideStringField;
-    NotariesDataSetCOUNTY: TFIBWideStringField;
-    NotariesDataSetGENDER: TFIBBCDField;
-    NotariesDataSetADDRESS_STATE: TFIBWideStringField;
-    NotariesDataSetADDRESS_REGION: TFIBWideStringField;
-    NotariesDataSetADDRESS_LOCALITY_TYPE: TFIBWideStringField;
-    NotariesDataSetADDRESS_LOCALITY: TFIBWideStringField;
-    NotariesDataSetADDRESS_STREET_TYPE: TFIBWideStringField;
-    NotariesDataSetADDRESS_STREET: TFIBWideStringField;
-    NotariesDataSetADDRESS_BUILDING: TFIBWideStringField;
-    NotariesDataSetADDRESS_FLAT: TFIBWideStringField;
-    NotariesDataSetADDRESS_CORPS: TFIBWideStringField;
-    NotariesDataSetADDRESS_SECTION: TFIBWideStringField;
-    NotariesDataSetADDRESS_INDEX: TFIBWideStringField;
-    NotariesDataSetADDRESS_OTHER: TFIBWideStringField;
   private
     { Private declarations }
   public

@@ -79,7 +79,30 @@ object dmNotary: TdmNotary
       '    ADDRESS_CORPS = :ADDRESS_CORPS,'
       '    ADDRESS_SECTION = :ADDRESS_SECTION,'
       '    ADDRESS_INDEX = :ADDRESS_INDEX,'
-      '    ADDRESS_OTHER = :ADDRESS_OTHER'
+      '    ADDRESS_OTHER = :ADDRESS_OTHER,'
+      '    SURNAME_CASE_NOMINATIVE = :SURNAME_CASE_NOMINATIVE,'
+      '    SURNAME_CASE_GENITIVE = :SURNAME_CASE_GENITIVE,'
+      '    SURNAME_CASE_DATIVE = :SURNAME_CASE_DATIVE,'
+      '    SURNAME_CASE_ACCUSATIVE = :SURNAME_CASE_ACCUSATIVE,'
+      '    SURNAME_CASE_ABLATIVE = :SURNAME_CASE_ABLATIVE,'
+      '    SURNAME_CASE_LOCATIVE = :SURNAME_CASE_LOCATIVE,'
+      '    SURNAME_CASE_VOCATIVE = :SURNAME_CASE_VOCATIVE,'
+      '    NAME_CASE_NOMINATIVE = :NAME_CASE_NOMINATIVE,'
+      '    NAME_CASE_GENITIVE = :NAME_CASE_GENITIVE,'
+      '    NAME_CASE_DATIVE = :NAME_CASE_DATIVE,'
+      '    NAME_CASE_ACCUSATIVE = :NAME_CASE_ACCUSATIVE,'
+      '    NAME_CASE_ABLATIVE = :NAME_CASE_ABLATIVE,'
+      '    NAME_CASE_LOCATIVE = :NAME_CASE_LOCATIVE,'
+      '    NAME_CASE_VOCATIVE = :NAME_CASE_VOCATIVE,'
+      '    NAME_CASE_ABBREVIATION = :NAME_CASE_ABBREVIATION,'
+      '    MIDDLE_CASE_NOMINATIVE = :MIDDLE_CASE_NOMINATIVE,'
+      '    MIDDLE_CASE_GENITIVE = :MIDDLE_CASE_GENITIVE,'
+      '    MIDDLE_CASE_DATIVE = :MIDDLE_CASE_DATIVE,'
+      '    MIDDLE_CASE_ACCUSATIVE = :MIDDLE_CASE_ACCUSATIVE,'
+      '    MIDDLE_CASE_ABLATIVE = :MIDDLE_CASE_ABLATIVE,'
+      '    MIDDLE_CASE_LOCATIVE = :MIDDLE_CASE_LOCATIVE,'
+      '    MIDDLE_CASE_VOCATIVE = :MIDDLE_CASE_VOCATIVE,'
+      '    MIDDLE_CASE_ABBREVIATION = :MIDDLE_CASE_ABBREVIATION'
       'WHERE'
       '    ID = :OLD_ID'
       '    ')
@@ -107,7 +130,30 @@ object dmNotary: TdmNotary
       '    ADDRESS_CORPS,'
       '    ADDRESS_SECTION,'
       '    ADDRESS_INDEX,'
-      '    ADDRESS_OTHER'
+      '    ADDRESS_OTHER,'
+      '    SURNAME_CASE_NOMINATIVE,'
+      '    SURNAME_CASE_GENITIVE,'
+      '    SURNAME_CASE_DATIVE,'
+      '    SURNAME_CASE_ACCUSATIVE,'
+      '    SURNAME_CASE_ABLATIVE,'
+      '    SURNAME_CASE_LOCATIVE,'
+      '    SURNAME_CASE_VOCATIVE,'
+      '    NAME_CASE_NOMINATIVE,'
+      '    NAME_CASE_GENITIVE,'
+      '    NAME_CASE_DATIVE,'
+      '    NAME_CASE_ACCUSATIVE,'
+      '    NAME_CASE_ABLATIVE,'
+      '    NAME_CASE_LOCATIVE,'
+      '    NAME_CASE_VOCATIVE,'
+      '    NAME_CASE_ABBREVIATION,'
+      '    MIDDLE_CASE_NOMINATIVE,'
+      '    MIDDLE_CASE_GENITIVE,'
+      '    MIDDLE_CASE_DATIVE,'
+      '    MIDDLE_CASE_ACCUSATIVE,'
+      '    MIDDLE_CASE_ABLATIVE,'
+      '    MIDDLE_CASE_LOCATIVE,'
+      '    MIDDLE_CASE_VOCATIVE,'
+      '    MIDDLE_CASE_ABBREVIATION'
       ')'
       'VALUES('
       '    :NAME,'
@@ -126,7 +172,30 @@ object dmNotary: TdmNotary
       '    :ADDRESS_CORPS,'
       '    :ADDRESS_SECTION,'
       '    :ADDRESS_INDEX,'
-      '    :ADDRESS_OTHER'
+      '    :ADDRESS_OTHER,'
+      '    :SURNAME_CASE_NOMINATIVE,'
+      '    :SURNAME_CASE_GENITIVE,'
+      '    :SURNAME_CASE_DATIVE,'
+      '    :SURNAME_CASE_ACCUSATIVE,'
+      '    :SURNAME_CASE_ABLATIVE,'
+      '    :SURNAME_CASE_LOCATIVE,'
+      '    :SURNAME_CASE_VOCATIVE,'
+      '    :NAME_CASE_NOMINATIVE,'
+      '    :NAME_CASE_GENITIVE,'
+      '    :NAME_CASE_DATIVE,'
+      '    :NAME_CASE_ACCUSATIVE,'
+      '    :NAME_CASE_ABLATIVE,'
+      '    :NAME_CASE_LOCATIVE,'
+      '    :NAME_CASE_VOCATIVE,'
+      '    :NAME_CASE_ABBREVIATION,'
+      '    :MIDDLE_CASE_NOMINATIVE,'
+      '    :MIDDLE_CASE_GENITIVE,'
+      '    :MIDDLE_CASE_DATIVE,'
+      '    :MIDDLE_CASE_ACCUSATIVE,'
+      '    :MIDDLE_CASE_ABLATIVE,'
+      '    :MIDDLE_CASE_LOCATIVE,'
+      '    :MIDDLE_CASE_VOCATIVE,'
+      '    :MIDDLE_CASE_ABBREVIATION'
       ')')
     RefreshSQL.Strings = (
       'SELECT'
@@ -147,7 +216,30 @@ object dmNotary: TdmNotary
       '    ADDRESS_CORPS,'
       '    ADDRESS_SECTION,'
       '    ADDRESS_INDEX,'
-      '    ADDRESS_OTHER'
+      '    ADDRESS_OTHER,'
+      '    SURNAME_CASE_NOMINATIVE,'
+      '    SURNAME_CASE_GENITIVE,'
+      '    SURNAME_CASE_DATIVE,'
+      '    SURNAME_CASE_ACCUSATIVE,'
+      '    SURNAME_CASE_ABLATIVE,'
+      '    SURNAME_CASE_LOCATIVE,'
+      '    SURNAME_CASE_VOCATIVE,'
+      '    NAME_CASE_NOMINATIVE,'
+      '    NAME_CASE_GENITIVE,'
+      '    NAME_CASE_DATIVE,'
+      '    NAME_CASE_ACCUSATIVE,'
+      '    NAME_CASE_ABLATIVE,'
+      '    NAME_CASE_LOCATIVE,'
+      '    NAME_CASE_VOCATIVE,'
+      '    NAME_CASE_ABBREVIATION,'
+      '    MIDDLE_CASE_NOMINATIVE,'
+      '    MIDDLE_CASE_GENITIVE,'
+      '    MIDDLE_CASE_DATIVE,'
+      '    MIDDLE_CASE_ACCUSATIVE,'
+      '    MIDDLE_CASE_ABLATIVE,'
+      '    MIDDLE_CASE_LOCATIVE,'
+      '    MIDDLE_CASE_VOCATIVE,'
+      '    MIDDLE_CASE_ABBREVIATION'
       'FROM'
       '    CATALOG_NOTARIES '
       ''
@@ -173,7 +265,30 @@ object dmNotary: TdmNotary
       '    ADDRESS_CORPS,'
       '    ADDRESS_SECTION,'
       '    ADDRESS_INDEX,'
-      '    ADDRESS_OTHER'
+      '    ADDRESS_OTHER,'
+      '    SURNAME_CASE_NOMINATIVE,'
+      '    SURNAME_CASE_GENITIVE,'
+      '    SURNAME_CASE_DATIVE,'
+      '    SURNAME_CASE_ACCUSATIVE,'
+      '    SURNAME_CASE_ABLATIVE,'
+      '    SURNAME_CASE_LOCATIVE,'
+      '    SURNAME_CASE_VOCATIVE,'
+      '    NAME_CASE_NOMINATIVE,'
+      '    NAME_CASE_GENITIVE,'
+      '    NAME_CASE_DATIVE,'
+      '    NAME_CASE_ACCUSATIVE,'
+      '    NAME_CASE_ABLATIVE,'
+      '    NAME_CASE_LOCATIVE,'
+      '    NAME_CASE_VOCATIVE,'
+      '    NAME_CASE_ABBREVIATION,'
+      '    MIDDLE_CASE_NOMINATIVE,'
+      '    MIDDLE_CASE_GENITIVE,'
+      '    MIDDLE_CASE_DATIVE,'
+      '    MIDDLE_CASE_ACCUSATIVE,'
+      '    MIDDLE_CASE_ABLATIVE,'
+      '    MIDDLE_CASE_LOCATIVE,'
+      '    MIDDLE_CASE_VOCATIVE,'
+      '    MIDDLE_CASE_ABBREVIATION'
       'FROM'
       '    CATALOG_NOTARIES ')
     Active = True
@@ -183,94 +298,6 @@ object dmNotary: TdmNotary
     AutoCommit = True
     Left = 64
     Top = 32
-    object NotariesDataSetID: TFIBBCDField
-      FieldName = 'ID'
-      Size = 0
-    end
-    object NotariesDataSetNAME: TFIBWideStringField
-      FieldName = 'NAME'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetSURNAME: TFIBWideStringField
-      FieldName = 'SURNAME'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetMIDDLE: TFIBWideStringField
-      FieldName = 'MIDDLE'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetCOUNTY: TFIBWideStringField
-      FieldName = 'COUNTY'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetGENDER: TFIBBCDField
-      FieldName = 'GENDER'
-      Size = 0
-    end
-    object NotariesDataSetADDRESS_STATE: TFIBWideStringField
-      FieldName = 'ADDRESS_STATE'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetADDRESS_REGION: TFIBWideStringField
-      FieldName = 'ADDRESS_REGION'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetADDRESS_LOCALITY_TYPE: TFIBWideStringField
-      FieldName = 'ADDRESS_LOCALITY_TYPE'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetADDRESS_LOCALITY: TFIBWideStringField
-      FieldName = 'ADDRESS_LOCALITY'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetADDRESS_STREET_TYPE: TFIBWideStringField
-      FieldName = 'ADDRESS_STREET_TYPE'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetADDRESS_STREET: TFIBWideStringField
-      FieldName = 'ADDRESS_STREET'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetADDRESS_BUILDING: TFIBWideStringField
-      FieldName = 'ADDRESS_BUILDING'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetADDRESS_FLAT: TFIBWideStringField
-      FieldName = 'ADDRESS_FLAT'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetADDRESS_CORPS: TFIBWideStringField
-      FieldName = 'ADDRESS_CORPS'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetADDRESS_SECTION: TFIBWideStringField
-      FieldName = 'ADDRESS_SECTION'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetADDRESS_INDEX: TFIBWideStringField
-      FieldName = 'ADDRESS_INDEX'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object NotariesDataSetADDRESS_OTHER: TFIBWideStringField
-      FieldName = 'ADDRESS_OTHER'
-      Size = 255
-      EmptyStrToNull = True
-    end
   end
   object NotariesDataSource: TDataSource
     DataSet = NotariesDataSet
