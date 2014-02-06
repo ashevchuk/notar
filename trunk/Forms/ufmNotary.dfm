@@ -2,8 +2,8 @@ object fmNotary: TfmNotary
   Left = 0
   Top = 0
   Caption = #1053#1086#1090#1072#1088#1110#1091#1089
-  ClientHeight = 378
-  ClientWidth = 548
+  ClientHeight = 533
+  ClientWidth = 1073
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -500,11 +500,10 @@ object fmNotary: TfmNotary
     ParentColor = False
     ParentFont = False
     TabOrder = 0
-    ExplicitTop = -8
-    ExplicitWidth = 1120
-    ExplicitHeight = 688
-    Height = 378
-    Width = 548
+    ExplicitWidth = 548
+    ExplicitHeight = 378
+    Height = 533
+    Width = 1073
     object cxGroupBox6: TcxGroupBox
       Left = 278
       Top = 26
@@ -1066,17 +1065,18 @@ object fmNotary: TfmNotary
         TabOrder = 8
         Width = 150
       end
-      object cxDBLookupComboBox5: TcxDBLookupComboBox
+      object cxDBLookupComboBox1: TcxDBLookupComboBox
         Left = 104
         Top = 123
         DataBinding.DataField = 'COUNTY'
         DataBinding.DataSource = dmNotary.NotariesDataSource
         ParentFont = False
+        Properties.DropDownListStyle = lsEditList
         Properties.DropDownSizeable = True
-        Properties.KeyFieldNames = 'ID'
+        Properties.KeyFieldNames = 'COUNTY'
         Properties.ListColumns = <
           item
-            FieldName = 'STATE'
+            FieldName = 'COUNTY'
           end>
         Properties.ListOptions.CaseInsensitive = True
         Properties.ListOptions.ShowHeader = False
@@ -1096,13 +1096,561 @@ object fmNotary: TfmNotary
       OnClick = PostButtonClick
     end
     object CancelButton: TcxButton
-      Left = 137
+      Left = 146
       Top = 208
       Width = 75
       Height = 25
       Caption = #1042#1110#1076#1084#1110#1085#1080#1090#1080
       TabOrder = 3
       OnClick = CancelButtonClick
+    end
+    object cxGroupBox13: TcxGroupBox
+      Left = 544
+      Top = 26
+      Caption = #1042#1110#1076#1084#1110#1085#1082#1080': '#1030#1084#39#1103
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 4
+      Height = 239
+      Width = 260
+      object cxLabel46: TcxLabel
+        Left = 3
+        Top = 16
+        AutoSize = False
+        Caption = #1053#1072#1079#1080#1074#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object NameCaseNominativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 16
+        DataBinding.DataField = 'NAME_CASE_NOMINATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 1
+        Width = 150
+      end
+      object NameCaseGenitiveTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 42
+        DataBinding.DataField = 'NAME_CASE_GENITIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 2
+        Width = 150
+      end
+      object cxLabel47: TcxLabel
+        Left = 3
+        Top = 43
+        AutoSize = False
+        Caption = #1056#1086#1076#1086#1074#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object NameCaseDativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 69
+        DataBinding.DataField = 'NAME_CASE_DATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 4
+        Width = 150
+      end
+      object cxLabel48: TcxLabel
+        Left = 3
+        Top = 70
+        AutoSize = False
+        Caption = #1044#1072#1074#1072#1083#1100#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object NameCaseAccusiveTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 96
+        DataBinding.DataField = 'NAME_CASE_ACCUSATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 6
+        Width = 150
+      end
+      object cxLabel49: TcxLabel
+        Left = 3
+        Top = 97
+        AutoSize = False
+        Caption = #1047#1085#1072#1093#1110#1076#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object NameCaseVocativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 177
+        DataBinding.DataField = 'NAME_CASE_VOCATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 8
+        Width = 150
+      end
+      object cxLabel50: TcxLabel
+        Left = 3
+        Top = 178
+        AutoSize = False
+        Caption = #1050#1083#1080#1095#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel51: TcxLabel
+        Left = 3
+        Top = 151
+        AutoSize = False
+        Caption = #1052#1110#1089#1094#1077#1074#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object NameCaseLocativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 150
+        DataBinding.DataField = 'NAME_CASE_LOCATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 11
+        Width = 150
+      end
+      object NameCaseAblativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 124
+        DataBinding.DataField = 'NAME_CASE_ABLATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 12
+        Width = 150
+      end
+      object cxLabel52: TcxLabel
+        Left = 3
+        Top = 124
+        AutoSize = False
+        Caption = #1054#1088#1091#1076#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object NameAbbreviationTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 204
+        DataBinding.DataField = 'NAME_CASE_ABBREVIATION'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 14
+        Width = 150
+      end
+      object cxLabel53: TcxLabel
+        Left = 3
+        Top = 205
+        AutoSize = False
+        Caption = #1057#1082#1086#1088#1086#1095#1077#1085#1085#1103
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+    end
+    object cxGroupBox14: TcxGroupBox
+      Left = 544
+      Top = 271
+      Caption = #1042#1110#1076#1084#1110#1085#1082#1080': '#1055#1086' '#1073#1072#1090#1100#1082#1086#1074#1110
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 5
+      Height = 239
+      Width = 260
+      object cxLabel54: TcxLabel
+        Left = 3
+        Top = 16
+        AutoSize = False
+        Caption = #1053#1072#1079#1080#1074#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object MiddleCaseNominativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 16
+        DataBinding.DataField = 'MIDDLE_CASE_NOMINATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 1
+        Width = 150
+      end
+      object MiddleCaseGenitiveTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 42
+        DataBinding.DataField = 'MIDDLE_CASE_GENITIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 2
+        Width = 150
+      end
+      object cxLabel55: TcxLabel
+        Left = 3
+        Top = 43
+        AutoSize = False
+        Caption = #1056#1086#1076#1086#1074#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object MiddleCaseDativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 69
+        DataBinding.DataField = 'MIDDLE_CASE_DATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 4
+        Width = 150
+      end
+      object cxLabel56: TcxLabel
+        Left = 3
+        Top = 70
+        AutoSize = False
+        Caption = #1044#1072#1074#1072#1083#1100#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object MiddleCaseAccusativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 96
+        DataBinding.DataField = 'MIDDLE_CASE_ACCUSATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 6
+        Width = 150
+      end
+      object cxLabel57: TcxLabel
+        Left = 3
+        Top = 97
+        AutoSize = False
+        Caption = #1047#1085#1072#1093#1110#1076#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object MiddleCaseVocativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 177
+        DataBinding.DataField = 'MIDDLE_CASE_VOCATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 8
+        Width = 150
+      end
+      object cxLabel58: TcxLabel
+        Left = 3
+        Top = 178
+        AutoSize = False
+        Caption = #1050#1083#1080#1095#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel59: TcxLabel
+        Left = 3
+        Top = 151
+        AutoSize = False
+        Caption = #1052#1110#1089#1094#1077#1074#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object MiddleCaseLocativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 150
+        DataBinding.DataField = 'MIDDLE_CASE_LOCATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 11
+        Width = 150
+      end
+      object MiddleCaseAblativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 123
+        DataBinding.DataField = 'MIDDLE_CASE_ABLATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 12
+        Width = 150
+      end
+      object cxLabel60: TcxLabel
+        Left = 3
+        Top = 124
+        AutoSize = False
+        Caption = #1054#1088#1091#1076#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object MiddleAbbreviationTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 204
+        DataBinding.DataField = 'MIDDLE_CASE_ABBREVIATION'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 14
+        Width = 150
+      end
+      object cxLabel61: TcxLabel
+        Left = 3
+        Top = 205
+        AutoSize = False
+        Caption = #1057#1082#1086#1088#1086#1095#1077#1085#1085#1103
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+    end
+    object cxGroupBox15: TcxGroupBox
+      Left = 810
+      Top = 26
+      Caption = #1042#1110#1076#1084#1110#1085#1082#1080': '#1060#1072#1084#1110#1083#1110#1103
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 6
+      Height = 213
+      Width = 260
+      object cxLabel62: TcxLabel
+        Left = 3
+        Top = 16
+        AutoSize = False
+        Caption = #1053#1072#1079#1080#1074#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object SurnameCaseNominativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 16
+        DataBinding.DataField = 'SURNAME_CASE_NOMINATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 1
+        Width = 150
+      end
+      object SurnameCaseGenitiveTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 42
+        DataBinding.DataField = 'SURNAME_CASE_GENITIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 2
+        Width = 150
+      end
+      object cxLabel63: TcxLabel
+        Left = 3
+        Top = 43
+        AutoSize = False
+        Caption = #1056#1086#1076#1086#1074#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object SurnameCaseDativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 69
+        DataBinding.DataField = 'NAME_CASE_DATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 4
+        Width = 150
+      end
+      object cxLabel64: TcxLabel
+        Left = 3
+        Top = 70
+        AutoSize = False
+        Caption = #1044#1072#1074#1072#1083#1100#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object SurnameCaseAccusiveTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 96
+        DataBinding.DataField = 'SURNAME_CASE_ACCUSATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 6
+        Width = 150
+      end
+      object cxLabel65: TcxLabel
+        Left = 3
+        Top = 97
+        AutoSize = False
+        Caption = #1047#1085#1072#1093#1110#1076#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object SurnameCaseVocativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 177
+        DataBinding.DataField = 'SURNAME_CASE_VOCATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 8
+        Width = 150
+      end
+      object cxLabel66: TcxLabel
+        Left = 3
+        Top = 178
+        AutoSize = False
+        Caption = #1050#1083#1080#1095#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object cxLabel67: TcxLabel
+        Left = 3
+        Top = 151
+        AutoSize = False
+        Caption = #1052#1110#1089#1094#1077#1074#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+      object SurnameCaseLocativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 150
+        DataBinding.DataField = 'SURNAME_CASE_LOCATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 11
+        Width = 150
+      end
+      object SurnameCaseAblativeTextEdit: TcxDBTextEdit
+        Left = 104
+        Top = 123
+        DataBinding.DataField = 'SURNAME_CASE_ABLATIVE'
+        DataBinding.DataSource = dmNotary.NotariesDataSource
+        ParentFont = False
+        TabOrder = 12
+        Width = 150
+      end
+      object cxLabel68: TcxLabel
+        Left = 3
+        Top = 124
+        AutoSize = False
+        Caption = #1054#1088#1091#1076#1085#1080#1081
+        ParentColor = False
+        ParentFont = False
+        Properties.Alignment.Horz = taRightJustify
+        Transparent = True
+        Height = 17
+        Width = 100
+        AnchorX = 103
+      end
+    end
+    object cxButton1: TcxButton
+      Left = 56
+      Top = 239
+      Width = 165
+      Height = 25
+      Caption = #1057#1090#1074#1086#1088#1080#1090#1080' '#1074#1110#1076#1084#1110#1085#1082#1080
+      TabOrder = 7
+      OnClick = cxButton1Click
     end
   end
 end

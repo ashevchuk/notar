@@ -10,7 +10,7 @@ uses
   dxSkinsCore, dxSkinOffice2007Blue, dxSkinscxPCPainter, cxCustomData, cxFilter,
   cxData, cxDataStorage, cxEdit, cxNavigator, cxDBData, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxGridLevel, cxClasses, cxGridCustomView,
-  cxGrid, cxLabel, cxCheckBox;
+  cxGrid, cxLabel, cxCheckBox, Vcl.Menus;
 
 type
   TfmAuthorizations = class(TForm)
@@ -129,6 +129,9 @@ type
     AuthorizationsDataSetTRANSITE: TFIBWideStringField;
     AuthorizationsDataSetSUBSTITUTION: TFIBWideStringField;
     AuthorizationsGridDBTableView1SUBSTITUTION: TcxGridDBColumn;
+    AuthorizationPopupMenu: TPopupMenu;
+    N1: TMenuItem;
+    N2: TMenuItem;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure AuthorizationsGridDBTableView2RELATION_TYPEGetDataText(
       Sender: TcxCustomGridTableItem; ARecordIndex: Integer; var AText: string);
@@ -139,6 +142,8 @@ type
       Sender: TcxCustomGridTableView;
       ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton;
       AShift: TShiftState; var AHandled: Boolean);
+    procedure N1Click(Sender: TObject);
+    procedure N2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -163,18 +168,22 @@ var
   InputFileName: string;
   OutputFileName: string;
 begin
-  InputFileName := 'Report0.template.rtf';
-  OutputFileName := 'Report0.output.rtf';
+  InputFileName := Format('%s\Report0.template.rtf', [TFmMain(Application.MainForm).CurrentDir + 'Templates\Repository']);
+  OutputFileName := Format('%s\%s.%s.report.output.rtf', [TFmMain(Application.MainForm).CurrentDir + 'Templates\Output', 'authorization', AuthorizationsDataSetID.asString]);
+
+  if not FileExists(OutputFileName) then
   with TMVCAuthorization.Create(Application.MainForm) do
   begin
     setID(AuthorizationsDataSetID.asString);
     buildReport(InputFileName, OutputFileName);
     Free;
   end;
-  with RVARibbonFrm.TfrmMain.Create(Application.MainForm) do begin
-  LoadFile(OutputFileName);
-  Show;
-end;
+
+  with RVARibbonFrm.TfrmMain.Create(Application.MainForm) do
+  begin
+    LoadFile(OutputFileName);
+    Show;
+  end;
 end;
 
 procedure TfmAuthorizations.AuthorizationsGridDBTableView2RELATION_TYPEGetDataText(
@@ -196,6 +205,51 @@ procedure TfmAuthorizations.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   Action := caFree;
+end;
+
+procedure TfmAuthorizations.N1Click(Sender: TObject);
+var
+  InputFileName: string;
+  OutputFileName: string;
+begin
+  InputFileName := Format('%s\Report0.template.rtf', [TFmMain(Application.MainForm).CurrentDir + 'Templates\Repository']);
+  OutputFileName := Format('%s\%s.%s.report.output.rtf', [TFmMain(Application.MainForm).CurrentDir + 'Templates\Output', 'authorization', AuthorizationsDataSetID.asString]);
+
+  if not FileExists(OutputFileName) then
+  with TMVCAuthorization.Create(Application.MainForm) do
+  begin
+    setID(AuthorizationsDataSetID.asString);
+    buildReport(InputFileName, OutputFileName);
+    Free;
+  end;
+
+  with RVARibbonFrm.TfrmMain.Create(Application.MainForm) do
+  begin
+    LoadFile(OutputFileName);
+    Show;
+  end;
+end;
+
+procedure TfmAuthorizations.N2Click(Sender: TObject);
+var
+  InputFileName: string;
+  OutputFileName: string;
+begin
+  InputFileName := Format('%s\Report0.template.rtf', [TFmMain(Application.MainForm).CurrentDir + 'Templates\Repository']);
+  OutputFileName := Format('%s\%s.%s.report.output.rtf', [TFmMain(Application.MainForm).CurrentDir + 'Templates\Output', 'authorization', AuthorizationsDataSetID.asString]);
+
+  with TMVCAuthorization.Create(Application.MainForm) do
+  begin
+    setID(AuthorizationsDataSetID.asString);
+    buildReport(InputFileName, OutputFileName);
+    Free;
+  end;
+
+  with RVARibbonFrm.TfrmMain.Create(Application.MainForm) do
+  begin
+    LoadFile(OutputFileName);
+    Show;
+  end;
 end;
 
 end.

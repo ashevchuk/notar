@@ -88,22 +88,21 @@ uses uDbFreeReporter, uFreeReporter,
 
 function TMVCAuthorization.buildReport(AInputFileName: string; AOutputFileName: string): boolean;
 var
-  TemplateName, OutputName, sTemplate: string;
   Reporter: TDbFreeReporter;
 begin
   prepareScript;
 
-  sTemplate := AInputFileName;
-  TemplateName := TFmMain(Application.MainForm).CurrentDir + 'Templates\Repository\' + sTemplate;
-  OutputName := TFmMain(Application.MainForm).CurrentDir + 'Templates\Output\' + StringReplace(sTemplate, '.template.', '.', [rfIgnoreCase]);
-
   Reporter := TDbFreeReporter.Create;
+
   Reporter.OnGetCustomTagValue := GetCustomTagValue;
+
   Reporter.AddDataSet(Authorization);
   Reporter.AddDataSet(Constituent);
   Reporter.AddDataSet(Representatives);
   Reporter.AddDataSet(Notary);
-  Reporter.CreateReport(TemplateName, AOutputFileName);
+
+  Reporter.CreateReport(AInputFileName, AOutputFileName);
+
   Reporter.Free;
 end;
 

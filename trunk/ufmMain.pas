@@ -164,6 +164,7 @@ procedure TfmMain.dxBarButton10Click(Sender: TObject);
 begin
   with TfmNotary.Create(Application.MainForm) do
     begin
+      appendNotary;
       Show;
     end;
 end;
