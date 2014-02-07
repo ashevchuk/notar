@@ -335,6 +335,11 @@ object fmMain: TfmMain
         Width = 20
       end
       item
+        PanelStyleClassName = 'TdxStatusBarContainerPanelStyle'
+        PanelStyle.Container = StatusBarProgressContainer
+        Width = 100
+      end
+      item
         PanelStyleClassName = 'TdxStatusBarTextPanelStyle'
         PanelStyle.Alignment = taCenter
         Text = 'Unregistered'
@@ -354,6 +359,27 @@ object fmMain: TfmMain
     Font.Name = 'Tahoma'
     Font.Style = []
     OnDblClick = StatusBarDblClick
+    object StatusBarProgressContainer: TdxStatusBarContainerControl
+      Left = 586
+      Top = 4
+      Width = 98
+      Height = 13
+      object StatusProgressBar: TcxProgressBar
+        Left = 0
+        Top = 0
+        TabStop = False
+        Align = alClient
+        ParentColor = False
+        ParentFont = False
+        ParentShowHint = False
+        Properties.Max = 100.000000000000000000
+        Properties.PeakValue = 100.000000000000000000
+        Properties.ShowText = False
+        ShowHint = False
+        TabOrder = 0
+        Width = 98
+      end
+    end
   end
   object LogGroupBox: TcxGroupBox
     Left = 0
@@ -931,6 +957,13 @@ object fmMain: TfmMain
     Filter = '*.log|*.log|*.*|*.*'
     Title = 'Save Log file'
     Left = 544
+    Top = 512
+  end
+  object dxTaskbarProgress: TdxTaskbarProgress
+    Active = True
+    LinkedComponent = StatusProgressBar
+    Position = 0
+    Left = 656
     Top = 512
   end
 end

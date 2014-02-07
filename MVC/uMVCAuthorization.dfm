@@ -389,10 +389,6 @@ object MVCAuthorization: TMVCAuthorization
     Left = 680
     Top = 16
   end
-  object PaxInvoke: TPaxInvoke
-    Left = 760
-    Top = 16
-  end
   object ConstituentDataSource: TDataSource
     DataSet = Constituent
     Left = 224

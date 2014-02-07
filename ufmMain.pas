@@ -13,12 +13,14 @@ uses
 
   cxGridTableView, Vcl.ComCtrls, ScriptCtrls, ShellApi, cxPCdxBarPopupMenu, cxTL, cxScrollBox,
   cxSplitter, cxGroupBox, cxListBox, dxSkinOffice2007Blue, Vcl.Menus,
-  dxCustomTileControl, dxTileControl, dxRibbonSkins, dxSkinsdxRibbonPainter;
+  dxCustomTileControl, dxTileControl, dxRibbonSkins, dxSkinsdxRibbonPainter,
+  cxProgressBar, dxTaskbarProgress;
 
 const
   IDX_STATUS_TEXT : byte = 0;
-  IDX_STATUS_REGISTERED : byte = 1;
-  IDX_STATUS_EXPIRATION : byte = 2;
+  IDX_STATUS_PROGRESS : byte = 1;
+  IDX_STATUS_REGISTERED : byte = 2;
+  IDX_STATUS_EXPIRATION : byte = 3;
 
 resourcestring
   Str_Registered = 'Registered';
@@ -88,6 +90,9 @@ type
     dxBarButton8: TdxBarButton;
     dxBarButton9: TdxBarButton;
     dxBarButton10: TdxBarButton;
+    StatusBarProgressContainer: TdxStatusBarContainerControl;
+    dxTaskbarProgress: TdxTaskbarProgress;
+    StatusProgressBar: TcxProgressBar;
     procedure FormCreate(Sender: TObject);
     procedure dxBarButtonExitClick(Sender: TObject);
     procedure dxBarButtonEditorClick(Sender: TObject);
@@ -107,7 +112,6 @@ type
     procedure dxBarButton10Click(Sender: TObject);
   private
     procedure OnException(Sender: TObject; E: Exception);
-
   public
     CurrentDir : string;
     procedure SetStatusText(const AStatus: string; StatusType: byte = 0);
@@ -115,6 +119,9 @@ type
     procedure ToggleLogWindow(AVisible: boolean);
     procedure SwitchLogWindow;
     procedure Log(AText: string);
+    procedure ShowStatusProgressBar;
+    procedure HideStatusProgressBar;
+    procedure SetStatusProgressBarPosition(const ATotal, APosition: Int64);
   end;
 
 procedure Log(AText: string);
@@ -269,12 +276,12 @@ begin
   ToggleLogWindow(false);
 //  Application.OnException := OnException;
 
-  ForceCurrentDirectory := true;
+ ForceCurrentDirectory := true;
  CurrentDir := ExtractFilePath(ParamStr(0));
  PathLength := Length(CurrentDir);
  if (PathLength > 3) and (CurrentDir[PathLength] <> '\') then CurrentDir := CurrentDir + '\';
 
-// CurrentDir := 'C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\Notar\';
+ Statusbar.Panels[IDX_STATUS_PROGRESS].Visible := False;
 
  SetStatusText('Started...');
  SetStatusText(RegisterFlipFlop[LicenseDataModule.IsRegistered], IDX_STATUS_REGISTERED);
@@ -286,6 +293,13 @@ begin
   if LogSaveDialog.Execute then LogListBox.Items.SaveToFile(LogSaveDialog.FileName);
 end;
 
+procedure TfmMain.SetStatusProgressBarPosition(const ATotal, APosition: Int64);
+begin
+  dxTaskbarProgress.Total := ATotal;
+  dxTaskbarProgress.Position := APosition;
+  Application.ProcessMessages;
+end;
+
 procedure TfmMain.SetStatusText(const AStatus: string; StatusType: byte);
 begin
   StatusBar.Panels[StatusType].Text := AStatus;
@@ -294,6 +308,11 @@ begin
     LogListBox.Items.Append(AStatus);
     LogListBox.ItemIndex := LogListBox.Count -1;
   end;
+end;
+
+procedure TfmMain.ShowStatusProgressBar;
+begin
+  Statusbar.Panels[IDX_STATUS_PROGRESS].Visible := True;
 end;
 
 procedure TfmMain.StatusBarDblClick(Sender: TObject);
@@ -317,6 +336,11 @@ function TfmMain.GetCustomTagValue(const Tag: AnsiString;  var Value: string): b
 begin
   Result := True;
  // Value := 'Test value for ' + Tag;
+end;
+
+procedure TfmMain.HideStatusProgressBar;
+begin
+  Statusbar.Panels[IDX_STATUS_PROGRESS].Visible := False;
 end;
 
 procedure TfmMain.OnException(Sender: TObject; E: Exception);
