@@ -7,7 +7,7 @@
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
-        <TargetedPlatforms>1</TargetedPlatforms>
+        <TargetedPlatforms>3</TargetedPlatforms>
         <AppType>Application</AppType>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
@@ -71,6 +71,10 @@
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1033</VerInfo_Locale>
         <DCC_UsePackage>FireDACSqliteDriver;DBXSqliteDriver;FireDACPgDriver;fmx;IndySystem;TeeDB;vclib;DBXInterBaseDriver;DataSnapClient;DataSnapCommon;DataSnapServer;DataSnapProviderClient;DBXSybaseASEDriver;DbxCommonDriver;vclimg;dbxcds;DatasnapConnectorsFreePascal;MetropolisUILiveTile;vcldb;vcldsnap;fmxFireDAC;DBXDb2Driver;DBXOracleDriver;CustomIPTransport;vclribbon;dsnap;IndyIPServer;fmxase;vcl;IndyCore;IndyIPCommon;CloudService;DBXMSSQLDriver;FmxTeeUI;FireDACIBDriver;FireDACDBXDriver;inetdbxpress;FireDACDb2Driver;adortl;FireDACASADriver;bindcompfmx;FireDACODBCDriver;rtl;dbrtl;DbxClientDriver;FireDACCommon;bindcomp;inetdb;Tee;DBXOdbcDriver;vclFireDAC;xmlrtl;ibxpress;IndyProtocols;DBXMySQLDriver;FireDACCommonDriver;bindengine;vclactnband;soaprtl;bindcompdbx;FMXTee;TeeUI;bindcompvcl;vclie;FireDACADSDriver;vcltouch;VclSmp;FireDACMSSQLDriver;FireDAC;VCLRESTComponents;Intraweb;DBXInformixDriver;DataSnapConnectors;FireDACDataSnapDriver;dsnapcon;DBXFirebirdDriver;inet;fmxobj;FireDACMySQLDriver;vclx;DBXSybaseASADriver;FireDACOracleDriver;fmxdae;RESTComponents;FireDACMSAccDriver;DataSnapIndy10ServerTransport;dbexpress;IndyIPClient;dxCoreRS19;cxLibraryRS19;dxGDIPlusRS19;dxThemeRS19;cxSpreadSheetRS19;cxDataRS19;cxEditorsRS19;cxExportRS19;cxVerticalGridRS19;cxPageControlRS19;cxGridRS19;cxSchedulerRS19;cxSchedulerTreeBrowserRS19;cxSchedulerGridRS19;dxBarRS19;dxComnRS19;cxTreeListRS19;cxTreeListdxBarPopupMenuRS19;dxPSCoreRS19;dxPSLnksRS19;dxPScxCommonRS19;dxPScxSchedulerLnkRS19;dxPScxSSLnkRS19;dxLayoutControlRS19;dxPSdxLCLnkRS19;dxPScxGridLnkRS19;dxmdsRS19;cxPivotGridRS19;dxPScxPivotGridLnkRS19;dxPScxExtCommonRS19;cxPivotGridOLAPRS19;cxPivotGridChartRS19;cxPageControldxBarPopupMenuRS19;dxorgcRS19;dxNavBarRS19;dxFlowChartRS19;dxdbtrRS19;dxDockingRS19;dxdborRS19;dxBarExtItemsRS19;dxBarDBNavRS19;dxDBXServerModeRS19;dxADOServerModeRS19;EurekaLogCore;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
@@ -89,13 +93,12 @@
     </PropertyGroup>
     <Import Project="..\def.optset" Condition="'$(Cfg_1_Win32)'!='' And Exists('..\def.optset')"/>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
-        <DCC_Define>EUREKALOG;EUREKALOG_VER7;$(DCC_Define)</DCC_Define>
         <DCC_UnitSearchPath>.\lib\;.\imports\;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <VerInfo_MinorVer>1</VerInfo_MinorVer>
         <VerInfo_Release>9</VerInfo_Release>
         <Icon_MainIcon>Notar_Icon1.ico</Icon_MainIcon>
-        <VerInfo_Keys>CompanyName=Cloud Computing Research Initiative;FileDescription=Notarial automated workingplace main unit;FileVersion=1.1.9.25;InternalName=Notar;LegalCopyright=Cloud Computing Research Initiative;LegalTrademarks=Notar (c) Cloud Computing Research Initiative;OriginalFilename=Notar.exe;ProductName=Notarial automated workingplace;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-        <VerInfo_Build>25</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=Cloud Computing Research Initiative;FileDescription=Notarial automated workingplace main unit;FileVersion=1.1.9.26;InternalName=Notar;LegalCopyright=Cloud Computing Research Initiative;LegalTrademarks=Notar (c) Cloud Computing Research Initiative;OriginalFilename=Notar.exe;ProductName=Notarial automated workingplace;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Build>26</VerInfo_Build>
         <DCC_CBuilderOutput>All</DCC_CBuilderOutput>
         <DCC_DcuOutput>.\</DCC_DcuOutput>
         <DCC_ExeOutput>.\</DCC_ExeOutput>
@@ -215,7 +218,7 @@
             <Deployment/>
             <Platforms>
                 <Platform value="Win32">True</Platform>
-                <Platform value="Win64">False</Platform>
+                <Platform value="Win64">True</Platform>
             </Platforms>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
@@ -227,12 +230,12 @@
 <!-- EurekaLog First Line
 [Exception Log]
 EurekaLog Version=7001
-Activate=1
+Activate=0
 atVCL=1
 atWin32=1
 csoShowRTLThreads=1
 csoShowWindowsThreads=1
-DeleteMapAfterCompile=1
+DeleteMapAfterCompile=0
 dpJCL=1
 edoShowInTopMostMode=1
 edoUseRealIcon=1
@@ -243,9 +246,6 @@ idEurekaLog=1
 idEurekaLogDetailed=1
 idMSClassic=1
 idStepsToReproduce=1
-InjectCode=1
-InjectInfo=1
-InjectOptions=1
 loResCatchLeaks=1
 ProjectID="{EC7B7521-CAEE-4786-B555-8C122DB729D9}"
 sndShowFailureMsg=1

@@ -21,6 +21,7 @@ type
   // DoCycle - event handler returns a value that determines whether
   //           the reporter is allowed to perform the cycle
   TForTagProc = procedure(const Param: AnsiString; var DoCycle: boolean) of object;
+  TProgressProc = procedure(const CurrentTag: string; Total: Word; Current: Word) of object;
   // Event calls when the parser reach the tag {end} in a template
   // StopCycle - event handler returns a value that determines whether
   //             the reporter has to stop iterations
@@ -36,6 +37,8 @@ type
     // List of fragmets founded in a template
     Pieces: TList;  // list of TPiece
     fDocType: TDocType;
+    PiecesCount: Word;
+    CurrentPiece: Word;
 
     // Format string before placing into a RTF file
     function FormatRtf(const s: AnsiString): AnsiString;
@@ -47,6 +50,8 @@ type
   public
     OnForTag: TForTagProc; // begin of a cycle
     OnEndTag: TEndTagProc; // end of a cycle
+    OnProgress: TProgressProc;
+    //TProgressProc = procedure(const CurrentTag: string; Total: Word; Current: Word) of object;
 
     constructor Create;
     destructor Destroy; override;
@@ -93,6 +98,8 @@ constructor TFreeReporter.Create;
 begin
   inherited;
   Pieces := TList.Create;
+  PiecesCount := 0;
+  CurrentPiece := 0;
 end;
 
 destructor TFreeReporter.Destroy;
@@ -217,7 +224,14 @@ var
           continue;
         end;
         pkTag: begin // Other tag
-          s := GetTagValue(StripRTFFormating(Piece.Param));
+          ss := StripRTFFormating(Piece.Param);
+          s := GetTagValue(ss);
+          if Pos(':', ss) <=0 then
+          begin
+            Inc(CurrentPiece);
+            if Assigned(OnProgress) then OnProgress(StripRTFFormating(Piece.Param), PiecesCount, CurrentPiece);
+          end;
+
           if length(s) > 0 then begin
             if DocType = dtRtf then
               ansis := FormatRtf(s)
@@ -326,6 +340,7 @@ procedure TFreeReporter.LoadTemplate(const TemplateName: string);
       end else begin
         PieceKind := pkTag;
         Param := Tag;
+        Inc(PiecesCount);
       end;
     end;
   end;
