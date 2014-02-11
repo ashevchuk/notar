@@ -65,7 +65,7 @@ type
     function getRepresentatives: TpFIBDataSet;
   private
     PaxEval: TPaxEval;
-    FInterpretersCollection: TDictionary<cardinal, TMemoryStream>;
+    FInterpretersCollection: TObjectDictionary<cardinal, TMemoryStream>;
     procedure ReportProgress(const CurrentTag: string; Total: Word; Current: Word);
   public
     function setID(AID: string): boolean;
@@ -73,6 +73,7 @@ type
     function GetCustomTagValue(const Tag: AnsiString; var Value: string): boolean;
     function GetCustomTagValue1(const Tag: AnsiString; var Value: String): boolean;
     function GetCustomTagValue2(const Tag: AnsiString; var Value: String): boolean;
+    function initProgram(AProgram: TPaxProgram): boolean;
     function prepareScript: boolean;
     procedure EditReport;
   end;
@@ -114,7 +115,7 @@ end;
 procedure TMVCAuthorization.DataModuleCreate(Sender: TObject);
 begin
 //  PaxEval := TPaxEval.Create(nil);
-  FInterpretersCollection := TDictionary<cardinal, TMemoryStream>.Create;
+  FInterpretersCollection := TObjectDictionary<cardinal, TMemoryStream>.Create([doOwnsValues]);
 end;
 
 procedure TMVCAuthorization.DataModuleDestroy(Sender: TObject);
@@ -242,6 +243,33 @@ begin
   Result := True;
 end;
 
+function TMVCAuthorization.initProgram(AProgram: TPaxProgram): boolean;
+begin
+//  AProgram.RegisterClassType(0, TMVCAuthorization);
+//  AProgram.RegisterClassType(0, TpFIBDataSet);
+//  AProgram.RegisterClassType(0, TField);
+{  AProgram.SetAddress();
+
+  PaxCompiler.RegisterHeader(0, 'function GetUnitCase(const AValue: Integer; const AUnit1, AUnit2, AUnit3: String): String;', @uStrUtils.GetUnitCase);
+
+  PaxCompiler.RegisterHeader(0, 'function YearsBetween(const ANow, AThen: TDateTime): Integer;', @DateUtils.YearsBetween);
+
+  PaxCompiler.RegisterHeader(0, 'function Month_Case_Nominative(ADate: TDateTime): string;', @uStrUtils.Month_Case_Nominative);
+  PaxCompiler.RegisterHeader(0, 'function Month_Case_Genitive(ADate: TDateTime): string;', @uStrUtils.Month_Case_Genitive);
+
+  PaxCompiler.RegisterHeader(0, 'function ExtraSpell(Number:extended; Param: string): string;', @uStrUtils.ExtraSpell);
+
+  PaxCompiler.RegisterHeader(0, 'procedure Log(AText: string);', @ufmMain.Log);
+  PaxCompiler.RegisterHeader(datasetHandle, 'function FieldByName(const FieldName: string): TField;', @TpFIBDataSet.FieldByName);
+
+
+  PaxCompiler.RegisterVariable(0, 'DataModule: TMVCAuthorization', @Self);
+
+  RepresentativesHandle := PaxCompiler.RegisterVariable(0, 'Representatives', datasetHandle, @Representatives);
+  RepresentativesHandle := PaxCompiler.RegisterVariable(0, 'Authorization', datasetHandle, @Authorization);
+  RepresentativesHandle := PaxCompiler.RegisterVariable(0, 'Constituent', datasetHandle, @Constituent);}
+end;
+
 function TMVCAuthorization.GetCustomTagValue(const Tag: AnsiString; var Value: String): boolean;
 var
   I: Integer;
@@ -253,36 +281,52 @@ begin
   Value := '';
   Log('[d] request tag: ' + Tag);
 
-  PaxEval := TPaxEval.Create(nil);
-  PaxEval.RegisterCompiler(PaxCompiler, PaxProgram);
+   CRC32 := ShaCrcRefresh($FFFFFFFF, @Tag[1], Length(Tag));
+   Log(Format('CRC32=%.8x',[not CRC32]));
 
-  try
-{
-    CRC32 := ShaCrcRefresh($FFFFFFFF, @Tag[1], Length(Tag));
-    Log(Format('CRC32=%.8x',[not CRC32]));
+   ProgramInterpreterState := TMemoryStream.Create;
 
   if FInterpretersCollection.TryGetValue(CRC32, ProgramInterpreterState) then
   begin
+    Log(IntToStr(ProgramInterpreterState.Size));
     ProgramInterpreterState.Position := 0;
     PaxProgram.LoadFromStream(ProgramInterpreterState);
+    initProgram(PaxProgram);
+    PaxProgram.Run;
+
     Log('Loaded from cache');
-  end
-    else
+  end  else
   begin
-    //prepareScript;
-    if PaxCompiler.CompileExpression(Tag, PaxProgram, PaxPascalLanguage.LanguageName) then
-    begin
-      ProgramInterpreterState := TMemoryStream.Create;
-      PaxProgram.SaveToStream(ProgramInterpreterState);
-      ProgramInterpreterState.Position := 0;
-      FInterpretersCollection.Add(CRC32, ProgramInterpreterState);
-      Log('Compiled and saved');
-    end;
-  end;    }
+
+//    prepareScript;
+    PaxEval := TPaxEval.Create(nil);
+    PaxEval.RegisterCompiler(PaxCompiler, PaxProgram);
 
     PaxEval.CompileExpression(Tag);
-    PaxEval.Run;
 
+//    if PaxCompiler.CompileExpression(Tag, PaxProgram, PaxPascalLanguage.LanguageName) then
+    if PaxEval.ErrorCount = 0 then
+    begin
+      if Assigned(ProgramInterpreterState) then ProgramInterpreterState.Free;
+      ProgramInterpreterState := TMemoryStream.Create;
+
+      PaxProgram.SaveToStream(ProgramInterpreterState);
+      ProgramInterpreterState.Position := 0;
+//      FInterpretersCollection.Add(CRC32, ProgramInterpreterState);
+      Log('Compiled and saved');
+    end else
+      begin
+        for I:=0 to PaxCompiler.ErrorCount -1 do
+        begin
+          Log('[!] Precompile error:' + PaxCompiler.ErrorMessage[I]);
+          Value := Value + PaxCompiler.ErrorMessage[I];
+        end;
+      end;
+  end;
+
+//    PaxEval.CompileExpression(Tag);
+  try
+    PaxEval.Run;
     Value := PaxEval.ResultAsString;
   except
     Value := '[!ERROR: (' + Tag + ')]';
@@ -331,7 +375,7 @@ begin
 
   PaxCompiler.AddModule('1', PaxPascalLanguage.LanguageName);
 
-  mainHandle := PaxCompiler.RegisterClassType(0, TMVCAuthorization);
+//  mainHandle := PaxCompiler.RegisterClassType(0, TMVCAuthorization);
   datasetHandle := PaxCompiler.RegisterClassType(0, TpFIBDataSet);
   fieldHandle := PaxCompiler.RegisterClassType(0, TField);
 
@@ -348,15 +392,16 @@ begin
   PaxCompiler.RegisterHeader(datasetHandle, 'function FieldByName(const FieldName: string): TField;', @TpFIBDataSet.FieldByName);
 
 
-  PaxCompiler.RegisterVariable(0, 'DataModule: TMVCAuthorization', @Self);
+//  PaxCompiler.RegisterVariable(0, 'DataModule: TMVCAuthorization', @Self);
 
   RepresentativesHandle := PaxCompiler.RegisterVariable(0, 'Representatives', datasetHandle, @Representatives);
   RepresentativesHandle := PaxCompiler.RegisterVariable(0, 'Authorization', datasetHandle, @Authorization);
   RepresentativesHandle := PaxCompiler.RegisterVariable(0, 'Constituent', datasetHandle, @Constituent);
+  RepresentativesHandle := PaxCompiler.RegisterVariable(0, 'Notary', datasetHandle, @Notary);
 
   PaxCompiler.AddCodeFromFile('1', TFmMain(Application.MainForm).CurrentDir + 'lib/' + 'Globals.pas');
 
-  PaxPascalLanguage.SetCallConv(__ccREGISTER);
+//  PaxPascalLanguage.SetCallConv(__ccREGISTER);
 
   if PaxCompiler.Compile(PaxProgram) then
   begin

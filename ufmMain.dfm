@@ -359,10 +359,11 @@ object fmMain: TfmMain
     Font.Name = 'Tahoma'
     Font.Style = []
     OnDblClick = StatusBarDblClick
+    ExplicitTop = 575
     object StatusBarProgressContainer: TdxStatusBarContainerControl
       Left = 586
       Top = 4
-      Width = 98
+      Width = 94
       Height = 13
       object StatusProgressBar: TcxProgressBar
         Left = 0
@@ -377,7 +378,8 @@ object fmMain: TfmMain
         Properties.ShowText = False
         ShowHint = False
         TabOrder = 0
-        Width = 98
+        ExplicitWidth = 97
+        Width = 94
       end
     end
   end
