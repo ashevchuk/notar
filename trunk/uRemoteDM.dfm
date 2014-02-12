@@ -84,7 +84,6 @@ object RemoteDataModule: TRemoteDataModule
       '    TABLE_NAME'
       'FROM'
       '    VIEW_TABLE_NAMES ')
-    Active = True
     Transaction = FIBTransaction
     Database = FIBDatabase
     UpdateTransaction = FIBUpdateTransaction

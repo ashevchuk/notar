@@ -1,13 +1,21 @@
 program Notar;
 
 uses
+  EMemLeaks,
+  EResLeaks,
+  EDialogWinAPIMSClassic,
+  EDialogWinAPIEurekaLogDetailed,
+  EDialogWinAPIStepsToReproduce,
+  EDebugExports,
+  EDebugJCL,
   EMapWin32,
+  EAppVCL,
+  ExceptionLog7,
   Vcl.Forms,
   ufmMain in 'ufmMain.pas' {fmMain},
   ufmSplash in 'ufmSplash.pas' {fmSplash},
   uRemoteDM in 'uRemoteDM.pas' {RemoteDataModule: TDataModule},
   uLicenseDM in 'uLicenseDM.pas' {LicenseDataModule: TDataModule},
-  ufmIDEDialog in 'ufmIDEDialog.pas',
   uUtils in 'uUtils.pas',
   uTypes in 'uTypes.pas',
   uDMConfig in 'uDMConfig.pas' {Config: TDataModule};
@@ -35,7 +43,7 @@ begin
   fmSplash.ShowMessage('Creating main form...');
   Application.CreateForm(TfmMain, fmMain);
 
-    fmSplash.ShowMessage('Reading configuration...');
+  fmSplash.ShowMessage('Reading configuration...');
   Application.CreateForm(TConfig, Config);
 
   fmSplash.ShowMessage('Creating data module...');

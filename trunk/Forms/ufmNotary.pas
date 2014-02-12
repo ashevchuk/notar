@@ -114,6 +114,7 @@ type
   public
     function appendNotary: boolean;
     function saveNotary: boolean;
+    function editNotary(ANotaryID: Int64): boolean;
   end;
 
 var
@@ -183,6 +184,16 @@ begin
   MiddleCaseLocativeTextEdit.EditValue := ExtractWord(3, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_LOCATIVE), [' ']);
   MiddleCaseAblativeTextEdit.EditValue := ExtractWord(3, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_ABLATIVE), [' ']);
   MiddleAbbreviationTextEdit.EditValue := PartsFIO.MiddleName;
+end;
+
+function TfmNotary.editNotary(ANotaryID: Int64): boolean;
+begin
+  dmNotary.NotariesDataSet.Close;
+  dmNotary.NotariesDataSet.Transaction := RemoteDataModule.createTransaction;
+  dmNotary.NotariesDataSet.Transaction.StartTransaction;
+  dmNotary.NotariesDataSet.Open;
+  dmNotary.NotariesDataSet.Locate('ID', ANotaryID, [loCaseInsensitive, loPartialKey]);
+  dmNotary.NotariesDataSet.Edit;
 end;
 
 procedure TfmNotary.FormClose(Sender: TObject; var Action: TCloseAction);

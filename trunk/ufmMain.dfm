@@ -422,47 +422,22 @@ object fmMain: TfmMain
     AlignSplitter = salBottom
     Control = LogGroupBox
   end
-  object dxRibbon1: TdxRibbon
-    Left = 0
-    Top = 0
-    Width = 915
-    Height = 93
-    BarManager = dxMainBarManager
-    ColorSchemeName = 'Blue'
-    ShowTabHeaders = False
-    Contexts = <>
-    TabOrder = 6
-    TabStop = False
-    object dxRibbon1Tab1: TdxRibbonTab
-      Active = True
-      Caption = #1044#1086#1074#1110#1076#1085#1080#1082#1080
-      Groups = <
-        item
-          Caption = #1044#1086#1074#1110#1088#1077#1085#1086#1089#1090#1110
-          ToolbarName = 'dxBarManagerBar1'
-        end
-        item
-          Caption = 'Reports'
-        end>
-      Index = 0
-    end
-  end
   object cxGroupBox1: TcxGroupBox
     Left = 0
-    Top = 93
+    Top = 26
     Align = alLeft
     Caption = #1054#1087#1077#1088#1072#1094#1110#1111
     ParentBackground = False
     ParentColor = False
     ParentFont = False
-    TabOrder = 8
-    Height = 351
+    TabOrder = 7
+    Height = 418
     Width = 185
     object dxDBTreeView1: TdxDBTreeView
       Left = 3
       Top = 15
       Width = 179
-      Height = 326
+      Height = 393
       ShowNodeHint = True
       AutoExpand = True
       HotTrack = True
@@ -487,9 +462,9 @@ object fmMain: TfmMain
   end
   object cxSplitter1: TcxSplitter
     Left = 185
-    Top = 93
+    Top = 26
     Width = 4
-    Height = 351
+    Height = 418
     Control = cxGroupBox1
   end
   object dxMainBarManager: TdxBarManager
@@ -512,13 +487,18 @@ object fmMain: TfmMain
     DockControlHeights = (
       0
       0
-      0
+      26
       0)
-    object dxBarManagerBar1: TdxBar
-      Caption = 'Catalogs'
+    object dxMainBarManagerBar1: TdxBar
+      AllowClose = False
+      AllowCustomizing = False
+      AllowQuickCustomizing = False
+      Caption = 'MainMenu'
       CaptionButtons = <>
+      DockedDockingStyle = dsTop
       DockedLeft = 0
       DockedTop = 0
+      DockingStyle = dsTop
       FloatLeft = 941
       FloatTop = 8
       FloatClientWidth = 0
@@ -527,138 +507,44 @@ object fmMain: TfmMain
       ItemLinks = <
         item
           Visible = True
-          ItemName = 'dxBarButtonEditor'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButtonEditTemplate'
-        end
-        item
-          Visible = True
           ItemName = 'dxBarButton1'
         end
         item
           Visible = True
-          ItemName = 'dxBarButton2'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton3'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton4'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton7'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton5'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton6'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton8'
-        end
-        item
-          Visible = True
-          ItemName = 'dxBarButton10'
+          ItemName = 'dxBarSubItem1'
         end>
       MultiLine = True
       OneOnRow = True
       Row = 0
+      ShowMark = False
       SizeGrip = False
       UseOwnFont = False
       Visible = True
       WholeRow = True
     end
-    object dxBarButtonEditor: TdxBarButton
-      Caption = 'Read only Editor'
-      Category = 0
-      Hint = 'Read only Editor'
-      Visible = ivAlways
-      OnClick = dxBarButtonEditorClick
-    end
-    object dxBarButtonEditTemplate: TdxBarButton
-      Caption = 'Template editor'
-      Category = 0
-      Hint = 'Template editor'
-      Visible = ivAlways
-      OnClick = dxBarButtonEditTemplateClick
-    end
-    object dxBarButton1: TdxBarButton
-      Caption = 'Form editor'
-      Category = 0
-      Hint = 'Form editor'
-      Visible = ivAlways
-      OnClick = dxBarButton1Click
-    end
-    object dxBarButton2: TdxBarButton
-      Caption = 'Run script'
-      Category = 0
-      Hint = 'Run script'
-      Visible = ivAlways
-      OnClick = dxBarButton2Click
-    end
     object dxBarButton3: TdxBarButton
-      Caption = 'Catalogs'
+      Caption = #1058#1072#1073#1083#1080#1094#1110
       Category = 0
-      Hint = 'Catalogs'
+      Hint = #1058#1072#1073#1083#1080#1094#1110
       Visible = ivAlways
       OnClick = dxBarButton3Click
     end
-    object dxBarButton4: TdxBarButton
-      Caption = 'Individual'
+    object dxBarButton1: TdxBarButton
+      Caption = #1042#1080#1093#1110#1076
       Category = 0
-      Hint = 'Individual'
+      Hint = #1042#1080#1093#1110#1076
       Visible = ivAlways
-      OnClick = dxBarButton4Click
+      OnClick = dxBarButton1Click
     end
-    object dxBarButton5: TdxBarButton
-      Caption = #1057#1090#1074#1086#1088#1080#1090#1080
+    object dxBarSubItem1: TdxBarSubItem
+      Caption = #1057#1077#1088#1074#1110#1089
       Category = 0
-      Hint = #1057#1090#1074#1086#1088#1080#1090#1080
       Visible = ivAlways
-      OnClick = dxBarButton5Click
-    end
-    object dxBarButton6: TdxBarButton
-      Caption = #1055#1077#1088#1077#1075#1083#1103#1076
-      Category = 0
-      Hint = #1055#1077#1088#1077#1075#1083#1103#1076
-      Visible = ivAlways
-      OnClick = dxBarButton6Click
-    end
-    object dxBarButton7: TdxBarButton
-      Caption = 'Generate'
-      Category = 0
-      Hint = 'Generate'
-      Visible = ivAlways
-      OnClick = dxBarButton7Click
-    end
-    object dxBarButton8: TdxBarButton
-      Caption = 'Edit report'
-      Category = 0
-      Hint = 'Edit report'
-      Visible = ivAlways
-      OnClick = dxBarButton8Click
-    end
-    object dxBarButton9: TdxBarButton
-      Caption = 'Show report'
-      Category = 0
-      Hint = 'Show report'
-      Visible = ivAlways
-    end
-    object dxBarButton10: TdxBarButton
-      Caption = 'New Notary'
-      Category = 0
-      Hint = 'New Notary'
-      Visible = ivAlways
-      OnClick = dxBarButton10Click
+      ItemLinks = <
+        item
+          Visible = True
+          ItemName = 'dxBarButton3'
+        end>
     end
   end
   object dxTabbedMDIManager: TdxTabbedMDIManager
