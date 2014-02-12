@@ -252,4 +252,7 @@ begin
   end;
 end;
 
+initialization
+  RegisterClass(TfmAuthorizations);
+
 end.

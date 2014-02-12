@@ -34,6 +34,13 @@ type
     FIBSQLLogger: TFIBSQLLogger;
     TableListDataSet: TpFIBDataSet;
     TableListDataSetTABLE_NAME: TFIBWideStringField;
+    MenuTreeDataSet: TpFIBDataSet;
+    MenuTreeDataSource: TDataSource;
+    MenuTreeDataSetID: TFIBBCDField;
+    MenuTreeDataSetCAPTION: TFIBWideStringField;
+    MenuTreeDataSetSUB_ID: TFIBBCDField;
+    MenuTreeDataSetGLYPH_ID: TFIBSmallIntField;
+    MenuTreeDataSetCLASS_NAME: TFIBWideStringField;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
     procedure FibErrorHandlerFIBErrorEvent(Sender: TObject; ErrorValue: EFIBError; KindIBError: TKindIBError; var DoRaise: Boolean);
@@ -194,6 +201,7 @@ begin
       FIBUpdateTransaction.Active:= True;
       FIBTransaction.Active:= True;
       TableListDataSet.Open;
+      MenuTreeDataSet.Open;
 
       Exit;
     end;

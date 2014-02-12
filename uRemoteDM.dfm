@@ -96,4 +96,46 @@ object RemoteDataModule: TRemoteDataModule
       EmptyStrToNull = True
     end
   end
+  object MenuTreeDataSet: TpFIBDataSet
+    SelectSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    CAPTION,'
+      '    SUB_ID,'
+      '    GLYPH_ID,'
+      '    CLASS_NAME'
+      'FROM'
+      '    CATALOG_MENU_TREE ')
+    Transaction = FIBTransaction
+    Database = FIBDatabase
+    UpdateTransaction = FIBUpdateTransaction
+    Left = 136
+    Top = 232
+    object MenuTreeDataSetID: TFIBBCDField
+      FieldName = 'ID'
+      Size = 0
+    end
+    object MenuTreeDataSetCAPTION: TFIBWideStringField
+      FieldName = 'CAPTION'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object MenuTreeDataSetSUB_ID: TFIBBCDField
+      FieldName = 'SUB_ID'
+      Size = 0
+    end
+    object MenuTreeDataSetGLYPH_ID: TFIBSmallIntField
+      FieldName = 'GLYPH_ID'
+    end
+    object MenuTreeDataSetCLASS_NAME: TFIBWideStringField
+      FieldName = 'CLASS_NAME'
+      Size = 255
+      EmptyStrToNull = True
+    end
+  end
+  object MenuTreeDataSource: TDataSource
+    DataSet = MenuTreeDataSet
+    Left = 232
+    Top = 232
+  end
 end

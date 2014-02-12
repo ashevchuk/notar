@@ -14,7 +14,7 @@ uses
   cxGridTableView, Vcl.ComCtrls, ScriptCtrls, ShellApi, cxPCdxBarPopupMenu, cxTL, cxScrollBox,
   cxSplitter, cxGroupBox, cxListBox, dxSkinOffice2007Blue, Vcl.Menus,
   dxCustomTileControl, dxTileControl, dxRibbonSkins, dxSkinsdxRibbonPainter,
-  cxProgressBar, dxTaskbarProgress;
+  cxProgressBar, dxTaskbarProgress, dxtree, dxdbtree, Vcl.ImgList;
 
 const
   IDX_STATUS_TEXT : byte = 0;
@@ -93,6 +93,10 @@ type
     StatusBarProgressContainer: TdxStatusBarContainerControl;
     dxTaskbarProgress: TdxTaskbarProgress;
     StatusProgressBar: TcxProgressBar;
+    cxGroupBox1: TcxGroupBox;
+    cxSplitter1: TcxSplitter;
+    dxDBTreeView1: TdxDBTreeView;
+    MenuTreeImageList: TImageList;
     procedure FormCreate(Sender: TObject);
     procedure dxBarButtonExitClick(Sender: TObject);
     procedure dxBarButtonEditorClick(Sender: TObject);
@@ -110,6 +114,7 @@ type
     procedure dxBarButton8Click(Sender: TObject);
     procedure dxBarButton7Click(Sender: TObject);
     procedure dxBarButton10Click(Sender: TObject);
+    procedure dxDBTreeView1DblClick(Sender: TObject);
   private
     procedure OnException(Sender: TObject; E: Exception);
   public
@@ -267,6 +272,23 @@ end;
 procedure TfmMain.dxBarButtonExitClick(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TfmMain.dxDBTreeView1DblClick(Sender: TObject);
+var
+  CRef: TFormClass;
+  CForm: TForm;
+begin
+if (Length(RemoteDataModule.MenuTreeDataSetCLASS_NAME.AsString) >0) then
+  begin
+    Log(RemoteDataModule.MenuTreeDataSetCLASS_NAME.AsString);
+    CRef := TFormClass(FindClass(RemoteDataModule.MenuTreeDataSetCLASS_NAME.AsString));
+    if (CRef <>nil) then
+      begin
+        CForm := CRef.Create(Self);
+        CForm.Show;
+      end;
+  end;
 end;
 
 procedure TfmMain.FormCreate(Sender: TObject);
