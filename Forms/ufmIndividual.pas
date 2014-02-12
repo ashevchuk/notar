@@ -188,6 +188,7 @@ type
   public
     function appendIndividual: boolean;
     function saveIndividual: boolean;
+    function editIndividual(AIndividualID: Int64): boolean;
   end;
 
 var
@@ -257,6 +258,16 @@ begin
   MiddleCaseLocativeTextEdit.EditValue := ExtractWord(3, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_LOCATIVE), [' ']);
   MiddleCaseAblativeTextEdit.EditValue := ExtractWord(3, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_ABLATIVE), [' ']);
   MiddleAbbreviationTextEdit.EditValue := PartsFIO.MiddleName;
+end;
+
+function TfmIndividual.editIndividual(AIndividualID: Int64): boolean;
+begin
+  dmIndividual.IndividualsDataSet.Close;
+  dmIndividual.IndividualsDataSet.Transaction := RemoteDataModule.createTransaction;
+  dmIndividual.IndividualsDataSet.Transaction.StartTransaction;
+  dmIndividual.IndividualsDataSet.Open;
+  dmIndividual.IndividualsDataSet.Locate('ID', AIndividualID, [loCaseInsensitive, loPartialKey]);
+  dmIndividual.IndividualsDataSet.Edit;
 end;
 
 procedure TfmIndividual.FormClose(Sender: TObject; var Action: TCloseAction);

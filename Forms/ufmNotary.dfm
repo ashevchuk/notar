@@ -500,8 +500,6 @@ object fmNotary: TfmNotary
     ParentColor = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 548
-    ExplicitHeight = 378
     Height = 533
     Width = 1073
     object cxGroupBox6: TcxGroupBox

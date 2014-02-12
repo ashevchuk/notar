@@ -34,8 +34,6 @@ type
     StatusBar: TdxStatusBar;
     dxMainBarManager: TdxBarManager;
     dxTabbedMDIManager: TdxTabbedMDIManager;
-    dxBarManagerBar1: TdxBar;
-    dxBarButtonEditor: TdxBarButton;
     cxEditStyleController: TcxEditStyleController;
     cxDefaultEditStyleController: TcxDefaultEditStyleController;
     cxEditRepository: TcxEditRepository;
@@ -57,9 +55,6 @@ type
     cxStyle9: TcxStyle;
     cxStyle10: TcxStyle;
     cxStyle11: TcxStyle;
-    dxBarButtonEditTemplate: TdxBarButton;
-    dxBarButton1: TdxBarButton;
-    dxBarButton2: TdxBarButton;
     dxBarButton3: TdxBarButton;
     TreeListStyleSheetHighContrast1: TcxTreeListStyleSheet;
     cxStyle12: TcxStyle;
@@ -81,15 +76,6 @@ type
     Save1: TMenuItem;
     Copy1: TMenuItem;
     LogSaveDialog: TSaveDialog;
-    dxBarButton4: TdxBarButton;
-    dxBarButton5: TdxBarButton;
-    dxBarButton6: TdxBarButton;
-    dxBarButton7: TdxBarButton;
-    dxRibbon1Tab1: TdxRibbonTab;
-    dxRibbon1: TdxRibbon;
-    dxBarButton8: TdxBarButton;
-    dxBarButton9: TdxBarButton;
-    dxBarButton10: TdxBarButton;
     StatusBarProgressContainer: TdxStatusBarContainerControl;
     dxTaskbarProgress: TdxTaskbarProgress;
     StatusProgressBar: TcxProgressBar;
@@ -97,24 +83,18 @@ type
     cxSplitter1: TcxSplitter;
     dxDBTreeView1: TdxDBTreeView;
     MenuTreeImageList: TImageList;
+    dxMainBarManagerBar1: TdxBar;
+    dxBarButton1: TdxBarButton;
+    dxBarSubItem1: TdxBarSubItem;
     procedure FormCreate(Sender: TObject);
     procedure dxBarButtonExitClick(Sender: TObject);
-    procedure dxBarButtonEditorClick(Sender: TObject);
-    procedure dxBarButtonEditTemplateClick(Sender: TObject);
-    procedure dxBarButton1Click(Sender: TObject);
-    procedure dxBarButton2Click(Sender: TObject);
-    procedure dxBarButton3Click(Sender: TObject);
     procedure StatusBarDblClick(Sender: TObject);
     procedure Copy1Click(Sender: TObject);
     procedure Clear1Click(Sender: TObject);
     procedure Save1Click(Sender: TObject);
-    procedure dxBarButton4Click(Sender: TObject);
-    procedure dxBarButton5Click(Sender: TObject);
-    procedure dxBarButton6Click(Sender: TObject);
-    procedure dxBarButton8Click(Sender: TObject);
-    procedure dxBarButton7Click(Sender: TObject);
-    procedure dxBarButton10Click(Sender: TObject);
     procedure dxDBTreeView1DblClick(Sender: TObject);
+    procedure dxBarButton3Click(Sender: TObject);
+    procedure dxBarButton1Click(Sender: TObject);
   private
     procedure OnException(Sender: TObject; E: Exception);
   public
@@ -139,8 +119,7 @@ uses uRemoteDM, uLicenseDM,
   ufmIndividual,
   ufmAuthorization,
   ufmAuthorizations,
-  ufmIDE,
- // ufmRichEditor,
+
   ufmCatalogs,
   uDMConfig,
   RVARibbonFrm,
@@ -148,7 +127,9 @@ uses uRemoteDM, uLicenseDM,
   uFreeReporter,
   uMVCAuthorization,
   ufmNotary,
-  uScriptEngine;
+
+  ufmIndividuals,
+  ufmNotaries;
 {$R *.dfm}
 
 procedure Log(AText: string);
@@ -172,27 +153,9 @@ begin
   Clipboard.AsText := LogListBox.Items[LogListBox.ItemIndex];
 end;
 
-procedure TfmMain.dxBarButton10Click(Sender: TObject);
-begin
-  with TfmNotary.Create(Application.MainForm) do
-    begin
-      appendNotary;
-      Show;
-    end;
-end;
-
 procedure TfmMain.dxBarButton1Click(Sender: TObject);
 begin
-  with TfmIDE.Create(self) do begin
-  end;
-end;
-
-procedure TfmMain.dxBarButton2Click(Sender: TObject);
-begin
-  with TScriptEngine.Create(self) do
-  begin
-    Run('.\Scripts\Unit1.psc');
-  end;
+  Close;
 end;
 
 procedure TfmMain.dxBarButton3Click(Sender: TObject);
@@ -201,72 +164,6 @@ begin
  begin
    Show;
  end;
-end;
-
-procedure TfmMain.dxBarButton4Click(Sender: TObject);
-begin
-  with TfmIndividual.Create(self) do
-  begin
-    appendIndividual;
-    Show;
-  end;
-end;
-
-procedure TfmMain.dxBarButton5Click(Sender: TObject);
-begin
-  with TfmAuthorization.Create(self) do
-  begin
-    appendAuthorization;
-    Show;
-  end;
-end;
-
-procedure TfmMain.dxBarButton6Click(Sender: TObject);
-begin
-  with TfmAuthorizations.Create(self) do
-  begin
-    Show;
-  end;
-end;
-
-procedure TfmMain.dxBarButton7Click(Sender: TObject);
-begin
-//  RemoteDataModule.generateGroups('CATALOG_NOTARIES');
-end;
-
-procedure TfmMain.dxBarButton8Click(Sender: TObject);
-begin
-  with TMVCAuthorization.Create(Self) do
-    begin
-      setID('71');
-      EditReport;
-    end;
-end;
-
-procedure TfmMain.dxBarButtonEditorClick(Sender: TObject);
-begin
-  with RVARibbonFrm.TfrmMain.Create(self) do begin
-    //Show;
-  end;
-end;
-
-procedure TfmMain.dxBarButtonEditTemplateClick(Sender: TObject);
-var
-  TemplateName, OutputName, sTemplate: string;
-  Reporter: TDbFreeReporter;
-begin
- { sTemplate := 'Report0.template.rtf';
-  TemplateName := CurrentDir + 'Templates\Repository\' + sTemplate;
-  OutputName := CurrentDir + 'Templates\Output\' + StringReplace(sTemplate, '.template.', '.', [rfIgnoreCase]);
-
-  Reporter := TDbFreeReporter.Create;
-  Reporter.OnGetCustomTagValue := GetCustomTagValue;
-  Reporter.CreateReport(TemplateName, OutputName);
-  Reporter.Free;
-  with RVARibbonFrm.TfrmMain.Create(self) do begin
-    LoadFile(OutputName);
-    Show;
-  end;       }
 end;
 
 procedure TfmMain.dxBarButtonExitClick(Sender: TObject);

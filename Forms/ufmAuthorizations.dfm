@@ -1308,5 +1308,9 @@ object fmAuthorizations: TfmAuthorizations
       Caption = #1055#1077#1088#1077#1092#1086#1088#1084#1091#1074#1072#1090#1080
       OnClick = N2Click
     end
+    object N3: TMenuItem
+      Caption = #1057#1090#1074#1086#1088#1080#1090#1080
+      OnClick = N3Click
+    end
   end
 end

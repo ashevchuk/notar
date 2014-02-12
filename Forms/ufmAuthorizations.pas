@@ -132,6 +132,7 @@ type
     AuthorizationPopupMenu: TPopupMenu;
     N1: TMenuItem;
     N2: TMenuItem;
+    N3: TMenuItem;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure AuthorizationsGridDBTableView2RELATION_TYPEGetDataText(
       Sender: TcxCustomGridTableItem; ARecordIndex: Integer; var AText: string);
@@ -144,6 +145,7 @@ type
       AShift: TShiftState; var AHandled: Boolean);
     procedure N1Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
+    procedure N3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -159,7 +161,7 @@ var
   fmAuthorizations: TfmAuthorizations;
 
 implementation
-uses uMVCAuthorization, RVARibbonFrm;
+uses uMVCAuthorization, ufmAuthorization, RVARibbonFrm;
 
 {$R *.dfm}
 
@@ -248,6 +250,15 @@ begin
   with RVARibbonFrm.TfrmMain.Create(Application.MainForm) do
   begin
     LoadFile(OutputFileName);
+    Show;
+  end;
+end;
+
+procedure TfmAuthorizations.N3Click(Sender: TObject);
+begin
+  with TfmAuthorization.Create(self) do
+  begin
+    appendAuthorization;
     Show;
   end;
 end;

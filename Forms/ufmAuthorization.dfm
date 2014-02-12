@@ -1321,6 +1321,7 @@ object fmAuthorization: TfmAuthorization
       Height = 25
       Caption = #1042#1110#1076#1084#1110#1085#1080#1090#1080
       TabOrder = 6
+      OnClick = CancelButtonClick
     end
     object PostButton: TcxButton
       Left = 336
@@ -1350,10 +1351,6 @@ object fmAuthorization: TfmAuthorization
         ItemHeight = 13
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 2
-        ExplicitTop = -2
-        ExplicitWidth = 256
-        ExplicitHeight = 44
       end
       object cxGroupBox11: TcxGroupBox
         Left = 3
@@ -1366,9 +1363,6 @@ object fmAuthorization: TfmAuthorization
         Style.Shadow = False
         Style.TransparentBorder = True
         TabOrder = 1
-        ExplicitLeft = 2
-        ExplicitTop = 42
-        ExplicitWidth = 256
         Height = 29
         Width = 254
         object AddNotaryButton: TcxButton

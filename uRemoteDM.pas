@@ -250,6 +250,7 @@ begin
     FIBUpdateTransaction.Active:= True;
     FIBTransaction.Active:= True;
     TableListDataSet.Open;
+    MenuTreeDataSet.Open;
   finally
     Result := FIBDatabase.Connected;
   end;

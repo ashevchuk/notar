@@ -93,12 +93,13 @@
     </PropertyGroup>
     <Import Project="..\def.optset" Condition="'$(Cfg_1_Win32)'!='' And Exists('..\def.optset')"/>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <DCC_Define>EUREKALOG;EUREKALOG_VER7;$(DCC_Define)</DCC_Define>
         <DCC_UnitSearchPath>.\lib\;.\imports\;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <VerInfo_MinorVer>1</VerInfo_MinorVer>
         <VerInfo_Release>9</VerInfo_Release>
         <Icon_MainIcon>Notar_Icon1.ico</Icon_MainIcon>
-        <VerInfo_Keys>CompanyName=Cloud Computing Research Initiative;FileDescription=Notarial automated workingplace main unit;FileVersion=1.1.9.26;InternalName=Notar;LegalCopyright=Cloud Computing Research Initiative;LegalTrademarks=Notar (c) Cloud Computing Research Initiative;OriginalFilename=Notar.exe;ProductName=Notarial automated workingplace;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-        <VerInfo_Build>26</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=Cloud Computing Research Initiative;FileDescription=Notarial automated workingplace main unit;FileVersion=1.1.9.27;InternalName=Notar;LegalCopyright=Cloud Computing Research Initiative;LegalTrademarks=Notar (c) Cloud Computing Research Initiative;OriginalFilename=Notar.exe;ProductName=Notarial automated workingplace;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Build>27</VerInfo_Build>
         <DCC_CBuilderOutput>All</DCC_CBuilderOutput>
         <DCC_DcuOutput>.\</DCC_DcuOutput>
         <DCC_ExeOutput>.\</DCC_ExeOutput>
@@ -128,7 +129,6 @@
             <Form>LicenseDataModule</Form>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="ufmIDEDialog.pas"/>
         <DCCReference Include="uUtils.pas"/>
         <DCCReference Include="uTypes.pas"/>
         <DCCReference Include="uDMConfig.pas">
@@ -230,12 +230,12 @@
 <!-- EurekaLog First Line
 [Exception Log]
 EurekaLog Version=7001
-Activate=0
+Activate=1
 atVCL=1
 atWin32=1
 csoShowRTLThreads=1
 csoShowWindowsThreads=1
-DeleteMapAfterCompile=0
+DeleteMapAfterCompile=1
 dpJCL=1
 edoShowInTopMostMode=1
 edoUseRealIcon=1
@@ -246,6 +246,9 @@ idEurekaLog=1
 idEurekaLogDetailed=1
 idMSClassic=1
 idStepsToReproduce=1
+InjectCode=1
+InjectInfo=1
+InjectOptions=1
 loResCatchLeaks=1
 ProjectID="{EC7B7521-CAEE-4786-B555-8C122DB729D9}"
 sndShowFailureMsg=1

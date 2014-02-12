@@ -93,6 +93,7 @@ type
     procedure RemoveRepresentativeButtonClick(Sender: TObject);
     procedure PostButtonClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
+    procedure CancelButtonClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -117,6 +118,12 @@ begin
   dmAuthorization.AuthorizationsDataSet.Transaction.StartTransaction;
   dmAuthorization.AuthorizationsDataSet.Open;
   dmAuthorization.AuthorizationsDataSet.Append;
+end;
+
+procedure TfmAuthorization.CancelButtonClick(Sender: TObject);
+begin
+  dmAuthorization.AuthorizationsDataSet.Cancel;
+  Close;
 end;
 
 procedure TfmAuthorization.ConstituentIndividualPopUpMenuItemClick(
