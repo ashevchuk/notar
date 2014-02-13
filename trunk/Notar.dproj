@@ -98,8 +98,8 @@
         <VerInfo_MinorVer>1</VerInfo_MinorVer>
         <VerInfo_Release>9</VerInfo_Release>
         <Icon_MainIcon>Notar_Icon1.ico</Icon_MainIcon>
-        <VerInfo_Keys>CompanyName=Cloud Computing Research Initiative;FileDescription=Notarial automated workingplace main unit;FileVersion=1.1.9.27;InternalName=Notar;LegalCopyright=Cloud Computing Research Initiative;LegalTrademarks=Notar (c) Cloud Computing Research Initiative;OriginalFilename=Notar.exe;ProductName=Notarial automated workingplace;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-        <VerInfo_Build>27</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=Cloud Computing Research Initiative;FileDescription=Notarial automated workingplace main unit;FileVersion=1.1.9.28;InternalName=Notar;LegalCopyright=Cloud Computing Research Initiative;LegalTrademarks=Notar (c) Cloud Computing Research Initiative;OriginalFilename=Notar.exe;ProductName=Notarial automated workingplace;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Build>28</VerInfo_Build>
         <DCC_CBuilderOutput>All</DCC_CBuilderOutput>
         <DCC_DcuOutput>.\</DCC_DcuOutput>
         <DCC_ExeOutput>.\</DCC_ExeOutput>
