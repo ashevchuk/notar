@@ -347,6 +347,20 @@ begin
     end;
   end;
 }
+
+  if FDataSetList.Count >0 then
+  begin
+    for DataSetItem in FDataSetList do
+    begin
+      try
+        unregisterDataSet(DataSetItem);
+        TpFIBDataSet(DataSetItem).Close;
+      except
+
+      end;
+    end;
+  end;
+
   if FTablesList.Count >0 then
   begin
     for iTablesList := 0 to FTablesList.Count -1 do
