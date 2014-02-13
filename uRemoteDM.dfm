@@ -2,8 +2,8 @@ object RemoteDataModule: TRemoteDataModule
   OldCreateOrder = False
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
-  Height = 323
-  Width = 332
+  Height = 359
+  Width = 325
   object FIBDatabase: TpFIBDatabase
     AutoReconnect = True
     Connected = True
@@ -62,9 +62,9 @@ object RemoteDataModule: TRemoteDataModule
     Left = 136
     Top = 168
   end
-  object SIBfibEventAlerter: TSIBfibEventAlerter
+  object FIBEventAlerter: TSIBfibEventAlerter
+    OnEventAlert = FIBEventAlerterEventAlert
     Database = FIBDatabase
-    AutoRegister = True
     Left = 40
     Top = 168
   end
@@ -136,5 +136,122 @@ object RemoteDataModule: TRemoteDataModule
     DataSet = MenuTreeDataSet
     Left = 232
     Top = 232
+  end
+  object GlobalConfigurationDataSet: TpFIBDataSet
+    UpdateSQL.Strings = (
+      'UPDATE CATALOG_CONFIGURATION'
+      'SET '
+      '    KEY_NAME = :KEY_NAME,'
+      '    VALUE_DATA = :VALUE_DATA'
+      'WHERE'
+      '    ID = :OLD_ID'
+      '    ')
+    DeleteSQL.Strings = (
+      'DELETE FROM'
+      '    CATALOG_CONFIGURATION'
+      'WHERE'
+      '        ID = :OLD_ID'
+      '    ')
+    InsertSQL.Strings = (
+      'INSERT INTO CATALOG_CONFIGURATION('
+      '    KEY_NAME,'
+      '    VALUE_DATA'
+      ')'
+      'VALUES('
+      '    :KEY_NAME,'
+      '    :VALUE_DATA'
+      ')')
+    RefreshSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    KEY_NAME,'
+      '    VALUE_DATA'
+      'FROM'
+      '    CATALOG_CONFIGURATION '
+      'WHERE( '
+      '    KEY_NAME = :KEY'
+      '     ) and (     CATALOG_CONFIGURATION.ID = :OLD_ID'
+      '     )'
+      '    ')
+    SelectSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    KEY_NAME,'
+      '    VALUE_DATA'
+      'FROM'
+      '    CATALOG_CONFIGURATION '
+      'WHERE'
+      '    KEY_NAME = :KEY')
+    Transaction = FIBTransaction
+    Database = FIBDatabase
+    UpdateTransaction = FIBUpdateTransaction
+    Left = 40
+    Top = 296
+    object GlobalConfigurationDataSetID: TFIBBCDField
+      FieldName = 'ID'
+      Size = 0
+    end
+    object GlobalConfigurationDataSetKEY_NAME: TFIBWideStringField
+      FieldName = 'KEY_NAME'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object GlobalConfigurationDataSetVALUE_DATA: TFIBMemoField
+      FieldName = 'VALUE_DATA'
+      BlobType = ftWideMemo
+      Size = 8
+    end
+  end
+  object EventsListDataSet: TpFIBDataSet
+    UpdateSQL.Strings = (
+      'UPDATE CATALOG_EVENTS'
+      'SET '
+      '    EVENT_NAME = :EVENT_NAME'
+      'WHERE'
+      '    ID = :OLD_ID'
+      '    ')
+    DeleteSQL.Strings = (
+      'DELETE FROM'
+      '    CATALOG_EVENTS'
+      'WHERE'
+      '        ID = :OLD_ID'
+      '    ')
+    InsertSQL.Strings = (
+      'INSERT INTO CATALOG_EVENTS('
+      '    EVENT_NAME'
+      ')'
+      'VALUES('
+      '    :EVENT_NAME'
+      ')')
+    RefreshSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    EVENT_NAME'
+      'FROM'
+      '    CATALOG_EVENTS '
+      ''
+      ' WHERE '
+      '        CATALOG_EVENTS.ID = :OLD_ID'
+      '    ')
+    SelectSQL.Strings = (
+      'SELECT'
+      '    ID,'
+      '    EVENT_NAME'
+      'FROM'
+      '    CATALOG_EVENTS ')
+    Transaction = FIBTransaction
+    Database = FIBDatabase
+    UpdateTransaction = FIBUpdateTransaction
+    Left = 136
+    Top = 296
+    object EventsListDataSetID: TFIBBCDField
+      FieldName = 'ID'
+      Size = 0
+    end
+    object EventsListDataSetEVENT_NAME: TFIBWideStringField
+      FieldName = 'EVENT_NAME'
+      Size = 255
+      EmptyStrToNull = True
+    end
   end
 end

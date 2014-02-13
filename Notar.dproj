@@ -133,7 +133,6 @@
         <DCCReference Include="uTypes.pas"/>
         <DCCReference Include="uDMConfig.pas">
             <Form>Config</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Release">

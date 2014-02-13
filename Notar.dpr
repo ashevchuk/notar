@@ -12,6 +12,7 @@ uses
   EAppVCL,
   ExceptionLog7,
   Vcl.Forms,
+  Vcl.Dialogs,
   ufmMain in 'ufmMain.pas' {fmMain},
   ufmSplash in 'ufmSplash.pas' {fmSplash},
   uRemoteDM in 'uRemoteDM.pas' {RemoteDataModule: TDataModule},
@@ -52,8 +53,18 @@ begin
   fmSplash.ShowMessage('Connecting to Database...');
   RemoteDataModule.ConnectDataBase;
 
+  fmSplash.ShowMessage('Checking Database version...');
+  if (not RemoteDataModule.checkDataBaseVersion) then
+  begin
+    fmSplash.ShowMessage('Warning! Please, check the Database version.');
+    ShowMessage('Database to old! Please, check the Database version.');
+  end;
+
   fmSplash.ShowMessage('Preloading tables data...');
   RemoteDataModule.preloadTablesData;
+
+  fmSplash.ShowMessage('Subscribe to global events...');
+  RemoteDataModule.subscribeEvents;
 
   fmSplash.ShowMessage('Starting Application...');
   Application.ShowMainForm := True;
@@ -64,7 +75,6 @@ begin
 
   Application.Run;
 
-//  LicenseDataModule.Free;
 end.
 
 

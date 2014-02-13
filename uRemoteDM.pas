@@ -7,9 +7,9 @@ uses
   SIBEABase, SIBFIBEA, FIBSQLMonitor, pFIBErrorHandler, Data.DB, FIBDataSet, Forms,
   pFIBDataSet, FIBQuery, pFIBQuery, RegularExpressions,
   ZInterbaseAnalyser, ZInterbaseToken, ZSelectSchema, IdBaseComponent,
-  IdComponent, IdTCPConnection, IdTCPClient, IdNetworkCalculator,
+  IdComponent, IdTCPConnection, IdTCPClient, IdNetworkCalculator, System.Variants,
   IdCustomTransparentProxy, IdSocks, IdStack, IdIPWatch, IdIPAddrMon, IdRawBase,
-  IdRawClient, IdIcmpClient, Winsock, Dialogs, uDMConfig;
+  IdRawClient, IdIcmpClient, Winsock, Dialogs, uDMConfig, fileinfo;
 
 type
   TTableFieldInfo = class(TObject)
@@ -30,7 +30,7 @@ type
     FIBUpdateTransaction: TpFIBTransaction;
     FibErrorHandler: TpFibErrorHandler;
     FIBSQLMonitor: TFIBSQLMonitor;
-    SIBfibEventAlerter: TSIBfibEventAlerter;
+    FIBEventAlerter: TSIBfibEventAlerter;
     FIBSQLLogger: TFIBSQLLogger;
     TableListDataSet: TpFIBDataSet;
     TableListDataSetTABLE_NAME: TFIBWideStringField;
@@ -41,10 +41,19 @@ type
     MenuTreeDataSetSUB_ID: TFIBBCDField;
     MenuTreeDataSetGLYPH_ID: TFIBSmallIntField;
     MenuTreeDataSetCLASS_NAME: TFIBWideStringField;
+    GlobalConfigurationDataSet: TpFIBDataSet;
+    GlobalConfigurationDataSetID: TFIBBCDField;
+    GlobalConfigurationDataSetKEY_NAME: TFIBWideStringField;
+    GlobalConfigurationDataSetVALUE_DATA: TFIBMemoField;
+    EventsListDataSet: TpFIBDataSet;
+    EventsListDataSetID: TFIBBCDField;
+    EventsListDataSetEVENT_NAME: TFIBWideStringField;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
     procedure FibErrorHandlerFIBErrorEvent(Sender: TObject; ErrorValue: EFIBError; KindIBError: TKindIBError; var DoRaise: Boolean);
     procedure FIBSQLMonitorSQL(EventText: string; EventTime: TDateTime);
+    procedure FIBEventAlerterEventAlert(Sender: TObject; EventName: string;
+      EventCount: Integer);
   published
     function getDatabase: TpFIBDatabase;
     function getTransaction: TpFIBTransaction;
@@ -64,9 +73,13 @@ type
     function notifyDataSets(const ATableName: string): boolean;
     function generateGroups(const ATable: string): boolean;
     function preloadTablesData: boolean;
+    function subscribeEvents: boolean;
 
     function FindDatabaseServer(AHost: string = 'localhost'; APort: Word = 3050; ATimeOut: Word = 100): string;
     function tryLocalDatabaseServer: boolean;
+
+    function getGlobalConfigData(AKeyName: string): variant;
+    function checkDataBaseVersion: boolean;
   end;
 
 var
@@ -183,6 +196,18 @@ begin
   IdTCPClient.Free;
   IdIPAddrMon.Free;
   IdNetworkCalculator.Free;
+end;
+
+function TRemoteDataModule.checkDataBaseVersion: boolean;
+var
+  V1, V2, V3, V4: Word;
+  FileVersion: String;
+  DBVersion: String;
+begin
+ GetBuildInfo(V1, V2, V3, V4);
+ FileVersion := Format('%s.%s.%s.%s', [IntToStr(V1), IntToStr(V2), IntToStr(V3), IntToStr(V4)]);
+ DBVersion := VarToStr(getGlobalConfigData('DB_VERSION'));
+ Result := FileVersion = DBVersion;
 end;
 
 function TRemoteDataModule.ConnectDataBase: boolean;
@@ -355,6 +380,20 @@ begin
   Log(ErrorValue.RaiserName);
 end;
 
+procedure TRemoteDataModule.FIBEventAlerterEventAlert(Sender: TObject; EventName: string; EventCount: Integer);
+var
+  TableName: string;
+begin
+  TfmMain(Application.MainForm).Log('Received event:  ' + EventName);
+  if AnsiPos('UPDATE_', EventName) >0 then
+  begin
+    TableName := EventName;
+    Delete(TableName, 1, 7);
+    notifyDataSets(TableName);
+  end;
+
+end;
+
 procedure TRemoteDataModule.FIBSQLMonitorSQL(EventText: string; EventTime: TDateTime);
 var
   tmpStr: string;
@@ -501,6 +540,15 @@ begin
   Result := FieldsListResult;
 end;
 
+function TRemoteDataModule.getGlobalConfigData(AKeyName: string): variant;
+begin
+  GlobalConfigurationDataSet.Close;
+  GlobalConfigurationDataSet.ParamByName('KEY').AsString := AKeyName;
+  GlobalConfigurationDataSet.Open;
+  Result := GlobalConfigurationDataSetVALUE_DATA.AsVariant;
+  GlobalConfigurationDataSet.Close;
+end;
+
 function TRemoteDataModule.getTransaction: TpFIBTransaction;
 begin
   Result := FIBTransaction;
@@ -557,6 +605,20 @@ end;
 function TRemoteDataModule.registerDataSet(const ADataSet: TpFIBDataSet): boolean;
 begin
   FDataSetList.Add(ADataSet);
+end;
+
+function TRemoteDataModule.subscribeEvents: boolean;
+begin
+  EventsListDataSet.Open;
+  EventsListDataSet.First;
+  while not EventsListDataSet.Eof do
+  begin
+    FIBEventAlerter.Events.Add(EventsListDataSetEVENT_NAME.AsString);
+    TfmMain(Application.MainForm).Log('Subscribed to event:  ' + EventsListDataSetEVENT_NAME.AsString);
+    EventsListDataSet.Next;
+  end;
+  EventsListDataSet.Close;
+  FIBEventAlerter.AutoRegister := True;
 end;
 
 function TRemoteDataModule.tryLocalDatabaseServer: boolean;
