@@ -2,3 +2,60 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 [Setup]
+AppName=Notar client
+AppVersion=1
+PrivilegesRequired=lowest
+AppId={{533B3CAB-17F9-4629-BC2F-8B70290791F3}
+DefaultDirName={pf}\Notar
+SolidCompression=True
+SetupIconFile=userdocs:RAD Studio\Projects\notar\Notar_Icon.ico
+ShowLanguageDialog=no
+UninstallDisplayName=Notar client
+UninstallDisplayIcon={app}\Notar_Icon.ico
+VersionInfoVersion=1
+Compression=lzma2/ultra64
+UsePreviousTasks=False
+UsePreviousLanguage=False
+FlatComponentsList=False
+AlwaysShowComponentsList=False
+ShowComponentSizes=False
+UsePreviousGroup=False
+DefaultGroupName=Notar
+AlwaysUsePersonalGroup=True
+
+[Files]
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\Notar.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\Notar.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\Notar.ini"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\Notar.key"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\Notar_Icon.ico"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\Templates\Output\authorization.71.report.output.rtf"; DestDir: "{app}\Templates\Output"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\Templates\Repository\Report0.template.rtf"; DestDir: "{app}\Templates\Repository"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\Templates\Repository\Report1.template.rtf"; DestDir: "{app}\Templates\Repository"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\Templates\Repository\Report2.template.rtf"; DestDir: "{app}\Templates\Repository"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\Templates\Repository\Report3.template.rtf"; DestDir: "{app}\Templates\Repository"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\lib\Globals.pas"; DestDir: "{app}\lib"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\lib\padeg_ua.dic"; DestDir: "{app}\lib"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\lib\padeg_ua.dll"; DestDir: "{app}\lib"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\fbclient.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\ib_util.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\icudt30.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\icuin30.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\icuuc30.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Documents and Settings\Slayer\Мои документы\RAD Studio\Projects\notar\padeg_ua.dll"; DestDir: "{app}"; Flags: ignoreversion
+
+[Dirs]
+Name: "{app}\Templates\Output"
+Name: "{app}\Templates\Repository"
+
+[Icons]
+Name: "{group}\Notar"; Filename: "{app}\Notar.exe"; Components: main; Tasks: startmenu; WorkingDir: "{app}"; Flags: runmaximized; IconFilename: "{app}\Notar_Icon.ico"; IconIndex: 0
+Name: "{commondesktop}\Notar"; Filename: "{app}\Notar.exe"; Components: main; Tasks: desktopicon; WorkingDir: "{app}"; Flags: runmaximized; IconFilename: "{app}\Notar_Icon.ico"; IconIndex: 0
+
+[Components]
+Name: "main"; Description: "Main installation"; Types: full
+
+[Tasks]
+Name: "Main"; Description: "Main Task"; Components: main
+Name: "startmenu"; Description: "startmenu"
+Name: "desktopicon"; Description: "desktopicon"
