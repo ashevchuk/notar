@@ -1,7 +1,7 @@
 object fmIndividuals: TfmIndividuals
   Left = 0
   Top = 0
-  Caption = #1043#1088#1086#1084#1072#1076#1103#1085#1080
+  Caption = #1060#1110#1079#1080#1095#1085#1110' '#1086#1089#1086#1073#1080
   ClientHeight = 287
   ClientWidth = 643
   Color = clBtnFace
