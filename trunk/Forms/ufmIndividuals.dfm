@@ -500,10 +500,6 @@ object fmIndividuals: TfmIndividuals
     Align = alClient
     PopupMenu = IndividualsPopupMenu
     TabOrder = 0
-    ExplicitLeft = 184
-    ExplicitTop = 144
-    ExplicitWidth = 250
-    ExplicitHeight = 200
     object cxIndividualsGridDBTableView1: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
       Navigator.Buttons.First.Visible = True
@@ -1250,6 +1246,7 @@ object fmIndividuals: TfmIndividuals
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    Description = 'CATALOG_INDIVIDUALS'
     Left = 136
     Top = 232
     object IndividualsDataSetID: TFIBBCDField

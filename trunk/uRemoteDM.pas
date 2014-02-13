@@ -330,7 +330,7 @@ var
   iTablesList: word;
   iFieldsList: word;
 begin
-  if FDataSetList.Count >0 then
+{  if FDataSetList.Count >0 then
   begin
     for DataSetItem in FDataSetList do
     begin
@@ -346,7 +346,7 @@ begin
       end;
     end;
   end;
-
+}
   if FTablesList.Count >0 then
   begin
     for iTablesList := 0 to FTablesList.Count -1 do
@@ -564,7 +564,8 @@ begin
   for DataSetItem in FDataSetList do
   begin
     try
-      if not Assigned(ValidateObj(DataSetItem)) then
+      //if not Assigned(ValidateObj(DataSetItem)) then
+      if Length(TpFIBDataSet(DataSetItem).Description) = 0 then
       begin
         unregisterDataSet(DataSetItem);
         Continue;

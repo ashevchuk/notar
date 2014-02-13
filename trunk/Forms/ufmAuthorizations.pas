@@ -146,6 +146,8 @@ type
     procedure N1Click(Sender: TObject);
     procedure N2Click(Sender: TObject);
     procedure N3Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -207,6 +209,16 @@ procedure TfmAuthorizations.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   Action := caFree;
+end;
+
+procedure TfmAuthorizations.FormCreate(Sender: TObject);
+begin
+  RemoteDataModule.registerDataSet(AuthorizationsDataSet);
+end;
+
+procedure TfmAuthorizations.FormDestroy(Sender: TObject);
+begin
+  RemoteDataModule.unregisterDataSet(AuthorizationsDataSet);
 end;
 
 procedure TfmAuthorizations.N1Click(Sender: TObject);

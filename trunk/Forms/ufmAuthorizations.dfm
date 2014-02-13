@@ -488,6 +488,8 @@ object fmAuthorizations: TfmAuthorizations
   OldCreateOrder = False
   Visible = True
   OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
   object AuthorizationsGrid: TcxGrid
@@ -1102,6 +1104,7 @@ object fmAuthorizations: TfmAuthorizations
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
     AutoCommit = True
+    Description = 'CATALOG_AUTHORIZATIONS'
     Left = 280
     Top = 264
     object AuthorizationsDataSetID: TFIBBCDField

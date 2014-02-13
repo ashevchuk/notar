@@ -500,10 +500,6 @@ object fmNotaries: TfmNotaries
     Align = alClient
     PopupMenu = NotariesPopupMenu
     TabOrder = 0
-    ExplicitLeft = 200
-    ExplicitTop = 80
-    ExplicitWidth = 250
-    ExplicitHeight = 200
     object cxNotariesGridDBTableView1: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
       Navigator.Buttons.First.Visible = True
@@ -930,6 +926,7 @@ object fmNotaries: TfmNotaries
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
+    Description = 'CATALOG_NOTARIES'
     Left = 136
     Top = 232
     object NotariesDataSetID: TFIBBCDField
