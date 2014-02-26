@@ -10,7 +10,8 @@ uses
   dxSkinsCore, dxSkinOffice2007Blue, dxSkinscxPCPainter, cxCustomData, cxFilter,
   cxData, cxDataStorage, cxEdit, cxNavigator, cxDBData, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxGridLevel, cxClasses, cxGridCustomView,
-  cxGrid, cxLabel, cxCheckBox, Vcl.Menus;
+  cxGrid, cxLabel, cxCheckBox, Vcl.Menus, cxContainer, Vcl.StdCtrls,
+  cxButtons, cxGroupBox;
 
 type
   TfmAuthorizations = class(TForm)
@@ -133,6 +134,8 @@ type
     N1: TMenuItem;
     N2: TMenuItem;
     N3: TMenuItem;
+    cxGroupBox1: TcxGroupBox;
+    cxButton1: TcxButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure AuthorizationsGridDBTableView2RELATION_TYPEGetDataText(
       Sender: TcxCustomGridTableItem; ARecordIndex: Integer; var AText: string);
@@ -148,6 +151,7 @@ type
     procedure N3Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure cxButton1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -203,6 +207,29 @@ procedure TfmAuthorizations.AuthorizationsGridDBTableView2RELATION_TYPEGetDispla
 begin
   if AText = 'rel_auth_const' then AText := rel_auth_const;
   if AText = 'rel_auth_repres' then AText := rel_auth_repres;
+end;
+
+procedure TfmAuthorizations.cxButton1Click(Sender: TObject);
+var
+  InputFileName: string;
+  OutputFileName: string;
+begin
+  InputFileName := Format('%s\Report0.template.rtf', [TFmMain(Application.MainForm).CurrentDir + 'Templates\Repository']);
+  OutputFileName := Format('%s\%s.%s.report.output.rtf', [TFmMain(Application.MainForm).CurrentDir + 'Templates\Output', 'authorization', AuthorizationsDataSetID.asString]);
+
+  if not FileExists(OutputFileName) then
+  with TMVCAuthorization.Create(Application.MainForm) do
+  begin
+    setID(AuthorizationsDataSetID.asString);
+    buildReport(InputFileName, OutputFileName);
+    Free;
+  end;
+
+  with RVARibbonFrm.TfrmMain.Create(Application.MainForm) do
+  begin
+    LoadFile(OutputFileName);
+    Show;
+  end;
 end;
 
 procedure TfmAuthorizations.FormClose(Sender: TObject;

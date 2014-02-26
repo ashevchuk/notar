@@ -2,8 +2,8 @@ object fmIndividuals: TfmIndividuals
   Left = 0
   Top = 0
   Caption = #1060#1110#1079#1080#1095#1085#1110' '#1086#1089#1086#1073#1080
-  ClientHeight = 287
-  ClientWidth = 643
+  ClientHeight = 474
+  ClientWidth = 855
   Color = clBtnFace
   DefaultMonitor = dmMainForm
   Font.Charset = DEFAULT_CHARSET
@@ -495,11 +495,13 @@ object fmIndividuals: TfmIndividuals
   object cxIndividualsGrid: TcxGrid
     Left = 0
     Top = 0
-    Width = 643
-    Height = 287
+    Width = 855
+    Height = 474
     Align = alClient
     PopupMenu = IndividualsPopupMenu
     TabOrder = 0
+    ExplicitWidth = 643
+    ExplicitHeight = 287
     object cxIndividualsGridDBTableView1: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
       Navigator.Buttons.First.Visible = True
@@ -523,295 +525,375 @@ object fmIndividuals: TfmIndividuals
       DataController.Summary.DefaultGroupSummaryItems = <>
       DataController.Summary.FooterSummaryItems = <>
       DataController.Summary.SummaryGroups = <>
+      OptionsView.CellAutoHeight = True
+      OptionsView.ColumnAutoWidth = True
       object cxIndividualsGridDBTableView1ID: TcxGridDBColumn
         DataBinding.FieldName = 'ID'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1SURNAME: TcxGridDBColumn
+        Caption = #1060#1072#1084#1110#1083#1110#1103
         DataBinding.FieldName = 'SURNAME'
         Width = 64
       end
       object cxIndividualsGridDBTableView1NAME: TcxGridDBColumn
+        Caption = #1030#1084#39#1103
         DataBinding.FieldName = 'NAME'
         Width = 64
       end
       object cxIndividualsGridDBTableView1MIDDLE: TcxGridDBColumn
+        Caption = #1055#1086' '#1073#1072#1090#1100#1082#1086#1074#1110
         DataBinding.FieldName = 'MIDDLE'
         Width = 64
       end
       object cxIndividualsGridDBTableView1GENDER: TcxGridDBColumn
         DataBinding.FieldName = 'GENDER'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1STATE: TcxGridDBColumn
         DataBinding.FieldName = 'STATE'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1PERSONAL_DOCUMENT: TcxGridDBColumn
         DataBinding.FieldName = 'PERSONAL_DOCUMENT'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1BIRTH_DATE: TcxGridDBColumn
         DataBinding.FieldName = 'BIRTH_DATE'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1BIRTH_PLACE: TcxGridDBColumn
         DataBinding.FieldName = 'BIRTH_PLACE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1DISABLEMENT: TcxGridDBColumn
         DataBinding.FieldName = 'DISABLEMENT'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1DISABLEMENT_GROUP: TcxGridDBColumn
         DataBinding.FieldName = 'DISABLEMENT_GROUP'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1DISABLEMENT_DOCUMENT: TcxGridDBColumn
         DataBinding.FieldName = 'DISABLEMENT_DOCUMENT'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1FOREIGN_ADDRESS_TYPE: TcxGridDBColumn
         DataBinding.FieldName = 'FOREIGN_ADDRESS_TYPE'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1FOREIGN_ADDRESS: TcxGridDBColumn
         DataBinding.FieldName = 'FOREIGN_ADDRESS'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1ID_NUMBER: TcxGridDBColumn
         DataBinding.FieldName = 'ID_NUMBER'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1ID_NUMBER_ABSENT: TcxGridDBColumn
         DataBinding.FieldName = 'ID_NUMBER_ABSENT'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1ID_NUMBER_ABSENT_REASON: TcxGridDBColumn
         DataBinding.FieldName = 'ID_NUMBER_ABSENT_REASON'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1PASSPORT_SERIAL: TcxGridDBColumn
         DataBinding.FieldName = 'PASSPORT_SERIAL'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1PASSPORT_NUMBER: TcxGridDBColumn
         DataBinding.FieldName = 'PASSPORT_NUMBER'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1PASSPORT_ISSUE_DATE: TcxGridDBColumn
         DataBinding.FieldName = 'PASSPORT_ISSUE_DATE'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1PASSPORT_ISSUER: TcxGridDBColumn
         DataBinding.FieldName = 'PASSPORT_ISSUER'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1PASSPORT_ISSUER_DEPT: TcxGridDBColumn
         DataBinding.FieldName = 'PASSPORT_ISSUER_DEPT'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1PASSPORT_ISSUER_STATE: TcxGridDBColumn
         DataBinding.FieldName = 'PASSPORT_ISSUER_STATE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1PASSPORT_FOREIGN_SERIAL: TcxGridDBColumn
         DataBinding.FieldName = 'PASSPORT_FOREIGN_SERIAL'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1PASSPORT_FOREIGN_NUMBER: TcxGridDBColumn
         DataBinding.FieldName = 'PASSPORT_FOREIGN_NUMBER'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1PASSPORT_FOREIGN_ISSUE_DATE: TcxGridDBColumn
         DataBinding.FieldName = 'PASSPORT_FOREIGN_ISSUE_DATE'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1PASSPORT_FOREIGN_EXPIRATION: TcxGridDBColumn
         DataBinding.FieldName = 'PASSPORT_FOREIGN_EXPIRATION'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1PASSPORT_FOREIGN_ISSUER: TcxGridDBColumn
         DataBinding.FieldName = 'PASSPORT_FOREIGN_ISSUER'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1BIRTH_CERTIFICATE_SERIAL: TcxGridDBColumn
         DataBinding.FieldName = 'BIRTH_CERTIFICATE_SERIAL'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1BIRTH_CERTIFICATE_NUMBER: TcxGridDBColumn
         DataBinding.FieldName = 'BIRTH_CERTIFICATE_NUMBER'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1BIRTH_CERTIFICATE_ISSUE_DATE: TcxGridDBColumn
         DataBinding.FieldName = 'BIRTH_CERTIFICATE_ISSUE_DATE'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1BIRTH_CERTIFICATE_ISSUER: TcxGridDBColumn
         DataBinding.FieldName = 'BIRTH_CERTIFICATE_ISSUER'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1BIRTH_CERTIFICATE_ISSUER_DEPT: TcxGridDBColumn
         DataBinding.FieldName = 'BIRTH_CERTIFICATE_ISSUER_DEPT'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1BIRTH_CERTIFICATE_ISSUER_STATE: TcxGridDBColumn
         DataBinding.FieldName = 'BIRTH_CERTIFICATE_ISSUER_STATE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1PERSONAL_CERTIFICATE: TcxGridDBColumn
         DataBinding.FieldName = 'PERSONAL_CERTIFICATE'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1ADDRESS_STATE: TcxGridDBColumn
         DataBinding.FieldName = 'ADDRESS_STATE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1ADDRESS_REGION: TcxGridDBColumn
         DataBinding.FieldName = 'ADDRESS_REGION'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1ADDRESS_LOCALITY_TYPE: TcxGridDBColumn
         DataBinding.FieldName = 'ADDRESS_LOCALITY_TYPE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1ADDRESS_LOCALITY: TcxGridDBColumn
         DataBinding.FieldName = 'ADDRESS_LOCALITY'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1ADDRESS_STREET_TYPE: TcxGridDBColumn
         DataBinding.FieldName = 'ADDRESS_STREET_TYPE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1ADDRESS_STREET: TcxGridDBColumn
         DataBinding.FieldName = 'ADDRESS_STREET'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1ADDRESS_BUILDING: TcxGridDBColumn
         DataBinding.FieldName = 'ADDRESS_BUILDING'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1ADDRESS_FLAT: TcxGridDBColumn
         DataBinding.FieldName = 'ADDRESS_FLAT'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1ADDRESS_CORPS: TcxGridDBColumn
         DataBinding.FieldName = 'ADDRESS_CORPS'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1ADDRESS_SECTION: TcxGridDBColumn
         DataBinding.FieldName = 'ADDRESS_SECTION'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1ADDRESS_INDEX: TcxGridDBColumn
         DataBinding.FieldName = 'ADDRESS_INDEX'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1ADDRESS_OTHER: TcxGridDBColumn
         DataBinding.FieldName = 'ADDRESS_OTHER'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1DESCRIPTION: TcxGridDBColumn
         DataBinding.FieldName = 'DESCRIPTION'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1MARRIAGE_REGISTRATOR: TcxGridDBColumn
         DataBinding.FieldName = 'MARRIAGE_REGISTRATOR'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1MARRIAGE_REGISTERED_DATE: TcxGridDBColumn
         DataBinding.FieldName = 'MARRIAGE_REGISTERED_DATE'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1MARRIAGE_MEMBER: TcxGridDBColumn
         DataBinding.FieldName = 'MARRIAGE_MEMBER'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1SHOW_BIRTH_DATE: TcxGridDBColumn
         DataBinding.FieldName = 'SHOW_BIRTH_DATE'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1SHOW_ADDRESS: TcxGridDBColumn
         DataBinding.FieldName = 'SHOW_ADDRESS'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1SHOW_ID_NUMBER: TcxGridDBColumn
         DataBinding.FieldName = 'SHOW_ID_NUMBER'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1SHOW_PASSPORT_DATA: TcxGridDBColumn
         DataBinding.FieldName = 'SHOW_PASSPORT_DATA'
+        Visible = False
       end
       object cxIndividualsGridDBTableView1SURNAME_CASE_NOMINATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'SURNAME_CASE_NOMINATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1SURNAME_CASE_GENITIVE: TcxGridDBColumn
         DataBinding.FieldName = 'SURNAME_CASE_GENITIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1SURNAME_CASE_DATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'SURNAME_CASE_DATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1SURNAME_CASE_ACCUSATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'SURNAME_CASE_ACCUSATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1SURNAME_CASE_ABLATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'SURNAME_CASE_ABLATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1SURNAME_CASE_LOCATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'SURNAME_CASE_LOCATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1SURNAME_CASE_VOCATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'SURNAME_CASE_VOCATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1NAME_CASE_NOMINATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'NAME_CASE_NOMINATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1NAME_CASE_GENITIVE: TcxGridDBColumn
         DataBinding.FieldName = 'NAME_CASE_GENITIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1NAME_CASE_DATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'NAME_CASE_DATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1NAME_CASE_ACCUSATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'NAME_CASE_ACCUSATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1NAME_CASE_ABLATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'NAME_CASE_ABLATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1NAME_CASE_LOCATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'NAME_CASE_LOCATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1NAME_CASE_VOCATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'NAME_CASE_VOCATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1NAME_CASE_ABBREVIATION: TcxGridDBColumn
         DataBinding.FieldName = 'NAME_CASE_ABBREVIATION'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1MIDDLE_CASE_NOMINATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'MIDDLE_CASE_NOMINATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1MIDDLE_CASE_GENITIVE: TcxGridDBColumn
         DataBinding.FieldName = 'MIDDLE_CASE_GENITIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1MIDDLE_CASE_DATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'MIDDLE_CASE_DATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1MIDDLE_CASE_ACCUSATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'MIDDLE_CASE_ACCUSATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1MIDDLE_CASE_ABLATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'MIDDLE_CASE_ABLATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1MIDDLE_CASE_LOCATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'MIDDLE_CASE_LOCATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1MIDDLE_CASE_VOCATIVE: TcxGridDBColumn
         DataBinding.FieldName = 'MIDDLE_CASE_VOCATIVE'
+        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1MIDDLE_CASE_ABBREVIATION: TcxGridDBColumn
         DataBinding.FieldName = 'MIDDLE_CASE_ABBREVIATION'
+        Visible = False
         Width = 64
       end
     end
