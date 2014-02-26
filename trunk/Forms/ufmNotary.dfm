@@ -1089,7 +1089,7 @@ object fmNotary: TfmNotary
       Top = 208
       Width = 75
       Height = 25
-      Caption = #1057#1090#1074#1086#1088#1080#1090#1080
+      Caption = #1047#1073#1077#1088#1110#1075#1090#1080
       TabOrder = 2
       OnClick = PostButtonClick
     end

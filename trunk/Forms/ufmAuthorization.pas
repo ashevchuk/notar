@@ -94,6 +94,7 @@ type
     procedure PostButtonClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
     procedure CancelButtonClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -144,11 +145,17 @@ end;
 procedure TfmAuthorization.FormCreate(Sender: TObject);
 begin
   dmAuthorization := TdmAuthorization.Create(self);
+  gotNotaryID(1);
 end;
 
 procedure TfmAuthorization.FormDestroy(Sender: TObject);
 begin
   dmAuthorization.Free;
+end;
+
+procedure TfmAuthorization.FormShow(Sender: TObject);
+begin
+  if not dmAuthorization.AuthorizationsDataSet.Modified then appendAuthorization;
 end;
 
 procedure TfmAuthorization.gotConstituentIndividualID(AID: Variant);
@@ -306,5 +313,8 @@ begin
     dmAuthorization.AuthorizationsDataSet.Transaction := RemoteDataModule.FIBTransaction;
   end;
 end;
+
+initialization
+  RegisterClass(TfmAuthorization);
 
 end.

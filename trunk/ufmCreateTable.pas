@@ -121,6 +121,7 @@ end;
 procedure TfmCreateTable.CreateTableButtonClick(Sender: TObject);
 begin
   generateFields;
+  Close;
 end;
 
 procedure TfmCreateTable.FieldNameTextEditPropertiesChange(Sender: TObject);

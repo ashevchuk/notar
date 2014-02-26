@@ -1,4 +1,4 @@
-object fmMain: TfmMain
+﻿object fmMain: TfmMain
   Left = 0
   Top = 0
   Caption = 'Notar'
@@ -319,6 +319,7 @@ object fmMain: TfmMain
   ShowHint = True
   Visible = True
   WindowState = wsMaximized
+  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -526,7 +527,7 @@ object fmMain: TfmMain
       Caption = #1058#1072#1073#1083#1080#1094#1110
       Category = 0
       Hint = #1058#1072#1073#1083#1080#1094#1110
-      Visible = ivAlways
+      Visible = ivNever
       OnClick = dxBarButton3Click
     end
     object dxBarButton1: TdxBarButton
@@ -543,8 +544,19 @@ object fmMain: TfmMain
       ItemLinks = <
         item
           Visible = True
+          ItemName = #1053#1086#1090#1072#1088#1110#1091#1089
+        end
+        item
+          Visible = True
           ItemName = 'dxBarButton3'
         end>
+    end
+    object Нотаріус: TdxBarButton
+      Caption = #1053#1086#1090#1072#1088#1110#1091#1089
+      Category = 0
+      Hint = #1053#1086#1090#1072#1088#1110#1091#1089
+      Visible = ivAlways
+      OnClick = НотаріусClick
     end
   end
   object dxTabbedMDIManager: TdxTabbedMDIManager

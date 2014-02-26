@@ -494,11 +494,13 @@ object fmAuthorizations: TfmAuthorizations
   TextHeight = 13
   object AuthorizationsGrid: TcxGrid
     Left = 0
-    Top = 0
+    Top = 31
     Width = 1103
-    Height = 479
+    Height = 448
     Align = alClient
     TabOrder = 0
+    ExplicitTop = 0
+    ExplicitHeight = 479
     object AuthorizationsGridDBTableView1: TcxGridDBTableView
       PopupMenu = AuthorizationPopupMenu
       Navigator.Buttons.CustomButtons = <>
@@ -935,6 +937,26 @@ object fmAuthorizations: TfmAuthorizations
         Caption = #1044#1086#1074#1110#1088#1080#1090#1077#1083#1100
         GridView = AuthorizationsGridDBTableView2
       end
+    end
+  end
+  object cxGroupBox1: TcxGroupBox
+    Left = 0
+    Top = 0
+    Align = alTop
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+    Height = 31
+    Width = 1103
+    object cxButton1: TcxButton
+      Left = 3
+      Top = 3
+      Width = 75
+      Height = 25
+      Caption = #1055#1077#1088#1077#1075#1083#1103#1076
+      TabOrder = 0
+      OnClick = cxButton1Click
     end
   end
   object AuthorizationsDataSource: TDataSource

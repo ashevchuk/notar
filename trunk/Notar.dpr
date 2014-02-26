@@ -1,6 +1,7 @@
 program Notar;
 
 uses
+{$IFDEF DEBUG}
   EMemLeaks,
   EResLeaks,
   EDialogWinAPIMSClassic,
@@ -11,6 +12,8 @@ uses
   EMapWin32,
   EAppVCL,
   ExceptionLog7,
+{$ENDIF}
+
   Vcl.Forms,
   Vcl.Dialogs,
   ufmMain in 'ufmMain.pas' {fmMain},

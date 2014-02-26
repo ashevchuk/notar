@@ -86,6 +86,7 @@ type
     dxMainBarManagerBar1: TdxBar;
     dxBarButton1: TdxBarButton;
     dxBarSubItem1: TdxBarSubItem;
+    Нотаріус: TdxBarButton;
     procedure FormCreate(Sender: TObject);
     procedure dxBarButtonExitClick(Sender: TObject);
     procedure StatusBarDblClick(Sender: TObject);
@@ -95,6 +96,8 @@ type
     procedure dxDBTreeView1DblClick(Sender: TObject);
     procedure dxBarButton3Click(Sender: TObject);
     procedure dxBarButton1Click(Sender: TObject);
+    procedure НотаріусClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     procedure OnException(Sender: TObject; E: Exception);
   public
@@ -188,6 +191,20 @@ if (Length(RemoteDataModule.MenuTreeDataSetCLASS_NAME.AsString) >0) then
   end;
 end;
 
+procedure TfmMain.FormClose(Sender: TObject; var Action: TCloseAction);
+var
+  MDIChildCounter: Word;
+begin
+  while TfmMain(self).MDIChildCount > 0 do
+  begin
+    try
+      TfmMain(self).MDIChildren[0].Close;
+    finally
+      Application.ProcessMessages;
+    end;
+  end;
+end;
+
 procedure TfmMain.FormCreate(Sender: TObject);
 var
   PathLength       : integer;
@@ -249,6 +266,15 @@ procedure TfmMain.ToggleLogWindow(AVisible: boolean);
 begin
   LogGroupBox.Visible := AVisible;
   LogSplitter.Visible := AVisible;
+end;
+
+procedure TfmMain.НотаріусClick(Sender: TObject);
+begin
+  with TfmNotary.Create(Application.MainForm) do
+  begin
+    editNotary(1);
+    Show;
+  end;
 end;
 
 function TfmMain.GetCustomTagValue(const Tag: AnsiString;  var Value: string): boolean;

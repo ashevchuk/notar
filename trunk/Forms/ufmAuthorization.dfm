@@ -490,6 +490,7 @@ object fmAuthorization: TfmAuthorization
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object cxGroupBox1: TcxGroupBox
@@ -1257,7 +1258,7 @@ object fmAuthorization: TfmAuthorization
     end
     object cxGroupBox9: TcxGroupBox
       Left = 14
-      Top = 184
+      Top = 105
       Caption = #1055#1088#1077#1076#1089#1090#1072#1074#1085#1080#1082#1080
       ParentBackground = False
       ParentColor = False
@@ -1334,12 +1335,13 @@ object fmAuthorization: TfmAuthorization
     end
     object cxGroupBox8: TcxGroupBox
       Left = 14
-      Top = 105
+      Top = 236
       Caption = #1053#1086#1090#1072#1088#1110#1091#1089
       ParentBackground = False
       ParentColor = False
       ParentFont = False
       TabOrder = 8
+      Visible = False
       Height = 73
       Width = 260
       object NotaryListBox: TcxListBox
