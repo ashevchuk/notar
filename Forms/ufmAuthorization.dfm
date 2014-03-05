@@ -1228,6 +1228,7 @@ object fmAuthorization: TfmAuthorization
         ItemHeight = 13
         ParentFont = False
         TabOrder = 0
+        OnDblClick = N2Click
       end
       object cxGroupBox2: TcxGroupBox
         Left = 3
@@ -1275,6 +1276,7 @@ object fmAuthorization: TfmAuthorization
         ItemHeight = 13
         ParentFont = False
         TabOrder = 1
+        OnDblClick = N3Click
       end
       object cxGroupBox10: TcxGroupBox
         Left = 3
@@ -1383,24 +1385,32 @@ object fmAuthorization: TfmAuthorization
     end
   end
   object ConstituentPopupMenu: TPopupMenu
-    Left = 64
-    Top = 352
+    Left = 128
+    Top = 56
     object ConstituentIndividualPopUpMenuItem: TMenuItem
-      Caption = #1060#1110#1079#1080#1095#1085#1072' '#1086#1089#1086#1073#1072
+      Caption = #1054#1073#1088#1072#1090#1080
       OnClick = ConstituentIndividualPopUpMenuItemClick
+    end
+    object N2: TMenuItem
+      Caption = #1044#1086#1076#1072#1090#1080
+      OnClick = N2Click
     end
   end
   object RepresentativesPopupMenu: TPopupMenu
-    Left = 168
-    Top = 352
+    Left = 128
+    Top = 144
     object RepresentativesIndividualPopUpMenuItem: TMenuItem
-      Caption = #1060#1110#1079#1080#1095#1085#1072' '#1086#1089#1086#1073#1072
+      Caption = #1054#1073#1088#1072#1090#1080
       OnClick = RepresentativesIndividualPopUpMenuItemClick
+    end
+    object N3: TMenuItem
+      Caption = #1044#1086#1076#1072#1090#1080
+      OnClick = N3Click
     end
   end
   object NotaryPopupMenu: TPopupMenu
-    Left = 256
-    Top = 352
+    Left = 128
+    Top = 264
     object N1: TMenuItem
       Caption = #1053#1086#1090#1072#1088#1110#1091#1089
       OnClick = N1Click

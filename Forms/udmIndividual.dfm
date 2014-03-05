@@ -60,6 +60,7 @@ object dmIndividual: TdmIndividual
     Top = 190
   end
   object IndividualsDataSet: TpFIBDataSet
+    UniDirectional = True
     UpdateSQL.Strings = (
       'UPDATE CATALOG_INDIVIDUALS'
       'SET '
@@ -482,6 +483,12 @@ object dmIndividual: TdmIndividual
       '    MIDDLE_CASE_ABBREVIATION'
       'FROM'
       '    CATALOG_INDIVIDUALS ')
+    AutoUpdateOptions.UpdateTableName = 'CATALOG_INDIVIDUALS'
+    AutoUpdateOptions.KeyFields = 'ID'
+    AutoUpdateOptions.GeneratorName = 'GEN_CATALOG_INDIVIDUALS_ID'
+    AutoUpdateOptions.WhenGetGenID = wgOnNewRecord
+    AutoUpdateOptions.GeneratorStep = 0
+    AutoUpdateOptions.UseReturningFields = [rfKeyFields]
     Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
@@ -489,6 +496,379 @@ object dmIndividual: TdmIndividual
     AutoCommit = True
     Left = 64
     Top = 32
+    oDontAutoClose = True
+    oFreeHandlesAfterClose = True
+    oFetchAll = True
+    object IndividualsDataSetID: TFIBBCDField
+      FieldKind = fkInternalCalc
+      FieldName = 'ID'
+      Size = 0
+    end
+    object IndividualsDataSetSURNAME: TFIBWideStringField
+      FieldName = 'SURNAME'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetNAME: TFIBWideStringField
+      FieldName = 'NAME'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetMIDDLE: TFIBWideStringField
+      FieldName = 'MIDDLE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetGENDER: TFIBSmallIntField
+      FieldName = 'GENDER'
+    end
+    object IndividualsDataSetSTATE: TFIBSmallIntField
+      FieldName = 'STATE'
+    end
+    object IndividualsDataSetPERSONAL_DOCUMENT: TFIBSmallIntField
+      FieldName = 'PERSONAL_DOCUMENT'
+    end
+    object IndividualsDataSetBIRTH_DATE: TFIBDateField
+      FieldName = 'BIRTH_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object IndividualsDataSetBIRTH_PLACE: TFIBWideStringField
+      FieldName = 'BIRTH_PLACE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetDISABLEMENT: TFIBSmallIntField
+      DefaultExpression = '0'
+      FieldName = 'DISABLEMENT'
+    end
+    object IndividualsDataSetDISABLEMENT_GROUP: TFIBWideStringField
+      FieldName = 'DISABLEMENT_GROUP'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetDISABLEMENT_DOCUMENT: TFIBWideStringField
+      FieldName = 'DISABLEMENT_DOCUMENT'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetFOREIGN_ADDRESS_TYPE: TFIBSmallIntField
+      FieldName = 'FOREIGN_ADDRESS_TYPE'
+    end
+    object IndividualsDataSetFOREIGN_ADDRESS: TFIBMemoField
+      FieldName = 'FOREIGN_ADDRESS'
+      BlobType = ftWideMemo
+      Size = 8
+    end
+    object IndividualsDataSetID_NUMBER: TFIBWideStringField
+      FieldName = 'ID_NUMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetID_NUMBER_ABSENT: TFIBSmallIntField
+      DefaultExpression = '0'
+      FieldName = 'ID_NUMBER_ABSENT'
+    end
+    object IndividualsDataSetID_NUMBER_ABSENT_REASON: TFIBMemoField
+      FieldName = 'ID_NUMBER_ABSENT_REASON'
+      BlobType = ftWideMemo
+      Size = 8
+    end
+    object IndividualsDataSetPASSPORT_SERIAL: TFIBWideStringField
+      FieldName = 'PASSPORT_SERIAL'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPASSPORT_NUMBER: TFIBWideStringField
+      FieldName = 'PASSPORT_NUMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPASSPORT_ISSUE_DATE: TFIBDateField
+      FieldName = 'PASSPORT_ISSUE_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object IndividualsDataSetPASSPORT_ISSUER: TFIBWideStringField
+      FieldName = 'PASSPORT_ISSUER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPASSPORT_ISSUER_DEPT: TFIBWideStringField
+      FieldName = 'PASSPORT_ISSUER_DEPT'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPASSPORT_ISSUER_STATE: TFIBWideStringField
+      FieldName = 'PASSPORT_ISSUER_STATE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPASSPORT_FOREIGN_SERIAL: TFIBWideStringField
+      FieldName = 'PASSPORT_FOREIGN_SERIAL'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPASSPORT_FOREIGN_NUMBER: TFIBWideStringField
+      FieldName = 'PASSPORT_FOREIGN_NUMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPASSPORT_FOREIGN_ISSUE_DATE: TFIBDateField
+      FieldName = 'PASSPORT_FOREIGN_ISSUE_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object IndividualsDataSetPASSPORT_FOREIGN_EXPIRATION: TFIBDateField
+      FieldName = 'PASSPORT_FOREIGN_EXPIRATION'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object IndividualsDataSetPASSPORT_FOREIGN_ISSUER: TFIBWideStringField
+      FieldName = 'PASSPORT_FOREIGN_ISSUER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetBIRTH_CERTIFICATE_SERIAL: TFIBWideStringField
+      FieldName = 'BIRTH_CERTIFICATE_SERIAL'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetBIRTH_CERTIFICATE_NUMBER: TFIBWideStringField
+      FieldName = 'BIRTH_CERTIFICATE_NUMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetBIRTH_CERTIFICATE_ISSUE_DATE: TFIBDateField
+      FieldName = 'BIRTH_CERTIFICATE_ISSUE_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object IndividualsDataSetBIRTH_CERTIFICATE_ISSUER: TFIBWideStringField
+      FieldName = 'BIRTH_CERTIFICATE_ISSUER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetBIRTH_CERTIFICATE_ISSUER_DEPT: TFIBWideStringField
+      FieldName = 'BIRTH_CERTIFICATE_ISSUER_DEPT'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetBIRTH_CERTIFICATE_ISSUER_STATE: TFIBWideStringField
+      FieldName = 'BIRTH_CERTIFICATE_ISSUER_STATE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetPERSONAL_CERTIFICATE: TFIBMemoField
+      FieldName = 'PERSONAL_CERTIFICATE'
+      BlobType = ftWideMemo
+      Size = 8
+    end
+    object IndividualsDataSetADDRESS_STATE: TFIBWideStringField
+      FieldName = 'ADDRESS_STATE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_REGION: TFIBWideStringField
+      FieldName = 'ADDRESS_REGION'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_LOCALITY_TYPE: TFIBWideStringField
+      FieldName = 'ADDRESS_LOCALITY_TYPE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_LOCALITY: TFIBWideStringField
+      FieldName = 'ADDRESS_LOCALITY'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_STREET_TYPE: TFIBWideStringField
+      FieldName = 'ADDRESS_STREET_TYPE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_STREET: TFIBWideStringField
+      FieldName = 'ADDRESS_STREET'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_BUILDING: TFIBWideStringField
+      FieldName = 'ADDRESS_BUILDING'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_FLAT: TFIBWideStringField
+      FieldName = 'ADDRESS_FLAT'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_CORPS: TFIBWideStringField
+      FieldName = 'ADDRESS_CORPS'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_SECTION: TFIBWideStringField
+      FieldName = 'ADDRESS_SECTION'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_INDEX: TFIBWideStringField
+      FieldName = 'ADDRESS_INDEX'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetADDRESS_OTHER: TFIBWideStringField
+      FieldName = 'ADDRESS_OTHER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetDESCRIPTION: TFIBMemoField
+      FieldName = 'DESCRIPTION'
+      BlobType = ftWideMemo
+      Size = 8
+    end
+    object IndividualsDataSetMARRIAGE_REGISTRATOR: TFIBWideStringField
+      FieldName = 'MARRIAGE_REGISTRATOR'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetMARRIAGE_REGISTERED_DATE: TFIBDateField
+      FieldName = 'MARRIAGE_REGISTERED_DATE'
+      DisplayFormat = 'dd.mm.yyyy'
+    end
+    object IndividualsDataSetMARRIAGE_MEMBER: TFIBWideStringField
+      FieldName = 'MARRIAGE_MEMBER'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetSHOW_BIRTH_DATE: TFIBSmallIntField
+      DefaultExpression = '0'
+      FieldName = 'SHOW_BIRTH_DATE'
+    end
+    object IndividualsDataSetSHOW_ADDRESS: TFIBSmallIntField
+      DefaultExpression = '0'
+      FieldName = 'SHOW_ADDRESS'
+    end
+    object IndividualsDataSetSHOW_ID_NUMBER: TFIBSmallIntField
+      DefaultExpression = '0'
+      FieldName = 'SHOW_ID_NUMBER'
+    end
+    object IndividualsDataSetSHOW_PASSPORT_DATA: TFIBSmallIntField
+      DefaultExpression = '0'
+      FieldName = 'SHOW_PASSPORT_DATA'
+    end
+    object IndividualsDataSetSURNAME_CASE_NOMINATIVE: TFIBWideStringField
+      FieldName = 'SURNAME_CASE_NOMINATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetSURNAME_CASE_GENITIVE: TFIBWideStringField
+      FieldName = 'SURNAME_CASE_GENITIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetSURNAME_CASE_DATIVE: TFIBWideStringField
+      FieldName = 'SURNAME_CASE_DATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetSURNAME_CASE_ACCUSATIVE: TFIBWideStringField
+      FieldName = 'SURNAME_CASE_ACCUSATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetSURNAME_CASE_ABLATIVE: TFIBWideStringField
+      FieldName = 'SURNAME_CASE_ABLATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetSURNAME_CASE_LOCATIVE: TFIBWideStringField
+      FieldName = 'SURNAME_CASE_LOCATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetSURNAME_CASE_VOCATIVE: TFIBWideStringField
+      FieldName = 'SURNAME_CASE_VOCATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetNAME_CASE_NOMINATIVE: TFIBWideStringField
+      FieldName = 'NAME_CASE_NOMINATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetNAME_CASE_GENITIVE: TFIBWideStringField
+      FieldName = 'NAME_CASE_GENITIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetNAME_CASE_DATIVE: TFIBWideStringField
+      FieldName = 'NAME_CASE_DATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetNAME_CASE_ACCUSATIVE: TFIBWideStringField
+      FieldName = 'NAME_CASE_ACCUSATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetNAME_CASE_ABLATIVE: TFIBWideStringField
+      FieldName = 'NAME_CASE_ABLATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetNAME_CASE_LOCATIVE: TFIBWideStringField
+      FieldName = 'NAME_CASE_LOCATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetNAME_CASE_VOCATIVE: TFIBWideStringField
+      FieldName = 'NAME_CASE_VOCATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetNAME_CASE_ABBREVIATION: TFIBWideStringField
+      FieldName = 'NAME_CASE_ABBREVIATION'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetMIDDLE_CASE_NOMINATIVE: TFIBWideStringField
+      FieldName = 'MIDDLE_CASE_NOMINATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetMIDDLE_CASE_GENITIVE: TFIBWideStringField
+      FieldName = 'MIDDLE_CASE_GENITIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetMIDDLE_CASE_DATIVE: TFIBWideStringField
+      FieldName = 'MIDDLE_CASE_DATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetMIDDLE_CASE_ACCUSATIVE: TFIBWideStringField
+      FieldName = 'MIDDLE_CASE_ACCUSATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetMIDDLE_CASE_ABLATIVE: TFIBWideStringField
+      FieldName = 'MIDDLE_CASE_ABLATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetMIDDLE_CASE_LOCATIVE: TFIBWideStringField
+      FieldName = 'MIDDLE_CASE_LOCATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetMIDDLE_CASE_VOCATIVE: TFIBWideStringField
+      FieldName = 'MIDDLE_CASE_VOCATIVE'
+      Size = 255
+      EmptyStrToNull = True
+    end
+    object IndividualsDataSetMIDDLE_CASE_ABBREVIATION: TFIBWideStringField
+      FieldName = 'MIDDLE_CASE_ABBREVIATION'
+      Size = 255
+      EmptyStrToNull = True
+    end
   end
   object IndividualsDataSource: TDataSource
     DataSet = IndividualsDataSet

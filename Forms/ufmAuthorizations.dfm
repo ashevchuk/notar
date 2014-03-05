@@ -524,49 +524,109 @@ object fmAuthorizations: TfmAuthorizations
         DataBinding.FieldName = 'ID'
         Visible = False
       end
-      object AuthorizationsGridDBTableView1TRANSPORT_KIND: TcxGridDBColumn
-        Caption = #1042#1080#1076' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1085#1086#1075#1086' '#1079#1072#1089#1086#1073#1091
-        DataBinding.FieldName = 'TRANSPORT_KIND'
-        Width = 64
-      end
       object AuthorizationsGridDBTableView1TRANSPORT_BRAND: TcxGridDBColumn
         Caption = #1052#1072#1088#1082#1072' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1085#1086#1075#1086' '#1079#1072#1089#1086#1073#1091
         DataBinding.FieldName = 'TRANSPORT_BRAND'
+        Visible = False
         Width = 64
       end
       object AuthorizationsGridDBTableView1TRANSPORT_MODEL: TcxGridDBColumn
         Caption = #1052#1086#1076#1077#1083#1100' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1085#1086#1075#1086' '#1079#1072#1089#1086#1073#1091
         DataBinding.FieldName = 'TRANSPORT_MODEL'
+        Visible = False
         Width = 64
       end
       object AuthorizationsGridDBTableView1TRANSPORT_TYPE: TcxGridDBColumn
         Caption = #1058#1080#1087' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1085#1086#1075#1086' '#1079#1072#1089#1086#1073#1091
         DataBinding.FieldName = 'TRANSPORT_TYPE'
+        Visible = False
         Width = 64
       end
       object AuthorizationsGridDBTableView1TRANSPORT_COLOR: TcxGridDBColumn
         Caption = #1050#1086#1083#1110#1088' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1085#1086#1075#1086' '#1079#1072#1089#1086#1073#1091
         DataBinding.FieldName = 'TRANSPORT_COLOR'
+        Visible = False
         Width = 64
       end
       object AuthorizationsGridDBTableView1TRANSPORT_CHASSIS_NUMBER: TcxGridDBColumn
         Caption = #1053#1086#1084#1077#1088' '#1096#1072#1089#1110' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1085#1086#1075#1086' '#1079#1072#1089#1086#1073#1091
         DataBinding.FieldName = 'TRANSPORT_CHASSIS_NUMBER'
+        Visible = False
         Width = 64
       end
       object AuthorizationsGridDBTableView1TRANSPORT_LOAD_WEIGHT: TcxGridDBColumn
         Caption = #1055#1086#1074#1085#1072' '#1084#1072#1089#1072' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1085#1086#1075#1086' '#1079#1072#1089#1086#1073#1091
         DataBinding.FieldName = 'TRANSPORT_LOAD_WEIGHT'
+        Visible = False
         Width = 64
       end
       object AuthorizationsGridDBTableView1TRANSPORT_WEIGHT: TcxGridDBColumn
         Caption = #1052#1072#1089#1072' '#1073#1077#1079' '#1085#1072#1074#1072#1085#1090#1072#1078#1077#1085#1085#1103
         DataBinding.FieldName = 'TRANSPORT_WEIGHT'
+        Visible = False
         Width = 64
       end
       object AuthorizationsGridDBTableView1TRANSPORT_ENGINE_VOLUME: TcxGridDBColumn
         Caption = #1054#1073#39#1108#1084' '#1076#1074#1080#1075#1091#1085#1072
         DataBinding.FieldName = 'TRANSPORT_ENGINE_VOLUME'
+        Visible = False
+        Width = 64
+      end
+      object AuthorizationsGridDBTableView1TRANSPORT_FABRICATION_DATE: TcxGridDBColumn
+        Caption = #1044#1072#1090#1072' '#1074#1080#1087#1091#1089#1082#1091
+        DataBinding.FieldName = 'TRANSPORT_FABRICATION_DATE'
+        Visible = False
+      end
+      object AuthorizationsGridDBTableView1TRANSPORT_CERTIFICATE_SERIAL: TcxGridDBColumn
+        Caption = #1057#1077#1088#1110#1103' '#1089#1074#1110#1076#1086#1094#1090#1074#1072' '#1087#1088#1086' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1102
+        DataBinding.FieldName = 'TRANSPORT_CERTIFICATE_SERIAL'
+        Visible = False
+        Width = 64
+      end
+      object AuthorizationsGridDBTableView1TRANSPORT_CERTIFICATE_NUMBER: TcxGridDBColumn
+        Caption = #1053#1086#1084#1077#1088' '#1089#1074#1110#1076#1086#1094#1090#1074#1072' '#1087#1088#1086' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1102
+        DataBinding.FieldName = 'TRANSPORT_CERTIFICATE_NUMBER'
+        Visible = False
+        Width = 64
+      end
+      object AuthorizationsGridDBTableView1TRANSPORT_CERTIFICATE_REG_DATE: TcxGridDBColumn
+        Caption = #1044#1072#1090#1072' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1111' '#1089#1074#1110#1076#1086#1094#1090#1074#1072' '#1087#1088#1086' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1102' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1085#1086#1075#1086' '#1079#1072#1089#1086#1073#1091
+        DataBinding.FieldName = 'TRANSPORT_CERTIFICATE_REG_DATE'
+        Visible = False
+      end
+      object AuthorizationsGridDBTableView1TRANSPORT_CERTIFICATE_ISSUER: TcxGridDBColumn
+        Caption = #1042#1080#1076#1072#1085#1086' '#1089#1074#1110#1076#1086#1094#1090#1074#1086' '#1087#1088#1086' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1102' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1085#1086#1075#1086' '#1079#1072#1089#1086#1073#1091
+        DataBinding.FieldName = 'TRANSPORT_CERTIFICATE_ISSUER'
+        Visible = False
+        Width = 64
+      end
+      object AuthorizationsGridDBTableView1TRANSITE_NUMBER: TcxGridDBColumn
+        Caption = #1058#1088#1072#1085#1079#1080#1090#1085#1080#1081' '#1085#1086#1084#1077#1088
+        DataBinding.FieldName = 'TRANSITE_NUMBER'
+        Visible = False
+        Width = 64
+      end
+      object AuthorizationsGridDBTableView1TRANSITE_NUMBER_REMOVED_DATE: TcxGridDBColumn
+        Caption = #1044#1072#1090#1072' '#1079#1085#1103#1090#1090#1103' '#1090#1088#1072#1085#1079#1080#1090#1085#1086#1075#1086' '#1085#1086#1084#1077#1088#1072
+        DataBinding.FieldName = 'TRANSITE_NUMBER_REMOVED_DATE'
+        Visible = False
+      end
+      object AuthorizationsGridDBTableView1AUTHORIZATION_NUMBER: TcxGridDBColumn
+        Caption = #1056#1077#1108#1089#1090#1088#1086#1074#1080#1081' '#1085#1086#1084#1077#1088' '#1076#1086#1074#1110#1088#1077#1085#1086#1089#1090#1110
+        DataBinding.FieldName = 'AUTHORIZATION_NUMBER'
+        Width = 64
+      end
+      object AuthorizationsGridDBTableView1AUTHORIZATION_DATE: TcxGridDBColumn
+        Caption = #1044#1072#1090#1072' '#1087#1086#1089#1074#1110#1076#1095#1077#1085#1085#1103
+        DataBinding.FieldName = 'AUTHORIZATION_DATE'
+      end
+      object AuthorizationsGridDBTableView1AUTHORIZATION_VALIDITY_DATE: TcxGridDBColumn
+        Caption = #1058#1077#1088#1084#1110#1085' '#1076#1110#1111
+        DataBinding.FieldName = 'AUTHORIZATION_VALIDITY_DATE'
+      end
+      object AuthorizationsGridDBTableView1TRANSPORT_KIND: TcxGridDBColumn
+        Caption = #1042#1080#1076' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1085#1086#1075#1086' '#1079#1072#1089#1086#1073#1091
+        DataBinding.FieldName = 'TRANSPORT_KIND'
         Width = 64
       end
       object AuthorizationsGridDBTableView1TRANSPORT_REG_NUMBER: TcxGridDBColumn
@@ -574,53 +634,8 @@ object fmAuthorizations: TfmAuthorizations
         DataBinding.FieldName = 'TRANSPORT_REG_NUMBER'
         Width = 64
       end
-      object AuthorizationsGridDBTableView1TRANSPORT_FABRICATION_DATE: TcxGridDBColumn
-        Caption = #1044#1072#1090#1072' '#1074#1080#1087#1091#1089#1082#1091
-        DataBinding.FieldName = 'TRANSPORT_FABRICATION_DATE'
-      end
-      object AuthorizationsGridDBTableView1TRANSPORT_CERTIFICATE_SERIAL: TcxGridDBColumn
-        Caption = #1057#1077#1088#1110#1103' '#1089#1074#1110#1076#1086#1094#1090#1074#1072' '#1087#1088#1086' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1102
-        DataBinding.FieldName = 'TRANSPORT_CERTIFICATE_SERIAL'
-        Width = 64
-      end
-      object AuthorizationsGridDBTableView1TRANSPORT_CERTIFICATE_NUMBER: TcxGridDBColumn
-        Caption = #1053#1086#1084#1077#1088' '#1089#1074#1110#1076#1086#1094#1090#1074#1072' '#1087#1088#1086' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1102
-        DataBinding.FieldName = 'TRANSPORT_CERTIFICATE_NUMBER'
-        Width = 64
-      end
-      object AuthorizationsGridDBTableView1TRANSPORT_CERTIFICATE_REG_DATE: TcxGridDBColumn
-        Caption = #1044#1072#1090#1072' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1111' '#1089#1074#1110#1076#1086#1094#1090#1074#1072' '#1087#1088#1086' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1102' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1085#1086#1075#1086' '#1079#1072#1089#1086#1073#1091
-        DataBinding.FieldName = 'TRANSPORT_CERTIFICATE_REG_DATE'
-      end
-      object AuthorizationsGridDBTableView1TRANSPORT_CERTIFICATE_ISSUER: TcxGridDBColumn
-        Caption = #1042#1080#1076#1072#1085#1086' '#1089#1074#1110#1076#1086#1094#1090#1074#1086' '#1087#1088#1086' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1102' '#1090#1088#1072#1085#1089#1087#1086#1088#1090#1085#1086#1075#1086' '#1079#1072#1089#1086#1073#1091
-        DataBinding.FieldName = 'TRANSPORT_CERTIFICATE_ISSUER'
-        Width = 64
-      end
-      object AuthorizationsGridDBTableView1TRANSITE_NUMBER: TcxGridDBColumn
-        Caption = #1058#1088#1072#1085#1079#1080#1090#1085#1080#1081' '#1085#1086#1084#1077#1088
-        DataBinding.FieldName = 'TRANSITE_NUMBER'
-        Width = 64
-      end
-      object AuthorizationsGridDBTableView1TRANSITE_NUMBER_REMOVED_DATE: TcxGridDBColumn
-        Caption = #1044#1072#1090#1072' '#1079#1085#1103#1090#1090#1103' '#1090#1088#1072#1085#1079#1080#1090#1085#1086#1075#1086' '#1085#1086#1084#1077#1088#1072
-        DataBinding.FieldName = 'TRANSITE_NUMBER_REMOVED_DATE'
-      end
-      object AuthorizationsGridDBTableView1AUTHORIZATION_NUMBER: TcxGridDBColumn
-        Caption = #1056#1077#1108#1089#1090#1088#1086#1074#1080#1081' '#1085#1086#1084#1077#1088' '#1076#1086#1074#1110#1088#1077#1085#1086#1089#1090#1110
-        DataBinding.FieldName = 'AUTHORIZATION_NUMBER'
-        Width = 64
-      end
-      object AuthorizationsGridDBTableView1AUTHORIZATION_VALIDITY_DATE: TcxGridDBColumn
-        Caption = #1058#1077#1088#1084#1110#1085' '#1076#1110#1111' '#1076#1086#1074#1110#1088#1077#1085#1086#1089#1090#1110
-        DataBinding.FieldName = 'AUTHORIZATION_VALIDITY_DATE'
-      end
-      object AuthorizationsGridDBTableView1AUTHORIZATION_DATE: TcxGridDBColumn
-        Caption = #1044#1072#1090#1072' '#1076#1086#1074#1110#1088#1077#1085#1086#1089#1090#1110
-        DataBinding.FieldName = 'AUTHORIZATION_DATE'
-      end
       object AuthorizationsGridDBTableView1AUTHORIZATION_DESCRIPTION: TcxGridDBColumn
-        Caption = #1055#1088#1080#1084#1110#1090#1082#1072' '#1076#1086#1074#1110#1088#1077#1085#1086#1089#1090#1110
+        Caption = #1055#1088#1080#1084#1110#1090#1082#1072
         DataBinding.FieldName = 'AUTHORIZATION_DESCRIPTION'
         Width = 64
       end
@@ -630,6 +645,7 @@ object fmAuthorizations: TfmAuthorizations
         PropertiesClassName = 'TcxCheckBoxProperties'
         Properties.ValueChecked = 1
         Properties.ValueUnchecked = 0
+        Visible = False
         Width = 64
       end
       object AuthorizationsGridDBTableView1SUBSTITUTION: TcxGridDBColumn
@@ -638,6 +654,7 @@ object fmAuthorizations: TfmAuthorizations
         PropertiesClassName = 'TcxCheckBoxProperties'
         Properties.ValueChecked = 1
         Properties.ValueUnchecked = 0
+        Visible = False
         Width = 20
       end
     end
