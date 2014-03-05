@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
-  udmIndividual,
+  udmIndividual, uTypes,
   ufmMain, uUtils, uRemoteDM, cxGraphics, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore, dxSkinOffice2007Blue,
   cxLabel, cxGroupBox, cxCheckBox, cxTextEdit, cxMaskEdit, cxDropDownEdit,
@@ -184,11 +184,12 @@ type
     procedure CancelButtonClick(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
   private
-    { Private declarations }
+    FSelectorCallback: TCatalogSelectorCallback;
   public
     function appendIndividual: boolean;
     function saveIndividual: boolean;
     function editIndividual(AIndividualID: Int64): boolean;
+    procedure registerSelectorCallback(ACallback: TCatalogSelectorCallback);
   end;
 
 var
@@ -206,6 +207,11 @@ const
 implementation
 uses padegFIO;
 {$R *.dfm}
+
+procedure TfmIndividual.registerSelectorCallback(ACallback: TCatalogSelectorCallback);
+begin
+  FSelectorCallback := ACallback;
+end;
 
 function TfmIndividual.appendIndividual: boolean;
 begin
@@ -248,7 +254,7 @@ begin
   NameCaseVocativeTextEdit.EditValue := ExtractWord(2, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_VOCATIVE), [' ']);
   NameCaseLocativeTextEdit.EditValue := ExtractWord(2, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_LOCATIVE), [' ']);
   NameCaseAblativeTextEdit.EditValue := ExtractWord(2, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_ABLATIVE), [' ']);
-  NameAbbreviationTextEdit.EditValue := PartsFIO.FirstName;
+  NameAbbreviationTextEdit.EditValue := Copy(PartsFIO.FirstName, 1, 1) + '.';
 
   MiddleCaseNominativeTextEdit.EditValue := ExtractWord(3, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_NOMINATIVE), [' ']);
   MiddleCaseGenitiveTextEdit.EditValue := ExtractWord(3, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_GENITIVE), [' ']);
@@ -257,7 +263,7 @@ begin
   MiddleCaseVocativeTextEdit.EditValue := ExtractWord(3, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_VOCATIVE), [' ']);
   MiddleCaseLocativeTextEdit.EditValue := ExtractWord(3, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_LOCATIVE), [' ']);
   MiddleCaseAblativeTextEdit.EditValue := ExtractWord(3, PadegFIO.GetFIOPadegAS(SurNameLookupComboBox.Text, NameLookupComboBox.Text, MiddleNameLookupComboBox.Text, CASE_ABLATIVE), [' ']);
-  MiddleAbbreviationTextEdit.EditValue := PartsFIO.MiddleName;
+  MiddleAbbreviationTextEdit.EditValue := Copy(PartsFIO.MiddleName, 1, 1) + '.';
 end;
 
 function TfmIndividual.editIndividual(AIndividualID: Int64): boolean;
@@ -278,6 +284,7 @@ end;
 procedure TfmIndividual.FormCreate(Sender: TObject);
 begin
   dmIndividual := TdmIndividual.Create(self);
+  FSelectorCallback := nil;
 end;
 
 procedure TfmIndividual.FormDestroy(Sender: TObject);
@@ -296,8 +303,10 @@ function TfmIndividual.saveIndividual: boolean;
 begin
   try
     dmIndividual.IndividualsDataSet.Post;
+    if Assigned(FSelectorCallback) then FSelectorCallback(dmIndividual.IndividualsDataSetID.AsInt64 +1);
   finally
     dmIndividual.IndividualsDataSet.Transaction.Commit;
+
     dmIndividual.IndividualsDataSet.Close;
     dmIndividual.IndividualsDataSet.Transaction.Free;
     dmIndividual.IndividualsDataSet.Transaction := RemoteDataModule.FIBTransaction;

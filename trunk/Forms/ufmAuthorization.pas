@@ -85,6 +85,8 @@ type
     AddNotaryButton: TcxButton;
     NotaryPopupMenu: TPopupMenu;
     N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure ConstituentIndividualPopUpMenuItemClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -95,6 +97,8 @@ type
     procedure N1Click(Sender: TObject);
     procedure CancelButtonClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure N2Click(Sender: TObject);
+    procedure N3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -109,7 +113,7 @@ var
   fmAuthorization: TfmAuthorization;
 
 implementation
-uses ufmIndividualSelector, ufmNotarySelector, udmNotary;
+uses ufmIndividualSelector, ufmNotarySelector, udmNotary, ufmIndividual;
 {$R *.dfm}
 
 function TfmAuthorization.appendAuthorization: boolean;
@@ -215,8 +219,38 @@ begin
   end;
 end;
 
+procedure TfmAuthorization.N2Click(Sender: TObject);
+begin
+  with TfmIndividual.Create(self) do
+  begin
+    Show;
+    appendIndividual;
+    registerSelectorCallback(gotConstituentIndividualID);
+  end;
+end;
+
+procedure TfmAuthorization.N3Click(Sender: TObject);
+begin
+  with TfmIndividual.Create(self) do
+  begin
+    Show;
+    appendIndividual;
+    registerSelectorCallback(gotRepresentativeIndividualID);
+  end;
+end;
+
 procedure TfmAuthorization.PostButtonClick(Sender: TObject);
 begin
+  if ConstituentsListBox.Items.Count = 0 then
+  begin
+    ShowMessage('Вкажіть довірителя');
+  end;
+
+  if RepresentativesListBox.Items.Count = 0 then
+  begin
+    ShowMessage('Вкажіть Представників');
+  end;
+
   saveAuthorization;
   dmAuthorization.AuthorizationsDataSet.Close;
   Close;
