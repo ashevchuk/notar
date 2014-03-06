@@ -500,8 +500,6 @@ object fmIndividuals: TfmIndividuals
     Align = alClient
     PopupMenu = IndividualsPopupMenu
     TabOrder = 0
-    ExplicitWidth = 643
-    ExplicitHeight = 287
     object cxIndividualsGridDBTableView1: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
       Navigator.Buttons.First.Visible = True
@@ -590,8 +588,8 @@ object fmIndividuals: TfmIndividuals
         Visible = False
       end
       object cxIndividualsGridDBTableView1ID_NUMBER: TcxGridDBColumn
+        Caption = #1030#1076#1077#1085#1090#1080#1092#1110#1082#1072#1094#1110#1081#1085#1080#1081' '#1085#1086#1084#1077#1088
         DataBinding.FieldName = 'ID_NUMBER'
-        Visible = False
         Width = 64
       end
       object cxIndividualsGridDBTableView1ID_NUMBER_ABSENT: TcxGridDBColumn
