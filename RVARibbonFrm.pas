@@ -36,7 +36,11 @@ uses
   RVTypes, ActnPopup, RVAPopupActionBar, RibbonObsidianStyleActnCtrls,
   RibbonSilverStyleActnCtrls, RVStyleFuncs, System.Actions, Vcl.ExtCtrls,
   RVReport,
-  ufmMain;
+  ufmMain, dxRibbonSkins, dxSkinsCore, dxSkinOffice2007Blue,
+  dxSkinsdxRibbonPainter, cxGraphics, cxControls, cxLookAndFeels,
+  cxLookAndFeelPainters, cxClasses, dxRibbon, dxSkinsdxBarPainter, dxBar,
+  dxRibbonMiniToolbar, cxStyles, dxBarExtItems, cxContainer, cxEdit,
+  cxGroupBox;
 
 type
   TfrmMain = class(TForm)
@@ -100,8 +104,6 @@ type
     rvActionFontBackColor1: TrvActionFontBackColor;
     rvActionSubscript1: TrvActionSubscript;
     rvActionSuperscript1: TrvActionSuperscript;
-    cmbFont: TRVFontComboBox;
-    cmbFontSize: TRVFontSizeComboBox;
     ribgParagraph: TRibbonGroup;
     rvActionParagraph1: TrvActionParagraph;
     rvActionParaBorder1: TrvActionParaBorder;
@@ -180,7 +182,7 @@ type
     ilBW32: TImageList;
     ilBW16: TImageList;
     ribgOptions: TRibbonGroup;
-    cmbUnits: TComboBox;
+    cmbUnits2: TComboBox;
     rvActionTableCellRotationNone1: TrvActionTableCellRotationNone;
     rvActionTableCellRotation901: TrvActionTableCellRotation90;
     rvActionTableCellRotation1801: TrvActionTableCellRotation180;
@@ -195,11 +197,168 @@ type
     rvActionClearFormat1: TrvActionClearFormat;
     rvActionClearTextFormat1: TrvActionClearTextFormat;
     rvActionStyleInspector1: TrvActionStyleInspector;
-    cmbStyles: TRVStyleTemplateComboBox;
     RVRulerItemSelector1: TRVRulerItemSelector;
     RVRuler2: TRVRuler;
     RibbonGroup1: TRibbonGroup;
     RibbonGroup2: TRibbonGroup;
+    dxRibbonHomeTab: TdxRibbonTab;
+    dxRibbon: TdxRibbon;
+    dxRibbonAdvancedTab: TdxRibbonTab;
+    dxRibbonTableTab: TdxRibbonTab;
+    dxBarManager: TdxBarManager;
+    dxRibbonMiniToolbar: TdxRibbonMiniToolbar;
+    RibbonQuickAccess: TdxBar;
+    dxQuickAccessBarQuickPrintButton: TdxBarButton;
+    dxQuickAccessBarPrintButton: TdxBarButton;
+    dxQuickAccessBarrintPreviewButton: TdxBarButton;
+    dxQuickAccessBarPageSetupButton: TdxBarButton;
+    dxQuickAccessBarSaveButton: TdxBarButton;
+    dxQuickAccessBarUndoButton: TdxBarButton;
+    dxQuickAccessBarRedoButton: TdxBarButton;
+    dxBarManagerClipboardBar: TdxBar;
+    dxBarSubItemPaste: TdxBarSubItem;
+    dxBarButtonPasteAsText: TdxBarButton;
+    dxBarButtonPasteAsSpecial: TdxBarButton;
+    cxStyleRepository: TcxStyleRepository;
+    cxStyle1: TcxStyle;
+    dxBarButtonCut: TdxBarButton;
+    dxBarButtonCopy: TdxBarButton;
+    dxBarButtonSelectAll: TdxBarButton;
+    dxBarManagerBarFont: TdxBar;
+    dxBarManagerBarParagraph: TdxBar;
+    dxBarManagerBarList: TdxBar;
+    dxBarManagerBarStyles: TdxBar;
+    dxBarManagerBarEditing: TdxBar;
+    dxBarManagerBarFile: TdxBar;
+    dxBarManagerBarPrint: TdxBar;
+    dxBarButton1: TdxBarButton;
+    dxBarButton: TdxBarButton;
+    dxBarButton3: TdxBarButton;
+    dxBarButton4: TdxBarButton;
+    dxBarButton2: TdxBarButton;
+    dxBarButton5: TdxBarButton;
+    dxBarSubItem1: TdxBarSubItem;
+    dxBarButton6: TdxBarButton;
+    dxBarButton7: TdxBarButton;
+    dxBarButton8: TdxBarButton;
+    dxBarSubItem2: TdxBarSubItem;
+    dxBarButton9: TdxBarButton;
+    dxBarButton10: TdxBarButton;
+    dxBarButton11: TdxBarButton;
+    dxBarButton12: TdxBarButton;
+    dxBarButton13: TdxBarButton;
+    dxBarButton14: TdxBarButton;
+    dxBarButton15: TdxBarButton;
+    dxBarButton16: TdxBarButton;
+    dxBarButton17: TdxBarButton;
+    dxBarButton18: TdxBarButton;
+    dxBarButton19: TdxBarButton;
+    dxBarButton20: TdxBarButton;
+    dxBarLargeButton1: TdxBarLargeButton;
+    dxBarButton21: TdxBarButton;
+    dxBarButton22: TdxBarButton;
+    dxBarLargeButton2: TdxBarLargeButton;
+    dxBarSubItem3: TdxBarSubItem;
+    dxBarButton23: TdxBarButton;
+    dxBarButton24: TdxBarButton;
+    dxBarSubItem4: TdxBarSubItem;
+    dxBarSubItem5: TdxBarSubItem;
+    dxBarButton25: TdxBarButton;
+    dxBarButton26: TdxBarButton;
+    dxBarButton27: TdxBarButton;
+    dxBarButton28: TdxBarButton;
+    dxBarButton29: TdxBarButton;
+    dxBarButton30: TdxBarButton;
+    dxBarButton31: TdxBarButton;
+    dxBarButton32: TdxBarButton;
+    dxBarButton33: TdxBarButton;
+    dxBarManagerBar1: TdxBar;
+    dxBarManagerBar2: TdxBar;
+    dxBarManagerBar3: TdxBar;
+    dxBarManagerBar4: TdxBar;
+    dxBarManagerBar5: TdxBar;
+    dxBarManagerBar6: TdxBar;
+    dxBarManagerBar7: TdxBar;
+    dxBarManagerBar8: TdxBar;
+    dxBarLargeButton3: TdxBarLargeButton;
+    dxBarLargeButton4: TdxBarLargeButton;
+    dxBarLargeButton5: TdxBarLargeButton;
+    dxBarLargeButton6: TdxBarLargeButton;
+    dxBarButton34: TdxBarButton;
+    dxBarButton35: TdxBarButton;
+    dxBarButton36: TdxBarButton;
+    dxBarButton37: TdxBarButton;
+    dxBarButton38: TdxBarButton;
+    dxBarButton39: TdxBarButton;
+    dxBarSubItem6: TdxBarSubItem;
+    dxBarButton40: TdxBarButton;
+    dxBarButton41: TdxBarButton;
+    dxBarButton42: TdxBarButton;
+    dxBarButton43: TdxBarButton;
+    dxBarSubItem7: TdxBarSubItem;
+    dxBarButton44: TdxBarButton;
+    dxBarButton45: TdxBarButton;
+    dxBarButton46: TdxBarButton;
+    dxBarButton47: TdxBarButton;
+    dxBarSubItem8: TdxBarSubItem;
+    dxBarButton48: TdxBarButton;
+    dxBarButton49: TdxBarButton;
+    dxBarButton50: TdxBarButton;
+    dxBarButton51: TdxBarButton;
+    dxBarButton52: TdxBarButton;
+    dxBarButton53: TdxBarButton;
+    dxBarButton54: TdxBarButton;
+    dxBarContainerItem1: TdxBarContainerItem;
+    dxBarButton55: TdxBarButton;
+    dxBarButton56: TdxBarButton;
+    dxBarButton57: TdxBarButton;
+    dxBarButton58: TdxBarButton;
+    dxBarButton59: TdxBarButton;
+    dxBarButton60: TdxBarButton;
+    dxBarButton61: TdxBarButton;
+    dxBarButton62: TdxBarButton;
+    dxBarButton63: TdxBarButton;
+    dxBarButton64: TdxBarButton;
+    dxBarButton65: TdxBarButton;
+    dxBarLargeButton7: TdxBarLargeButton;
+    dxBarLargeButton8: TdxBarLargeButton;
+    dxBarLargeButton9: TdxBarLargeButton;
+    dxBarLargeButton10: TdxBarLargeButton;
+    dxBarSubItem9: TdxBarSubItem;
+    dxBarButton66: TdxBarButton;
+    dxBarButton67: TdxBarButton;
+    dxBarButton68: TdxBarButton;
+    dxBarButton69: TdxBarButton;
+    cmbUnits: TdxBarCombo;
+    dxBarContainerItem2: TdxBarContainerItem;
+    dxBarInPlaceSubItem1: TdxBarInPlaceSubItem;
+    dxBarControlContainerItem1: TdxBarControlContainerItem;
+    dxBarControlContainerItem2: TdxBarControlContainerItem;
+    dxBarControlContainerItem3: TdxBarControlContainerItem;
+    dxBarButton70: TdxBarButton;
+    dxBarButton71: TdxBarButton;
+    dxBarButton72: TdxBarButton;
+    dxBarButton73: TdxBarButton;
+    dxBarButton74: TdxBarButton;
+    dxBarButton75: TdxBarButton;
+    dxBarButton76: TdxBarButton;
+    dxBarButton77: TdxBarButton;
+    dxBarButton78: TdxBarButton;
+    dxBarButton79: TdxBarButton;
+    dxBarButton80: TdxBarButton;
+    dxBarSubItem10: TdxBarSubItem;
+    dxBarButton81: TdxBarButton;
+    dxBarButton82: TdxBarButton;
+    dxBarButton83: TdxBarButton;
+    dxBarButton84: TdxBarButton;
+    dxBarControlContainerItem4: TdxBarControlContainerItem;
+    dxBarControlContainerItem5: TdxBarControlContainerItem;
+    dxBarControlContainerItem6: TdxBarControlContainerItem;
+    cxFontGroupBox: TcxGroupBox;
+    dxBarControlContainerItem7: TdxBarControlContainerItem;
+    cmbFont: TRVFontComboBox;
+    cmbFontSize: TRVFontSizeComboBox;
+    cmbStyles: TRVStyleTemplateComboBox;
     procedure FormCreate(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure RichViewEdit1Jump(Sender: TObject; id: Integer);
@@ -222,14 +381,14 @@ type
     procedure rvActionSave1DocumentFileChange(Sender: TObject;
       Editor: TCustomRichViewEdit; const FileName: string;
       FileFormat: TrvFileSaveFilter; IsNew: Boolean);
-    procedure cmbUnitsClick(Sender: TObject);
+    procedure cmbUnits2Click(Sender: TObject);
     procedure RichViewEdit1Progress(Sender: TCustomRichView;
       Operation: TRVLongOperation; Stage: TRVProgressStage; PercentDone: Byte);
     procedure RVPrint1SendingToPrinter(Sender: TCustomRichView;
       PageCompleted: Integer; Step: TRVPrintingStep);
     procedure rvActionStyleInspector1Showing(Sender: TrvAction; Form: TForm);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure rvActionPageSetup1Change(Sender: TObject);
+    procedure rvActionPaste1Execute(Sender: TObject);
   private
     { Private declarations }
     procedure Localize;
@@ -270,7 +429,7 @@ begin
 
   cmbFont.Font.Name := RVAControlPanel1.DialogFontName;
   cmbFontSize.Font.Name := RVAControlPanel1.DialogFontName;
-  cmbUnits.Font.Name := RVAControlPanel1.DialogFontName;
+//  cmbUnits.Font.Name := RVAControlPanel1.DialogFontName;
   cmbStyles.Font.Name := RVAControlPanel1.DialogFontName;
 
   // linking the style inspector to RichViewEdit1
@@ -400,13 +559,14 @@ begin
 end;
 
 
-procedure TfrmMain.cmbUnitsClick(Sender: TObject);
+procedure TfrmMain.cmbUnits2Click(Sender: TObject);
 begin
 // --- 1. Units displayed to the user
   // units for displaying in dialogs
   RVAControlPanel1.UnitsDisplay := TRVUnits(cmbUnits.ItemIndex);
   // units for displaying in the ruler
   RVRuler1.UnitsDisplay := TRulerUnits(cmbUnits.ItemIndex);
+  RVRuler2.UnitsDisplay := TRulerUnits(cmbUnits.ItemIndex);
   // units for page setup dialog
   if RVAControlPanel1.UnitsDisplay in [rvuPixels, rvuCentimeters, rvuMillimeters] then
     rvActionPageSetup1.MarginsUnits := rvpmuMillimeters
@@ -428,7 +588,8 @@ begin
     RVStyle1.ConvertToDifferentUnits(RVAControlPanel1.UnitsProgram);
     RichViewEdit1.Change;
   end;
-  RichViewEdit1.SetFocus;
+
+  if RVRuler1.UnitsDisplay <> TRulerUnits(cmbUnits.ItemIndex) then RichViewEdit1.SetFocus;
 end;
 
 {---------------------------- Ruler ------------------------------------}
@@ -556,9 +717,10 @@ end;
 procedure TfrmMain.rvActionInsertTable1Execute(Sender: TObject);
 begin
   rvActionInsertTable1.ShowTableSizeDialog(RichViewEdit1,
-    rvActionInsertTable1.ActionComponent as TControl);
+    RVRulerItemSelector1 as TControl);
 end;
-procedure TfrmMain.rvActionPageSetup1Change(Sender: TObject);
+
+procedure TfrmMain.rvActionPaste1Execute(Sender: TObject);
 begin
 
 end;
@@ -567,7 +729,7 @@ end;
 procedure TfrmMain.Ribbon1HelpButtonClick(Sender: TObject);
 var HelpFileName: String;
 begin
-  HelpFileName := ExtractFilePath(Application.ExeName)+'..\Help\RichViewActions.chm';
+  HelpFileName := ExtractFilePath(Application.ExeName)+'\Notar.chm';
   RvHtmlHelp(HelpFileName);
 end;
 {-------------------------- Styles-Templates ----------------------------------}
