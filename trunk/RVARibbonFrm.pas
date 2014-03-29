@@ -40,7 +40,7 @@ uses
   dxSkinsdxRibbonPainter, cxGraphics, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxClasses, dxRibbon, dxSkinsdxBarPainter, dxBar,
   dxRibbonMiniToolbar, cxStyles, dxBarExtItems, cxContainer, cxEdit,
-  cxGroupBox;
+  cxGroupBox, cxButtons;
 
 type
   TfrmMain = class(TForm)
@@ -50,11 +50,6 @@ type
     RVPrint1: TRVPrint;
     ColorDialog1: TColorDialog;
     RVRuler1: TRVRuler;
-    Ribbon1: TRibbon;
-    ribHome: TRibbonPage;
-    ribgClipboard: TRibbonGroup;
-    ribAdvanced: TRibbonPage;
-    ribTable: TRibbonPage;
     ActionManager1: TActionManager;
     rvActionCut1: TrvActionCut;
     rvActionCopy1: TrvActionCopy;
@@ -67,8 +62,6 @@ type
     rvActionFind1: TrvActionFind;
     rvActionFindNext1: TrvActionFindNext;
     rvActionReplace1: TrvActionReplace;
-    RibbonQuickAccessToolbar1: TRibbonQuickAccessToolbar;
-    ribgInsert: TRibbonGroup;
     rvActionInsertTable1: TrvActionInsertTable;
     rvActionNew1: TrvActionNew;
     rvActionOpen1: TrvActionOpen;
@@ -87,7 +80,6 @@ type
     rvActionInsertHyperlink1: TrvActionInsertHyperlink;
     rvActionInsertSymbol1: TrvActionInsertSymbol;
     rvActionInsertText1: TrvActionInsertText;
-    ribgFont: TRibbonGroup;
     rvActionFonts1: TrvActionFonts;
     rvActionFontEx1: TrvActionFontEx;
     rvActionFontBold1: TrvActionFontBold;
@@ -104,7 +96,6 @@ type
     rvActionFontBackColor1: TrvActionFontBackColor;
     rvActionSubscript1: TrvActionSubscript;
     rvActionSuperscript1: TrvActionSuperscript;
-    ribgParagraph: TRibbonGroup;
     rvActionParagraph1: TrvActionParagraph;
     rvActionParaBorder1: TrvActionParaBorder;
     rvActionWordWrap1: TrvActionWordWrap;
@@ -126,13 +117,11 @@ type
     rvActionParaBullets1: TrvActionParaBullets;
     rvActionParaNumbering1: TrvActionParaNumbering;
     rvActionShowSpecialCharacters1: TrvActionShowSpecialCharacters;
-    ribgList: TRibbonGroup;
     actTextSize: TAction;
     actTextFlow: TAction;
     actLineSpacing: TAction;
     actExit: TAction;
     actLanguage: TAction;
-    ribgEditing: TRibbonGroup;
     rvActionTableInsertRowsBelow1: TrvActionTableInsertRowsBelow;
     rvActionTableInsertRowsAbove1: TrvActionTableInsertRowsAbove;
     rvActionTableInsertColLeft1: TrvActionTableInsertColLeft;
@@ -158,11 +147,7 @@ type
     rvActionTableCellNoBorders1: TrvActionTableCellNoBorders;
     rvActionTableProperties1: TrvActionTableProperties;
     rvActionTableGrid1: TrvActionTableGrid;
-    ribgTableInsert: TRibbonGroup;
-    ribgTableDelete: TRibbonGroup;
-    ribgTableOperations: TRibbonGroup;
     actSelectInTable: TAction;
-    ribgTableBorders: TRibbonGroup;
     actAlignCell: TAction;
     rvActionColor1: TrvActionColor;
     rvActionBackground1: TrvActionBackground;
@@ -172,8 +157,6 @@ type
     rvActionRemoveHyperlinks1: TrvActionRemoveHyperlinks;
     rvActionItemProperties1: TrvActionItemProperties;
     rvActionVAlign1: TrvActionVAlign;
-    ribgBackground: TRibbonGroup;
-    ribgPageSetup: TRibbonGroup;
     rvActionCharCase1: TrvActionCharCase;
     RVAPopupActionBar1: TRVAPopupActionBar;
     rvActionHide1: TrvActionHide;
@@ -181,8 +164,6 @@ type
     ilGlyphs32: TImageList;
     ilBW32: TImageList;
     ilBW16: TImageList;
-    ribgOptions: TRibbonGroup;
-    cmbUnits2: TComboBox;
     rvActionTableCellRotationNone1: TrvActionTableCellRotationNone;
     rvActionTableCellRotation901: TrvActionTableCellRotation90;
     rvActionTableCellRotation1801: TrvActionTableCellRotation180;
@@ -191,7 +172,6 @@ type
     rvActionTableSplit1: TrvActionTableSplit;
     rvActionTableToText1: TrvActionTableToText;
     rvActionTableSort1: TrvActionTableSort;
-    ribgStyles: TRibbonGroup;
     rvActionStyleTemplates1: TrvActionStyleTemplates;
     rvActionAddStyleTemplate1: TrvActionAddStyleTemplate;
     rvActionClearFormat1: TrvActionClearFormat;
@@ -199,8 +179,6 @@ type
     rvActionStyleInspector1: TrvActionStyleInspector;
     RVRulerItemSelector1: TRVRulerItemSelector;
     RVRuler2: TRVRuler;
-    RibbonGroup1: TRibbonGroup;
-    RibbonGroup2: TRibbonGroup;
     dxRibbonHomeTab: TdxRibbonTab;
     dxRibbon: TdxRibbon;
     dxRibbonAdvancedTab: TdxRibbonTab;
@@ -354,11 +332,28 @@ type
     dxBarControlContainerItem4: TdxBarControlContainerItem;
     dxBarControlContainerItem5: TdxBarControlContainerItem;
     dxBarControlContainerItem6: TdxBarControlContainerItem;
-    cxFontGroupBox: TcxGroupBox;
     dxBarControlContainerItem7: TdxBarControlContainerItem;
+    dxBarButton85: TdxBarButton;
+    dxBarButton86: TdxBarButton;
+    dxBarButton87: TdxBarButton;
+    dxBarButton88: TdxBarButton;
+    dxBarButton89: TdxBarButton;
+    dxBarContainerItem3: TdxBarContainerItem;
+    dxBarControlContainerItem8: TdxBarControlContainerItem;
+    dxBarControlContainerItem9: TdxBarControlContainerItem;
+    dxBarControlContainerItem10: TdxBarControlContainerItem;
+    cxGroupBox1: TcxGroupBox;
     cmbFont: TRVFontComboBox;
     cmbFontSize: TRVFontSizeComboBox;
     cmbStyles: TRVStyleTemplateComboBox;
+    dxBarButton90: TdxBarButton;
+    dxBarButton91: TdxBarButton;
+    dxBarButton92: TdxBarButton;
+    dxBarButton93: TdxBarButton;
+    dxBarButton94: TdxBarButton;
+    dxBarButton95: TdxBarButton;
+    dxBarButton96: TdxBarButton;
+    dxBarButton97: TdxBarButton;
     procedure FormCreate(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure RichViewEdit1Jump(Sender: TObject; id: Integer);
@@ -389,6 +384,12 @@ type
     procedure rvActionStyleInspector1Showing(Sender: TrvAction; Form: TForm);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure rvActionPaste1Execute(Sender: TObject);
+    procedure dxBarManagerBarFontCaptionButtons0Click(Sender: TObject);
+    procedure dxBarManagerBarParagraphCaptionButtons0Click(
+      Sender: TObject);
+    procedure dxBarManagerBarListCaptionButtons0Click(Sender: TObject);
+    procedure dxBarManagerBar2CaptionButtons0Click(Sender: TObject);
+    procedure dxBarManagerBar3CaptionButtons0Click(Sender: TObject);
   private
     { Private declarations }
     procedure Localize;
@@ -460,8 +461,8 @@ begin
 
 //  Application.HintPause := 700;
 
-  SetRulerColors(RVRuler1, Ribbon1.ColorMap as TCustomRibbonColorMap);
-  SetRulerColors(RVRuler2, Ribbon1.ColorMap as TCustomRibbonColorMap);
+//  SetRulerColors(RVRuler1, Ribbon1.ColorMap as TCustomRibbonColorMap);
+//  SetRulerColors(RVRuler2, Ribbon1.ColorMap as TCustomRibbonColorMap);
 end;
 
 
@@ -479,12 +480,13 @@ begin
   rvActionQuickPrint1.Title := s;
   if IsNew then
     s := s+' (*)';
-  Ribbon1.DocumentName := s;
+{  Ribbon1.DocumentName := s;
   if not IsNew then begin
     Index := Ribbon1.AddRecentItem(FileName);
     if Index>=0 then
       Ribbon1.ApplicationMenu.Menu.RecentItems[Index].Tag := ord(FileFormat);
   end;
+}
 end;
 
 // Open a file from the recent list
@@ -492,7 +494,7 @@ procedure TfrmMain.Ribbon1RecentItemClick(Sender: TObject; FileName: string;
   Index: Integer);
 var i: Integer;
 begin
-  Index := 0;
+{  Index := 0;
   for i := 0 to Ribbon1.ApplicationMenu.Menu.RecentItems.Count-1 do
     if CompareText(Ribbon1.ApplicationMenu.Menu.RecentItems[i].Caption, FileName)=0 then begin
       Index := i;
@@ -500,6 +502,7 @@ begin
     end;
   rvActionOpen1.LoadFile(RichViewEdit1, FileName,
     TrvFileOpenFilter(Ribbon1.ApplicationMenu.Menu.RecentItems[Index].Tag));
+}
 end;
 // Prompt for saving...
 procedure TfrmMain.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -592,6 +595,34 @@ begin
   if RVRuler1.UnitsDisplay <> TRulerUnits(cmbUnits.ItemIndex) then RichViewEdit1.SetFocus;
 end;
 
+procedure TfrmMain.dxBarManagerBar2CaptionButtons0Click(Sender: TObject);
+begin
+  rvActionBackground1.Execute;
+end;
+
+procedure TfrmMain.dxBarManagerBar3CaptionButtons0Click(Sender: TObject);
+begin
+  rvActionPageSetup1.Execute;
+end;
+
+procedure TfrmMain.dxBarManagerBarFontCaptionButtons0Click(
+  Sender: TObject);
+begin
+  rvActionFontEx1.Execute;
+end;
+
+procedure TfrmMain.dxBarManagerBarListCaptionButtons0Click(
+  Sender: TObject);
+begin
+  rvActionParaList1.Execute;
+end;
+
+procedure TfrmMain.dxBarManagerBarParagraphCaptionButtons0Click(
+  Sender: TObject);
+begin
+  rvActionParagraph1.Execute;
+end;
+
 {---------------------------- Ruler ------------------------------------}
 
 procedure TfrmMain.RVAControlPanel1MarginsChanged(Sender: TrvAction;
@@ -627,12 +658,12 @@ begin
   i := cmbUnits.ItemIndex;
   RVA_TranslateUnits(cmbUnits.Items);
   cmbUnits.ItemIndex := i;
-  ribgOptions.Items[0].Caption := RVA_GetS(rvam_lbl_Units);
+  //ribgOptions.Items[0].Caption := RVA_GetS(rvam_lbl_Units);
   // Styles
   rvActionStyleInspector1.UpdateInfo;
   cmbStyles.Localize;
   // Localizing ribbon
-  LocalizeRibbonPage(ribHome, rvam_ribt_MainTab1);
+{  LocalizeRibbonPage(ribHome, rvam_ribt_MainTab1);
   LocalizeRibbonPage(ribAdvanced, rvam_ribt_MainTab2);
   LocalizeRibbonPage(ribTable, rvam_ribt_Table);
   ribgClipboard.Caption := RVA_GetS(rvam_ribg_Clipboard);
@@ -648,10 +679,10 @@ begin
   ribgTableInsert.Caption := RVA_GetS(rvam_ribg_TableInsert);
   ribgTableDelete.Caption := RVA_GetS(rvam_ribg_TableDelete);
   ribgTableOperations.Caption := RVA_GetS(rvam_ribg_TableOperations);
-  ribgTableBorders.Caption := RVA_GetS(rvam_ribg_TableBorders);
+  ribgTableBorders.Caption := RVA_GetS(rvam_ribg_TableBorders);}
   ActionManager1.ActionBars[2].Items[0].Items[3].Items[0].Caption := RVA_GetS(rvam_rib_SaveAsTitle);
   ActionManager1.ActionBars[2].Items[0].Items[4].Items[0].Caption := RVA_GetS(rvam_rib_PrintTitle);
-  Ribbon1.ApplicationMenu.Caption := RVA_GetS(rvam_rib_RecentFiles);
+//  Ribbon1.ApplicationMenu.Caption := RVA_GetS(rvam_rib_RecentFiles);
   ScreenTipsManager1.Footer := RVA_GetS(rvam_rib_ScreenTipFooter);
 
   // Localizing menus (not all menus in this demo are translated)
