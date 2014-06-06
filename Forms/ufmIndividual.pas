@@ -183,6 +183,9 @@ type
     procedure PostButtonClick(Sender: TObject);
     procedure CancelButtonClick(Sender: TObject);
     procedure cxButton1Click(Sender: TObject);
+    procedure SurnameLookupComboBoxExit(Sender: TObject);
+    procedure NameLookupComboBoxExit(Sender: TObject);
+    procedure MiddleNameLookupComboBoxExit(Sender: TObject);
   private
     FSelectorCallback: TCatalogSelectorCallback;
   public
@@ -292,6 +295,16 @@ begin
   dmIndividual.Destroy;
 end;
 
+procedure TfmIndividual.MiddleNameLookupComboBoxExit(Sender: TObject);
+begin
+  cxButton1Click(Sender);
+end;
+
+procedure TfmIndividual.NameLookupComboBoxExit(Sender: TObject);
+begin
+  cxButton1Click(Sender);
+end;
+
 procedure TfmIndividual.PostButtonClick(Sender: TObject);
 begin
   saveIndividual;
@@ -311,6 +324,11 @@ begin
     dmIndividual.IndividualsDataSet.Transaction.Free;
     dmIndividual.IndividualsDataSet.Transaction := RemoteDataModule.FIBTransaction;
   end;
+end;
+
+procedure TfmIndividual.SurnameLookupComboBoxExit(Sender: TObject);
+begin
+  cxButton1Click(Sender);
 end;
 
 end.

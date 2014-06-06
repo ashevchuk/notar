@@ -1,5 +1,7 @@
 object dmNotary: TdmNotary
   OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
   Height = 418
   Width = 843
   object SurnamesDataSet: TpFIBDataSet
@@ -8,7 +10,6 @@ object dmNotary: TdmNotary
       '    SURNAME'
       'FROM'
       '    CAT_NOTR_SURNAME ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -32,7 +33,6 @@ object dmNotary: TdmNotary
       '    NAME'
       'FROM'
       '    CAT_NOTR_NAME ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -46,7 +46,6 @@ object dmNotary: TdmNotary
       '    MIDDLE'
       'FROM'
       '    CAT_NOTR_MIDDLE')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -291,7 +290,6 @@ object dmNotary: TdmNotary
       '    MIDDLE_CASE_ABBREVIATION'
       'FROM'
       '    CATALOG_NOTARIES ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -311,7 +309,6 @@ object dmNotary: TdmNotary
       '    GENDER'
       'FROM'
       '    CATALOG_GENDERS ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -330,7 +327,6 @@ object dmNotary: TdmNotary
       '    COUNTY'
       'FROM'
       '    CAT_NOTR_COUNTY ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -354,7 +350,6 @@ object dmNotary: TdmNotary
       '    ADDRESS_STATE'
       'FROM'
       '    CAT_NOTR_ADDRESS_STATE ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -368,7 +363,6 @@ object dmNotary: TdmNotary
       '    ADDRESS_REGION'
       'FROM'
       '    CAT_NOTR_ADDRESS_REGION ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -387,7 +381,6 @@ object dmNotary: TdmNotary
       '    ADDRESS_LOCALITY_TYPE'
       'FROM'
       '    CAT_NOTR_ADDRESS_LOCALITY_TYPE ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -406,7 +399,6 @@ object dmNotary: TdmNotary
       '    ADDRESS_LOCALITY'
       'FROM'
       '    CAT_NOTR_ADDRESS_LOCALITY ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -425,7 +417,6 @@ object dmNotary: TdmNotary
       '    ADDRESS_STREET_TYPE'
       'FROM'
       '    CAT_NOTR_ADDRESS_STREET_TYPE ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -444,7 +435,6 @@ object dmNotary: TdmNotary
       '    ADDRESS_STREET'
       'FROM'
       '    CAT_NOTR_ADDRESS_STREET ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -463,7 +453,6 @@ object dmNotary: TdmNotary
       '    ADDRESS_BUILDING'
       'FROM'
       '    CAT_NOTR_ADDRESS_BUILDING ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -487,7 +476,6 @@ object dmNotary: TdmNotary
       '    ADDRESS_FLAT'
       'FROM'
       '    CAT_NOTR_ADDRESS_FLAT ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -506,7 +494,6 @@ object dmNotary: TdmNotary
       '    ADDRESS_CORPS'
       'FROM'
       '    CAT_NOTR_ADDRESS_CORPS ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -520,7 +507,6 @@ object dmNotary: TdmNotary
       '    ADDRESS_SECTION'
       'FROM'
       '    CAT_NOTR_ADDRESS_SECTION ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -544,7 +530,6 @@ object dmNotary: TdmNotary
       '    ADDRESS_INDEX'
       'FROM'
       '    CAT_NOTR_ADDRESS_INDEX ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -563,7 +548,6 @@ object dmNotary: TdmNotary
       '    ADDRESS_OTHER'
       'FROM'
       '    CAT_NOTR_ADDRESS_OTHER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction

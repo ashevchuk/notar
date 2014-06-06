@@ -1,5 +1,7 @@
 object dmAuthorization: TdmAuthorization
   OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
   Height = 606
   Width = 1070
   object IndividualConstituentsDataSource: TDataSource
@@ -1824,7 +1826,6 @@ object dmAuthorization: TdmAuthorization
       '    TRANSPORT_KIND'
       'FROM'
       '    CAT_AUTH_TRANS_KIND ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1843,7 +1844,6 @@ object dmAuthorization: TdmAuthorization
       '    TRANSPORT_BRAND'
       'FROM'
       '    CAT_AUTH_TRANS_BRAND ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1862,7 +1862,6 @@ object dmAuthorization: TdmAuthorization
       '    TRANSPORT_MODEL'
       'FROM'
       '    CAT_AUTH_TRANS_MODEL ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1881,7 +1880,6 @@ object dmAuthorization: TdmAuthorization
       '    TRANSPORT_TYPE'
       'FROM'
       '    CAT_AUTH_TRANS_TYPE ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1900,7 +1898,6 @@ object dmAuthorization: TdmAuthorization
       '    TRANSPORT_COLOR'
       'FROM'
       '    CAT_AUTH_TRANS_COLOR ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1919,7 +1916,6 @@ object dmAuthorization: TdmAuthorization
       '    TRANSPORT_REG_NUMBER'
       'FROM'
       '    CAT_AUTH_TRANS_REG_NUMBER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1938,7 +1934,6 @@ object dmAuthorization: TdmAuthorization
       '    TRANSPORT_ENGINE_VOLUME'
       'FROM'
       '    CAT_AUTH_TRANS_ENGINE_VOLUME ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1957,7 +1952,6 @@ object dmAuthorization: TdmAuthorization
       '    TRANSPORT_WEIGHT'
       'FROM'
       '    CAT_AUTH_TRANS_WEIGHT ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1976,7 +1970,6 @@ object dmAuthorization: TdmAuthorization
       '    TRANSPORT_CHASSIS_NUMBER'
       'FROM'
       '    CAT_AUTH_TRANS_CHASSIS_NUMBER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1995,7 +1988,6 @@ object dmAuthorization: TdmAuthorization
       '    TRANSPORT_LOAD_WEIGHT'
       'FROM'
       '    CAT_AUTH_TRANS_LOAD_WEIGHT ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -2147,7 +2139,6 @@ object dmAuthorization: TdmAuthorization
       '    AUTHORIZATION_DESCRIPTION'
       'FROM'
       '    CAT_AUTH_DESCRIPTION ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -2166,7 +2157,6 @@ object dmAuthorization: TdmAuthorization
       '    AUTHORIZATION_NUMBER'
       'FROM'
       '    CAT_AUTH_NUMBER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -2185,7 +2175,6 @@ object dmAuthorization: TdmAuthorization
       '    TRANSITE_NUMBER'
       'FROM'
       '    CAT_AUTH_TRANSITE_NUMBER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -2204,7 +2193,6 @@ object dmAuthorization: TdmAuthorization
       '    TRANSPORT_CERTIFICATE_ISSUER'
       'FROM'
       '    CAT_AUTH_TRANS_CERT_ISSUER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -2223,7 +2211,6 @@ object dmAuthorization: TdmAuthorization
       '    TRANSPORT_CERTIFICATE_NUMBER'
       'FROM'
       '    CAT_AUTH_TRANS_CERT_NUMBER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -2242,7 +2229,6 @@ object dmAuthorization: TdmAuthorization
       '    TRANSPORT_CERTIFICATE_SERIAL'
       'FROM'
       '    CAT_AUTH_TRANS_CERT_SERIAL ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction

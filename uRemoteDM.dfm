@@ -6,7 +6,6 @@ object RemoteDataModule: TRemoteDataModule
   Width = 325
   object FIBDatabase: TpFIBDatabase
     AutoReconnect = True
-    Connected = True
     DBName = '127.0.0.1/3050:C:\db\notar.fdb'
     DBParams.Strings = (
       'user_name=SYSDBA'
@@ -25,7 +24,6 @@ object RemoteDataModule: TRemoteDataModule
     Top = 40
   end
   object FIBTransaction: TpFIBTransaction
-    Active = True
     DefaultDatabase = FIBDatabase
     TRParams.Strings = (
       'write'
@@ -38,7 +36,6 @@ object RemoteDataModule: TRemoteDataModule
     Top = 40
   end
   object FIBUpdateTransaction: TpFIBTransaction
-    Active = True
     DefaultDatabase = FIBDatabase
     TRParams.Strings = (
       'write'

@@ -1,5 +1,7 @@
 object dmIndividual: TdmIndividual
   OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
   Height = 827
   Width = 1049
   object SurnamesDataSet: TpFIBDataSet
@@ -8,7 +10,6 @@ object dmIndividual: TdmIndividual
       '    SURNAME'
       'FROM'
       '    CAT_INDS_SURNAME ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -32,7 +33,6 @@ object dmIndividual: TdmIndividual
       '    NAME'
       'FROM'
       '    CAT_INDS_NAME ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -46,7 +46,6 @@ object dmIndividual: TdmIndividual
       '    MIDDLE'
       'FROM'
       '    CAT_INDS_MIDDLE')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -489,7 +488,6 @@ object dmIndividual: TdmIndividual
     AutoUpdateOptions.WhenGetGenID = wgOnNewRecord
     AutoUpdateOptions.GeneratorStep = 0
     AutoUpdateOptions.UseReturningFields = [rfKeyFields]
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -882,7 +880,6 @@ object dmIndividual: TdmIndividual
       '    GENDER'
       'FROM'
       '    CATALOG_GENDERS ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -902,7 +899,6 @@ object dmIndividual: TdmIndividual
       '    STATE'
       'FROM'
       '    CATALOG_STATES ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -922,7 +918,6 @@ object dmIndividual: TdmIndividual
       '    PERSONAL_DOCUMENT'
       'FROM'
       '    CATALOG_PERSON_DOCS ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -941,7 +936,6 @@ object dmIndividual: TdmIndividual
       '    BIRTH_PLACE'
       'FROM'
       '    CAT_INDS_BIRTH_PLACE ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -960,7 +954,6 @@ object dmIndividual: TdmIndividual
       '    DESCRIPTION'
       'FROM'
       '    CAT_INDS_DESCRIPTION ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -984,7 +977,6 @@ object dmIndividual: TdmIndividual
       '    ADDRESS_STATE'
       'FROM'
       '    CAT_INDS_ADDRESS_STATE ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -998,7 +990,6 @@ object dmIndividual: TdmIndividual
       '    ADDRESS_REGION'
       'FROM'
       '    CAT_INDS_ADDRESS_REGION ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1017,7 +1008,6 @@ object dmIndividual: TdmIndividual
       '    ADDRESS_LOCALITY_TYPE'
       'FROM'
       '    CAT_INDS_ADDRESS_LOCALITY_TYPE ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1036,7 +1026,6 @@ object dmIndividual: TdmIndividual
       '    ADDRESS_LOCALITY'
       'FROM'
       '    CAT_INDS_ADDRESS_LOCALITY ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1055,7 +1044,6 @@ object dmIndividual: TdmIndividual
       '    ADDRESS_STREET_TYPE'
       'FROM'
       '    CAT_INDS_ADDRESS_STREET_TYPE ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1074,7 +1062,6 @@ object dmIndividual: TdmIndividual
       '    ADDRESS_STREET'
       'FROM'
       '    CAT_INDS_ADDRESS_STREET ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1093,7 +1080,6 @@ object dmIndividual: TdmIndividual
       '    ADDRESS_BUILDING'
       'FROM'
       '    CAT_INDS_ADDRESS_BUILDING ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1117,7 +1103,6 @@ object dmIndividual: TdmIndividual
       '    ADDRESS_FLAT'
       'FROM'
       '    CAT_INDS_ADDRESS_FLAT ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1136,7 +1121,6 @@ object dmIndividual: TdmIndividual
       '    ADDRESS_CORPS'
       'FROM'
       '    CAT_INDS_ADDRESS_CORPS ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1150,7 +1134,6 @@ object dmIndividual: TdmIndividual
       '    ADDRESS_SECTION'
       'FROM'
       '    CAT_INDS_ADDRESS_SECTION ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1174,7 +1157,6 @@ object dmIndividual: TdmIndividual
       '    ADDRESS_INDEX'
       'FROM'
       '    CAT_INDS_ADDRESS_INDEX ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1193,7 +1175,6 @@ object dmIndividual: TdmIndividual
       '    ADDRESS_OTHER'
       'FROM'
       '    CAT_INDS_ADDRESS_OTHER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1212,7 +1193,6 @@ object dmIndividual: TdmIndividual
       '    PASSPORT_SERIAL'
       'FROM'
       '    CAT_INDS_PASSPORT_SERIAL ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1231,7 +1211,6 @@ object dmIndividual: TdmIndividual
       '    PASSPORT_NUMBER'
       'FROM'
       '    CAT_INDS_PASSPORT_NUMBER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1250,7 +1229,6 @@ object dmIndividual: TdmIndividual
       '    PASSPORT_ISSUER'
       'FROM'
       '    CAT_INDS_PASSPORT_ISSUER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1269,7 +1247,6 @@ object dmIndividual: TdmIndividual
       '    PASSPORT_ISSUER_DEPT'
       'FROM'
       '    CAT_INDS_PASSPORT_ISSUER_DEPT ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1288,7 +1265,6 @@ object dmIndividual: TdmIndividual
       '    PASSPORT_ISSUER_DEPT'
       'FROM'
       '    CAT_INDS_PASSPORT_ISSUER_DEPT ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1307,7 +1283,6 @@ object dmIndividual: TdmIndividual
       '    PASSPORT_FOREIGN_SERIAL'
       'FROM'
       '    CAT_INDS_PASSPORT_FRN_SERIAL ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1321,7 +1296,6 @@ object dmIndividual: TdmIndividual
       '    PASSPORT_FOREIGN_NUMBER'
       'FROM'
       '    CAT_INDS_PASSPORT_FRN_NUMBER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1345,7 +1319,6 @@ object dmIndividual: TdmIndividual
       '    PASSPORT_FOREIGN_ISSUER'
       'FROM'
       '    CAT_INDS_PASSPORT_FRN_ISSUER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1359,7 +1332,6 @@ object dmIndividual: TdmIndividual
       '    ID_NUMBER'
       'FROM'
       '    CAT_INDS_ID_NUMBER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1383,7 +1355,6 @@ object dmIndividual: TdmIndividual
       '    ID_NUMBER_ABSENT_REASON'
       'FROM'
       '    CAT_INDS_ID_NUMBER_ABSENT_RSN ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1402,7 +1373,6 @@ object dmIndividual: TdmIndividual
       '    DISABLEMENT_GROUP'
       'FROM'
       '    CAT_INDS_DISABLEMENT_GROUP ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1421,7 +1391,6 @@ object dmIndividual: TdmIndividual
       '    DISABLEMENT_DOCUMENT'
       'FROM'
       '    CAT_INDS_DISABLEMENT_DOCUMENT ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1440,7 +1409,6 @@ object dmIndividual: TdmIndividual
       '    BIRTH_CERTIFICATE_SERIAL'
       'FROM'
       '    CAT_INDS_BRTH_CERT_SERIAL ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1459,7 +1427,6 @@ object dmIndividual: TdmIndividual
       '    BIRTH_CERTIFICATE_NUMBER'
       'FROM'
       '    CAT_INDS_BRTH_CERT_NUMBER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1473,7 +1440,6 @@ object dmIndividual: TdmIndividual
       '    BIRTH_CERTIFICATE_ISSUER'
       'FROM'
       '    CAT_INDS_BRTH_CERT_ISSUER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1497,7 +1463,6 @@ object dmIndividual: TdmIndividual
       '    BIRTH_CERTIFICATE_ISSUER_DEPT'
       'FROM'
       '    CAT_INDS_BRTH_CERT_ISSUER_DEPT ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1516,7 +1481,6 @@ object dmIndividual: TdmIndividual
       '    BIRTH_CERTIFICATE_ISSUER_STATE'
       'FROM'
       '    CAT_INDS_BRTH_CERT_ISSUER_STATE ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1535,7 +1499,6 @@ object dmIndividual: TdmIndividual
       '    MARRIAGE_MEMBER'
       'FROM'
       '    CAT_INDS_MARRIAGE_MEMBER ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
@@ -1554,7 +1517,6 @@ object dmIndividual: TdmIndividual
       '    MARRIAGE_REGISTRATOR'
       'FROM'
       '    CAT_INDS_MARRIAGE_REGISTRATOR ')
-    Active = True
     Transaction = RemoteDataModule.FIBTransaction
     Database = RemoteDataModule.FIBDatabase
     UpdateTransaction = RemoteDataModule.FIBUpdateTransaction
