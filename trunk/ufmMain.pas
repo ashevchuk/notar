@@ -178,9 +178,19 @@ procedure TfmMain.dxDBTreeView1DblClick(Sender: TObject);
 var
   CRef: TFormClass;
   CForm: TForm;
+  MDIChildCounter: Word;
 begin
 if (Length(RemoteDataModule.MenuTreeDataSetCLASS_NAME.AsString) >0) then
   begin
+    // Run only once
+    if (TfmMain(self).MDIChildCount > 0) then
+    begin
+      for MDIChildCounter := 0 to TfmMain(self).MDIChildCount -1 do
+      begin
+        if TfmMain(self).MDIChildren[MDIChildCounter].ClassName = RemoteDataModule.MenuTreeDataSetCLASS_NAME.AsString then Exit;
+      end;
+    end;
+
     Log(RemoteDataModule.MenuTreeDataSetCLASS_NAME.AsString);
     CRef := TFormClass(FindClass(RemoteDataModule.MenuTreeDataSetCLASS_NAME.AsString));
     if (CRef <>nil) then

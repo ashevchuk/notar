@@ -44,6 +44,8 @@ type
     AddressIndexDataSet: TpFIBDataSet;
     AddressOtherDataSource: TDataSource;
     AddressOtherDataSet: TpFIBDataSet;
+    procedure DataModuleCreate(Sender: TObject);
+    procedure DataModuleDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -58,5 +60,27 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+procedure TdmNotary.DataModuleCreate(Sender: TObject);
+var
+  ComponentsIndexer: Word;
+begin
+  for ComponentsIndexer := 0 to TdmNotary(Self).ComponentCount -1 do
+  begin
+    if TdmNotary(Self).Components[ComponentsIndexer].ClassName = 'TpFIBDataSet' then
+      TpFIBDataSet(TdmNotary(Self).Components[ComponentsIndexer]).Open;
+  end;
+end;
+
+procedure TdmNotary.DataModuleDestroy(Sender: TObject);
+var
+  ComponentsIndexer: Word;
+begin
+  for ComponentsIndexer := 0 to TdmNotary(Self).ComponentCount -1 do
+  begin
+    if TdmNotary(Self).Components[ComponentsIndexer].ClassName = 'TpFIBDataSet' then
+      TpFIBDataSet(TdmNotary(Self).Components[ComponentsIndexer]).Close;
+  end;
+end;
 
 end.

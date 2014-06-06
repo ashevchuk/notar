@@ -220,6 +220,8 @@ type
     AddNotaryDataSetID: TFIBBCDField;
     AddNotaryDataSetAUTHORIZATION_ID: TFIBBCDField;
     AddNotaryDataSetNOTARY_ID: TFIBBCDField;
+    procedure DataModuleCreate(Sender: TObject);
+    procedure DataModuleDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -234,5 +236,27 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+procedure TdmAuthorization.DataModuleCreate(Sender: TObject);
+var
+  ComponentsIndexer: Word;
+begin
+  for ComponentsIndexer := 0 to TdmAuthorization(Self).ComponentCount -1 do
+  begin
+    if TdmAuthorization(Self).Components[ComponentsIndexer].ClassName = 'TpFIBDataSet' then
+      TpFIBDataSet(TdmAuthorization(Self).Components[ComponentsIndexer]).Open;
+  end;
+end;
+
+procedure TdmAuthorization.DataModuleDestroy(Sender: TObject);
+var
+  ComponentsIndexer: Word;
+begin
+  for ComponentsIndexer := 0 to TdmAuthorization(Self).ComponentCount -1 do
+  begin
+    if TdmAuthorization(Self).Components[ComponentsIndexer].ClassName = 'TpFIBDataSet' then
+      TpFIBDataSet(TdmAuthorization(Self).Components[ComponentsIndexer]).Close;
+  end;
+end;
 
 end.

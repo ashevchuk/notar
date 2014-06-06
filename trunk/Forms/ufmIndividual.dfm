@@ -708,6 +708,7 @@ object fmIndividual: TfmIndividual
       ParentColor = False
       ParentFont = False
       TabOrder = 1
+      Visible = False
       Height = 184
       Width = 260
       object cxLabel19: TcxLabel
@@ -906,6 +907,7 @@ object fmIndividual: TfmIndividual
       ParentColor = False
       ParentFont = False
       TabOrder = 2
+      Visible = False
       Height = 156
       Width = 260
       object cxLabel25: TcxLabel
@@ -1467,6 +1469,7 @@ object fmIndividual: TfmIndividual
       ParentColor = False
       ParentFont = False
       TabOrder = 4
+      Visible = False
       Height = 81
       Width = 260
       object cxDBMemo2: TcxDBMemo
@@ -1490,6 +1493,7 @@ object fmIndividual: TfmIndividual
       ParentColor = False
       ParentFont = False
       TabOrder = 5
+      Visible = False
       Height = 76
       Width = 260
       object cxLabel42: TcxLabel
@@ -1567,6 +1571,7 @@ object fmIndividual: TfmIndividual
       ParentColor = False
       ParentFont = False
       TabOrder = 6
+      Visible = False
       Height = 81
       Width = 260
       object cxDBMemo1: TcxDBMemo
@@ -1737,6 +1742,7 @@ object fmIndividual: TfmIndividual
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
         Transparent = True
+        Visible = False
         Height = 17
         Width = 100
         AnchorX = 103
@@ -1750,6 +1756,7 @@ object fmIndividual: TfmIndividual
         ParentFont = False
         Properties.Alignment.Horz = taRightJustify
         Transparent = True
+        Visible = False
         Height = 17
         Width = 100
         AnchorX = 103
@@ -1811,6 +1818,7 @@ object fmIndividual: TfmIndividual
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmIndividual.SurnamesDataSource
         TabOrder = 9
+        OnExit = SurnameLookupComboBoxExit
         Width = 150
       end
       object NameLookupComboBox: TcxDBLookupComboBox
@@ -1831,6 +1839,7 @@ object fmIndividual: TfmIndividual
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmIndividual.NameDataSource
         TabOrder = 10
+        OnExit = NameLookupComboBoxExit
         Width = 150
       end
       object MiddleNameLookupComboBox: TcxDBLookupComboBox
@@ -1851,6 +1860,7 @@ object fmIndividual: TfmIndividual
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmIndividual.MiddleDataSource
         TabOrder = 11
+        OnExit = MiddleNameLookupComboBoxExit
         Width = 150
       end
       object GenderLookupComboBox: TcxDBLookupComboBox
@@ -1889,6 +1899,7 @@ object fmIndividual: TfmIndividual
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmIndividual.StateDataSource
         TabOrder = 13
+        Visible = False
         Width = 150
       end
       object cxDBLookupComboBox6: TcxDBLookupComboBox
@@ -1908,6 +1919,7 @@ object fmIndividual: TfmIndividual
         Properties.ListOptions.SyncMode = True
         Properties.ListSource = dmIndividual.PersonalDocumentsDataSource
         TabOrder = 14
+        Visible = False
         Width = 150
       end
       object cxDBDateEdit1: TcxDBDateEdit
@@ -1953,10 +1965,11 @@ object fmIndividual: TfmIndividual
         Properties.ValueUnchecked = 0
         TabOrder = 17
         Transparent = True
+        Visible = False
         Width = 83
       end
       object cxDBCheckBox2: TcxDBCheckBox
-        Left = 148
+        Left = 151
         Top = 231
         Caption = #1030#1085#1086#1079#1077#1084#1085#1072' '#1072#1076#1088#1077#1089#1072
         DataBinding.DataField = 'FOREIGN_ADDRESS_TYPE'
@@ -1967,6 +1980,7 @@ object fmIndividual: TfmIndividual
         Properties.Alignment = taRightJustify
         TabOrder = 18
         Transparent = True
+        Visible = False
         Width = 106
       end
       object cxDBMemo3: TcxDBMemo
@@ -2064,6 +2078,7 @@ object fmIndividual: TfmIndividual
       ParentColor = False
       ParentFont = False
       TabOrder = 10
+      Visible = False
       Height = 103
       Width = 260
       object cxLabel2: TcxLabel
@@ -2719,6 +2734,7 @@ object fmIndividual: TfmIndividual
       Height = 25
       Caption = #1057#1090#1074#1086#1088#1080#1090#1080' '#1074#1110#1076#1084#1110#1085#1082#1080
       TabOrder = 16
+      Visible = False
       OnClick = cxButton1Click
     end
   end
